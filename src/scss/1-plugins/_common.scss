@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+}
+
+dl,
+ol,
+p,
+ul {
+  margin: 0;
+}
+
+.is-disabled {
+  pointer-events: none;
+  cursor: none;
+}
+
+
+body {
+  overflow-x: hidden;
+  font-family: $opensans;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1text,
+.h2text,
+.h3text,
+.h4text,
+.h5text,
+.h6text {
+  font-family: $playfair;
+}
+
+h1,
+.h1text,
+h2,
+.h2text,
+h3,
+.h3text {
+  font-weight: 900;
+}
+
+.no-scroll {
+  overflow: hidden;
+}

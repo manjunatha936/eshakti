@@ -1,0 +1,84 @@
+@mixin bp($size) {
+  @if $size == "phone" {
+    @media (min-width: $xs) {
+      @content;
+    }
+  }
+
+  @if $size == "phone-lg" {
+    @media (min-width: $sm) {
+      @content;
+    }
+  }
+
+  @if $size == "tab" {
+    @media (min-width: $tab) {
+      @content;
+    }
+  }
+
+  @if $size == "desktop" {
+    @media (min-width: $desktop) {
+      @content;
+    }
+  }
+
+  @if $size == "desktop-1200" {
+    @media (min-width: $xl) {
+      @content;
+    }
+  }
+
+  @if $size == "desktop-lg" {
+    @media (min-width: $desktop-lg) {
+      @content;
+    }
+  }
+
+  @if $size == "hd" {
+    @media (min-width: $mxl) {
+      @content;
+    }
+  }
+}
+
+@mixin bpmax($size) {
+  @if $size == "phone" {
+    @media (max-width: $sm - 0.1px) and (min-width: $xs) {
+      @content;
+    }
+  }
+
+  @if $size == "phone-lg" {
+    @media (max-width: $tab - 0.1px) {
+      @content;
+    }
+  }
+
+  @if $size == "tab" {
+    @media (max-width: $desktop - 0.1px) {
+      @content;
+    }
+  }
+
+  @if $size == "desktop" {
+    @media (max-width: $xl - 0.1px) {
+      @content;
+    }
+  }
+
+  @if $size == "desktop-1200" {
+    @media (max-width: $desktop-lg - 0.1px) {
+      @content;
+    }
+  }
+
+  @if $size == "desktop-lg" {
+    @media (max-width: $mxl - 0.1px) {
+      @content;
+    }
+  }
+}
+
+
+

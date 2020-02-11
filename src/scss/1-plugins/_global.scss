@@ -1,0 +1,35 @@
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-size: 14px;
+}
+
+ul,
+ol {
+  list-style-type: none;
+}
+
+.container {
+  &-web {
+    @include bp("desktop-1200") {
+      max-width: 1110px;
+    }
+  }
+}
+
+.fnt-300 {
+  font-weight: 300;
+}
+
+.fnt-500 {
+  font-weight: 500;
+}
+
+.fnt-700 {
+  font-weight: 700;
+}
+
+.fnt-800 {
+  font-weight: 800;
+}
