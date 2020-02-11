@@ -47,3 +47,49 @@ h3,
 .no-scroll {
   overflow: hidden;
 }
+
+a {
+  display: inline-block;
+
+  &:hover {
+    color: inherit;
+  }
+}
+
+.web-link {
+  @extend .fnt-700;
+  color: $text-black;
+  line-height: 1.7;
+  border-bottom: 1px solid;
+}
+
+.discount-bar {
+  font-size: 11px;
+  line-height: 1.64;
+  color: $title-black;
+  text-align: center;
+  padding: 11px;
+
+  a {
+    @extend .fnt-700;
+    color: $bnr-red;
+
+    &::after,
+    &::before {
+      content: " ";
+      white-space: pre;
+    }
+
+    &:last-of-type:not(:first-of-type) {
+      color: $title-black;
+      font-weight: normal;
+      text-decoration: underline;
+      margin-left: 3px;
+
+      &::after,
+      &::before {
+        display: none;
+      }
+    }
+  }
+}
