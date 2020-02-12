@@ -1,5 +1,48 @@
 .web-banner {
-    height: 700px;
+    height: 620px;
     padding-top: 130px;
     background-image: linear-gradient(184deg, #eae9e7 0%, #e7e6e4 100%);
+
+    @media only screen and (min-width: 1300px) {
+        height: 700px;
+        padding-top: 150px;
+    }
+
+    &__textwrap {
+        max-width: 47.25%;
+        flex: 0 0 47.25%;
+    }
+
+    &__imgwrap {
+        max-width: 52.25%;
+        flex: 0 0 52.25%;
+        height: 100%;
+    }
+
+    &__img {
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        background: #e9e8e6;
+
+        img {
+            height: 100%;
+        }
+    }
+
+    &__text {
+        max-width: 335px;
+
+        .h2heading {
+            line-height: 1.05;
+        }
+
+        span {
+            color: $bnr-red;
+        }
+
+        p {
+            margin: 20px 0 25px;
+        }
+    }
 }

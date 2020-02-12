@@ -1,0 +1,134 @@
+.home-cards {
+    padding-top: 60px;
+
+    .swiper-pagination {
+        bottom: 85px;
+    }
+
+    .swiper-pagination-bullet {
+        background-color: $white;
+        opacity: 0.48;
+    }
+
+    .swiper-pagination-bullet-active {
+        background-color: $white;
+        opacity: 1;
+    }
+
+    .white-text {
+        color: $white;
+    }
+
+    &__tag {
+        @extend .fnt-600;
+
+        position: absolute;
+        z-index: 2;
+        left: 20px;
+        top: 20px;
+        font-size: 10px;
+        line-height: 1.4;
+        opacity: 0.67;
+        padding: 5px 12px;
+        border-radius: 12px;
+        background: rgba(0, 0, 0, 0.06);
+    }
+
+    &__box-md,
+    &__box-lg,
+    &__box-sm,
+    &__slide,
+    &__media {
+        margin-bottom: 60px;
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+    }
+    
+    &__box-lg {
+        height: 560px;
+        padding-right: 60px;
+        justify-content: center;
+
+        .home-cards__content {
+            padding: 15px;
+            width: 270px;
+            max-width: 100%;
+            padding-top: 40px;
+        }
+    }
+
+    &__slide {
+        height: 530px;
+    }
+
+    &__media {
+        height: 520px;
+    }
+
+    &__slide,
+    &__media {
+        justify-content: center;
+
+        .home-cards__content {
+            text-align: center;
+            padding: 15px;
+            width: 350px;
+            max-width: 100%;
+            padding-top: 25px;
+
+            p {
+                max-width: 238px;
+                width: 100%;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    &__box-sm {
+        height: 400px;
+    }
+
+    &__box-md {
+        height: 500px;
+    }
+
+    &__box-sm,
+    &__box-md {
+        justify-content: flex-end;
+        padding-right: 45px;
+
+        &.text-center {
+            justify-content: center;
+            padding: 0;
+        }
+
+        .home-cards__title {
+            font-size: 28px;
+        }
+
+        .home-cards__content {
+            padding: 15px;
+            width: 220px;
+            max-width: 100%;
+            padding-top: 25px;
+        }
+    }
+
+    &__title {
+        margin-bottom: 12px;
+    }
+
+    &__desc {
+        line-height: 1.43;
+    }
+
+    &--white {
+        background: $white;
+    }
+
+    &--grey {
+        background: #f1f1f1;;
+    }
+}

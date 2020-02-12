@@ -63,6 +63,10 @@ a {
   border-bottom: 1px solid;
 }
 
+.hght100 {
+  height: 100%;
+}
+
 .discount-bar {
   font-size: 11px;
   line-height: 1.64;
@@ -129,6 +133,7 @@ a {
   width: 100%;
   transition: all 0.3s ease;
   top: 40px;
+  z-index: 10;
 
   @media only screen and (min-width: 1300px) {
     padding: 23px 35px;
