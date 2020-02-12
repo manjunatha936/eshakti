@@ -1,1 +1,59 @@
-include discount-bar.pug
+header.web-header
+    .web-header__top
+        .web-header__logo
+            a(href="index.html")
+                img(src="assets/images/logo.svg", alt="")
+        form.web-header__search
+            input(type="text" placeholder="Search Products")
+            button(type="submit")
+                i.icon-search
+
+        ul.web-header__toplinks
+            li
+                a(href="#")
+                    span
+                        i.icon-account
+                    p Sign in
+            li
+                a(href="#")
+                    span
+                        sup 3
+                        i.icon-wishlist
+                    p Wishlist
+            li
+                a(href="#")
+                    span
+                        sup 3
+                        i.icon-cart
+                    p Cart
+    .web-header__bottom.container
+        ul.web-header__menulinks(data-breaks="5,4,4")
+            li
+                a(href="#") Top Sellers
+            li
+                a(href="#") Dresses
+            li
+                a(href="#") Tops
+            li
+                a(href="#") Bottoms
+            li
+                a(href="#") Jumpsuits
+            li
+                a(href="#") Styled for Work
+            li
+                a(href="#") Bridal
+            li
+                a(href="#") LBD
+            li
+                a(href="#") Party
+            li
+                a(href="#") Shop by brand
+            li
+                a(href="#") Sale
+            li
+                a(href="#") Overstock
+            li
+                a(href="#") Fabric
+
+
+

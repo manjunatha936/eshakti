@@ -10,14 +10,6 @@ ol {
   list-style-type: none;
 }
 
-.container {
-  &-web {
-    @include bp("desktop-1200") {
-      max-width: 1110px;
-    }
-  }
-}
-
 .fnt-300 {
   font-weight: 300;
 }
@@ -26,10 +18,34 @@ ol {
   font-weight: 500;
 }
 
+.fnt-600 {
+  font-weight: 600;
+}
+
 .fnt-700 {
   font-weight: 700;
 }
 
 .fnt-800 {
   font-weight: 800;
+}
+
+.h2heading {
+  font-size: 42px;
+}
+
+.h3heading {
+  font-size: 32px;
+}
+
+// section-headings
+
+.section-heading {
+  font-size: 26px;
+  line-height: 36px;
+  
+  @include bp("tab") {
+    font-size: 36px;
+    line-height: 46px;
+  }
 }
