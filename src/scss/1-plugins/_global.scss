@@ -10,20 +10,16 @@ ol {
   list-style-type: none;
 }
 
-.container {
-  &-web {
-    @include bp("desktop-1200") {
-      max-width: 1110px;
-    }
-  }
-}
-
 .fnt-300 {
   font-weight: 300;
 }
 
 .fnt-500 {
   font-weight: 500;
+}
+
+.fnt-600 {
+  font-weight: 600;
 }
 
 .fnt-700 {
