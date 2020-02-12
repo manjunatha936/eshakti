@@ -6,3 +6,6 @@ const bannerslider = new BannerSwiper();
 
 import CardSwiper from "./home/card-section.js";
 const cardslider = new CardSwiper();
+
+import FeedbackSwiper from "./home/feedback.js";
+const feedbackslider = new FeedbackSwiper();
