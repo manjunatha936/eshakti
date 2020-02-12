@@ -1,3 +1,23 @@
 .web-banner
-    .container
-        a(href="#").web-link Watch fx video
+    .container-fluid.hght100
+        .row.align-items-center.hght100
+            .col-sm-5.order-sm-1.web-banner__textwrap
+                .web-banner__text
+                    h1.h2heading Unlike others, we 
+                        span customize 
+                        | for you easily.
+                    p Deliver clothing that is made just for you. It is not enough that fashion looks good on the mannequin - it needs to look good on YOU!
+                    a.web-link(href="#") Watch fx video
+            .col-sm-7.order-sm-0.web-banner__imgwrap
+                .js-homebnr-slider.swiper-container.hght100
+                    .swiper-wrapper
+                        .swiper-slide
+                            .web-banner__img
+                                img(src="./assets/images/home/banner-img1.png", alt="")
+                        .swiper-slide
+                            .web-banner__img
+                                img(src="./assets/images/home/banner-img2.png", alt="")
+                        .swiper-slide
+                            .web-banner__img
+                                img(src="./assets/images/home/banner-img1.png", alt="")
+                        
