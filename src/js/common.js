@@ -3,6 +3,7 @@ import "../scss/main.scss";
 // import "@babel/polyfill";
 
 import "../pug/index.pug";
+import "../pug/repeat-customer.pug";
 import "../pug/about.pug";
 import "../pug/contact.pug";
 

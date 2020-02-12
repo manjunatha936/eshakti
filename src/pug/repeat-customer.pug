@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+html(lang="en")
+
+  head
+    include ./base/head.pug
+    +head("Repeat-customer")
+
+  body
+    include ./base/discount-bar.pug
+    include ./base/header.pug
+
+    main
+      include ./layouts/home/main.pug
+      
+      // whole-sale
+      include ./layouts/home/whole-sale.pug
+
+
+    include ./base/footer.pug

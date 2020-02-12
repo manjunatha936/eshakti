@@ -38,6 +38,25 @@ ol {
   font-size: 32px;
 }
 
+.fnt-xs {
+  font-size: 12px;
+  line-height: 22px;
+  @include bp("tab") {
+    font-size: 13px;
+  }
+}
+
+.fnt-sm {
+  font-size: 12px;
+  line-height: 22px;
+
+  @include bp("tab") {
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+
+
 // section-headings
 
 .section-heading {
