@@ -2,13 +2,26 @@ section
     .container
         .row
             .col-12
-                .sale-info
-                    .sale-info__banner
+                .sales-wrapper
+                    //START: SALES BANNER
+                    .sales-wrapper__banner
                         picture
-                            source(srcset="../assets/images/home/banner-holesale.png")
-                            img(src="../assets/images/home/banner-holesale.png" alt="wholesale-Banner")
-                    .sale-info__content
-                        h3 eShakti is now available for wholesale
-                        p Let us help you grow your business.
+                            source(media="(max-width: 767px)" srcset="../assets/images/home/banner-holesale-sm.png")
+                            img.img360(src="../assets/images/home/banner-holesale.png" alt="wholesale-Banner")
+                    
+                    //START: SALES CONTENT
+                    .sales-wrapper__content
+                        h3.sales-heading.txt-primary
+                            | eShakti is now
+                            br
+                            | available for wholesale
+                        p.section-des.mb-3.mb-md-2 Let us help you grow your business.
+                        a.ekt-email.flex-center(href="javascript:void(0);")
+                            i.icon-mail
+                            span.ml-2 wholesale@eshakti.com
+                        .text-link.text-click.fnt-sm.mt-4.mt-md-2
+                            span To learn more
+                            a.web-link.ml-2(href="javascript:void(0);") click here
+                            
 
             //- .sale-banner(style="background-image: url('aasets/image/home/banner-holesale.png')")

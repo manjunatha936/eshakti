@@ -3,34 +3,44 @@
 $circle-clr : #f5f5f5;
 
 .fnt-lxs {
-    font-size: 13px;
-    line-height: 23px;
+    font-size: 12px;
+    line-height: 22px;
+    @include bp("tab") {
+        font-size: 13px;
+        line-height: 23px;
+    }
 }
 
 .main-footer {
-    padding: 3rem 0;
+    padding: 1.8rem 0;
     border-top: 1px solid $footer-brder;
-
+    @include bpmax("phone-lg") {
+        text-align: center;
+        margin-bottom: .6rem;
+    }
+    @include bp("tab") {
+        padding: 3rem 0;
+    }
     &__heading {
-        font-size: 12px;
+        font-size: 14px;
         line-height: 22px;
         font-family: $opensans;
         @extend .fnt-700;
-        margin-bottom: .8rem;
-        
-        @include bp("tab") {
-            font-size: 14px;
-            line-height: 24px;
-        }
     }
 
     /** footer nav-list **/
     &__list {
+        @include bpmax("tab") {
+            margin-top: .8rem;
+        }
         &__item {
             @extend .fnt-lxs;
             margin-bottom: .8rem;
             &:last-child {
                 margin-bottom: 0;
+            }
+            @include bpmax("tab") {
+                margin-bottom: .6rem;
             }
         }
     }
@@ -40,7 +50,19 @@ $circle-clr : #f5f5f5;
 
 .app-block-list {
     display: flex;
-    justify-content: flex-end;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    @include bpmax("phone-lg") {
+        justify-content: center;
+        margin-top: 1.8rem;
+        margin-bottom: 1.8rem;
+    }
+    @include bp("tab") {
+        justify-content: flex-start;
+    }
+    @include bp("tab-lg") {
+        justify-content: flex-end;
+    }
 }
 .footer-link {
     color: $black;
@@ -50,8 +72,15 @@ $circle-clr : #f5f5f5;
 
 .social-list {
     display: flex;
-    justify-content: flex-end;
-
+    @include bpmax("phone-lg") {
+        justify-content: center;
+    }
+    @include bp("tab") {
+        justify-content: flex-start;
+    }
+    @include bp("tab-lg") {
+        justify-content: flex-end;
+    }
     &__item {
         margin-right: 1.5rem;
         &:last-child {
@@ -70,11 +99,6 @@ $circle-clr : #f5f5f5;
     border-radius: 50%;
     background: $circle-clr;
     @extend .flex-center;
-}
-
-.app-block-list {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
 }
 
 /** Copyrights **/

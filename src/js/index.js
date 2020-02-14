@@ -6,3 +6,6 @@ const bannerslider = new BannerSwiper();
 
 import CardSwiper from "./home/card-section.js";
 const cardslider = new CardSwiper();
+
+import realFashion from "./home/fashion.js";
+const realfashionslider = new realFashion();

@@ -3,10 +3,16 @@
         position: relative;
         background: $white;
         margin-top: -2.8rem;
-        margin-left: 2.2rem;
+        margin-left: 1.5rem;
         padding: 1.2rem 1.5rem;
         z-index: 1;
         padding-bottom: 0;
+        @include bp("tab") {
+            margin-left: 1rem;
+        }
+        @include bp("tab-lg") {
+            margin-left: 2.2rem;
+        }
     }
     &__inner-content {
         @extend .fnt-xs;
@@ -20,4 +26,6 @@
     color: $card-title;
     letter-spacing: $letter-spacing02;
     @extend .fnt-600;
+    font-size: 14px;
+    line-height: 24px;
 }

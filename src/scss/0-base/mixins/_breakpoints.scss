@@ -16,6 +16,12 @@
       @content;
     }
   }
+  
+  @if $size == "tab-lg" {
+    @media (min-width: $lg) {
+      @content;
+    }
+  }
 
   @if $size == "desktop" {
     @media (min-width: $desktop) {
@@ -51,6 +57,12 @@
 
   @if $size == "phone-lg" {
     @media (max-width: $tab - 0.1px) {
+      @content;
+    }
+  }
+  
+  @if $size == "tab-sm" {
+    @media (max-width: $lg - 0.1px) {
       @content;
     }
   }
