@@ -13,7 +13,10 @@ class FeedbackSwiper {
         slidesPerView: 1,
         spaceBetween: 0,
         loop: true,
-        effect: 'fade'
+        effect: 'fade',
+        fadeEffect: {
+          crossFade: true
+        }
     });
   }
 }

@@ -13,7 +13,10 @@ class BannerSwiper {
         slidesPerView: 1,
         spaceBetween: 0,
         loop: true,
-        effect: 'fade'
+        effect: 'fade',
+        autoplay: {
+          delay: 3000,
+        }
     });
   }
 }

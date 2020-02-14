@@ -61,6 +61,12 @@
     }
   }
 
+  @if $size == "tab-mid" {
+    @media (max-width: $lg - 0.1px) {
+      @content;
+    }
+  }
+
   @if $size == "desktop" {
     @media (max-width: $xl - 0.1px) {
       @content;

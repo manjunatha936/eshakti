@@ -1,0 +1,31 @@
+
+.section-des {
+    color: $text-black;
+}
+
+.img310x456{
+    height: 456px;
+    width: 310px;
+    max-height: 100%;
+    max-width: 100%;
+}
+.img12x12 {
+    height: 12px;
+    width: 12px;
+}
+
+// blockquotes
+
+blockquote {
+    margin-bottom: 0;
+}
+.author-quotes {
+    letter-spacing: $letter-spacing01;
+    font-style: italic;
+}
+.author-info {
+    letter-spacing: $letter-spacing02;
+    color: $black;
+    display: flex;
+    align-items: center;
+}

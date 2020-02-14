@@ -1,0 +1,23 @@
+.ekt-card {
+    &__box {
+        position: relative;
+        background: $white;
+        margin-top: -2.8rem;
+        margin-left: 2.2rem;
+        padding: 1.2rem 1.5rem;
+        z-index: 1;
+        padding-bottom: 0;
+    }
+    &__inner-content {
+        @extend .fnt-xs;
+        color: $black;
+    }
+}
+
+.ek-card-title {
+    font-family: $opensans;
+    text-transform: uppercase;
+    color: $card-title;
+    letter-spacing: $letter-spacing02;
+    @extend .fnt-600;
+}

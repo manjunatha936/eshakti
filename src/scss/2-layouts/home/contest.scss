@@ -1,0 +1,139 @@
+.home-contest {
+    padding: 60px 0;
+    background-image: linear-gradient(180deg, #ffffff 0%, #f9fafa 100%);
+
+    @include bpmax("desktop") {
+        padding: 50px 0;
+    }
+
+    @include bpmax("tab-mid") {
+        padding: 45px 0; 
+    }
+
+    @include bpmax('phone-lg') {
+        padding: 30px 0 45px;
+        
+        .container {
+            padding-right: 25px;
+            padding-left: 25px;
+        }
+    }
+
+    &__text {
+        flex: 0 0 37%;
+        max-width: 37%;
+        padding-right: 25px;
+        padding-bottom: 7.5%;
+
+        @include bpmax('tab-mid') {
+            padding-bottom: 0;
+        }
+
+        @include bpmax('phone-lg') {
+            padding: 0;
+            width: 90%;
+            flex: none;
+            max-width: none;
+            margin: 0 auto;
+            margin-bottom: 45px;
+            text-align: center;
+        }
+
+        p {
+            line-height: 1.43;
+            margin: 15px 0 35px;
+
+            @include bpmax('tab-mid') {
+                margin: 15px 0 20px;
+            }
+
+            @include bpmax('phone-lg') {
+                margin: 15px 0 30px;
+            }
+        }
+    }
+
+    &__img {
+        flex: 0 0 63%;
+        max-width: 63%;
+        display: flex;
+        padding-bottom: 40px;
+        align-items: flex-start;
+
+        @include bpmax('tab-mid') {
+            padding-bottom: 25px;
+        }
+
+        @include bpmax('phone-lg') {
+            width: 100%;
+            max-width: none;
+            flex: none;
+        }
+    }
+
+    &__imgbox {
+        margin-left: 25px;
+        position: relative;
+        padding-bottom: 58%;
+        background-size: cover;
+        background-position: center;
+
+        &:first-of-type {
+            margin-left: 0;
+        }
+
+        &:nth-of-type(1) {
+            width: 51%;
+
+            @include bpmax('desktop') {
+                width: 57.5%;
+            }
+        }
+
+        &:nth-of-type(2) {
+            width: 37%;
+            margin-top: 55px;
+
+            @include bpmax('desktop') {
+                width: 42.5%;
+            }
+
+            @include bpmax('tab-mid') {
+                margin-top: 40px;
+            }
+        }
+    }
+
+    &__namebox {
+        position: absolute;
+        left: 0;
+        bottom: -40px;
+        padding: 15px 25px 13px;
+        min-width: 190px;
+        background: $white;
+        color: #15171a;
+
+        @include bpmax('tab-mid') {
+            min-width: 0;
+            bottom: -25px;
+            padding: 5px 12px 7px;
+        }
+
+        p {
+            font-size: 16px;
+
+            @include bpmax('tab-mid') {
+                font-size: 15px;
+            }
+        }
+
+        label {
+            font-size: 13px;
+            line-height: 1.4;
+            letter-spacing: 0.33px;
+            opacity: 0.8;
+            font-style: italic;
+            margin: 0;
+        }
+    }
+}

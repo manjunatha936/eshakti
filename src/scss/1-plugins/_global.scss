@@ -31,9 +31,60 @@ ol {
 }
 
 .h2heading {
-  font-size: 42px;
+  font-size: 32px;
+  
+  @include bp("tab") {
+    font-size: 37px;
+  }
+  
+  @include bp("desktop-1200") {
+    font-size: 42px;
+  }
 }
 
 .h3heading {
-  font-size: 32px;
+  font-size: 28px;
+   
+  @include bp("tab") {
+    font-size: 30px;
+  }
+  
+  @include bp("desktop-1200") {
+    font-size: 32px;
+  } 
+}
+
+.fnt-xs {
+  font-size: 12px;
+  line-height: 22px;
+  @include bp("tab") {
+    font-size: 13px;
+  }
+}
+
+.fnt-sm {
+  font-size: 12px;
+  line-height: 22px;
+
+  @include bp("tab") {
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+
+
+// section-headings
+
+.section-heading {
+  font-size: 26px;
+  line-height: 1.3;
+  color: $title-black;
+
+  @include bp("tab") {
+    font-size: 30px;
+  }
+  
+  @include bp("desktop-1200") {
+    font-size: 36px;
+  }
 }
