@@ -1,7 +1,40 @@
 .web-banner {
-    height: 620px;
+    height: 480px;
     padding-top: 130px;
     background-image: linear-gradient(184deg, #eae9e7 0%, #e7e6e4 100%);
+
+    @include bpmax('phone') {
+        height: auto;
+    }
+
+    @include bpmax('phone-lg') {
+        .container-fluid {
+            padding-right: 30px;
+            padding-left: 30px;
+        }
+    }
+
+    @include bpmax('phone') {
+        .container-fluid {
+            padding-right: 25px;
+            padding-left: 25px;
+        }
+    }
+
+    @media only screen and (max-width: 369.9px) {
+        .container-fluid {
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+    }
+
+    @include bp('tab') {
+        height: 550px;
+    }
+
+    @include bp('desktop') {
+        height: 620px;
+    }
 
     @media only screen and (min-width: 1300px) {
         height: 700px;
@@ -11,12 +44,26 @@
     &__textwrap {
         max-width: 47.25%;
         flex: 0 0 47.25%;
+
+        @include bpmax('phone') {
+            max-width: none;
+            flex: none;
+            width: 100%;
+            margin-bottom: 40px;
+        }
     }
 
     &__imgwrap {
         max-width: 52.25%;
         flex: 0 0 52.25%;
         height: 100%;
+
+        @include bpmax('phone') {
+            max-width: none;
+            flex: none;
+            width: 100%;
+            height: 400px;
+        }
     }
 
     &__img {
@@ -33,8 +80,22 @@
     &__text {
         max-width: 335px;
 
+        @include bpmax('tab') {
+            max-width: 295px;
+        }
+
+        @include bpmax('phone') {
+            max-width: none;
+        }
+
         .h2heading {
             line-height: 1.05;
+            color: $bnr-black;
+
+            @include bpmax('phone') {
+                width: 300px;
+                max-width: 100%;
+            }
         }
 
         span {

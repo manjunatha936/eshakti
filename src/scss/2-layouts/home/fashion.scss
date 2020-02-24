@@ -5,18 +5,17 @@
 
 .img310x456{
     width: 240px;
-    height: 353px;
     max-height: 100%;
     max-width: 100%;
+
     @include bp("tab-lg") {
         width: 310px;
-        height: 456px;
     }
 }
 
-.img12x12 {
-    height: 12px;
-    width: 12px;
+.img14x14 {
+    height: 14px;
+    width: 14px;
 }
 
 // blockquotes
@@ -24,13 +23,25 @@
 blockquote {
     margin-bottom: 0;
 }
+
 .author-quotes {
     letter-spacing: $letter-spacing01;
     font-style: italic;
+    line-height: 1.46;
+    height: 57px;
+    overflow: hidden;
+    display: inline-block;
 }
+
 .author-info {
     letter-spacing: $letter-spacing02;
     color: $black;
     display: flex;
     align-items: center;
+    margin-top: 15px;
+    line-height: 1.46;
+
+    span {
+        margin-right: 12px;
+    }
 }

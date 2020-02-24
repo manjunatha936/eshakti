@@ -18,6 +18,11 @@ class HeaderInteractions {
         }
     });
 
+    $(window).on('load resize', function () {
+      var discountht = $('.discount-bar').outerHeight();
+      $('.web-header').css('top', discountht);
+  });
+
     var data_breaks = $('.web-header__menulinks').attr('data-breaks').split(',');
     var break_count = 0;
     for(var i=0;i<data_breaks.length-1;i++) {
@@ -25,6 +30,16 @@ class HeaderInteractions {
         break_count = break_count + break_val;
         $(".web-header__menulinks > li:nth-of-type(" + (break_count + i) + ")").after("<li class='seperator'></li>");
     }
+
+    $(document).on('click', '.web-header__search:not(.search-open)', function(){
+      $(this).addClass('search-open');
+      $(this).parent().append("<div class='overlay'></div>")
+    });
+
+    $(document).on('click', '.web-header__top .overlay', function(){
+      $('.web-header__search').removeClass('search-open');
+      $(this).remove();
+    });
   }
 }
 

@@ -4,14 +4,38 @@
         background: $white;
         margin-top: -2.8rem;
         margin-left: 1.5rem;
-        padding: 1.2rem 1.5rem;
+        padding: 20px;
         z-index: 1;
-        padding-bottom: 0;
+
         @include bp("tab") {
             margin-left: 1rem;
         }
+
         @include bp("tab-lg") {
             margin-left: 2.2rem;
+        }
+
+        @include bpmax("tab-mid") {
+            margin-top: 0;
+            margin-left: 0;
+            padding: 15px 10px;
+        }
+
+        blockquote {
+            position: relative;
+            
+            &::before {
+                content: "\e90b";
+                font-family: 'icomoon';
+                color: #f5f5f5;
+                position: absolute;
+                left: -8px;
+                z-index: -1;
+                font-size: 150%;
+                top: -4px;
+                line-height: 1;
+                font-style: normal;
+            }
         }
     }
     &__inner-content {
@@ -27,5 +51,6 @@
     letter-spacing: $letter-spacing02;
     @extend .fnt-600;
     font-size: 14px;
-    line-height: 24px;
+    line-height: 1.43;
+    margin-bottom: 12px;
 }

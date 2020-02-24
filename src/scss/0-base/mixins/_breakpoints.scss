@@ -50,7 +50,7 @@
 
 @mixin bpmax($size) {
   @if $size == "phone" {
-    @media (max-width: $sm - 0.1px) and (min-width: $xs) {
+    @media (max-width: $sm - 0.1px) {
       @content;
     }
   }
@@ -69,6 +69,12 @@
 
   @if $size == "tab" {
     @media (max-width: $desktop - 0.1px) {
+      @content;
+    }
+  }
+
+  @if $size == "tab-mid" {
+    @media (max-width: $lg - 0.1px) {
       @content;
     }
   }

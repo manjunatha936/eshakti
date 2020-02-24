@@ -1,0 +1,194 @@
+.home-contest {
+    padding: 60px 0;
+    background-image: linear-gradient(180deg, #ffffff 0%, #f9fafa 100%);
+
+    @include bpmax("desktop") {
+        padding: 50px 0;
+    }
+
+    @include bpmax("tab-mid") {
+        padding: 45px 0; 
+    }
+
+    @include bpmax('phone-lg') {
+        padding: 30px 0 45px;
+        
+        .container {
+            padding-right: 25px;
+            padding-left: 25px;
+        }
+    }
+
+    
+    @media only screen and (max-width: 369.9px) {
+        .container {
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+    }
+
+    @include bpmax('phone') {
+        padding: 35px 0;
+    }
+
+    &__text {
+        flex: 0 0 37%;
+        max-width: 37%;
+        padding-right: 25px;
+        padding-bottom: 7.5%;
+
+        @include bpmax('tab-mid') {
+            padding-bottom: 0;
+        }
+
+        @include bpmax('phone-lg') {
+            padding: 0;
+            width: 90%;
+            flex: none;
+            max-width: none;
+            margin: 0 auto;
+            margin-bottom: 45px;
+            text-align: center;
+        }
+
+        @include bpmax('phone') {
+            margin-bottom: 30px;
+        }
+
+        p {
+            line-height: 1.43;
+            margin: 15px 0 35px;
+
+            @include bpmax('tab-mid') {
+                margin: 15px 0 20px;
+            }
+
+            @include bpmax('phone-lg') {
+                margin: 15px 0 30px;
+            }
+
+            @include bpmax('phone') {
+                margin: 15px 0;
+            }
+        }
+    }
+
+    &__img {
+        flex: 0 0 63%;
+        max-width: 63%;
+        display: flex;
+        padding-bottom: 40px;
+        align-items: flex-start;
+
+        @include bpmax('tab-mid') {
+            padding-bottom: 25px;
+        }
+
+        @include bpmax('phone-lg') {
+            width: 100%;
+            max-width: none;
+            flex: none;
+        }
+
+        @include bpmax('phone') {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        @media only screen and (max-width: 369.9px) {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+
+    &__imgbox {
+        margin-left: 25px;
+        position: relative;
+        padding-bottom: 58%;
+        background-size: cover;
+        background-position: center;
+
+        @include bpmax('phone') {
+            margin-left: 10px;
+        }
+
+        &:first-of-type {
+            margin-left: 0;
+        }
+
+        &:nth-of-type(1) {
+            width: 51%;
+
+            @include bpmax('desktop') {
+                width: 57.5%;
+            }
+
+            @include bpmax('phone') {
+                width: 55%;
+            }
+        }
+
+        &:nth-of-type(2) {
+            width: 37%;
+            margin-top: 55px;
+
+            @include bpmax('desktop') {
+                width: 42.5%;
+            }
+
+            @include bpmax('tab-mid') {
+                margin-top: 40px;
+            }
+
+            @include bpmax('phone') {
+                margin-top: 25px;
+                width: 45%;
+            }
+        }
+    }
+
+    &__namebox {
+        position: absolute;
+        left: 0;
+        bottom: -40px;
+        padding: 15px 25px 13px;
+        min-width: 190px;
+        background: $white;
+        color: #15171a;
+
+        @include bpmax('tab-mid') {
+            min-width: 0;
+            bottom: -25px;
+            padding: 5px 12px 7px;
+        }
+
+        @include bpmax('phone') {
+            padding: 5px 10px 5px;
+        }
+
+        p {
+            font-size: 16px;
+
+            @include bpmax('tab-mid') {
+                font-size: 15px;
+            }
+
+            @include bpmax('phone') {
+                font-size: 14px;
+            }
+        }
+
+        label {
+            font-size: 13px;
+            line-height: 1.4;
+            letter-spacing: 0.33px;
+            opacity: 0.8;
+            font-style: italic;
+            margin: 0;
+
+            @include bpmax('phone') {
+                font-size: 12px;
+            }
+        }
+    }
+}

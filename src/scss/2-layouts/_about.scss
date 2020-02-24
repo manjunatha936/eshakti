@@ -1,0 +1,23 @@
+.main-div {
+    width: 400px;
+    height: 2000px;
+    background: red;
+}
+
+.scroll-div {
+    position: fixed;
+    top: calc(100% - 100px);
+    background: blue;
+    width: 400px;
+    height: 100vh;
+    overflow: hidden;
+    transition: all 0.3s ease;
+
+    &.active {
+        overflow: auto;
+    }
+}
+
+.content {
+    height: 2000px;
+}
