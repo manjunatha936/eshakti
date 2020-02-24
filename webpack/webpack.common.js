@@ -3,7 +3,7 @@ const webpack = require("webpack");
 
 // Plugins
 const HtmlWebPackPlugin = require("html-webpack-plugin");
-const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
+const TerserPlugin = require("terser-webpack-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
@@ -35,12 +35,14 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: [{ loader: "babel-loader" }]
+        use: [
+          { loader: 'babel-loader' },
+        ]
       },
       {
         test: /\.js$/,
-        use: ["source-map-loader"],
-        enforce: "pre"
+        use: ['source-map-loader'],
+        enforce: 'pre',
       },
       {
         test: /\.(eot|woff|woff2|svg|ttf)([\?]?.*)$/,
@@ -92,10 +94,16 @@ module.exports = {
   ],
   optimization: {
     minimizer: [
-      new UglifyJsPlugin({
-        cache: true,
+      new TerserPlugin({
         parallel: true,
-        sourceMap: true // set to true if you want JS source maps
+        cache: true,
+        extractComments: true,
+        terserOptions: {
+          ecma: 5,
+          ie8: false,
+          compress: true,
+          warnings: true,
+        },
       }),
       new OptimizeCSSAssetsPlugin({}),
       // Make sure that the plugin is after any plugins that add images

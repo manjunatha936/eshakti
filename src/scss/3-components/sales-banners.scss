@@ -1,3 +1,74 @@
-.sale-info {
-    margin-bottom: 4rem;
+.sales-wrapper {
+    margin-bottom: 3.5rem;
+    position: relative;
+    @include bpmax("phone-lg") {
+        background: #ececec;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    @include bp("tab") {
+        margin-bottom: 4rem;
+    }
+    
+    // content
+    &__content {
+        text-align: center;
+        @include bpmax("phone-lg") {
+            padding: 2.5rem 1rem;
+        }
+        @include bp("tab") {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 350px;
+        }
+    }
+}
+
+.img360 {
+    object-fit: contain;
+    max-width: 100%;
+    max-height: 100%;
+    @include bpmax("phone-lg") {
+        width: 700px;
+    }
+    @include bp("tab") {
+        height: 220px;
+    }
+    @include bp("tab-lg") {
+        height: 300px;
+    }
+    @include bp("desktop-1200") {
+        height: 360px;
+    }
+}
+
+.sales-heading {
+    font-size: 28px;
+    line-height: 38px;
+    @extend .fnt-800;
+}
+
+.ekt-email {
+    @extend .fnt-600;
+    color: $text-black;
+    .icon-mail {
+        font-size: 12px;
+        position: relative;
+        top: 1px;
+    }
+}
+
+.text-click {
+    position: relative;
+    @include bp("tab") {
+        bottom: -.5rem;
+    }
+    @include bp("tab-lg") {
+        bottom: -3rem;
+    }
+    @include bp("desktop-1200") {
+        bottom: -4rem;
+    }
 }

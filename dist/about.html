@@ -1,11 +1,126 @@
-<!DOCTYPE js>
-<html>
+<!DOCTYPE html><!DOCTYPE js>
+<html lang="en">
   <head>
-    <title>Welcome</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+        <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"/>
+        <title>eShakti | About us</title>
+        <meta name="description" content=""/>
+        <meta name="keywords" content=""/>
   <link href="./css/main.css" rel="stylesheet"></head>
-  <body class="text-center d-flex">
-    <div class="d-block m-auto">
-      <h2>A bad ass Webpack 4 boilerplate that uses Pug, Scss and ES6+</h2><img class="webpack-diagram" src="./assets/images/webpack.png"/>
+  <body>
+    <header class="web-header">
+      <div class="web-header__top">
+        <div class="web-header__logo"><a href="index.html"><img src="assets/images/logo.svg" alt=""/></a></div>
+        <form class="web-header__search">
+          <input type="text" placeholder="Search Products"/>
+          <button type="submit"><i class="icon-search"></i></button>
+        </form>
+        <ul class="web-header__toplinks">
+          <li><a href="#"><span><i class="icon-account"></i></span>
+              <p>Sign in</p></a></li>
+          <li><a href="#"><span><sup>3</sup><i class="icon-wishlist"></i></span>
+              <p>Wishlist</p></a></li>
+          <li><a href="#"><span><sup>3</sup><i class="icon-cart"></i></span>
+              <p>Cart</p></a></li>
+        </ul>
+      </div>
+      <div class="web-header__bottom container">
+        <ul class="web-header__menulinks" data-breaks="5,4,4">
+          <li><a href="#">Top Sellers</a></li>
+          <li><a href="#">Dresses</a></li>
+          <li><a href="#">Tops</a></li>
+          <li><a href="#">Bottoms</a></li>
+          <li><a href="#">Jumpsuits</a></li>
+          <li><a href="#">Styled for Work</a></li>
+          <li><a href="#">Bridal</a></li>
+          <li><a href="#">LBD</a></li>
+          <li><a href="#">Party</a></li>
+          <li><a href="#">Shop by brand</a></li>
+          <li><a href="#">Sale</a></li>
+          <li><a href="#">Overstock</a></li>
+          <li><a href="#">Fabric</a></li>
+        </ul>
+      </div>
+    </header>
+    <main>
+      <div class="d-block m-auto container container-web">
+        <h2>A bad ass Webpack 4 boilerplate that uses Pug, Scss and ES6+</h2>
+      </div>
+    </main>
+    <footer>
+      <div class="container">
+        <div class="row main-footer">
+          <!--START: CONTACT-US-->
+          <div class="main-footer__linkwrap col-12 col-lg-8">
+            <div class="main-footer__linkbox">
+              <h6 class="main-footer__heading">Contact Us</h6>
+              <ul class="main-footer__list">
+                <li class="main-footer__list__item"><a class="footer-link" href="javascript:voi.main-footer__listd(0);">855 374 2584<span class="d-block">(Mon-Fri 8am to 4pm PST)</span></a></li>
+                <li class="main-footer__list__item"><a class="footer-link" href="javascript:void(0);">Drop a message </a></li>
+              </ul>
+            </div>
+            <!--START: ORDERS-->
+            <div class="main-footer__linkbox">
+              <h6 class="main-footer__heading">Orders</h6>
+              <ul class="main-footer__list">
+                <li class="main-footer__list__item"><a class="footer-link" href="javascript:voi.main-footer__listd(0);">Payments & Shipping</a></li>
+                <li class="main-footer__list__item"><a class="footer-link" href="javascript:void(0);">Returns & Refunds </a></li>
+              </ul>
+            </div>
+            <!--START: PARTNER-->
+            <div class="main-footer__linkbox">
+              <h6 class="main-footer__heading">Partner</h6>
+              <ul class="main-footer__list">
+                <li class="main-footer__list__item"><a class="footer-link" href="javascript:voi.main-footer__listd(0);">Affiliate Program</a></li>
+                <li class="main-footer__list__item"><a class="footer-link" href="javascript:void(0);">Wholesale          </a></li>
+              </ul>
+            </div>
+            <!--START: ABOUT-->
+            <div class="main-footer__linkbox">
+              <h6 class="main-footer__heading">About</h6>
+              <ul class="main-footer__list">
+                <li class="main-footer__list__item"><a class="footer-link" href="javascript:voi.main-footer__listd(0);">eShakti</a></li>
+                <li class="main-footer__list__item"><a class="footer-link" href="javascript:voi.main-footer__listd(0);">How it works</a></li>
+                <li class="main-footer__list__item"><a class="footer-link" href="javascript:voi.main-footer__listd(0);">Size Chart</a></li>
+                <li class="main-footer__list__item"><a class="footer-link" href="javascript:voi.main-footer__listd(0);">Media Speak</a></li>
+                <li class="main-footer__list__item"><a class="footer-link" href="javascript:void(0);">Customers Speak</a></li>
+              </ul>
+            </div>
+          </div>
+          <!--START: SOCAIL LIST-->
+          <div class="col-12 col-lg-4 text-right">
+            <ul class="social-list">
+              <li class="social-list__item"><a class="social-circle" href="javascript:void(0);"><i class="icon-facebook"></i></a></li>
+              <li class="social-list__item"><a class="social-circle" href="javascript:void(0);"><i class="icon-twitter"></i></a></li>
+              <li class="social-list__item"><a class="social-circle" href="javascript:void(0);"><i class="icon-pinterest"></i></a></li>
+              <li class="social-list__item"><a class="social-circle" href="javascript:void(0);"><i class="icon-tumblr"></i></a></li>
+              <li class="social-list__item"><a class="social-circle" href="javascript:void(0);"><i class="icon-instagram"></i></a></li>
+            </ul>
+            <!-- START: APPS INFO-->
+            <div class="app-block-list"><a href="javascript:void(0);"><img class="mr-3" src="./assets/images/footer/app-store.png" alt="App-store"/></a><a href="javascript:void(0);"><img src="./assets/images/footer/google-play.png" alt="Google play"/></a></div><a class="location-dropmodal d-lg-inline-block d-none" href="#" data-toggle="modal" data-target="#exampleModal">USA</a>
+          </div>
+          <div class="col-12 col-lg-4 col-lg-12 text-center text-lg-left accredition-img"><img src="./assets/images/footer/accredited-business.png" alt="Google play"/><a class="location-dropmodal d-lg-none" href="#" data-toggle="modal" data-target="#exampleModal">USA</a></div>
+        </div>
+      </div>
+      <!--START: COPYRIGHT-->
+      <div class="bottom-footer text-center">
+        <p>© Copyright 2019 eShakti</p>
+      </div>
+    </footer>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"></button><span aria-hidden="true">×</span>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" type="button" data-dismiss="modal">Close</button>
+            <button class="btn btn-primary" type="button">Save changes</button>
+          </div>
+        </div>
+      </div>
     </div>
   <script type="text/javascript" src="./js/common.js"></script><script type="text/javascript" src="./js/about.js"></script></body>
 </html>

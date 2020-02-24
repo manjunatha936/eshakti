@@ -9,3 +9,6 @@ const cardslider = new CardSwiper();
 
 import FeedbackSwiper from "./home/feedback.js";
 const feedbackslider = new FeedbackSwiper();
+
+import realFashion from "./home/fashion.js";
+const realfashionslider = new realFashion();

@@ -3,13 +3,13 @@ html(lang="en")
 
   head
     include ./base/head.pug
-    +head("About us")
+    +head("About")
 
   body
+    include ./base/discount-bar.pug
     include ./base/header.pug
 
     main
-      .d-block.m-auto.container.container-web
-        h2 A bad ass Webpack 4 boilerplate that uses Pug, Scss and ES6+
+      include ./layouts/about/main.pug
 
     include ./base/footer.pug

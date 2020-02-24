@@ -9,6 +9,10 @@
         padding-top: 45px;
     }
 
+    @include bpmax('phone') {
+        padding-top: 35px;
+    }
+
     @include bpmax('phone-lg') {
         .container {
             padding-right: 25px;
@@ -23,11 +27,26 @@
         }
     }
 
+    @media only screen and (max-width: 369.9px) {
+        .container {
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+    }
+
     .swiper-pagination {
         bottom: 85px;
 
         @include bpmax('tab-mid') {
             bottom: 60px;
+        }
+
+        @include bpmax('phone-lg') {
+            bottom: 45px;
+        }
+
+        @include bpmax('phone') {
+            bottom: 35px;
         }
     }
 
@@ -85,6 +104,10 @@
 
         @include bpmax('tab-mid') {
             margin-bottom: 30px;
+        }
+
+        @include bpmax('phone') {
+            margin-bottom: 20px;
         }
 
         .home-cards__boxdata {
@@ -153,6 +176,44 @@
 
     &__media {
         padding-bottom: 46.85%;
+
+        @include bpmax('phone-lg') {
+            padding-bottom: 156%;
+
+            .home-cards__boxdata {
+                align-items: flex-end;
+                padding-bottom: 20%;
+            }
+        }
+
+        @include bpmax('phone') {
+            padding-bottom: 156%;
+
+            .home-cards__boxdata {
+                align-items: flex-end;
+                padding-bottom: 15%;
+            }
+        }
+
+        @media only screen and (max-width: 399.9px) {
+            .home-cards__boxdata {
+                align-items: flex-end;
+                padding-bottom: 10%;
+            }
+        }
+
+        a {
+            color: $title-black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 25px;
+
+            i {
+                font-size: 23px;
+                margin-right: 8px;
+            }
+        }
     }
 
     &__slide,
@@ -196,7 +257,7 @@
         }
 
         @include bpmax('phone') {
-            padding-bottom: 92.5%;
+            padding-bottom: 82%;
         }
     }
 
@@ -249,6 +310,14 @@
             @include bpmax('phone-lg') {
                 width: 200px;
             }
+
+            @include bpmax('phone') {
+                width: 170px;
+            }
+
+            @media only screen and (max-width: 369.9px) {
+                width: 160px;
+            }
         }
     }
 
@@ -262,6 +331,10 @@
 
         @include bpmax('tab-mid') {
             font-size: 13px;
+        }
+
+        @include bpmax('phone') {
+            font-size: 12px;
         }
     }
 

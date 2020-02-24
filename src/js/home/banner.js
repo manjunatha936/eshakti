@@ -15,7 +15,7 @@ class BannerSwiper {
         loop: true,
         effect: 'fade',
         autoplay: {
-          delay: 3000,
+          delay: 3000
         }
     });
   }

@@ -19,6 +19,18 @@
         }
     }
 
+    
+    @media only screen and (max-width: 369.9px) {
+        .container {
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+    }
+
+    @include bpmax('phone') {
+        padding: 35px 0;
+    }
+
     &__text {
         flex: 0 0 37%;
         max-width: 37%;
@@ -39,6 +51,10 @@
             text-align: center;
         }
 
+        @include bpmax('phone') {
+            margin-bottom: 30px;
+        }
+
         p {
             line-height: 1.43;
             margin: 15px 0 35px;
@@ -49,6 +65,10 @@
 
             @include bpmax('phone-lg') {
                 margin: 15px 0 30px;
+            }
+
+            @include bpmax('phone') {
+                margin: 15px 0;
             }
         }
     }
@@ -69,6 +89,16 @@
             max-width: none;
             flex: none;
         }
+
+        @include bpmax('phone') {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        @media only screen and (max-width: 369.9px) {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
     }
 
     &__imgbox {
@@ -77,6 +107,10 @@
         padding-bottom: 58%;
         background-size: cover;
         background-position: center;
+
+        @include bpmax('phone') {
+            margin-left: 10px;
+        }
 
         &:first-of-type {
             margin-left: 0;
@@ -87,6 +121,10 @@
 
             @include bpmax('desktop') {
                 width: 57.5%;
+            }
+
+            @include bpmax('phone') {
+                width: 55%;
             }
         }
 
@@ -100,6 +138,11 @@
 
             @include bpmax('tab-mid') {
                 margin-top: 40px;
+            }
+
+            @include bpmax('phone') {
+                margin-top: 25px;
+                width: 45%;
             }
         }
     }
@@ -119,11 +162,19 @@
             padding: 5px 12px 7px;
         }
 
+        @include bpmax('phone') {
+            padding: 5px 10px 5px;
+        }
+
         p {
             font-size: 16px;
 
             @include bpmax('tab-mid') {
                 font-size: 15px;
+            }
+
+            @include bpmax('phone') {
+                font-size: 14px;
             }
         }
 
@@ -134,6 +185,10 @@
             opacity: 0.8;
             font-style: italic;
             margin: 0;
+
+            @include bpmax('phone') {
+                font-size: 12px;
+            }
         }
     }
 }

@@ -19,7 +19,7 @@ class CardSwiper {
           crossFade: true
         },
         pagination: {
-            el: '.swiper-pagination',
+          el: '.swiper-pagination'
         }
     });
 
@@ -50,12 +50,12 @@ class CardSwiper {
               var attr = $(this).attr(screenArr[i]);
               if(typeof attr !== typeof undefined && attr !== false) {
                 $(this).css("background-image", "url(" + $(this).attr(screenArr[i]) + ")");
-                return false;
+                break;
               }
             }
           }
           else {
-            $(this).css("background-image", "url(" + $(this).attr(dataval) + ")")
+            $(this).css("background-image", "url(" + $(this).attr(dataval) + ")");
           }
         });
       }
