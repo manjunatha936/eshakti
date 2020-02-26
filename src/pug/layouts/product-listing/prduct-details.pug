@@ -1,0 +1,80 @@
+section.product-listing
+    .container
+        .row
+            .col-md-7
+            .col-md-5
+                .dress-details
+                    span.prod-label ZAPELLE
+                    p.head-prd.py-2 Pleat Front Cotton Chambray Wrap Dress
+                    span.txt-gry-12 Style #CL0062013
+                    span.d-block.prd-price.mt-3 $64.95
+                    p.txt-gry-12.pt-1.pb-4 or 3 interest-free payments of $18 with Affirm. Learn more
+                        a.learn-link(href="#") Learn more
+                    span.txt-gry-12 2 reviews
+                    p.fnt-xs.drk-gry.py-4 Pleated cotton chambray brings draped flair to our flattering frock that boasts a cross-front with ties at the waist for a wrap silhouette. Available: Additional 3 neckline, 4 sleeve type... Product Details
+                        a.learn-link.fnt-700(href="#")  Product Details
+                    .prd-color.txt-gry-12.pb-3
+                        span Color: 
+                        span Indigo chambray
+                .prd-size.fnt-xs
+                    ul#pills-tab.nav.d-flex.justify-content-between.pt-2(role='tablist')
+                        p.prd-sub-txt.my-auto Select Size
+                        li.nav-item
+                            a#pills-home-tab.nav-link.active(data-toggle='pill', href='#pills-home', role='tab', aria-controls='pills-home', aria-selected='true') Standard Size
+                        li.nav-item
+                            a#pills-profile-tab.nav-link(data-toggle='pill', href='#pills-profile', role='tab', aria-controls='pills-profile', aria-selected='false') Custom size(Charges apply)
+                        
+                #pills-tabContent.tab-content.mb-2
+                    mixin dropdown(text)
+                        .drop-container.mb-3.mb-md-4
+                                .drop-title
+                                    span.prd-sub-txt.text-capitalize.fnt-600=text
+                                    img.pl-1(src="./assets/images/i.png", alt="")
+                                .select-style
+                                    span.triangle-icon
+                                    select.txt-gry-12
+                                        option(disable) select
+                                        option(value='saab') Saab
+                                        option(value='mercedes') Mercedes
+                                        option(value='audi') Audi
+                    #pills-home.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='pills-home-tab')
+                        .measures-drop-wrp.d-flex.flex-wrap.pt-2
+                            +dropdown("Shoulder")
+                            +dropdown("Chest ")
+                    #pills-profile.tab-pane.fade(role='tabpanel', aria-labelledby='pills-profile-tab')
+                        .row
+                            .col-md-10
+                                p.txt-gry-12 (For custom size and/or custom style, a single fee of $9.95 per garment will apply)
+                                    a.learn-link.fnt-700(href="#")  Measure
+                        .row
+                            .col
+                                
+                                .measures-drop-wrp.d-flex.flex-wrap.pt-4
+                                    +dropdown("Shoulder")
+                                    +dropdown("Chest ")
+                                    +dropdown("Bust")
+                                    +dropdown("Under Bust")
+                                    +dropdown("Hip")
+                                    
+                                    
+                p.txt-gry-12 Optional Measurements
+                    img.pl-1(src="./assets/images/i.png", alt="")
+                p.fnt-xs.drk-gry.pt-2 From shoulder high point to 
+                .drop-wrp.d-flex.flex-wrap.pt-3
+                    +dropdown("Waist ")
+                    +dropdown("Waist Point  ")
+                    +dropdown("Knee Point ")
+                .select-Height.d-flex.align-items-center
+                    span.prd-sub-txt.mr-4 Select Height
+                    .select-style.mt-0
+                        span.triangle-icon
+                        select.txt-gry-12
+                            option(disable) select
+                            option(value='saab') Saab
+                            option(value='mercedes') Mercedes
+                            option(value='audi') Audi
+                .btn-wrp.d-flex.justify-content-between
+                    button(type="button") Add to Cart
+                    .share
+                        img.mr-2(src="./assets/images/share.svg", alt="")
+                        span Share
