@@ -1,0 +1,31 @@
+.breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    &__item {
+        font-size: 12px;
+        line-height: 24px;
+        &:before {
+            content: ">";
+            display: inline-block;
+            padding-right: .5rem;
+            padding-left: .5rem;
+            color: #5e5e5e;
+            font-size: 8px;
+        }
+        &:first-child {
+            &:before {
+                display: none;
+            }
+        }
+    }
+    a{
+        color: #5e5e5e;
+        text-decoration: underline;
+        &:hover, &:focus {
+            color: #5e5e5e;   
+        }
+    }
+    &.active {
+        color: $black;
+    }
+}
