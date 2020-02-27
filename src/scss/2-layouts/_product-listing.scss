@@ -220,23 +220,7 @@
         
       
     }
-    .close-icon {
-        position: absolute;
-        top: 5px;
-        right: 5px;
-        width: 20px;
-        height: 20px;
-        z-index: 111;
-         span {
-      
-        }
-        & .left {
-            width: 2px;
-            height: 11px;
-            background-color: #585d61;
-            transform: rotate(75deg);
-        }
-    }
+    
     .saved-img {
         width: 201px;
         height: 336px;
