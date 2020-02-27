@@ -38,6 +38,18 @@ const colorspan = document.querySelectorAll('.color-circle');
 //   }
 // });
 
+function addActive(element) { 
+   element = this; 
+   if (element.classList.contains('active')) 
+   { element.classList.remove('active'); } 
+   else { childrens.forEach(function(e) { 
+      e.classList.remove('active'); 
+   }); 
+   element.classList.add('active'); } 
+}
+
+
+
 // accordian info
 
 class Accordion {
