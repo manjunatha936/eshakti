@@ -52,6 +52,11 @@
 		padding: 10px 25px;
 	}
 
+	@media only screen and (max-width: 369.9px) {
+        padding-right: 15px;
+		padding-left: 15px;
+    }
+
 	.hamburger-menu {
 		padding: 5px;
 		display: flex;

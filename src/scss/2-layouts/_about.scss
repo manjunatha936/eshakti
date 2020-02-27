@@ -4,6 +4,15 @@
     background: red;
 }
 
+body {
+/* Disables pull-to-refresh but allows overscroll glow effects. */
+    overscroll-behavior-y: contain;
+}
+
+html.overflow-hidden {
+    overflow: hidden;
+}
+
 .scroll-div {
     position: fixed;
     top: calc(100% - 100px);
@@ -19,5 +28,15 @@
 }
 
 .content {
-    height: 2000px;
+    height: 100%;
+    color: white;
+    overflow: hidden;
+}
+
+.mystyle .content {
+    overflow: auto;
+
+    // &.attop {
+    //     touch-action: pan-down;
+    // }
 }
