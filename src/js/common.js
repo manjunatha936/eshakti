@@ -4,12 +4,14 @@ import $ from 'jquery'
 import "bootstrap/js/src/modal";
 import "bootstrap/js/src/tab";
 // import "bootstrap/js/src/dropdown";
+// import "bootstrap/js/src/modal"
 
 
 import "../pug/index.pug";
 import "../pug/repeat-customer.pug";
 // import "../pug/about.pug";
 import "../pug/contact.pug";
+import "../pug/productlisting.pug";
 
 
 import HeaderInteractions from "./components/header";

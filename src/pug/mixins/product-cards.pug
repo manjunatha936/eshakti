@@ -1,0 +1,19 @@
+mixin product-card(srcimg, img, name, type, cost)
+    a.product-card(href="javascript:void(0);")
+        .product-card__view(href="#")
+            .card-tag Fx
+            picture
+                source(srcset=srcimg)
+                img.img-fluid.img-scale(src=img)
+            div.product-card__customize
+                img(src="./assets/images/product-listing/product-card/customize.svg" alt="customize")
+                span.fnt-sm.ml-2 Customize style 
+        .product-card__body
+            .product-info
+                span.product-name=name 
+                span.product-type=type
+                span.product-cost=cost
+            .product-conatct
+                div.share
+                div.favourite
+                    img(src="./assets/images/product-listing/product-card/favourite.svg" alt="favourite")
