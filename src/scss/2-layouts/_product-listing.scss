@@ -226,13 +226,15 @@
         right: 5px;
         width: 20px;
         height: 20px;
-        & span {
+        z-index: 111;
+         span {
+      
+        }
+        & .left {
             width: 2px;
             height: 11px;
             background-color: #585d61;
-            & .left {
-                transform: rotate(75deg);
-            }
+            transform: rotate(75deg);
         }
     }
     .saved-img {
