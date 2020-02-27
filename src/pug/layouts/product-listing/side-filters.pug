@@ -3,7 +3,7 @@ aside
     #accordion.mt-4
         .panel-card
             .panel-cardtitle.active COLOR
-            .accordion-content
+            .accordion-content.pb-1
                 ul.color-list
                     li.color-list__item
                         span.color-circle.gray
@@ -24,10 +24,46 @@ aside
 
         .panel-card
             .panel-cardtitle fabric
-            .accordion-content
+            .accordion-content.pb-1
+                label.label-container
+                    | Cotton Spandex
+                    input(type="checkbox" checked="checked")
+                    span.checkmark
+                label.label-container
+                    | Cotton
+                    input(type="checkbox")
+                    span.checkmark
+                label.label-container
+                    | Polyester Crepe de Chine
+                    input(type="checkbox")
+                    span.checkmark
+                label.label-container
+                    | Polyester
+                    input(type="checkbox")
+                    span.checkmark
+                label.label-container
+                    | Rayon
+                    input(type="checkbox")
+                    span.checkmark
+                label.label-container
+                    | Wool Arcylic Polyester
+                    input(type="checkbox")
+                    span.checkmark
         .panel-card
             .panel-cardtitle Price
             .accordion-content
+                label.label-container
+                    | $50 - $80
+                    input(type="checkbox" checked="checked")
+                    span.checkmark
+                label.label-container
+                    | $50 - $80
+                    input(type="checkbox")
+                    span.checkmark
+                label.label-container
+                    | Above $100
+                    input(type="checkbox")
+                    span.checkmark
         .panel-card
             .panel-cardtitle Neckline
             .accordion-content 

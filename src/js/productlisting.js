@@ -26,29 +26,19 @@ gridViewButton.addEventListener('click', () => {
 
 // Color select 
 
-const clrhightlight = document.querySelectorAll('.color-list__item');
-const colorspan = document.querySelectorAll('.color-circle');
+let colorPicker = Array.from(document.querySelectorAll('.color-list__item'));
 
-// clrhightlight.addEventListener('click', () => {
-//   if (colorspan.classList.contains('active')) {
-//     colorspan.classList.remove('active');
-//   } 
-//   else {
-//     colorspan.classList.add('active');
-//   }
-// });
-
-function addActive(element) { 
-   element = this; 
-   if (element.classList.contains('active')) 
-   { element.classList.remove('active'); } 
-   else { childrens.forEach(function(e) { 
-      e.classList.remove('active'); 
-   }); 
-   element.classList.add('active'); } 
+const handleClick = (e) => {
+  e.preventDefault();
+  colorPicker.forEach(node => {
+    node.classList.remove('active');
+  });
+  e.currentTarget.classList.add('active');
+  
 }
-
-
+colorPicker.forEach(node => {
+  node.addEventListener('click', handleClick)
+});
 
 // accordian info
 
