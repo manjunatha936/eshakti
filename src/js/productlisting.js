@@ -29,17 +29,14 @@ gridViewButton.addEventListener('click', () => {
 const clrhightlight = document.querySelectorAll('.color-list__item');
 const colorspan = document.querySelectorAll('.color-circle');
 
-clrhightlight.addEventListener('click', () => {
-  if (colorspan.classList.contains('active')) {
-    colorspan.classList.remove('active');
-    console.log("hell0");
-  } 
-  else {
-    colorspan.classList.add('active');
-    console.log("hello2");
-  }
-  console.log("hello3");
-});
+// clrhightlight.addEventListener('click', () => {
+//   if (colorspan.classList.contains('active')) {
+//     colorspan.classList.remove('active');
+//   } 
+//   else {
+//     colorspan.classList.add('active');
+//   }
+// });
 
 // accordian info
 
