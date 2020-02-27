@@ -1,7 +1,60 @@
 section.product-listing
     .container
+        mixin dropdown(text)
+            .drop-container.mb-3.mb-md-4
+                    .drop-title
+                        span.prd-sub-txt.text-capitalize.fnt-600=text
+                        img.pl-1(src="./assets/images/i.png", alt="")
+                    .select-style
+                        span.triangle-icon
+                        select.txt-gry-12
+                            option(disable) select
+                            option(value='saab') Saab
+                            option(value='mercedes') Mercedes
+                            option(value='audi') Audi
         .row
-            .col-md-7
+            .col-md-7.slider-style-thumb
+                .swiper-container.gallery-top
+                    .swiper-wrapper
+                        .swiper-slide(style='background-image:url(./assets/images/women.png)')
+                        .swiper-slide(style='background-image:url(./assets/images/women.png)')
+                        .swiper-slide(style='background-image:url(./assets/images/women.png)')
+                        .swiper-slide(style='background-image:url(./assets/images/women.png)')
+                        .swiper-slide(style='background-image:url(./assets/images/women.png)')
+                        .swiper-slide(style='background-image:url(./assets/images/women.png)')
+                        .swiper-slide(style='background-image:url(./assets/images/women.png)')
+                        .swiper-slide(style='background-image:url(./assets/images/women.png)')
+                        .swiper-slide(style='background-image:url(./assets/images/women.png)')
+                    .style-guid
+                        .img-card-wrp
+                            p.prod-label.fnt-700.pb-2.mb-1 Neckline
+                            img.img-50(src="./assets/images/style-guid.png", alt="")
+                            p.fnt-xs.drk-gry.pt-2 Mandarin Collar
+                        .img-card-wrp
+                            p.prod-label.fnt-700.pb-2.mb-1 Sleeve Type
+                            img.img-50(src="./assets/images/style-guid.png", alt="")
+                            p.fnt-xs.drk-gry.pt-2 Mandarin Collar
+                        .img-card-wrp
+                            p.prod-label.fnt-700.pb-2.mb-1 Length
+                            img.img-50(src="./assets/images/style-guid.png", alt="")
+                            p.fnt-xs.drk-gry.pt-2 Mandarin Collar
+                        a(href="" type='button', data-toggle='modal', data-target='.bd-example-modal-lg').fnt-12-black Customize Style 
+                    // Add Arrows
+                    //- .swiper-button-next.swiper-button-white
+                    //- .swiper-button-prev.swiper-button-white
+                .swiper-container.gallery-thumbs
+                    .swiper-wrapper
+                        .swiper-slide.thumb-slide(style='background-image:url(./assets/images/women.png)')
+                        .swiper-slide.thumb-slide(style='background-image:url(./assets/images/women.png)')
+                        .swiper-slide.thumb-slide(style='background-image:url(./assets/images/women.png)')
+                        .swiper-slide.thumb-slide(style='background-image:url(./assets/images/women.png)')
+                        .swiper-slide.thumb-slide(style='background-image:url(./assets/images/women.png)')
+                        .swiper-slide.thumb-slide(style='background-image:url(./assets/images/women.png)')
+                        .swiper-slide.thumb-slide(style='background-image:url(./assets/images/women.png)')
+                        .swiper-slide.thumb-slide(style='background-image:url(./assets/images/women.png)')
+                        .swiper-slide.thumb-slide(style='background-image:url(./assets/images/women.png)')
+                        .swiper-slide.thumb-slide(style='background-image:url(./assets/images/women.png)')
+                
             .col-md-5
                 .dress-details
                     span.prod-label ZAPELLE
@@ -25,22 +78,90 @@ section.product-listing
                             a#pills-profile-tab.nav-link(data-toggle='pill', href='#pills-profile', role='tab', aria-controls='pills-profile', aria-selected='false') Custom size(Charges apply)
                         
                 #pills-tabContent.tab-content.mb-2
-                    mixin dropdown(text)
-                        .drop-container.mb-3.mb-md-4
-                                .drop-title
-                                    span.prd-sub-txt.text-capitalize.fnt-600=text
-                                    img.pl-1(src="./assets/images/i.png", alt="")
-                                .select-style
-                                    span.triangle-icon
-                                    select.txt-gry-12
-                                        option(disable) select
-                                        option(value='saab') Saab
-                                        option(value='mercedes') Mercedes
-                                        option(value='audi') Audi
+                    
                     #pills-home.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='pills-home-tab')
+                        .row
+                            .col-md-10
+                                p.txt-gry-12 XS to 6X sizes are available 
+                                    a.learn-link.fnt-700(href="#")  Size Chart
                         .measures-drop-wrp.d-flex.flex-wrap.pt-2
-                            +dropdown("Shoulder")
-                            +dropdown("Chest ")
+                            .size.text-center   
+                                span.size-hd.pb-1 XS
+                                .size-range.d-flex
+                                    label(for="size01").py-2.mr-1.txt-gry-12 0 
+                                    input#size01.d-none(type="checkbox")
+                                    label(for="size02").py-2.txt-gry-12 2
+                                    input#size02.d-none(type="checkbox")
+                            .size.text-center   
+                                span.size-hd.pb-1 S
+                                .size-range.d-flex
+                                    label(for="").py-2.mr-1.txt-gry-12 4 
+                                    input#size03.d-none(type="checkbox")
+                                    label(for="size03").py-2.txt-gry-12 6
+                                    input.d-none(type="checkbox")
+                            .size.text-center   
+                                span.size-hd.pb-1 M
+                                .size-range.d-flex
+                                    label(for="size04").py-2.mr-1.txt-gry-12 8 
+                                    input#size04.d-none(type="checkbox")
+                                    label(for="size05").py-2.txt-gry-12 10
+                                    input#size05.d-none(type="checkbox")
+                            .size.text-center   
+                                span.size-hd.pb-1 L
+                                .size-range.d-flex
+                                    label(for="size06").py-2.mr-1.txt-gry-12 12 
+                                    input#size06.d-none(type="checkbox")
+                                    label(for="size07").py-2.txt-gry-12 14
+                                    input#size07.d-none(type="checkbox")
+                            .size.text-center   
+                                span.size-hd.pb-1 XL
+                                .size-range.d-flex
+                                    label(for="").py-2.mr-1.txt-gry-12 16
+                                    input.d-none(type="checkbox")
+                                    label(for="").py-2.txt-gry-12 18
+                                    input.d-none(type="checkbox")
+                            .size.text-center   
+                                span.size-hd.pb-1 1X
+                                .size-range.d-flex
+                                    label(for="").py-2.mr-1.txt-gry-12 16w
+                                    input.d-none(type="checkbox")
+                                    label(for="").py-2.txt-gry-12 18w
+                                    input.d-none(type="checkbox")
+                            .size.text-center   
+                                span.size-hd.pb-1 2X
+                                .size-range.d-flex
+                                    label(for="").py-2.mr-1.txt-gry-12 20W
+                                    input.d-none(type="checkbox")
+                                    label(for="").py-2.txt-gry-12 22W
+                                    input.d-none(type="checkbox")
+                            .size.text-center   
+                                span.size-hd.pb-1 3X
+                                .size-range.d-flex
+                                    label(for="").py-2.mr-1.txt-gry-12 24W
+                                    input.d-none(type="checkbox")
+                                    label(for="").py-2.txt-gry-12 26W
+                                    input.d-none(type="checkbox")
+                            .size.text-center   
+                                span.size-hd.pb-1 4X
+                                .size-range.d-flex
+                                    label(for="").py-2.mr-1.txt-gry-12 28W
+                                    input.d-none(type="checkbox")
+                                    label(for="").py-2.txt-gry-12 30W
+                                    input.d-none(type="checkbox")
+                            .size.text-center   
+                                span.size-hd.pb-1 5X
+                                .size-range.d-flex
+                                    label(for="").py-2.mr-1.txt-gry-12 32W
+                                    input.d-none(type="checkbox")
+                                    label(for="").py-2.txt-gry-12 34W
+                                    input.d-none(type="checkbox")
+                            .size.text-center   
+                                span.size-hd.pb-1 6X
+                                .size-range.d-flex
+                                    label(for="").py-2.mr-1.txt-gry-12 36W
+                                    input.d-none(type="checkbox")
+                                   
+                            
                     #pills-profile.tab-pane.fade(role='tabpanel', aria-labelledby='pills-profile-tab')
                         .row
                             .col-md-10
@@ -57,13 +178,13 @@ section.product-listing
                                     +dropdown("Hip")
                                     
                                     
-                p.txt-gry-12 Optional Measurements
-                    img.pl-1(src="./assets/images/i.png", alt="")
-                p.fnt-xs.drk-gry.pt-2 From shoulder high point to 
-                .drop-wrp.d-flex.flex-wrap.pt-3
-                    +dropdown("Waist ")
-                    +dropdown("Waist Point  ")
-                    +dropdown("Knee Point ")
+                                p.txt-gry-12 Optional Measurements
+                                    img.pl-1(src="./assets/images/i.png", alt="")
+                                p.fnt-xs.drk-gry.pt-2 From shoulder high point to 
+                                .drop-wrp.d-flex.flex-wrap.pt-3
+                                    +dropdown("Waist ")
+                                    +dropdown("Waist Point  ")
+                                    +dropdown("Knee Point ")
                 .select-Height.d-flex.align-items-center
                     span.prd-sub-txt.mr-4 Select Height
                     .select-style.mt-0
@@ -75,7 +196,7 @@ section.product-listing
                             option(value='audi') Audi
                 .btn-wrp.d-flex.justify-content-between.mt-3.mt-md-4
                     button.px-5.bttn.bttn__orange(type="button") Add to Cart
-                    .share
+                    .share.my-auto
                         img.mr-2(src="./assets/images/share.svg", alt="")
                         span.txt-gry-12 Share
-        button.btn.btn-primary(type='button', data-toggle='modal', data-target='.bd-example-modal-lg') Large modal
+            //- button.btn.btn-primary(type='button', data-toggle='modal', data-target='.bd-example-modal-lg') Large modal
