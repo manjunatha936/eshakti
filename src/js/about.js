@@ -1,6 +1,6 @@
 import $ from 'jquery';
 // import './plugins/jquery-ui.min';
-import './plugins/jquery.mobile';
+// import './plugins/jquery.mobile';
 // import 'hammerjs';
 // import 'jquery-touch-events';
 
