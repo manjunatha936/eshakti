@@ -4,7 +4,7 @@ import $ from 'jquery'
 
 class ProductListing {
     constructor() {
-      if (document.querySelector(".product-listing")){
+      if (document.querySelector(".product-details")){
        
         this.init();
       }
