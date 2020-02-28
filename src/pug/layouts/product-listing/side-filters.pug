@@ -1,11 +1,12 @@
 aside
     h6.filter-title Filter Products by
     #accordion.mt-4
+        //START: COLORS
         .panel-card
             .panel-cardtitle.active COLOR
-            .accordion-content.pb-1
+            .accordion-content.py-1
                 ul.color-list
-                    li.color-list__item
+                    li.color-list__item.active
                         span.color-circle.gray
                     li.color-list__item
                         span.color-circle.blue
@@ -21,7 +22,8 @@ aside
                         span.color-circle.gold
                     li.color-list__item
                         span.color-circle.thick-vilot
-
+        
+        // START: FABRIC
         .panel-card
             .panel-cardtitle fabric
             .accordion-content.pb-1
@@ -49,9 +51,11 @@ aside
                     | Wool Arcylic Polyester
                     input(type="checkbox")
                     span.checkmark
+        
+        //START: PRICE
         .panel-card
             .panel-cardtitle Price
-            .accordion-content
+            .accordion-content.py-1
                 label.label-container
                     | $50 - $80
                     input(type="checkbox" checked="checked")
@@ -64,9 +68,27 @@ aside
                     | Above $100
                     input(type="checkbox")
                     span.checkmark
+        
+        //START: NECKLINE
         .panel-card
             .panel-cardtitle Neckline
-            .accordion-content 
+            .accordion-content.d-flex.py-1
+                .neck-wrapper
+                    input#check2.d-none.style-check(type="radio" name="neckline" data-src="./assets/images/women.png") 
+                    label(for="check2" ).img-wrp
+                        img.img50x50(src="./assets/images/style-img.png", alt="")
+                        span.neck-type Petre Pan
+                .neck-wrapper
+                    input#check3.d-none.style-check(type="radio" name="neckline" data-src="./assets/images/women.png") 
+                    label(for="check3" ).img-wrp
+                        img.img50x50(src="./assets/images/style-img.png", alt="")
+                        span.neck-type Mandarin collar
+                .neck-wrapper
+                    input#check4.d-none.style-check(type="radio" name="neckline" data-src="./assets/images/women.png") 
+                    label(for="check4" ).img-wrp
+                        img.img50x50(src="./assets/images/style-img.png", alt="")
+                        span.neck-type Round Collar
+        
         .panel-card
             .panel-cardtitle Sleevetype
             .accordion-content

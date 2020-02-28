@@ -1,5 +1,5 @@
-/*eslint-disable*/
 
+/*eslint-disable*/
 console.log('Product listing code');
 
 const listViewButton = document.querySelector('.list-view-btn');
@@ -26,7 +26,8 @@ gridViewButton.addEventListener('click', () => {
 
 // Color select 
 
-let colorPicker = Array.from(document.querySelectorAll('.color-list__item'));
+let colorPicker = document.querySelectorAll('.color-list__item');
+// let colorPicker = Array.from(document.querySelectorAll('.color-list__item'));
 
 const handleClick = (e) => {
   e.preventDefault();
@@ -39,6 +40,19 @@ const handleClick = (e) => {
 colorPicker.forEach(node => {
   node.addEventListener('click', handleClick)
 });
+
+
+// Product alert
+
+let productAlert = document.querySelectorAll('.neck-wrapper');
+let alertContent = document.querySelectorAll('.product-alert');
+
+if(productAlert.checked) {
+   console.log("hello");
+}
+else{
+   alert()
+}
 
 // accordian info
 
