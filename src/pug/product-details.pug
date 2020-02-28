@@ -6,11 +6,12 @@ html(lang="en")
     +head("Home")
 
   body
-    //- include ./base/discount-bar.pug
-    //- include ./base/header.pug
+    include ./base/discount-bar.pug
+    include ./base/header.pug
 
-    main.product-listing
+    main.product-details
       include ./layouts/product-listing/product-modal.pug
       include ./layouts/product-listing/prduct-details.pug
+      include ./layouts/product-listing/cards.pug
 
-    //- include ./base/footer.pug
+    include ./base/footer.pug

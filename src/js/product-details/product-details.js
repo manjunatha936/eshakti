@@ -4,7 +4,7 @@ import $ from 'jquery'
 
 class ProductListing {
     constructor() {
-      if (document.querySelector(".product-listing")){
+      if (document.querySelector(".product-details")){
        
         this.init();
       }
@@ -18,8 +18,51 @@ class ProductListing {
                 // alert(imageSource)
             $('.js-style-img').attr('src',imageSource)
         })
+        //thumbs
+        var galleryThumbs = new Swiper('.js-slider-img', {
+            spaceBetween: 10,
+            slidesPerView: 1,
+            freeMode: true,
+            watchSlidesVisibility: true,
+            watchSlidesProgress: true,
+        });
+        
+        var galleryTop = new Swiper('.js-slider-thumb', {
+            spaceBetween: 10,
+            slidesPerView: 4,
+            navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+            },
+            thumbs: {
+              swiper: galleryThumbs
+            }
+          });
 
-        $(".js-btn-proceed").click(function(e){
+
+          //
+
+          var galleryThumbs = new Swiper('.gallery-thumbs', {
+            spaceBetween: 10,
+            slidesPerView: 4.5,
+            loop: true,
+            freeMode: true,
+            loopedSlides: 5, //looped slides should be the same
+            watchSlidesVisibility: true,
+            watchSlidesProgress: true,
+            
+          });
+          var galleryTop = new Swiper('.gallery-top', {
+            spaceBetween: 10,
+            loop:true,
+            loopedSlides: 5, //looped slides should be the same
+            
+            thumbs: {
+              swiper: galleryThumbs,
+            },
+          });
+        //save style
+        $(".js-btn-save").click(function(e){
             // e.preventDefault();
             if($(".savedItem").css("display","none")){
                 $(".savedItem").css({display:"block"})
