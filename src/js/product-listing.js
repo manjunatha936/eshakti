@@ -14,8 +14,8 @@ class ProductListing {
      $(document).ready(function(){
        var imageSource = $('.js-style-img').attr('src');
         $('.style-check').on('click',function(){
-                 imageSource = $(this).attr('data-src')
-                alert(imageSource)
+            imageSource = $(this).attr('data-src');
+                // alert(imageSource)
             $('.js-style-img').attr('src',imageSource)
         })
 

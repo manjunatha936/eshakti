@@ -1,19 +1,20 @@
 .product-modal.modal.fade.bd-example-modal-lg(tabindex='-1' role='dialog' aria-labelledby='myLargeModalLabel' aria-hidden='true')
   .modal-dialog.modal-lg
     .modal-content
-        .container
-            .row.model-head.text-center.justify-content-center
-                .col-md-5
+        button.close-modal(data-dismiss="modal") &times;
+        .container.p-0
+            .row.model-head.text-center.justify-content-center.m-0
+                .custom-modal-heading
                     h4.model-22 Customize your style with eShakti fx
                     p.prd-sub-txt.px-5 You can customize the garment to your style or shop the style 'as shown'.
-            .row.pt-4.mt-2
-                .col-md-4.d-flex.justify-content-center
+            .row.custom-modal-head
+                .col-md-4.d-flex.justify-content-center.custom-modal-head__img
                     .model-img
                         img.js-style-img.style-img.mt-2(src="./assets/images/women.png", alt="")
-                        .share-style
-                            img.share-icon.mr-2(src="./assets/images/share.svg", alt="")
-                            span.txt-gry-12 Share
-                .col-md-8
+                    a(href="#").share-style
+                        i.icon-share
+                        span.txt-gry-12 Share
+                .col-md-8.custom-modal-head__opt
                     .custom-style
                         .style-model-content
                             .style-head.pb-3 Neckline
@@ -105,8 +106,8 @@
                                     label(for="check16").img-wrp
                                         img.style-img(src="./assets/images/style-img.png", alt="")
                                     p.img-txt.pt-2  Petre Pan
-            .row
-                .col.d-flex.justify-content-end.pt-md-3.mt-1
+            .row.custom-modal-foot
+                .col.d-flex.justify-content-end
                     button.js-btn-proceed.bttn.bttn__orange.mr-3(type="button") Proceed with the style
                     button.bttn.bttn__white.ml-1(type="button") Save Style
                 

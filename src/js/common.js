@@ -12,6 +12,7 @@ import "../pug/repeat-customer.pug";
 // import "../pug/about.pug";
 import "../pug/contact.pug";
 import "../pug/productlisting.pug";
+import "../pug/product-listing.pug";
 
 
 import HeaderInteractions from "./components/header";

@@ -5,15 +5,30 @@
         font-size: 13px;
         font-weight: 600;
         line-height: 22px;
-        padding: 9px 21px ;
+        padding: 9px 21px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+
         &__orange {
             color: #ffffff;
             background-color: #f25c50;
+            border: 1px solid transparent;
+
+            &:hover {
+                color: #f25c50;
+                background-color: #ffffff;
+                border: 1px solid #f25c50;
+            }
         }
         &__white {
             color: #2e333d;
             background-color: #ffffff;
             border: 1px solid #141313;  
+
+            &:hover {
+                color: #ffffff;
+                background-color: #2e333d;
+            }
         }
 
     }
@@ -133,10 +148,6 @@
         border-bottom: 1px solid #d7d9dc;
 
     }
-    .modal-lg {
-        width: 58%;
-    }
-    
 }
 .model-22 {
     font-family: $playfair;;
@@ -145,7 +156,8 @@
     letter-spacing: 0.51px;
 }
 .product-modal {
-    overflow-y: scroll;
+    padding-right: 0 !important;
+    
     .share-icon {
         width: 9px;
         height: 11px;
@@ -163,30 +175,32 @@
     .img-wrp {
         width: 50px;
         height: 50px;
-        
+        border: 1px solid transparent;
         background-color: #f1f1f1;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        margin-bottom: 0;
     }
     .img-txt {
         color: #c1c3c6;
         font-size: 10px;
         font-weight: 400;
-        line-height: 12px;
+        line-height: 1.2;
+        text-align: center;
+
         &__inner-txt {
             font-size: 8px;
+            text-transform: uppercase;
+            opacity: 0.69;
+            color: #aeb0b2;
         }
     }
     .img-container {
         width: 50px;
     }
     .modal-lg {
-        @media (min-width: 992px){
-            max-width: 58% !important;
-            
-        }
         .modal-content {
-            padding: 40px 32px 20px !important;
-            // overflow-y: scroll;
-
+            padding-top: 40px;
         }
     }
     .slide-item {
@@ -210,8 +224,22 @@
     }
     .share-style {
         position: absolute;
-        bottom: 0;
-        right:  -35px;
+        bottom: 20px;
+        right: 20px;
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        color: #2e333d;
+
+        i {
+            font-size: 16px;
+            margin-right: 7px;
+        }
+
+        span {
+            font-weight: 600;
+            color: #2e333d;
+        }
     }
     .style-card {
         position: relative;
@@ -232,6 +260,71 @@
         font-weight: 400;
     }
     
+    .modal-content {
+        box-shadow: 0 1px 7px rgba(0, 0, 0, 0.1);
+        border: none;
+        border-radius: 0;
+    }
+
+    .modal-dialog {
+        width: 85%;
+        max-width: 1180px;
+    }
+
+    .prd-sub-txt {
+        text-transform: none;
+        color: #83868a;
+        font-size: 13px;
+        font-weight: normal;
+    }
+
+    .custom-modal-head {
+        padding: 0 17px;
+        margin: 0;
+        margin-top: 30px;
+
+        &__img {
+            max-width: 285px;
+            flex: none;
+        }
+
+        &__opt {
+            max-width: calc(100% - 285px);
+            flex: none;
+        }
+    }
+
+    .custom-modal-foot {
+        border-top: 1px solid #e9eef0;
+        margin: 0;
+        padding: 20px 17px;
+    }
+
+    .custom-modal-heading {
+        flex: none;
+        max-width: 430px;
+        padding: 0 15px;
+    }
+
+    .container {
+        max-width: 100%;
+    }
+
+    .close-modal {
+        width: 32px;
+        height: 32px;
+        color:#a3abb0;
+        font-size: 20px;
+        line-height: 1;
+        border-radius: 50%;
+        padding: 0;
+        border: 1px solid #c2cfd4;
+        background-color: $white;
+        position: absolute;
+        left: calc(100% + 10px);
+        top: 3px;
+        cursor: pointer;
+    }
 }
 .style-img {
     width: 100%;
@@ -242,4 +335,8 @@
         border-radius: 3px;
         border: 1px solid #f25c50;
     }
+}
+.product-listing ~ .modal-backdrop {
+    background-color: #ffffff;
+    opacity: 0.9;
 }
