@@ -25,6 +25,9 @@
     .drk-gry {
         color: #2e333d;
     }
+    .lt-gry {
+        color: #83868a !important;
+    }
     .prod-label {
         font-size: 12px;
         font-weight: 600;
@@ -135,7 +138,16 @@
 
     }
     .modal-lg {
-        width: 58%;
+        // width: 58%;
+        // @media screen and (max-width:992px) {
+        //     width: 58%;
+
+        // }
+        @media screen and (max-width:1336px) {
+            width: 82%;
+            
+            
+        }
     }
     
 }
@@ -180,10 +192,16 @@
         width: 50px;
     }
     .modal-lg {
-        @media (min-width: 992px){
-            max-width: 58% !important;
+        width: 1110px;
+        max-width: 100%;
+        // @media (min-width: 992px){
+        //     max-width: 82% !important;
             
-        }
+        // }
+        // @media (min-width: 1404px){
+        //     max-width: 58% !important;
+            
+        // }
         .modal-content {
             padding: 40px 32px 20px !important;
             // overflow-y: scroll;
