@@ -1,8 +1,6 @@
 import "../scss/main.scss";
 import $ from 'jquery'
 // import "@babel/polyfill";
-// import "bootstrap/js/src/modal";
-// import "bootstrap/js/src/tab";
 // import "bootstrap/js/src/dropdown";
 // import "bootstrap/js/src/modal"
 

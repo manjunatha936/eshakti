@@ -47,12 +47,15 @@ colorPicker.forEach(node => {
 let productAlert = document.querySelectorAll('.neck-wrapper');
 let alertContent = document.querySelectorAll('.product-alert');
 
-if(productAlert.checked) {
-   console.log("hello");
-}
-else{
-   alert()
-}
+const checkbox = document.getElementById('myCheckbox') 
+checkbox.addEventListener('change', (event) => { 
+   if (event.target.checked) { 
+      alert('checked'); 
+   } 
+   else { 
+      alert('not checked'); 
+   } 
+})
 
 // accordian info
 

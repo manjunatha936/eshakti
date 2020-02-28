@@ -1,28 +1,14 @@
 .product-listing {
-    .bttn{
-        border: none;
-        outline: none;
-        font-size: 13px;
-        font-weight: 600;
-        line-height: 22px;
-        padding: 9px 21px ;
-        &__orange {
-            color: #ffffff;
-            background-color: #f25c50;
-        }
-        &__white {
-            color: #2e333d;
-            background-color: #ffffff;
-            border: 1px solid #141313;  
-        }
-
-    }
+    padding-top: 6rem;
     font-style: $opensans;
     .dress-details {
         border-bottom: 1px solid #dfdfdf;
     }
     .drk-gry {
         color: #2e333d;
+    }
+    .lt-gry {
+        color: #83868a !important;
     }
     .prod-label {
         font-size: 12px;
@@ -59,7 +45,7 @@
         font-size: 13px;
         font-weight: 700;
         letter-spacing: 0.3px;
-        text-transform: uppercase;
+        // text-transform: uppercase;
     }
     .nav-link {
         color: #2a2a2a;
@@ -134,7 +120,16 @@
 
     }
     .modal-lg {
-        width: 58%;
+        // width: 58%;
+        // @media screen and (max-width:992px) {
+        //     width: 58%;
+
+        // }
+        @media screen and (max-width:1336px) {
+            width: 82%;
+            
+            
+        }
     }
     
 }
@@ -179,10 +174,16 @@
         width: 50px;
     }
     .modal-lg {
-        @media (min-width: 992px){
-            max-width: 58% !important;
+        width: 1110px;
+        max-width: 100%;
+        // @media (min-width: 992px){
+        //     max-width: 82% !important;
             
-        }
+        // }
+        // @media (min-width: 1404px){
+        //     max-width: 58% !important;
+            
+        // }
         .modal-content {
             padding: 40px 32px 20px !important;
             // overflow-y: scroll;
@@ -232,4 +233,127 @@
         font-weight: 400;
     }
     
+}
+.style-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.slide-img {
+    width: 149px;
+    height: 545px;
+}
+.slide-img-thumb {
+    width: 200px;
+    height: 175px;
+}
+.style-check:checked {
+    & +.img-wrp  {
+        border-radius: 3px;
+        border: 1px solid #f25c50;
+    }
+}
+.slider-style-thumb {
+    .swiper-container {
+        width: 100%;
+        height: 300px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .swiper-slide {
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 40%;
+    }
+    .gallery-top {
+        height: 620px;
+        width: 100%;
+        border: 1px solid #ebebeb;
+        background-color: #ffffff;
+        margin-bottom: 28px;
+    }
+    .gallery-thumbs {
+        height: 20%;
+        box-sizing: border-box;
+        padding: 10px 0;
+    }
+    .gallery-thumbs .swiper-slide {
+        width: 25%;
+        background-position: center;
+        height: 100%;
+        // opacity: 0.4;
+      }
+      .thumb-slide {
+
+        border: 1px solid #ebebeb;
+        background-color: #ffffff;
+      }
+}
+.style-guid {
+    z-index: 11;
+    text-align: center;
+    padding-top: 35px ;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #f9f9f9;
+}
+.img-card-wrp {
+    margin-bottom: 40px;
+}
+.img-50 {
+    width: 70px;
+    height: 70px;
+    border-radius: 75px;
+    background-color: #f0f0f0;
+}
+.fnt-12-black {
+    padding: 13px 18px;
+    color: #2a2a2a;
+    background-color: #efefef;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: underline;
+}
+.style-cards {
+    padding:62px 0 0;
+    // border-bottom: 2px solid #393939;
+}
+.size-hd {
+    color: #3f4145;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.24px;
+    text-transform: uppercase;
+}
+.size {
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+.size-range {
+   & label {
+    width: 40px;
+    height: 31px;
+    // margin-top: auto;
+    border: 1px solid #e0e2e3;
+    background-color: #ffffff;
+    }
+}
+.bttn{
+    border: none;
+    outline: none;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 22px;
+    padding: 9px 21px ;
+    &__orange {
+        color: #ffffff;
+        background-color: #f25c50;
+    }
+    &__white {
+        color: #2e333d;
+        background-color: #ffffff;
+        border: 1px solid #141313;  
+    }
 }

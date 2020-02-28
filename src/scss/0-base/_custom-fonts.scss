@@ -28,46 +28,70 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-account:before {
+.icon-account::before {
     content: "\e900";
 }
-.icon-cart:before {
+.icon-cart::before {
     content: "\e901";
     font-size: 110%;
 }
-.icon-dropdown:before {
+.icon-dropdown::before {
     content: "\e902";
 }
-.icon-facebook:before {
+.icon-facebook::before {
     content: "\e903";
 }
-.icon-instagram:before {
+.icon-instagram::before {
     content: "\e904";
 }
-.icon-pinterest:before {
+.icon-pinterest::before {
     content: "\e905";
 }
-.icon-search:before {
+.icon-search::before {
     content: "\e906";
 }
-.icon-tumblr:before {
+.icon-tumblr::before {
     content: "\e907";
 }
-.icon-twitter:before {
+.icon-twitter::before {
     content: "\e908";
 }
-.icon-wishlist:before {
+.icon-wishlist::before {
     content: "\e909";
 }
-.icon-mail:before {
+.icon-mail::before {
     content: "\e90a";
     color: #f25c50;
 }
-.icon-quote:before {
+.icon-quote::before {
     content: "\e90b";
     color: #f5f5f5;
 }
-.icon-play:before {
+.icon-play::before {
     content: "\e90c";
     color: #e05d21;
+}
+.icon-share::before {
+    content: "\e916";
+}
+.icon-starfill::before {
+    content: "\e90d";
+    color: #abb2b8;
+}
+.icon-info::before {
+    content: "\e90e";
+    color: #979797;
+}
+.icon-star::before {
+    content: "\e90f";
+    color: #979797;
+}
+.icon-custom::before {
+    content: "";
+    width: 1em;
+    height: 1em;
+    background: url('../assets/images/custom.svg');
+    background-size: cover;
+    background-position: center;
+    display: inline-block;
 }
