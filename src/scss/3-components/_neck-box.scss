@@ -1,0 +1,32 @@
+// Neck info
+
+// When it's cheked add this
+
+.style-check:checked {
+    & +.img-wrp img  {
+        border-radius: 3px;
+        border: 1px solid #f25c50;
+    }
+}
+
+// Neckline checkbox
+
+.neck-wrapper {
+    max-width: 50px;
+    text-align: center;
+    margin-right: 1.8rem;
+}
+
+.neck-type {
+    font-size: 10px;
+    line-height: 14px;
+    display: block;
+    color: rgba($color: #787d83, $alpha: .87);
+    margin-top: .5rem;
+}
+
+.img50x50 {
+    height: 50px;
+    width: 50px;
+    object-fit: contain;
+}

@@ -13,7 +13,19 @@ mixin product-card(srcimg, img, name, type, cost)
                 span.product-name=name 
                 span.product-type=type
                 span.product-cost=cost
-            .product-conatct
+            .product-conatct.d-flex
                 div.share
+                    i.icon-share
+                    .tooltip-share
+                        .pinterest.d-flex
+                            i.icon-pinterest.tip-icon
+                            p.prd-sub-txt Pinterest
+                        .facebook.d-flex
+                            i.icon-facebook.tip-icon
+                            p.prd-sub-txt Facebook
+                        .twitter.d-flex
+                            i.icon-twitter.tip-icon
+                            p.prd-sub-txt Twitter
+
                 div.favourite
                     img(src="./assets/images/product-listing/product-card/favourite.svg" alt="favourite")
