@@ -1,9 +1,9 @@
 .filter-title {
-    @extend .fnt-xs;
-    font-family: $opensans;
-    letter-spacing: $letter-spacing03;
-    font-weight: 600;
-    text-transform: uppercase;
+  @extend .fnt-xs;
+  font-family: $opensans;
+  letter-spacing: $letter-spacing03;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
 #accordion {
@@ -56,18 +56,17 @@
        }
     }
     
-    .accordion-content {
-    //    max-height: 0;
-       margin-bottom: 10px;
-    //    visibility: hidden;
-    //    transition: visibility 0.3s;
-        transition: min-height .3s ease;
-        display: none;
-    }
- }
+  .accordion-content {
+  //    max-height: 0;
+      margin-bottom: 10px;
+  //    visibility: hidden;
+  //    transition: visibility 0.3s;
+      transition: min-height .3s ease;
+      display: none;
+  }
+}
 
  // Colors
-
  .color-list {
      padding-top: .5rem;
      &__item{
@@ -186,4 +185,29 @@
     border: solid white;
     border-width: 0 1px 1px 0;
     transform: rotate(45deg);
+}
+
+// clear filter
+
+.panel-clear-container {
+  display: flex;
+  justify-content: space-between;
+  &.active {
+    .clear-select, .clear-color {
+      display: block;
+    }
+  }
+}
+
+.clear-select, .clear-color {
+  text-transform: capitalize;
+  margin-right: 1rem;
+  color: $bnr-red;
+  text-decoration: underline;
+  position: absolute;
+  right: 0;
+  display: none;
+  &:hover {
+    color: $bnr-red;
+  }
 }
