@@ -7,14 +7,6 @@ const listViewButton = document.querySelector('.list-view-btn');
 const gridViewButton = document.querySelector('.grid-view-btn');
 const list = document.querySelector('.js-products');
 
-// listViewButton.addEventListener('click', () => {
-//   // if (productlist.classList.contains('fill')) {
-//   //   productlist.classList.remove('fill');
-//   // } else {
-//   //   productlist.classList.add('fill');
-//   // }
-//   productlist.classList.toggle('fill');
-// });
 let styleSticky = `position:fixed;
             top:0;
             transition: .5s ease all;`
@@ -24,28 +16,29 @@ let styleRelative = `position:absolute;
 let top = `top:0;
             transition: .9s ease top;`
 let heightOfWrapper = list.scrollHeight
-console.log(heightOfWrapper)
+// console.log(heightOfWrapper)
 let stickyELement = document.querySelector('.product-details-sticky');
 stickyHeight = stickyELement.scrollHeight
 let stickyELementOffset = stickyELement.offsetHeight;
-console.log(stickyELementOffset)
-window.addEventListener("scroll", function(event) {
-   var top = this.scrollY;
-   console.log(top)
+// console.log(stickyELementOffset)
+if(window.innerWidth > 767){
+   window.addEventListener("scroll", function(event) {
+      var top = this.scrollY;
+      // console.log(top)
+   
+      if(top >= (stickyELementOffset-50) && top <= (heightOfWrapper - stickyHeight + 400 ) ){
+         stickyELement.style=styleSticky;
+      }
+      else {
+         stickyELement.style=styleRelative;
+   
+      }
+      if( top <stickyELementOffset-50){
+         stickyELement.style=top
+      }
+   });
 
-   if(top >= (stickyELementOffset-50) && top <= (heightOfWrapper - stickyHeight + 400 ) ){
-      stickyELement.style=styleSticky;
-   }
-   else {
-      stickyELement.style=styleRelative;
-
-   }
-   if( top <stickyELementOffset-50){
-      stickyELement.style=top
-   }
-
-
-});
+}
 listViewButton.addEventListener('click', () => {
   list.classList.remove('grid-item');
   list.classList.add('list-item');
