@@ -15,7 +15,7 @@
         font-weight: 700;
         color: $title-black;
         letter-spacing: 1px;
-        margin-bottom: .8rem;
+        margin-bottom: 1rem;
         cursor: pointer;
         text-transform: uppercase;
         position: relative;
@@ -41,7 +41,10 @@
 
        &.active {
           & + .accordion-content {
-             max-height: 500px;
+             min-height: 1px;
+            //  visibility: visible;
+            display: block;
+            transition: min-height .6s ease;
             //  padding: {
             //     top: 20px;
             //     bottom: 20px;
@@ -54,20 +57,37 @@
     }
     
     .accordion-content {
-       max-height: 0;
+    //    max-height: 0;
        margin-bottom: 10px;
-       overflow: hidden;
-       transition: max-height 0.3s, padding 0.3s;;
+    //    visibility: hidden;
+    //    transition: visibility 0.3s;
+        transition: min-height .3s ease;
+        display: none;
     }
  }
 
  // Colors
 
  .color-list {
+     padding-top: .5rem;
      &__item{
         display: inline-block;
         margin: 0 .8rem .6rem 0;
         cursor: pointer;
+        &.active {
+            position: relative;
+            &::before {
+                content: "";
+                position: absolute;
+                height: 30px;
+                width: 30px;
+                border-radius: 50%;
+                top: -4px;
+                left: 50%;
+                transform: translateX(-50%);
+                border: 2px solid rgba(168, 173, 181, 0.29);
+            }
+        }
     }
  }
 
@@ -75,7 +95,7 @@
      height: 22px;
      width: 22px;
      border-radius: 50%;
-     display: inline-block;
+     display: block;
  }
 
  .gray {
@@ -101,4 +121,69 @@
 }
 .thick-vilot {
     background: #cdd1d7;
+}
+
+// Checkbox
+
+.label-container {
+  display: block;
+  position: relative;
+  padding-left: 1.8rem;
+  margin-bottom: .7rem;
+  @extend .fnt-xs;
+  color: $text-black;
+  cursor: pointer;
+  user-select: none;
+  letter-spacing: 0.18px;
+
+//   &:hover input ~ .checkmark {
+//     background-color: #ccc;
+//   }
+
+  input:checked ~ .checkmark {
+    background-color: $bnr-red;
+    border-color: $bnr-red;
+  }
+  /* Hide the browser's default checkbox */
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  background-color: transparent;
+  border: 1px solid #e4e5e6;
+  border-radius: 2px;
+}
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.label-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.label-container .checkmark:after {
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 1px 1px 0;
+    transform: rotate(45deg);
 }

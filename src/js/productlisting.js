@@ -1,5 +1,5 @@
-/*eslint-disable*/
 
+/*eslint-disable*/
 console.log('Product listing code');
 
 const listViewButton = document.querySelector('.list-view-btn');
@@ -26,17 +26,36 @@ gridViewButton.addEventListener('click', () => {
 
 // Color select 
 
-const clrhightlight = document.querySelectorAll('.color-list__item');
-const colorspan = document.querySelectorAll('.color-circle');
+let colorPicker = document.querySelectorAll('.color-list__item');
+// let colorPicker = Array.from(document.querySelectorAll('.color-list__item'));
 
-// clrhightlight.addEventListener('click', () => {
-//   if (colorspan.classList.contains('active')) {
-//     colorspan.classList.remove('active');
-//   } 
-//   else {
-//     colorspan.classList.add('active');
-//   }
-// });
+const handleClick = (e) => {
+  e.preventDefault();
+  colorPicker.forEach(node => {
+    node.classList.remove('active');
+  });
+  e.currentTarget.classList.add('active');
+  
+}
+colorPicker.forEach(node => {
+  node.addEventListener('click', handleClick)
+});
+
+
+// Product alert
+
+let productAlert = document.querySelectorAll('.neck-wrapper');
+let alertContent = document.querySelectorAll('.product-alert');
+
+const checkbox = document.getElementById('myCheckbox') 
+checkbox.addEventListener('change', (event) => { 
+   if (event.target.checked) { 
+      alert('checked'); 
+   } 
+   else { 
+      alert('not checked'); 
+   } 
+})
 
 // accordian info
 
