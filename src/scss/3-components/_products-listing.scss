@@ -27,3 +27,26 @@
         font-weight: 600;
     }
 }
+
+// Product alert
+
+.product-alert {
+    display: none;
+    text-align: center;
+    color: #4c4f52;
+    font-size: 11px;
+    padding: {
+      top: .5rem;
+      bottom: .5rem;
+    }
+    // When its added the cheked class 
+    &.class-cheked {
+      display: block;
+      margin-bottom: 1.5rem;
+    }
+  }
+  
+.text-hilght {
+    font-weight: 600;
+    color: #131415;
+}
