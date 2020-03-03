@@ -14,7 +14,18 @@
                         span.rect-box
                         span.rect-box
                 .filter-sort
-                    span.products-header__label Sortby:
+                    .dropdown.products-header__label
+                        button#dLabel.dropdown-select(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                            | Sortby:
+                            span.caret
+                        ul.dropdown-menu(aria-labelledby='dLabel')
+                            li Option 1
+                            li Option 2
+                            li Option 3
+                            li Option 4
+                            li Option 5
+                            li Option 6
+            
         .product-alert.bg-lght-gray.mx-3
             span
                 | All displayed products are available with

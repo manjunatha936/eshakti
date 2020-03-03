@@ -1,5 +1,5 @@
 // import $ from 'jquery'
-
+import "bootstrap/js/src/dropdown"
 /*eslint-disable*/
 console.log('Product listing code');
 
@@ -15,10 +15,12 @@ let styleRelative = `position:absolute;
             transition: .9s ease all;`;
 let top = `top:0;
             transition: .9s ease top;`
+
 let heightOfWrapper = list.scrollHeight
 // console.log(heightOfWrapper)
 let stickyELement = document.querySelector('.product-details-sticky');
-stickyHeight = stickyELement.scrollHeight
+let stickyHeight = stickyELement.scrollHeight;
+
 let stickyELementOffset = stickyELement.offsetHeight;
 // console.log(stickyELementOffset)
 if(window.innerWidth > 767){
@@ -39,6 +41,13 @@ if(window.innerWidth > 767){
    });
 
 }
+
+$('.dropdown-menu li').on('click', function() {
+   var getValue = $(this).text();
+   $('.dropdown-select').text(getValue);
+ });
+
+
 listViewButton.addEventListener('click', () => {
   list.classList.remove('grid-item');
   list.classList.add('list-item');
