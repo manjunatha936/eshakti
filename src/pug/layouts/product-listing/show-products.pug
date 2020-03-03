@@ -1,26 +1,30 @@
 .row
     .col-md-12.js-product-header
-        .products-header.mb-4.px-3
-            span.products-header__label showing 133 products
+        .products-header.mb-3.mb-md-4.px-1.px-md-3
+            span.products-header__label.mt-4.mt-md-0 Showing 133 products
             .products-header__right-info
-                .products-filter-view.d-flex
+                .product-filter-mob.order-1
+                    span.products-header__label.mobile-label filter
+                .products-filter-view.d-flex.order-3.order-md-2
                     span.products-header__label View:
-                    a(href="javascript:void(0);").list-view-btn
+                    a.view-item(href="javascript:void(0);").list-view-btn.active
                         span.rect-box
                         span.rect-box
-                    a(href="javascript:void(0);").grid-view-btn
+                    a.view-item(href="javascript:void(0);").grid-view-btn
                         span.rect-box
                         span.rect-box
                         span.rect-box
                         span.rect-box
-                .filter-sort
-                    span.products-header__label Sortby:
+                .filter-sort.order-2.order-md-3
+                    span.products-header__label.mobile-label Sortby:
+        
         .product-alert.bg-lght-gray.mx-3
             span
                 | All displayed products are available with
                 span.text-hilght Peter Pan 
                 | Necklines.
-        ol.js-products.row.list-item.px-3
+        
+        ol.js-products.row.list-item.px-2.px-md-3
             li.col-md-6
                 //- img.img-fluid(src="./assets/images/product-listing/product1.png" alt="Product1")
                 include ../../mixins/product-cards.pug
