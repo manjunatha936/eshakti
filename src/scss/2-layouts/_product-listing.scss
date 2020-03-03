@@ -1,43 +1,6 @@
 .product-listing {
-<<<<<<< HEAD
-    .bttn{
-        border: none;
-        outline: none;
-        font-size: 13px;
-        font-weight: 600;
-        line-height: 22px;
-        padding: 9px 21px;
-        cursor: pointer;
-        transition: all 0.2s ease;
-
-        &__orange {
-            color: #ffffff;
-            background-color: #f25c50;
-            border: 1px solid transparent;
-
-            &:hover {
-                color: #f25c50;
-                background-color: #ffffff;
-                border: 1px solid #f25c50;
-            }
-        }
-        &__white {
-            color: #2e333d;
-            background-color: #ffffff;
-            border: 1px solid #141313;  
-
-            &:hover {
-                color: #ffffff;
-                background-color: #2e333d;
-            }
-        }
-
-    }
-    padding-top: 6rem;
-=======
     padding-top: 11rem;
    
->>>>>>> 14c52046509c8a5a68d0a76b6e788c3adbab1f9e
     font-style: $opensans;
     .dress-details {
         border-bottom: 1px solid #dfdfdf;
