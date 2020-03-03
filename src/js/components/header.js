@@ -1,5 +1,6 @@
 /*eslint-disable*/
 import $ from "jquery"
+import "bootstrap/js/src/modal";
 
 class HeaderInteractions {
   constructor() {
@@ -39,6 +40,13 @@ class HeaderInteractions {
     $(document).on('click', '.web-header__top .overlay', function(){
       $('.web-header__search').removeClass('search-open');
       $(this).remove();
+    });
+
+    $('header .dropdown-menulink').on('mouseover', function(){
+      $('header').addClass('menu-hover');
+    });
+    $('header .dropdown-menulink').on('mouseleave', function(){
+      $('header').removeClass('menu-hover');
     });
   }
 }
