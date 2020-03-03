@@ -1,3 +1,4 @@
+// import $ from 'jquery'
 
 /*eslint-disable*/
 console.log('Product listing code');
@@ -7,15 +8,17 @@ const gridViewButton = document.querySelector('.grid-view-btn');
 const colorList = document.querySelectorAll('.view-item');
 const list = document.querySelector('.js-products');
 
-listViewButton.addEventListener('click', () => {
-  list.classList.remove('grid-item');
-  list.classList.add('list-item');
-});
-gridViewButton.addEventListener('click', () => {
-  list.classList.remove('list-item');
-  list.classList.add('grid-item');
-});
 
+listViewButton.addEventListener('click', () => {
+   list.classList.remove('grid-item');
+   list.classList.add('list-item');
+ });
+ 
+ gridViewButton.addEventListener('click', () => {
+   list.classList.remove('list-item');
+   list.classList.add('grid-item');
+ });
+ 
 // Onclick active-state
 
 const handleClickl = (ek) => {
@@ -29,6 +32,41 @@ const handleClickl = (ek) => {
    node.addEventListener('click', handleClickl)
  });
 
+
+ // Side-sticky filters
+
+let styleSticky = `position:fixed;
+            top:0;
+            transition: .5s ease all;`
+let styleRelative = `position:absolute;
+            bottom:0;
+            transition: .9s ease all;`;
+let top = `top:0;
+            transition: .9s ease top;`
+let heightOfWrapper = list.scrollHeight
+// console.log(heightOfWrapper)
+let stickyELement = document.querySelector('.side-filter-sticky');
+stickyHeight = stickyELement.scrollHeight
+let stickyELementOffset = stickyELement.offsetHeight;
+// console.log(stickyELementOffset)
+if(window.innerWidth > 767){
+   window.addEventListener("scroll", function(event) {
+      var top = this.scrollY;
+      // console.log(top)
+   
+      if(top >= (stickyELementOffset-50) && top <= (heightOfWrapper - stickyHeight + 400 ) ){
+         stickyELement.style=styleSticky;
+      }
+      else {
+         stickyELement.style=styleRelative;
+   
+      }
+      if( top <stickyELementOffset-50){
+         stickyELement.style=top
+      }
+   });
+
+}
 
 // Color select 
 
