@@ -1,3 +1,5 @@
+// import "bootstrap/js/src/modal";
+// import "bootstrap/js/src/tab";
 import "bootstrap/js/src/modal";
 import "bootstrap/js/src/tab";
 

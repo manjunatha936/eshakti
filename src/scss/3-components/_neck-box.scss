@@ -3,8 +3,7 @@
 // When it's cheked add this
 
 .style-check:checked {
-    & +.img-wrp img  {
-        border-radius: 3px;
+    & +.img-wrp  {
         border: 1px solid #f25c50;
     }
 }

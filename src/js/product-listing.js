@@ -1,6 +1,7 @@
 
 import Swiper from 'swiper';
 import $ from 'jquery'
+// import $ from 'bootstrap/js/src/mod'
 
 class ProductListing {
     constructor() {
@@ -15,7 +16,7 @@ class ProductListing {
        var imageSource = $('.js-style-img').attr('src');
         $('.style-check').on('click',function(){
                  imageSource = $(this).attr('data-src')
-                alert(imageSource)
+                // alert(imageSource)
             $('.js-style-img').attr('src',imageSource)
         })
 
@@ -28,24 +29,21 @@ class ProductListing {
             // $('.slide-item-wrp').append(ele)
             // if($(".slide-item").length> 4){
                 var swiperStyle = new Swiper('.js-style-slider', {
-                    // loop: true,
+                    loop: true,
                     // nextButton: '.swiper-button-next',
                     // prevButton: '.swiper-button-prev',
-                    slidesPerView: 3,
+                    slidesPerView: 'auto',
                     paginationClickable: true,
                     spaceBetween: 20,
                     breakpoints: {
-                        1920: {
-                            slidesPerView: 3,
-                            spaceBetween: 30
-                        },
-                        1028: {
-                            slidesPerView: 2,
-                            spaceBetween: 30
-                        },
                         480: {
-                            slidesPerView: 1,
                             spaceBetween: 10
+                        },
+                        992: {
+                            spaceBetween: 20
+                        },
+                        1200: {
+                            spaceBetween: 30
                         }
                     }
                 });

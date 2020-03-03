@@ -1,4 +1,3 @@
-// import $ from 'jquery'
 
 /*eslint-disable*/
 console.log('Product listing code');
@@ -43,6 +42,7 @@ let styleRelative = `position:absolute;
             transition: .9s ease all;`;
 let top = `top:0;
             transition: .9s ease top;`
+
 let heightOfWrapper = list.scrollHeight
 // console.log(heightOfWrapper)
 let stickyELement = document.querySelector('.side-filter-sticky');
