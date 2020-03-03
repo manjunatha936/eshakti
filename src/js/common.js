@@ -1,7 +1,7 @@
 import "../scss/main.scss";
 // import "@babel/polyfill";
 // import "bootstrap/js/src/dropdown";
-// import "bootstrap/js/src/modal"
+import "bootstrap/js/src/modal"
 
 
 import "../pug/index.pug";
