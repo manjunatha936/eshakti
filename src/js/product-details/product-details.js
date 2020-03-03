@@ -2,7 +2,8 @@
 import Swiper from 'swiper';
 import $ from 'jquery'
 
-class ProductListing {
+
+class ProductDetais {
     constructor() {
       if (document.querySelector(".product-details")){
        
@@ -12,6 +13,7 @@ class ProductListing {
   
     init() {
      $(document).ready(function(){
+      
        var imageSource = $('.js-style-img').attr('src');
         $('.style-check').on('click',function(){
             imageSource = $(this).attr('data-src');
@@ -101,4 +103,4 @@ class ProductListing {
     }
 }
 
-export default ProductListing;
+export default ProductDetais;
