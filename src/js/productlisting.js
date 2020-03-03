@@ -42,10 +42,15 @@ if(window.innerWidth > 767){
 
 }
 
-$('.dropdown-menu li').on('click', function() {
-   var getValue = $(this).text();
-   $('.dropdown-select').text(getValue);
- });
+
+let dropBtn = document.querySelector('.dropdown-select');
+ let dropItem = document.querySelectorAll('.dropdown-menu li');
+ for(const opt of dropItem){
+   opt.addEventListener("click",(e)=>{
+      let val = e.target.textContent;
+      dropBtn.innerHTML= val
+   })
+ }
 
 
 listViewButton.addEventListener('click', () => {

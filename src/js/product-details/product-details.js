@@ -13,11 +13,29 @@ class ProductDetais {
   
     init() {
      $(document).ready(function(){
-      
+       var neckText,sleeveText,lengthText;
+       neckText = sleeveText = lengthText = "As shown";
+
+        $('.neckline').children('.style-contain').find('.img-container').click(function(){
+          neckText = $(this).children(".img-txt").text()
+          console.log(neckText)
+        })
+        $('.sleeve').children('.style-contain').find('.img-container').click(function(){
+          sleeveText = $(this).children(".img-txt").text()
+          console.log(sleeveText)
+
+        })
+        $('.length').children('.style-contain').find('.img-container').click(function(){
+          lengthText = $(this).children(".img-txt").text()
+          console.log(lengthText)
+
+        })
        var imageSource = $('.js-style-img').attr('src');
         $('.style-check').on('click',function(){
+          
             imageSource = $(this).attr('data-src');
                 // alert(imageSource)
+              
             $('.js-style-img').attr('src',imageSource)
         })
         //thumbs
@@ -69,7 +87,7 @@ class ProductDetais {
             if($(".savedItem").css("display","none")){
                 $(".savedItem").css({display:"block"})
             }
-            const ele = '<li class="slide-item swiper-slide"><div class="style-card"><img class="saved-img" src="'+imageSource+'" alt="" /></div><div class="d-flex pt-2 align-items-center  " ><p class="fnt-11 w-100 pr-2">As shown</p><img class="share-icon mr-2" src="./assets/images/share.svg" alt="" /></div></li>'
+            const ele = '<li class="slide-item swiper-slide"><div class="card-wrp"><div class="style-card"><img class="saved-img" src="'+imageSource+'" alt="" /></div><div class="d-flex pt-2 align-items-center  " ><p class="fnt-11 w-100 pr-2">'+neckText+","+sleeveText+","+lengthText+'</p><img class="share-icon mr-2" src="./assets/images/share.svg" alt=""></div></div></li>'
             // $('.slide-item-wrp').append(ele)
             // if($(".slide-item").length> 4){
                 var swiperStyle = new Swiper('.js-style-slider', {
