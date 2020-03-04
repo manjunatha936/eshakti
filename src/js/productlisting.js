@@ -1,6 +1,7 @@
 // import "jquery"
 // import "./plugins/semantic-stick"
 /*eslint-disable*/
+// import 'bootstrap/js/src/dropdown'
 console.log('Product listing code');
 
 const listViewButton = document.querySelector('.list-view-btn');
