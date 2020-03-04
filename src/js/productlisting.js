@@ -29,7 +29,7 @@ const handleClickl = (ek) => {
  }
  colorList.forEach(node => {
    node.addEventListener('click', handleClickl)
- });
+});
 
 
  // Side-sticky filters
@@ -76,9 +76,9 @@ let colorClear = document.querySelector('.clear-color');
 const handleClick = (e) => {
   e.preventDefault();
   colorPicker.forEach(node => {
-    node.classList.remove('active');
+   //  node.classList.remove('active');
+    e.currentTarget.classList.add('active');
   });
-  e.currentTarget.classList.add('active');
 }
 colorPicker.forEach(node => {
   node.addEventListener('click', handleClick)
@@ -153,3 +153,28 @@ class Accordion {
 const accordion = new Accordion('.panel-cardtitle');
 // for open every use showAll();
 accordion.showAll();
+
+// Mobile side filters
+   const filterMobile = document.querySelector('.product-filter-mob');
+   const filterSide = document.querySelectorAll('.side-filter');
+   const filterBody = document.querySelectorAll('body');
+   const filterClose = document.querySelector('.btn-close');
+
+   filterMobile.addEventListener('click', () => { 
+      filterSide.forEach(node => {
+         // event.stopPropagation();
+         node.classList.add('active');
+      })
+      filterBody.forEach(node => {
+         // event.stopPropagation();
+         node.classList.add('scroll');
+      })
+      // alert(filterSide);
+   });
+   
+   filterClose.addEventListener('click', () => { 
+      filterSide.forEach(node => {
+         // event.stopPropagation();
+         node.classList.remove('active');
+      })
+   });

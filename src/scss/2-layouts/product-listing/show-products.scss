@@ -50,19 +50,23 @@
         color: $black;
         letter-spacing: $letter-spacing03;
         text-transform: uppercase;
+        margin-left: .3rem;
     } 
 }
 
 .filter-sort {
     @include bpmax("phone-lg") {
         position: relative;
+        text-align: center;
     }
 }
 
 .filter-sort, .product-filter-mob {
     @include bpmax("phone-lg") {
         position: relative;
-        padding-right: 2.5rem;
+        padding-right: 1.5rem;
+        margin-right: 1.5rem;
+        width: 33.3%;
         &::after {
             content: "";
             position: absolute;
@@ -84,6 +88,7 @@
     position: relative;
     @include bpmax("phone-lg") {
         align-items: center;
+        width: 33.3%;
     }
     @include bp("tab") {
         padding-right: .8rem;
@@ -191,16 +196,12 @@
         justify-content: space-between;
         .share {
             position: relative;
-            margin-top: 2px;
             margin-right: 15px;
-            .icon-share::before {
-                font-size: 18px;
-                color: #1e1b1b;
-                
-            }
+           i{
+            font-size: 18px !important;
+           }
             .tooltip {
                 padding: 14px 22px;
-
             }
         }
     }
@@ -236,6 +237,14 @@
                 transform: scale(1.1);
             }
         }
+    }
+}
+
+.product-conatct {
+    padding-top: .2rem;
+    i{
+        font-size: 16px;
+        color: rgba(11, 10, 10, .5);
     }
 }
 
@@ -321,7 +330,7 @@
 // Product filters-side sticky
 
 .side-filter-sticky {
-    width:264px;
+    width:255px;
     max-width: 100%;
     background: $white;
     z-index: 1;
