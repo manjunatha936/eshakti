@@ -1,6 +1,7 @@
 
 import Swiper from 'swiper';
 import $ from 'jquery'
+// import $ from 'bootstrap/js/src/mod'
 
 class ProductListing {
     constructor() {

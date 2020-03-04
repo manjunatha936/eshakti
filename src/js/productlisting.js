@@ -1,11 +1,38 @@
-// import $ from 'jquery'
-import "bootstrap/js/src/dropdown"
+
 /*eslint-disable*/
 console.log('Product listing code');
 
 const listViewButton = document.querySelector('.list-view-btn');
 const gridViewButton = document.querySelector('.grid-view-btn');
+const colorList = document.querySelectorAll('.view-item');
 const list = document.querySelector('.js-products');
+
+
+listViewButton.addEventListener('click', () => {
+   list.classList.remove('grid-item');
+   list.classList.add('list-item');
+ });
+ 
+ gridViewButton.addEventListener('click', () => {
+   list.classList.remove('list-item');
+   list.classList.add('grid-item');
+ });
+ 
+// Onclick active-state
+
+const handleClickl = (ek) => {
+   ek.preventDefault();
+   colorList.forEach(node => {
+     node.classList.remove('active');
+   });
+   ek.currentTarget.classList.add('active');
+ }
+ colorList.forEach(node => {
+   node.addEventListener('click', handleClickl)
+ });
+
+
+ // Side-sticky filters
 
 let styleSticky = `position:fixed;
             top:0;
@@ -18,9 +45,8 @@ let top = `top:0;
 
 let heightOfWrapper = list.scrollHeight
 // console.log(heightOfWrapper)
-let stickyELement = document.querySelector('.product-details-sticky');
-let stickyHeight = stickyELement.scrollHeight;
-
+let stickyELement = document.querySelector('.side-filter-sticky');
+stickyHeight = stickyELement.scrollHeight
 let stickyELementOffset = stickyELement.offsetHeight;
 // console.log(stickyELementOffset)
 if(window.innerWidth > 767){
@@ -66,7 +92,6 @@ gridViewButton.addEventListener('click', () => {
 
 let colorPicker = document.querySelectorAll('.color-list__item');
 let colorClear = document.querySelector('.clear-color');
-// let colorPicker = Array.from(document.querySelectorAll('.color-list__item'));
 
 const handleClick = (e) => {
   e.preventDefault();
@@ -75,10 +100,11 @@ const handleClick = (e) => {
   });
   e.currentTarget.classList.add('active');
 }
-
 colorPicker.forEach(node => {
   node.addEventListener('click', handleClick)
 });
+
+// clear the selected colors
 
 colorClear.addEventListener('click', (event) => { 
    colorPicker.forEach(node => {
@@ -86,7 +112,6 @@ colorClear.addEventListener('click', (event) => {
       node.classList.remove('active');
    })
 })
-
 
 // Product alert
 
@@ -98,15 +123,13 @@ checkbox.forEach(node => {
    node.addEventListener('change', (event) => { 
       if (event.target.checked) { 
          alertContent.classList.add('class-cheked');
-         event.target.nextElementSibling.children
-         alert(event.target.nextElementSibling.children);
+         // event.target.nextElementSibling.children
+         // alert(event.target.nextElementSibling.children);
       }
    })
 });
 
-
 //Clear the selcted list
-
 clear.addEventListener('click', (el) => { 
    checkbox.forEach(node => {
       el.stopPropagation();
@@ -115,7 +138,6 @@ clear.addEventListener('click', (el) => {
    });
 })
 
- 
 // accordian info
 class Accordion {
    constructor(heading) {
