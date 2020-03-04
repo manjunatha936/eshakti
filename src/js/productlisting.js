@@ -1,4 +1,5 @@
-
+// import "jquery"
+// import "./plugins/semantic-stick"
 /*eslint-disable*/
 console.log('Product listing code');
 
@@ -33,28 +34,32 @@ const handleClickl = (ek) => {
 
 
  // Side-sticky filters
-
+//  $('.side-filter-sticky')
+//  .sticky({
+//    context: '.product-sticky'
+//  })
+// ;
 let styleSticky = `position:fixed;
-            top:0;
-            transition: .5s ease all;`
+            top:0;`
 let styleRelative = `position:absolute;
-            bottom:0;
-            transition: .9s ease all;`;
-let top = `top:0;
-            transition: .9s ease top;`
+            bottom:0;`;
+let top = `top:0;`
 
 let heightOfWrapper = list.scrollHeight
 // console.log(heightOfWrapper)
+
+let stickyELementwrp = document.querySelector('.product-sticky');
 let stickyELement = document.querySelector('.side-filter-sticky');
+let stickyELementwrpHeight = stickyELementwrp.offsetTop
 stickyHeight = stickyELement.scrollHeight
 let stickyELementOffset = stickyELement.offsetHeight;
-// console.log(stickyELementOffset)
+console.log(stickyELementwrpHeight)
 if(window.innerWidth > 767){
    window.addEventListener("scroll", function(event) {
       var top = this.scrollY;
-      // console.log(top)
+      console.log(top)
    
-      if(top >= (stickyELementOffset-50) && top <= (heightOfWrapper - stickyHeight + 400 ) ){
+      if(top > (stickyELementwrpHeight - 80) && top <= (heightOfWrapper - stickyHeight + 400 ) ){
          stickyELement.style=styleSticky;
       }
       else {
