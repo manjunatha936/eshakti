@@ -25,7 +25,8 @@ module.exports = {
     about: [path.join(paths.dirSrcJs, "about")],
     contact: [path.join(paths.dirSrcJs, "contact")],
     productlisting: [path.join(paths.dirSrcJs, "productlisting")],
-    "product-details": [path.join(paths.dirSrcJs, "product-details")]
+    "product-details": [path.join(paths.dirSrcJs, "product-details")],
+    "repeat-customer": [path.join(paths.dirSrcJs, "repeat-customer")]
   },
   output: {
     path: paths.dirDist,

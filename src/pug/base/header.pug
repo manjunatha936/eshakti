@@ -1,153 +1,166 @@
-header.web-header
-    .web-header__top
-        .web-header__logo
-            .hamburger-menu.d-lg-none
-                span
-                span
-                span
-            a(href="index.html")
-                img(src="assets/images/logo.svg", alt="")
-        form.web-header__search
-            input(type="text" placeholder="Search Products")
-            button(type="submit")
-                i.icon-search
-
-        ul.web-header__toplinks
-            li
-                a(href="#")
+mixin header(status)
+    header.web-header
+        .web-header__top
+            .web-header__logo
+                .hamburger-menu.d-lg-none
                     span
-                        i.icon-account
-                    p Sign in
-            li
-                a(href="#")
                     span
-                        sup 3
-                        i.icon-wishlist
-                    p Wishlist
-            li
-                a(href="#")
                     span
-                        sup 3
-                        i.icon-cart
-                    p Cart
-    .web-header__bottom.container
-        ul.web-header__menulinks(data-breaks="5,4,4")
-            li
-                a(href="#") Top Sellers
-            li.dropdown-menulink
-                a(href="#") Dresses
-                .dropdown-menucontain
-                    .dropdown-menuwrap
-                        .container
-                            .row.justify-content-between
-                                .dropdown-menuwrap__box
-                                    h3 Style
-                                    ul
-                                        li
-                                            a(href="#") Fit - And - Flare
-                                        li
-                                            a(href="#") Shift
-                                        li
-                                            a(href="#") Shealth
-                                        li
-                                            a(href="#") Skirt dresses
-                                        li
-                                            a(href="#") Skirt dresses
-                                        li
-                                            a(href="#") Wrap
-                                .dropdown-menuwrap__box
-                                    h3 Occasion
-                                    ul
-                                        li
-                                            a(href="#") Work
-                                        li
-                                            a(href="#") Vacation
-                                        li
-                                            a(href="#") LBD
-                                        li
-                                            a(href="#") Party
-                                        li
-                                            a(href="#") Special Occasion
-                                        li
-                                            a(href="#") Bridesmaid
-                                        li
-                                            a(href="#") Bride
+                a(href="index.html")
+                    img(src="assets/images/logo.svg", alt="")
+            form.web-header__search
+                input(type="text" placeholder="Search Products")
+                button(type="submit")
+                    i.icon-search
 
-                                .dropdown-menuwrap__box
-                                    h3 Pattern
-                                    ul
-                                        li
-                                            a(href="#") Floral
-                                        li
-                                            a(href="#") Stripe
-                                        li
-                                            a(href="#") Plaid
-                                        li
-                                            a(href="#") Whimsical
-                                        li
-                                            a(href="#") Graphics
-                                        li
-                                            a(href="#") Animal Print
-                                        li
-                                            a(href="#") Colourblock
-                                        li
-                                            a(href="#") Omber
-                                        
-                                .dropdown-menuwrap__box
-                                    h3 Category
-                                    ul
-                                        li
-                                            a(href="#") Emblished
-                                        li
-                                            a(href="#") Knits
-                                        li
-                                            a(href="#") Solids
-                                        li
-                                            a(href="#") Ruffles
-                                        li
-                                            a(href="#") Denim dresses
-                                        li
-                                            a(href="#") Dupioni
-                                        li
-                                            a(href="#") Velvet
+            ul.web-header__toplinks
+                li
+                    a(href="#")
+                        span
+                            i.icon-account
+                        if status
+                            p Steffy
+                        else
+                            p Sign in
 
-                                .dropdown-menuwrap__box
-                                    h3 Get our basics                        
-                                    .dropdown-menuwrap__img
-                                        a.full-link(href="#")
-                                        img(src="assets/images/menu-img1.jpg", alt="")
+                    if status
+                        .profile-dropdown
+                            ul
+                                li
+                                    a(href="#") My profile
+                                li
+                                    a(href="#") Log out
+                                li
+                                    a(href="#") Log out
+                li
+                    a(href="#")
+                        span
+                            if status
+                                sup 3
+                            i.icon-wishlist
+                        p Wishlist
+                li
+                    a(href="#")
+                        span
+                            if status
+                                sup 3
+                            i.icon-cart
+                        p Cart
+        .web-header__bottom.container
+            ul.web-header__menulinks(data-breaks="5,4,4")
+                li
+                    a(href="#") Top Sellers
+                li.dropdown-menulink
+                    a(href="#") Dresses
+                    .dropdown-menucontain
+                        .dropdown-menuwrap
+                            .container
+                                .row.justify-content-between
+                                    .dropdown-menuwrap__box
+                                        h3 Style
+                                        ul
+                                            li
+                                                a(href="#") Fit - And - Flare
+                                            li
+                                                a(href="#") Shift
+                                            li
+                                                a(href="#") Shealth
+                                            li
+                                                a(href="#") Skirt dresses
+                                            li
+                                                a(href="#") Skirt dresses
+                                            li
+                                                a(href="#") Wrap
+                                    .dropdown-menuwrap__box
+                                        h3 Occasion
+                                        ul
+                                            li
+                                                a(href="#") Work
+                                            li
+                                                a(href="#") Vacation
+                                            li
+                                                a(href="#") LBD
+                                            li
+                                                a(href="#") Party
+                                            li
+                                                a(href="#") Special Occasion
+                                            li
+                                                a(href="#") Bridesmaid
+                                            li
+                                                a(href="#") Bride
 
-                                .dropdown-menuwrap__box
-                                    h3 New arrivals
-                                    .dropdown-menuwrap__img
-                                        a.full-link(href="#")
-                                        img(src="assets/images/menu-img2.jpg", alt="")
-                            
-                            a.web-link(href='#') All the women collection
-            
-            
-            li
-                a(href="#") Tops
-            li
-                a(href="#") Bottoms
-            li
-                a(href="#") Jumpsuits
-            li
-                a(href="#") Styled for Work
-            li
-                a(href="#") Bridal
-            li
-                a(href="#") LBD
-            li
-                a(href="#") Party
-            li
-                a(href="#") Shop by brand
-            li
-                a(href="#") Sale
-            li
-                a(href="#") Overstock
-            li
-                a(href="#") Fabric
+                                    .dropdown-menuwrap__box
+                                        h3 Pattern
+                                        ul
+                                            li
+                                                a(href="#") Floral
+                                            li
+                                                a(href="#") Stripe
+                                            li
+                                                a(href="#") Plaid
+                                            li
+                                                a(href="#") Whimsical
+                                            li
+                                                a(href="#") Graphics
+                                            li
+                                                a(href="#") Animal Print
+                                            li
+                                                a(href="#") Colourblock
+                                            li
+                                                a(href="#") Omber
+                                            
+                                    .dropdown-menuwrap__box
+                                        h3 Category
+                                        ul
+                                            li
+                                                a(href="#") Emblished
+                                            li
+                                                a(href="#") Knits
+                                            li
+                                                a(href="#") Solids
+                                            li
+                                                a(href="#") Ruffles
+                                            li
+                                                a(href="#") Denim dresses
+                                            li
+                                                a(href="#") Dupioni
+                                            li
+                                                a(href="#") Velvet
 
+                                    .dropdown-menuwrap__box
+                                        h3 Get our basics                        
+                                        .dropdown-menuwrap__img
+                                            a.full-link(href="#")
+                                            img(src="assets/images/menu-img1.jpg", alt="")
 
-
+                                    .dropdown-menuwrap__box
+                                        h3 New arrivals
+                                        .dropdown-menuwrap__img
+                                            a.full-link(href="#")
+                                            img(src="assets/images/menu-img2.jpg", alt="")
+                                
+                                a.web-link(href='#') All the women collection
+                
+                
+                li
+                    a(href="#") Tops
+                li
+                    a(href="#") Bottoms
+                li
+                    a(href="#") Jumpsuits
+                li
+                    a(href="#") Styled for Work
+                li
+                    a(href="#") Bridal
+                li
+                    a(href="#") LBD
+                li
+                    a(href="#") Party
+                li
+                    a(href="#") Shop by brand
+                li
+                    a(href="#") Sale
+                li
+                    a(href="#") Overstock
+                li
+                    a(href="#") Fabric
