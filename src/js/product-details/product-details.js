@@ -13,6 +13,13 @@ class ProductDetais {
   
     init() {
      $(document).ready(function(){
+
+
+
+
+   
+
+
        var neckText,sleeveText,lengthText;
        neckText = sleeveText = lengthText = "As shown";
 
@@ -83,11 +90,19 @@ class ProductDetais {
           });
         //save style
         $(".js-btn-save").click(function(e){
+          var index = $(".slide-item").length
+          --index 
             // e.preventDefault();
-            if($(".savedItem").css("display","none")){
-                $(".savedItem").css({display:"block"})
+            
+            if($(".saveditem-container").css("display","none")){
+                $(".saveditem-container").css({"display":"block"})
+                $(".saved-btn").css({"display":"block"})
+                $(".procced-btn").css({"display":"none"})
+
             }
-            const ele = '<li class="slide-item swiper-slide"><div class="card-wrp"><div class="style-card"><img class="saved-img" src="'+imageSource+'" alt="" /></div><div class="d-flex pt-2 align-items-center  " ><p class="fnt-11 w-100 pr-2">'+neckText+","+sleeveText+","+lengthText+'</p><img class="share-icon mr-2" src="./assets/images/share.svg" alt=""></div></div></li>'
+
+            
+            const ele = '<li class="slide-item swiper-slide"><div class="card-wrp"><div class="style-card"><img class="saved-img" src="'+imageSource+'" alt="style image" /><div class="close-card" slide-id="'+ index +'"><span></span><span></span></div></div><div class="d-flex pt-2 align-items-center  " ><p class="fnt-11 w-100 pr-2">'+neckText+","+sleeveText+","+lengthText+'</p><i class="share-icon icon-share mr-2"  ></i></div></div></li>'
             // $('.slide-item-wrp').append(ele)
             // if($(".slide-item").length> 4){
                 var swiperStyle = new Swiper('.js-style-slider', {
@@ -114,7 +129,21 @@ class ProductDetais {
                 
                 swiperStyle.appendSlide(ele);
         })
-
+        // $(document).on('.close-card','click',function(){
+        //   alert(parseInt($(this).attr("slide-id")))
+        //   let slideIndex = parseInt($(this).attr("slide-id"))
+        //   swiperStyle.removeSlide(slideIndex);
+        // })
+        // $('.close-card').on('click',function(){
+        //   alert(parseInt($(this).attr("slide-id")))
+        //   let slideIndex = parseInt($(this).attr("slide-id"))
+        //   swiperStyle.removeSlide(slideIndex);
+        // })
+        $('.close-card').click(function(){
+          alert(parseInt($(this).attr("slide-id")))
+          let slideIndex = parseInt($(this).attr("slide-id"))
+          swiperStyle.removeSlide(slideIndex);
+        })
 
      })
 

@@ -188,7 +188,7 @@
     }
     .savedItem {
         transition: ease-out .5 all;
-        display: none;
+
         
     }
     .js-style-slider {
@@ -221,6 +221,31 @@
         height: 335px;
         padding: 8px;
         text-align: center;
+    }
+    .close-card {
+        cursor: pointer;
+        width: 20px;
+        height: 20px;
+        top: 8px;
+        right: 8px;
+        
+        position: absolute;
+         & span {
+             position:inherit;
+             height: 11px;
+             width: 2px;
+             background-color: #585d61;
+             transform: rotate(-45deg);
+             &:first-child {
+                 transform: rotate(-45deg);
+                
+             }
+             &:last-child {
+                 transform: rotate(45deg);
+                
+             }
+         }
+
     }
     .card-wrp {
         width: 200px;
@@ -273,7 +298,7 @@
     }
 
     .custom-modal-foot {
-        border-top: 1px solid #e9eef0;
+        // border-top: 1px solid #e9eef0;
         margin: 0;
         padding: 20px 17px;
     }
@@ -436,7 +461,9 @@
 
 .saveditem-container {
     border-top: 1px solid #e9eef0;
-    padding: 30px 48px;
+    border-bottom: 1px solid #e9eef0;
+    padding: 20px 32px;
+    display: none;
 
     .swiper-slide {
         width: auto;
@@ -585,4 +612,12 @@
     .dropdown-menu li:hover {
       background-color: #ccc;
     }
+}
+
+.saved-btn {
+    display: none;
+    margin-left: auto;
+}
+.procced-btn {
+    display: block;
 }
