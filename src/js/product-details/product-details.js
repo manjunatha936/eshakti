@@ -13,13 +13,7 @@ class ProductDetais {
   
     init() {
      $(document).ready(function(){
-
-
-
-
-   
-
-
+      var swiperStyle;
        var neckText,sleeveText,lengthText;
        neckText = sleeveText = lengthText = "As shown";
 
@@ -57,6 +51,7 @@ class ProductDetais {
         var galleryTop = new Swiper('.js-slider-thumb', {
             spaceBetween: 10,
             slidesPerView: 4,
+            effect: 'fade',
             navigation: {
               nextEl: '.swiper-button-next',
               prevEl: '.swiper-button-prev',
@@ -81,6 +76,7 @@ class ProductDetais {
           });
           var galleryTop = new Swiper('.gallery-top', {
             spaceBetween: 10,
+            effect: 'fade',
             loop:true,
             loopedSlides: 5, //looped slides should be the same
             
@@ -91,7 +87,7 @@ class ProductDetais {
         //save style
         $(".js-btn-save").click(function(e){
           var index = $(".slide-item").length
-          --index 
+          
             // e.preventDefault();
             
             if($(".saveditem-container").css("display","none")){
@@ -100,12 +96,24 @@ class ProductDetais {
                 $(".procced-btn").css({"display":"none"})
 
             }
+            // let flag = lengthText.localeCompare(neckText.localeCompare(sleeveText))
+            var cardTitle;
+              if(neckText.localeCompare(sleeveText)){
+                if(lengthText.localeCompare(sleeveText)){
+                  cardTitle = neckText
+                }
+              }else{
 
+              }
+              cardTitle = neckText+","+sleeveText+","+lengthText;
+              
+         
             
-            const ele = '<li class="slide-item swiper-slide"><div class="card-wrp"><div class="style-card"><img class="saved-img" src="'+imageSource+'" alt="style image" /><div class="close-card" slide-id="'+ index +'"><span></span><span></span></div></div><div class="d-flex pt-2 align-items-center  " ><p class="fnt-11 w-100 pr-2">'+neckText+","+sleeveText+","+lengthText+'</p><i class="share-icon icon-share mr-2"  ></i></div></div></li>'
+            
+            const ele = '<li class="slide-item swiper-slide"><div class="card-wrp"><div class="style-card"><img class="saved-img" src="'+imageSource+'" alt="style image" /><div class="close-card" slide-id="'+ index +'"><span></span><span></span></div></div><div class="d-flex pt-2 align-items-center  " ><p class="fnt-11 w-100 pr-2">'+cardTitle+'</p><i class="share-icon icon-share mr-2"  ></i></div></div></li>'
             // $('.slide-item-wrp').append(ele)
             // if($(".slide-item").length> 4){
-                var swiperStyle = new Swiper('.js-style-slider', {
+                swiperStyle = new Swiper('.js-style-slider', {
                     // loop: true,
                     // nextButton: '.swiper-button-next',
                     // prevButton: '.swiper-button-prev',
@@ -129,21 +137,24 @@ class ProductDetais {
                 
                 swiperStyle.appendSlide(ele);
         })
-        // $(document).on('.close-card','click',function(){
-        //   alert(parseInt($(this).attr("slide-id")))
-        //   let slideIndex = parseInt($(this).attr("slide-id"))
-        //   swiperStyle.removeSlide(slideIndex);
-        // })
+        $(document).on('click','.close-card',function(){
+          
+          let slideIndex = parseInt($(this).attr("slide-id"))
+          --slideIndex; 
+          console.log(slideIndex)
+          swiperStyle.removeSlide(slideIndex  );
+          swiperStyle.update()
+        })
         // $('.close-card').on('click',function(){
         //   alert(parseInt($(this).attr("slide-id")))
         //   let slideIndex = parseInt($(this).attr("slide-id"))
         //   swiperStyle.removeSlide(slideIndex);
         // })
-        $('.close-card').click(function(){
-          alert(parseInt($(this).attr("slide-id")))
-          let slideIndex = parseInt($(this).attr("slide-id"))
-          swiperStyle.removeSlide(slideIndex);
-        })
+        // $('.close-card span').click(function(){
+        //   alert(parseInt($(this).attr("slide-id")))
+        //   let slideIndex = parseInt($(this).attr("slide-id"))
+        //   swiperStyle.removeSlide(slideIndex);
+        // })
 
      })
 
