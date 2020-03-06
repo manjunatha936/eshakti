@@ -90,7 +90,12 @@ class ProductDetais {
             effect: 'fade',
             loop:true,
             loopedSlides: 5, //looped slides should be the same
-            
+            pagination: {
+              el: '.swiper-pagination-bullets',
+              clickable: true,
+               
+            },
+        
             thumbs: {
               swiper: galleryThumbs,
             },
