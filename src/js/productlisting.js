@@ -69,7 +69,7 @@ let heightOfWrapper = list.scrollHeight
 let stickyELementwrp = document.querySelector('.product-sticky');
 let stickyELement = document.querySelector('.side-filter-sticky');
 let stickyELementwrpHeight = stickyELementwrp.offsetTop
-stickyHeight = stickyELement.scrollHeight
+let stickyHeight = stickyELement.scrollHeight
 let stickyELementOffset = stickyELement.offsetHeight;
 console.log(stickyELementwrpHeight)
 if(window.innerWidth > 767){
