@@ -1,24 +1,25 @@
 import $ from 'jquery'
 /*eslint-disable*/
 // Load image after scroll
+console.log('Product listing code 2222222222222222');
 class lazyLoader {
     constructor() {
         function isIE() {
-        var ua = navigator.userAgent;
-        var is_ie = ua.indexOf("MSIE ") > -1 || ua.indexOf("Trident/") > -1;
-        return is_ie; 
+            var ua = navigator.userAgent;
+            var is_ie = ua.indexOf("MSIE ") > -1 || ua.indexOf("Trident/") > -1;
+            return is_ie; 
         }
         
         if (isIE()) {
-        $(window).on('load scroll', function() {
-            $('.js-loading-card__img').each(function(el) {
-                var dataSrc = $(this).attr('data');
-                if(!(onView($(this)))){
-                    $(this).attr('src', dataSrc);
-                    $(this).parents(".js-loading-card").addClass('active');
-                }
-            }); 
-        });
+            $(window).on('scroll', function() {
+                $('.js-loading-card__img').each(function(el) {
+                    var dataSrc = $(this).attr('data');
+                    if(!(onView($(this)))){
+                        $(this).attr('src', dataSrc);
+                        $(this).parents(".js-loading-card").addClass('active');
+                    }
+                }); 
+            });
         }
         
         else {
@@ -58,5 +59,6 @@ class lazyLoader {
 
     }
 }
+
 
 export default lazyLoader;
