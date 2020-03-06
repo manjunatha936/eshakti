@@ -139,3 +139,21 @@
     margin-top: .2rem;
     display: inline-block;
 }
+
+.js-loading-card {
+    opacity: 0;
+    transition: all 1.5s ease-in-out !important;
+
+    &.active {
+        opacity: 1;
+    }
+
+    &__img {
+        min-height: 100px;
+        transition: all .9s ease-in-out !important;
+    
+        @media (min-width: 768px) {
+            min-height: 200px;
+        }
+    }
+}

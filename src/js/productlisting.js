@@ -1,7 +1,9 @@
-
+import $ from 'jquery'
 /*eslint-disable*/
 console.log('Product listing code');
 
+
+ 
 const listViewButton = document.querySelector('.list-view-btn');
 const gridViewButton = document.querySelector('.grid-view-btn');
 const list = document.querySelector('.js-products');
@@ -77,7 +79,7 @@ clear.addEventListener('click', (el) => {
    });
 })
 
- 
+
 // accordian info
 class Accordion {
    constructor(heading) {
@@ -113,3 +115,6 @@ class Accordion {
 const accordion = new Accordion('.panel-cardtitle');
 // for open every use showAll();
 accordion.showAll();
+
+
+
