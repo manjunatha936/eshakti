@@ -1,6 +1,10 @@
 .products-header {
     display: flex;
     justify-content: space-between;
+    background: #ffffff;
+    width: 100%;
+    transition: all 0.7s ease-in-out !important;
+
     @include bpmax("phone") {
         flex-direction: column-reverse;
     }
@@ -11,6 +15,8 @@
     &__right-info {
         display: flex;
         position: relative;
+      
+
         @include bpmax("phone") {
             padding-top: .8rem;
             padding-bottom: .8rem;
@@ -327,6 +333,23 @@
     display: inline-block;
 }
 
+.js-loading-card {
+    opacity: 0;
+    transition: all 1.5s ease-in-out !important;
+
+    &.active {
+        opacity: 1;
+    }
+
+    &__img {
+        min-height: 100px;
+        transition: all .9s ease-in-out !important;
+    
+        @media (min-width: 768px) {
+            min-height: 200px;
+        }
+    }
+}
 
 // Product filters-side sticky
 
@@ -336,4 +359,22 @@
     background: $white;
     z-index: 1;
     transition: .8 ease all;
+}
+
+.sticky-block {
+    position: sticky;
+    top: 0;
+    z-index: 998;
+}
+
+.sticky-left {
+    position: sticky;
+    top: 0;
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .sticky-left {
+        position: fixed;
+        top: 0;
+    }
 }

@@ -3,8 +3,8 @@ mixin product-card(srcimg, img, name, type, cost)
         .product-card__view(href="#")
             .card-tag Fx
             picture
-                source(srcset=srcimg)
-                img.img-fluid.img-scale(src=img)
+                //- source(srcset=srcimg)
+                img.js-loading-card__img.img-fluid.img-scale(src="", data=img)
             div.product-card__customize
                 img(src="./assets/images/product-listing/product-card/customize.svg" alt="customize")
                 span.fnt-sm.ml-2 Customize style 
