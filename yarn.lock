@@ -3426,7 +3426,11 @@ debug@2.6.9, debug@^2.2.0, debug@^2.3.3:
   dependencies:
     ms "2.0.0"
 
+<<<<<<< HEAD
 debug@3.2.6, debug@^3.0.0, debug@^3.1.0, debug@^3.1.1, debug@^3.2.5:
+=======
+debug@^3.0.0, debug@^3.1.0, debug@^3.1.1, debug@^3.2.5:
+>>>>>>> 97c4142aa4665c09f07f9fa6b0af2f4ae3ede517
   version "3.2.6"
   resolved "https://registry.yarnpkg.com/debug/-/debug-3.2.6.tgz#e83d17de16d8a7efb7717edbe5fb10135eee629b"
   integrity sha512-mel+jf7nrtEl5Pn1Qx46zARXKDpBbvzezse7p7LqINmdoIk8PYP5SySaxEmYv6TZ0JyEKA1hsCId6DIhgITtWQ==
@@ -5647,6 +5651,7 @@ https-proxy-agent@^2.2.1:
     agent-base "^4.3.0"
     debug "^3.1.0"
 
+<<<<<<< HEAD
 icon-android@*:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/icon-android/-/icon-android-0.0.1.tgz#506b4ea60090a792ec45ee685a9b36192aa6cac8"
@@ -5697,6 +5702,8 @@ icon-windows@*:
   resolved "https://registry.yarnpkg.com/icon-windows/-/icon-windows-0.0.1.tgz#abe463f50f10d6dfc3bea2d5ffd4a1b350b57fcd"
   integrity sha1-q+Rj9Q8Q1t/DvqLV/9Shs1C1f80=
 
+=======
+>>>>>>> 97c4142aa4665c09f07f9fa6b0af2f4ae3ede517
 iconv-lite@0.4.24, iconv-lite@^0.4.24:
   version "0.4.24"
   resolved "https://registry.yarnpkg.com/iconv-lite/-/iconv-lite-0.4.24.tgz#2022b4b25fbddc21d2f524974a474aafe733908b"
@@ -7756,6 +7763,7 @@ node-sass@4.13.0:
   dependencies:
     abbrev "1"
 
+<<<<<<< HEAD
 nopt@~1.0.10:
   version "1.0.10"
   resolved "https://registry.yarnpkg.com/nopt/-/nopt-1.0.10.tgz#6ddd21bd2a31417b92727dd585f8a6f37608ebee"
@@ -7763,6 +7771,8 @@ nopt@~1.0.10:
   dependencies:
     abbrev "1"
 
+=======
+>>>>>>> 97c4142aa4665c09f07f9fa6b0af2f4ae3ede517
 normalize-newline@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/normalize-newline/-/normalize-newline-3.0.0.tgz#1cbea804aba436001f83938ab21ec039d69ae9d3"
@@ -9406,6 +9416,7 @@ raw-loader@3.1.0:
     loader-utils "^1.1.0"
     schema-utils "^2.0.1"
 
+<<<<<<< HEAD
 read-only-stream@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/read-only-stream/-/read-only-stream-2.0.0.tgz#2724fd6a8113d73764ac288d4386270c1dbf17f0"
@@ -9413,6 +9424,8 @@ read-only-stream@^2.0.0:
   dependencies:
     readable-stream "^2.0.2"
 
+=======
+>>>>>>> 97c4142aa4665c09f07f9fa6b0af2f4ae3ede517
 read-pkg-up@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/read-pkg-up/-/read-pkg-up-1.0.1.tgz#9d63c13276c065918d57f002a57f40a1b643fb02"
@@ -10852,7 +10865,11 @@ strip-indent@^2.0.0:
   resolved "https://registry.yarnpkg.com/strip-indent/-/strip-indent-2.0.0.tgz#5ef8db295d01e6ed6cbf7aab96998d7822527b68"
   integrity sha1-XvjbKV0B5u1sv3qrlpmNeCJSe2g=
 
+<<<<<<< HEAD
 strip-json-comments@2.0.1, strip-json-comments@^2.0.1:
+=======
+strip-json-comments@^2.0.1:
+>>>>>>> 97c4142aa4665c09f07f9fa6b0af2f4ae3ede517
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-2.0.1.tgz#3c531942e908c2697c0ec344858c286c7ca0a60a"
   integrity sha1-PFMZQukIwml8DsNEhYwobHygpgo=

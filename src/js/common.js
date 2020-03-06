@@ -3,7 +3,7 @@ import "../scss/main.scss";
 // import "bootstrap/js/src/dropdown";
 import "bootstrap/js/src/modal"
 
-import 'jquery'
+
 import "../pug/index.pug";
 import "../pug/repeat-customer.pug";
 // import "../pug/about.pug";

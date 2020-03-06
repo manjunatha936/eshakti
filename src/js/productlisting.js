@@ -198,7 +198,9 @@ const accordion = new Accordion('.panel-cardtitle');
 // for open every use showAll();
 accordion.showAll();
 
+
 // Mobile side filters
+
 const filterMobile = document.querySelector('.product-filter-mob');
 const filterSide = document.querySelectorAll('.side-filter');
 const filterBody = document.querySelectorAll('body');
