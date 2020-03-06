@@ -44,18 +44,26 @@ section.product-listing
                             // Add Arrows
                     //- .swiper-button-next.swiper-button-white
                     //- .swiper-button-prev.swiper-button-white
-                .swiper-container.gallery-thumbs
-                    .swiper-wrapper
-                        .swiper-slide.thumb-slide(style='background-image:url(./assets/images/women.png)')
-                        .swiper-slide.thumb-slide(style='background-image:url(./assets/images/women.png)')
-                        .swiper-slide.thumb-slide(style='background-image:url(./assets/images/women.png)')
-                        .swiper-slide.thumb-slide(style='background-image:url(./assets/images/women.png)')
-                        .swiper-slide.thumb-slide(style='background-image:url(./assets/images/women.png)')
-                        .swiper-slide.thumb-slide(style='background-image:url(./assets/images/women.png)')
-                        .swiper-slide.thumb-slide(style='background-image:url(./assets/images/women.png)')
-                        .swiper-slide.thumb-slide(style='background-image:url(./assets/images/women.png)')
-                        .swiper-slide.thumb-slide(style='background-image:url(./assets/images/women.png)')
-                        .swiper-slide.thumb-slide(style='background-image:url(./assets/images/women.png)')
+                .thumb-wrp.d-flex.flex-row
+                    .preview-img
+                        .swiper-slide.thumb-slide-img(style='background-image:url(./assets/images/thumbimg.png)')
+                    .swiper-container.gallery-thumbs
+                        .swiper-wrapper
+                            .swiper-slide.thumb-slide(style='background-image:url(./assets/images/thumbimg.png)')
+                            .swiper-slide.thumb-slide(style='background-image:url(./assets/images/thumbimg.png)')
+                            .swiper-slide.thumb-slide(style='background-image:url(./assets/images/thumbimg.png)')
+                            .swiper-slide.thumb-slide(style='background-image:url(./assets/images/thumbimg.png)')
+                            .swiper-slide.thumb-slide(style='background-image:url(./assets/images/thumbimg.png)')
+                            .swiper-slide.thumb-slide(style='background-image:url(./assets/images/thumbimg.png)')
+                            .swiper-slide.thumb-slide(style='background-image:url(./assets/images/thumbimg.png)')
+                            .swiper-slide.thumb-slide(style='background-image:url(./assets/images/thumbimg.png)')
+                            .swiper-slide.thumb-slide(style='background-image:url(./assets/images/thumbimg.png)')
+                            .swiper-slide.thumb-slide(style='background-image:url(./assets/images/thumbimg.png)')
+                        .swiper-arrow
+                            .arrow.left-arrow
+                                span
+                            .arrow.right-arrow
+                                span
                 
             .col-md-5
                 .dress-details
@@ -66,8 +74,9 @@ section.product-listing
                     p.txt-gry-12.pt-1.pb-4 or 3 interest-free payments of $18 with Affirm. Learn more
                         a.learn-link(href="#") Learn more
                     span.txt-gry-12 2 reviews
-                    p.fnt-xs.drk-gry.py-4 Pleated cotton chambray brings draped flair to our flattering frock that boasts a cross-front with ties at the waist for a wrap silhouette. Available: Additional 3 neckline, 4 sleeve type... Product Details
-                        a.learn-link.fnt-700(href="#")  Product Details
+                    .fnt-xs.drk-gry.py-4 Pleated cotton chambray brings draped flair to our flattering frock that boasts a cross-front with ties at the waist for a wrap silhouette. Available: Additional 3 neckline, 4 sleeve type... 
+                        p.more-info hambray brings draped flair to our flatte
+                        a.js-read-more.learn-link.fnt-700(href="#")  Product Details
                     .prd-color.txt-gry-12.pb-3
                         span Color: 
                         span Indigo chambray

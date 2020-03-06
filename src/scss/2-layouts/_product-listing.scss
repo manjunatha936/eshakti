@@ -352,7 +352,16 @@
     background-color: #ffffff;
     opacity: 0.9;
 }
-
+.slider-style-thumb .gallery-thumbs {
+    padding: 15px 0 15px 15px;
+    // width: 80% !important;
+    height: 100% !important;
+    background-color: #f4f5f7;
+}
+.thumb-wrp {
+    // padding: 10px 0;
+    height: 190px !important;
+}
 .slider-style-thumb {
     .swiper-container {
         width: 100%;
@@ -370,12 +379,12 @@
         width: 100%;
         border: 1px solid #ebebeb;
         background-color: #ffffff;
-        margin-bottom: 28px;
+        // margin-bottom: 28px;
     }
     .gallery-thumbs {
         height: 20%;
         box-sizing: border-box;
-        padding: 10px 0;
+        
     }
     .gallery-thumbs .swiper-slide {
         width: 25%;
@@ -383,11 +392,60 @@
         height: 100%;
         // opacity: 0.4;
       }
-      .thumb-slide {
-
-        border: 1px solid #ebebeb;
-        background-color: #ffffff;
+      .preview-img {
+        padding: 15px 15px 15px 0;
       }
+      .thumb-slide-img {
+          
+        object-fit: scale-down;
+        background-position: center;
+        width: 120px;
+        // height: 190px;
+        border: 1px solid #464748;
+        background-color: #ffffff;
+        // margin-right: 12px;
+      }
+}
+.swiper-arrow {
+    .arrow {
+        cursor: pointer;
+        transform: translate(-50%,-50%);
+        z-index: 11;
+        border-radius: 50%;
+        width: 23px;
+        height: 23px;
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+        background-color: #ffffff;
+        position: absolute;
+        & span {
+            border: solid #bec0c5;
+            border-width: 0 1px 1px 0;
+            display: inline-block;
+            padding: 2px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+        }
+    }
+    .arrow:first-child {
+        top: 50%;
+        left: 28px;
+        & span {
+            
+            transform: translate(-50%,-50%) rotate(-230deg);
+           
+        }
+        
+    }.arrow:last-child {
+        top: 50%;
+        right: 0;
+        & span {
+       
+           
+            transform:translate(-50%,-50%) rotate(-45deg);
+       
+        }
+    }
 }
 .style-guid {
     z-index: 11;
@@ -620,4 +678,7 @@
 }
 .procced-btn {
     display: block;
+}
+.more-info {
+    display: none;
 }
