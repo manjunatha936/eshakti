@@ -1,4 +1,23 @@
+import $ from 'jquery'
 console.log('Product listing code');
+
+
+// Side-sticky
+window.addEventListener("scroll", function (event) {
+   var stickyFilter = document.querySelector('.products-header');
+   var $target = $(stickyFilter);
+   var $window = $(window);
+   var docViewTop = $window.scrollTop();
+   var docViewBottom = docViewTop + $window.height();
+   var targetTop = $target.offset().top;
+   if(docViewTop == 0) {
+      stickyFilter.classList.remove('sticky-block');
+   }
+   else if(docViewTop >= targetTop) {
+      stickyFilter.classList.add('sticky-block');
+   }
+
+});
 
 
  
@@ -52,7 +71,7 @@ let stickyELement = document.querySelector('.side-filter-sticky');
 let stickyELementwrpHeight = stickyELementwrp.offsetTop
 stickyHeight = stickyELement.scrollHeight
 let stickyELementOffset = stickyELement.offsetHeight;
-// console.log(stickyELementwrpHeight)
+console.log(stickyELementwrpHeight)
 if(window.innerWidth > 767){
    window.addEventListener("scroll", function(event) {
       var top = this.scrollY;

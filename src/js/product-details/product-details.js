@@ -16,7 +16,11 @@ class ProductDetais {
       var swiperStyle;
        var neckText,sleeveText,lengthText;
        neckText = sleeveText = lengthText = "As shown";
-
+        $(".js-read-more").click(function(e){
+          e.preventDefault()
+          alert(1)
+          $(this).siblings('.more-info').toggle()
+        })
         $('.neckline').children('.style-contain').find('.img-container').click(function(){
           neckText = $(this).children(".img-txt").text()
           console.log(neckText)
@@ -66,12 +70,19 @@ class ProductDetais {
 
           var galleryThumbs = new Swiper('.gallery-thumbs', {
             spaceBetween: 10,
-            slidesPerView: 4.5,
-            loop: true,
+            slidesPerView: 3.5,
+            // loop: true,
             freeMode: true,
-            loopedSlides: 5, //looped slides should be the same
+            // loopedSlides: 5, //looped slides should be the same
             watchSlidesVisibility: true,
             watchSlidesProgress: true,
+              // Navigation arrows
+          navigation: {
+            nextEl: '.left-arrow',
+            prevEl: '.right-arrow',
+          },
+    
+            grabCursor: true,
             
           });
           var galleryTop = new Swiper('.gallery-top', {

@@ -342,17 +342,30 @@
     width: 200px;
     height: 175px;
 }
+
 .style-check:checked {
     & +.img-wrp  {
-        border-radius: 3px;
-        // border: 1px solid #f25c50;
+        border: none !important;
+        img {
+            border-radius: 3px;
+            border: 1px solid #f25c50;
+        }
     }
 }
 .product-details ~ .modal-backdrop {
     background-color: #ffffff;
     opacity: 0.9;
 }
-
+.slider-style-thumb .gallery-thumbs {
+    padding: 15px 0 15px 15px;
+    // width: 80% !important;
+    height: 100% !important;
+    background-color: #f4f5f7;
+}
+.thumb-wrp {
+    // padding: 10px 0;
+    height: 190px !important;
+}
 .slider-style-thumb {
     .swiper-container {
         width: 100%;
@@ -370,12 +383,12 @@
         width: 100%;
         border: 1px solid #ebebeb;
         background-color: #ffffff;
-        margin-bottom: 28px;
+        // margin-bottom: 28px;
     }
     .gallery-thumbs {
         height: 20%;
         box-sizing: border-box;
-        padding: 10px 0;
+        
     }
     .gallery-thumbs .swiper-slide {
         width: 25%;
@@ -383,11 +396,60 @@
         height: 100%;
         // opacity: 0.4;
       }
-      .thumb-slide {
-
-        border: 1px solid #ebebeb;
-        background-color: #ffffff;
+      .preview-img {
+        padding: 15px 15px 15px 0;
       }
+      .thumb-slide-img {
+          
+        object-fit: scale-down;
+        background-position: center;
+        width: 120px;
+        // height: 190px;
+        border: 1px solid #464748;
+        background-color: #ffffff;
+        // margin-right: 12px;
+      }
+}
+.swiper-arrow {
+    .arrow {
+        cursor: pointer;
+        transform: translate(-50%,-50%);
+        z-index: 11;
+        border-radius: 50%;
+        width: 23px;
+        height: 23px;
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+        background-color: #ffffff;
+        position: absolute;
+        & span {
+            border: solid #bec0c5;
+            border-width: 0 1px 1px 0;
+            display: inline-block;
+            padding: 2px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+        }
+    }
+    .arrow:first-child {
+        top: 50%;
+        left: 28px;
+        & span {
+            
+            transform: translate(-50%,-50%) rotate(-230deg);
+           
+        }
+        
+    }.arrow:last-child {
+        top: 50%;
+        right: 0;
+        & span {
+       
+           
+            transform:translate(-50%,-50%) rotate(-45deg);
+       
+        }
+    }
 }
 .style-guid {
     z-index: 11;
@@ -483,15 +545,18 @@
     .tooltip-share {
         // transition: ease-in-out all .6s;
         opacity: 0;
-        padding: 14px 22px ;
+        padding: 14px 20px ;
         box-shadow: 0 1px 7px rgba(0, 0, 0, 0.09);
         background-color: #ffffff;
         position: absolute;     
         top: -5px;
         transform: translate(-100%,-100%);
         left: 15px;
+        padding-top: 0;
+        &__item {
+            margin-top: 14px;
+        }
         .facebook {
-            margin-bottom: 12px;
             .tip-icon{ 
                 background-color: #3b5998;
                 &::before {
@@ -499,13 +564,7 @@
                 }
             }
         }
-        .pinterest {
-            margin-bottom: 12px;
-            
-        }
         .twitter {
-            margin-bottom: 12px;
-            
             .tip-icon{ 
                 background-color: #55acee;
                 &::before {
@@ -532,7 +591,6 @@
         .icon-pinterest{
             background-color: #cb2027;
             position: relative;
-        
         }   
     }
 }
@@ -591,10 +649,6 @@
         box-shadow: 0 1px 7px rgba(0, 0, 0, 0.09);
         background-color: #ffffff;
         border: none;
-        
-
-        
-    
     }
     
     .dropdown-menu li {
@@ -604,9 +658,6 @@
         cursor: pointer;
         padding: 6.5px 15px;
         border: none;
-      
-     
-     
     }
     
     .dropdown-menu li:hover {
@@ -620,4 +671,7 @@
 }
 .procced-btn {
     display: block;
+}
+.more-info {
+    display: none;
 }
