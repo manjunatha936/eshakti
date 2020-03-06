@@ -16,7 +16,7 @@
                         span.txt-gry-12 Share
                 .col-md-8.custom-modal-head__opt
                     .custom-style
-                        .style-model-content
+                        .style-model-content.neckline
                             .style-head.pb-3 Neckline
                             .style-contain.d-flex.flex-wrap 
                                 label(for="check1" ).img-container.mr-4
@@ -44,7 +44,7 @@
                                     .img-wrp
                                         img.style-img(src="./assets/images/style-img.png", alt="")
                                     p.img-txt.pt-2 Petre Pan
-                        .style-model-content
+                        .style-model-content.sleeve
                             .style-head.pb-3 Sleeve Type
                             .style-contain.d-flex.flex-wrap 
                                 label(for="check6").img-container.mr-4
@@ -78,7 +78,7 @@
                                     .img-wrp
                                         img.style-img(src="./assets/images/style-img.png", alt="")
                                     p.img-txt.pt-2 Elbow Length
-                        .style-model-content
+                        .style-model-content.length
                             .style-head.pb-3 Length
                             .style-contain.d-flex.flex-wrap 
                                 label(for="check12").img-container.mr-4
@@ -118,11 +118,12 @@
                     .dynaic-slide-wrapper.d-flex
                         ul.slide-item-wrp
                             li.slide-item
-                                .style-card
-                                    img.saved-img(src="./assets/images/women.png", alt="")
-                                    .close-icon
-                                        span.left
-                                        span.right
-                                p.fnt-11.pt-2 As shown
+                                .card-wrp
+                                    .style-card
+                                        img.saved-img(src="./assets/images/women.png", alt="")
+                                        .close-icon
+                                            span.left
+                                            span.right
+                                    p.fnt-11.pt-2 As shown
                         .swiper-container.js-style-slider
                             ul.swiper-wrapper

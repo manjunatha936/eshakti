@@ -7,7 +7,7 @@ aside.side-filter.d-md-block.side-filter-sticky
         .panel-card
             .panel-cardtitle.panel-clear-container.active
                 span COLOR
-                a(href="javascript:void(0);").clear-color clear
+                a(href="javascript:void(0);").js-clear.clear-color clear
             .accordion-content.py-1
                 ul.color-list
                     li.color-list__item.active
@@ -29,48 +29,51 @@ aside.side-filter.d-md-block.side-filter-sticky
         
         // START: FABRIC
         .panel-card
-            .panel-cardtitle fabric
+            .panel-cardtitle.panel-clear-container
+                span fabric
+                a.clear-color.js-check-clear(href="javascript:void(0);") clear
             .accordion-content.pb-1
                 label.label-container
                     | Cotton Spandex
-                    input(type="checkbox" checked="checked")
+                    input(type="checkbox" name="selectPlant" value="a")
                     span.checkmark
                 label.label-container
                     | Cotton
-                    input(type="checkbox")
+                    input(type="checkbox" name="selectPlant" value="a")
                     span.checkmark
                 label.label-container
                     | Polyester Crepe de Chine
-                    input(type="checkbox")
+                    input(type="checkbox" name="selectPlant" value="a")
                     span.checkmark
                 label.label-container
                     | Polyester
-                    input(type="checkbox")
+                    input(type="checkbox" name="selectPlant" value="a")
                     span.checkmark
                 label.label-container
                     | Rayon
-                    input(type="checkbox")
+                    input(type="checkbox" name="selectPlant" value="a")
                     span.checkmark
                 label.label-container
                     | Wool Arcylic Polyester
-                    input(type="checkbox")
+                    input(type="checkbox" name="selectPlant" value="a")
                     span.checkmark
         
         //START: PRICE
         .panel-card
-            .panel-cardtitle Price
+            .panel-cardtitle.panel-clear-container
+                span Price
             .accordion-content.py-1
                 label.label-container
                     | $50 - $80
-                    input(type="checkbox" checked="checked")
+                    input(type="checkbox" name="selectPlant" value="a")
                     span.checkmark
                 label.label-container
                     | $50 - $80
-                    input(type="checkbox")
+                    input(type="checkbox" name="selectPlant" value="a")
                     span.checkmark
                 label.label-container
                     | Above $100
-                    input(type="checkbox")
+                    input(type="checkbox" name="selectPlant" value="a")
                     span.checkmark
         
         //START: NECKLINE

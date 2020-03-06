@@ -10,7 +10,7 @@ class ProductListing {
         this.init();
       }
     }
-  
+
     init() {
      $(document).ready(function(){
        var imageSource = $('.js-style-img').attr('src');

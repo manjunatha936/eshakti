@@ -182,6 +182,7 @@
 }
 
 // Product-listing cards
+
 .product-card {
     position: relative;
     &__view {
@@ -334,4 +335,5 @@
     max-width: 100%;
     background: $white;
     z-index: 1;
+    transition: .8 ease all;
 }

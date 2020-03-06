@@ -16,10 +16,23 @@
                         span.rect-box
                         span.rect-box
                         span.rect-box
+                //- .filter-sort.order-2.order-md-3
+                //-     img.d-inline-block.d-md-none(src="./assets/images/product-listing/sort.svg" alt="Sort Icon")
+                //-     span.products-header__label.mobile-label Sortby:
+        
                 .filter-sort.order-2.order-md-3
                     img.d-inline-block.d-md-none(src="./assets/images/product-listing/sort.svg" alt="Sort Icon")
                     span.products-header__label.mobile-label Sortby:
-        
+                    .dropdown.products-header__label.d-none.d-md-inline-block
+                        button#dLabel.dropdown-select.bttn.bttn__white.p-0.mx-1(style="color: #15171a;" type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                            | New Arrival
+                        span.caret
+                        ul.dropdown-menu(aria-labelledby='dLabel')
+                            li Best Sellers
+                            li Price High to low
+                            li Price low to High
+                      
+            
         .product-alert.bg-lght-gray.mx-3
             span
                 | All displayed products are available with
