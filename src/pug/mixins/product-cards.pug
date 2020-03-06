@@ -17,15 +17,16 @@ mixin product-card(srcimg, img, name, type, cost)
                 div.share
                     i.icon-share
                     .tooltip-share
-                        .pinterest.d-flex
+                        .tooltip-share__item.pinterest.d-flex
                             i.icon-pinterest.tip-icon
                             p.prd-sub-txt Pinterest
-                        .facebook.d-flex
+                        .tooltip-share__item.facebook.d-flex
                             i.icon-facebook.tip-icon
                             p.prd-sub-txt Facebook
-                        .twitter.d-flex
+                        .tooltip-share__item.twitter.d-flex
                             i.icon-twitter.tip-icon
                             p.prd-sub-txt Twitter
 
                 div.favourite
-                    img(src="./assets/images/product-listing/product-card/favourite.svg" alt="favourite")
+                    i.icon-wishlist
+                    //- img(src="./assets/images/product-listing/product-card/favourite.svg" alt="favourite")
