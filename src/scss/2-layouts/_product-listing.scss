@@ -362,6 +362,25 @@
     // padding: 10px 0;
     height: 190px !important;
 }
+.measures-drop-wrp {
+    overflow-x: scroll;
+    @include bp('desktop'){
+        overflow: hidden;
+    }
+}
+.swiper-pagination-bullets {
+    position: absolute;
+    bottom: -40px !important;
+    left: 50% !important;
+    transform: translate(-50%,-50%);
+    .swiper-pagination-bullet {
+        margin-right: 7px;
+        background-color: #929498 !important;
+    }
+    .swiper-pagination-bullet-active {
+        background-color: #949aa5 !important    ;
+    }
+}
 .slider-style-thumb {
     .swiper-container {
         width: 100%;
@@ -372,13 +391,22 @@
       .swiper-slide {
         background-size: contain;
         background-repeat: no-repeat;
-        background-position: 40%;
+        background-position: 30%;
+        @include bp('desktop') {
+            background-position: 40%;
+            
+        }
+        
     }
     .gallery-top {
-        height: 620px;
+        height: 425px;
         width: 100%;
         border: 1px solid #ebebeb;
         background-color: #ffffff;
+        
+        @include bp('desktop') {
+            height: 620px;
+        }
         // margin-bottom: 28px;
     }
     .gallery-thumbs {
@@ -450,21 +478,34 @@
 .style-guid {
     z-index: 11;
     text-align: center;
-    padding-top: 35px ;
+    padding-top: 17px ;
     position: absolute;
     right: 0;
     top: 50%;
     transform: translateY(-50%);
     background-color: #f9f9f9;
+    @include bp('desktop') {
+        padding-top: 35px; 
+
+    }
 }
 .img-card-wrp {
-    margin-bottom: 40px;
+    margin-bottom: 15px;
+    @include bp('desktop') {
+        margin-bottom: 40px;
+
+    }
 }
 .img-50 {
-    width: 70px;
-    height: 70px;
+    width: 40px;
+    height: 40px;
     border-radius: 75px;
     background-color: #f0f0f0;
+    @include bp('desktop') {
+        width: 70px;
+        height: 70px;
+
+    }
 }
 .fnt-12-black {
     padding: 13px 18px;

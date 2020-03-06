@@ -25,6 +25,7 @@ section.product-listing
                         .swiper-slide(style='background-image:url(./assets/images/women.png)')
                         .swiper-slide(style='background-image:url(./assets/images/women.png)')
                         .swiper-slide(style='background-image:url(./assets/images/women.png)')
+                
                     .style-guid
                         .img-card-wrp
                             p.prod-label.fnt-700.pb-2.mb-1 Neckline
@@ -40,11 +41,13 @@ section.product-listing
                             p.fnt-xs.drk-gry.pt-2 Mandarin Collar
                         a(href="" type='button', data-toggle='modal', data-target='.bd-example-modal-lg').fnt-12-black 
                             img(src="./assets/images/product-listing/product-card/customize.svg" alt="customize")
-                            span.ml-2 Customize style                     
+                            span.ml-2.d-none.d-md-inline-block Customize style                     
+                            span.ml-2.d-md-none Customize                    
                             // Add Arrows
+                .swiper-pagination-bullets.d-md-none
                     //- .swiper-button-next.swiper-button-white
                     //- .swiper-button-prev.swiper-button-white
-                .thumb-wrp.d-flex.flex-row
+                .thumb-wrp.flex-row.d-none.d-md-flex
                     .preview-img
                         .swiper-slide.thumb-slide-img(style='background-image:url(./assets/images/thumbimg.png)')
                     .swiper-container.gallery-thumbs
@@ -65,7 +68,7 @@ section.product-listing
                             .arrow.right-arrow
                                 span
                 
-            .col-md-5
+            .col-md-5.mt-5.mt-md-0
                 .dress-details
                     span.prod-label ZAPELLE
                     p.head-prd.py-2 Pleat Front Cotton Chambray Wrap Dress
@@ -80,10 +83,10 @@ section.product-listing
                     .prd-color.txt-gry-12.pb-3
                         span Color: 
                         span Indigo chambray
-                .prd-size.fnt-xs
-                    ul#pills-tab.nav.d-flex.justify-content-between.pt-2(role='tablist')
-                        p.prd-sub-txt.my-auto Select Size
-                        li.nav-item
+                .prd-size.fnt-xs.d-flex.flex-column.flex-md-row.align-items-md-center.mt-4.mt-md-0
+                    p.prd-sub-txt.my-auto.mr-md-4 Select Size
+                    ul#pills-tab.nav.d-flex.justify-content-between(role='tablist')
+                        li.nav-item.ml-2.ml-md-0
                             a#pills-home-tab.nav-link.active(data-toggle='pill', href='#pills-home', role='tab', aria-controls='pills-home', aria-selected='true') Standard Size
                         li.nav-item
                             a#pills-profile-tab.nav-link(data-toggle='pill', href='#pills-profile', role='tab', aria-controls='pills-profile', aria-selected='false') Custom size(Charges apply)
@@ -95,7 +98,7 @@ section.product-listing
                             .col-md-10
                                 p.txt-gry-12 XS to 6X sizes are available 
                                     a.learn-link.fnt-700(href="#")  Size Chart
-                        .measures-drop-wrp.d-flex.flex-wrap.pt-2
+                        .measures-drop-wrp.d-flex.flex-md-wrap.pt-2
                             .size.text-center   
                                 span.size-hd.pb-1 XS
                                 .size-range.d-flex
