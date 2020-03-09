@@ -2,7 +2,7 @@ import $ from 'jquery'
 console.log('Product listing code');
 
 
-// Side-sticky
+// // Side-sticky
 window.addEventListener("scroll", function (event) {
    var stickyFilter = document.querySelector('.products-header');
    var $target = $(stickyFilter);
@@ -69,7 +69,7 @@ let heightOfWrapper = list.scrollHeight
 let stickyELementwrp = document.querySelector('.product-sticky');
 let stickyELement = document.querySelector('.side-filter-sticky');
 let stickyELementwrpHeight = stickyELementwrp.offsetTop
-stickyHeight = stickyELement.scrollHeight
+let stickyHeight = stickyELement.scrollHeight
 let stickyELementOffset = stickyELement.offsetHeight;
 console.log(stickyELementwrpHeight)
 if(window.innerWidth > 767){
@@ -197,4 +197,23 @@ const accordion = new Accordion('.panel-cardtitle');
 // for open every use showAll();
 accordion.showAll();
 
+const filterMobile = document.querySelector('.product-filter-mob');
+const filterSide = document.querySelectorAll('.side-filter');
+const filterBody = document.querySelectorAll('body');
+const filterClose = document.querySelector('.btn-close');
 
+filterMobile.addEventListener('click', () => {
+   filterSide.forEach(node => {
+      node.classList.add('active');
+   })
+   filterBody.forEach(node => {
+      node.classList.add('scroll');
+   })
+});
+
+filterClose.addEventListener('click', () => {
+   filterSide.forEach(node => {
+      // event.stopPropagation();
+      node.classList.remove('active');
+   })    
+});

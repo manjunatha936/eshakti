@@ -18,7 +18,6 @@ class ProductDetais {
        neckText = sleeveText = lengthText = "As shown";
         $(".js-read-more").click(function(e){
           e.preventDefault()
-          alert(1)
           $(this).siblings('.more-info').toggle()
         })
         $('.neckline').children('.style-contain').find('.img-container').click(function(){
@@ -83,6 +82,17 @@ class ProductDetais {
           },
     
             grabCursor: true,
+            breakpoints: {
+             
+              768: {
+                slidesPerView: 2.5,
+         
+              },
+              1024: {
+                slidesPerView: 3.5,
+             
+              },
+            }
             
           });
           var galleryTop = new Swiper('.gallery-top', {
@@ -160,6 +170,12 @@ class ProductDetais {
           console.log(slideIndex)
           swiperStyle.removeSlide(slideIndex  );
           swiperStyle.update()
+        })
+        $('.style-head').click(function(){
+          $('.style-head').removeClass("border-bttom-o")
+          $(this).addClass("border-bttom-o")
+          $(".style-contain").removeClass("active")
+          $(this).siblings(".style-contain").addClass("active")
         })
         // $('.close-card').on('click',function(){
         //   alert(parseInt($(this).attr("slide-id")))
