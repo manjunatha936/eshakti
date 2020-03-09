@@ -1,6 +1,10 @@
 .products-header {
     display: flex;
     justify-content: space-between;
+    background: #ffffff;
+    width: 100%;
+    transition: all 0.7s ease-in-out !important;
+
     @include bpmax("phone") {
         flex-direction: column-reverse;
     }
@@ -11,6 +15,8 @@
     &__right-info {
         display: flex;
         position: relative;
+      
+
         @include bpmax("phone") {
             padding-top: .8rem;
             padding-bottom: .8rem;
@@ -50,19 +56,23 @@
         color: $black;
         letter-spacing: $letter-spacing03;
         text-transform: uppercase;
+        margin-left: .3rem;
     } 
 }
 
 .filter-sort {
     @include bpmax("phone-lg") {
         position: relative;
+        text-align: center;
     }
 }
 
 .filter-sort, .product-filter-mob {
     @include bpmax("phone-lg") {
         position: relative;
-        padding-right: 2.5rem;
+        padding-right: 1.5rem;
+        margin-right: 1.5rem;
+        width: 33.3%;
         &::after {
             content: "";
             position: absolute;
@@ -84,6 +94,7 @@
     position: relative;
     @include bpmax("phone-lg") {
         align-items: center;
+        width: 33.3%;
     }
     @include bp("tab") {
         padding-right: .8rem;
@@ -193,6 +204,7 @@
 }
 
 // Product-listing cards
+
 .product-card {
     position: relative;
     width: 100%;
@@ -209,16 +221,12 @@
         justify-content: space-between;
         .share {
             position: relative;
-            margin-top: 2px;
             margin-right: 15px;
-            .icon-share::before {
-                font-size: 18px;
-                color: #1e1b1b;
-                
-            }
+           i{
+            font-size: 18px !important;
+           }
             .tooltip {
                 padding: 14px 22px;
-
             }
         }
     }
@@ -255,6 +263,14 @@
                 transform: scale(1.1);
             }
         }
+    }
+}
+
+.product-conatct {
+    padding-top: .2rem;
+    i{
+        font-size: 16px;
+        color: rgba(11, 10, 10, .5);
     }
 }
 
@@ -336,12 +352,48 @@
     display: inline-block;
 }
 
+.js-loading-card {
+    opacity: 0;
+    transition: all 1.5s ease-in-out !important;
+
+    &.active {
+        opacity: 1;
+    }
+
+    &__img {
+        min-height: 100px;
+        transition: all .9s ease-in-out !important;
+    
+        @media (min-width: 768px) {
+            min-height: 200px;
+        }
+    }
+}
 
 // Product filters-side sticky
 
 .side-filter-sticky {
-    width:264px;
+    width:255px;
     max-width: 100%;
     background: $white;
     z-index: 1;
+    transition: .8 ease all;
+}
+
+.sticky-block {
+    position: sticky;
+    top: 0;
+    z-index: 998;
+}
+
+.sticky-left {
+    position: sticky;
+    top: 0;
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .sticky-left {
+        position: fixed;
+        top: 0;
+    }
 }
