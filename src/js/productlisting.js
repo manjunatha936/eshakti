@@ -1,8 +1,3 @@
-// import "jquery"
-// import "./plugins/semantic-stick"
-
-/*eslint-disable*/
-
 // import 'bootstrap/js/src/dropdown'
 
 console.log('Product listing code');
@@ -85,63 +80,66 @@ for (const opt of dropItem) {
 
 // Color select and clear the selected colors
 
-let colorPicker = document.querySelectorAll('.color-list__item');
-let colorClear = document.querySelector('.js-clear');
+// let colorPicker = document.querySelectorAll('.color-list__item');
+// let colorClear = document.querySelector('.js-clear');
 
-const handleClick = (e) => {
-   e.preventDefault();
-   colorPicker.forEach(node => {
-      node.classList.remove('active');
-   });
-   e.currentTarget.classList.add('active');
-}
-colorPicker.forEach(node => {
-   node.addEventListener('click', handleClick)
-});
-
-colorClear.addEventListener('click', (event) => {
-   colorPicker.forEach(node => {
-      event.stopPropagation();
-      node.classList.remove('active');
-   })
-})
-
-// Side-filter checkbox selection and clear the selection
-
-let checkLabel = Array.from(document.querySelectorAll('.label-container input'));
-let checkChecbox = document.querySelector('.js-check-clear');
-
-// checkLabel.forEach(node => {
-  
+// const handleClick = (e) => {
+//    e.preventDefault();
+//    colorPicker.forEach(node => {
+//       node.classList.remove('active');
+//    });
+//    e.currentTarget.classList.add('active');
+// }
+// colorPicker.forEach(node => {
+//    node.addEventListener('click', handleClick)
 // });
 
-// const myForm = document.forms[0]
-// const checkLabel = myForm.querySelectorAll('input')
+// colorClear.addEventListener('click', (event) => {
+//    colorPicker.forEach(node => {
+//       event.stopPropagation();
+//       node.classList.remove('active');
+//    })
+// })
 
-Array.from(checkLabel).forEach(node => {
+
+// Side-filter checkbox selection and clear the selection
+let checkInput = Array.from(document.querySelectorAll('.label-container input'))
+
+Array.from(checkInput).forEach(node => {
    node.addEventListener('change', (event) => {
+      let panelCard = event.target.closest(".panel-card");
+      let clearButtons = panelCard.querySelector('.js-check-clear');
+      let selectedCheckBoxCount = panelCard.querySelectorAll("input:checked");
+
       if (event.target.checked) {
-         checkChecbox.classList.add('active');
+         clearButtons.classList.add('active');
       }
-      let selectedCheckBoxCount = document.querySelectorAll("input:checked");
+      
       if (!selectedCheckBoxCount.length) {
-         checkChecbox.classList.remove('active');
+         clearButtons.classList.remove('active');
       }
    })
-})
+});
 
-checkChecbox.addEventListener('click', (el) => { 
-   checkLabel.forEach(node => {
-      el.stopPropagation();
-      node.checked = false;
-      checkChecbox.classList.remove('active');
-   });
-})
+//  Clearing the buttons and button as well
 
+let clearButtons = document.querySelectorAll('.js-check-clear')
+clearButtons.forEach(clearBtn => {
+   clearBtn.addEventListener('click', (event) => {
+      event.stopPropagation();
+      let panelCard = event.target.closest(".panel-card");
+      let checkChecboxes = panelCard.querySelectorAll('.label-container input');
+
+      checkChecboxes.forEach(checkbox => {
+         checkbox.checked = false;
+      })
+      clearBtn.classList.remove('active');
+   })
+});
 
 // Product alert
 
-let alertContent = document.querySelector('.product-alert');
+const alertContent = document.querySelector('.product-alert');
 const checkbox = document.querySelectorAll('.style-check');
 const clear = document.querySelector('.clear-select');
 
