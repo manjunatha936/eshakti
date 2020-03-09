@@ -1,0 +1,144 @@
+.cart-contain
+    .container.cart-contain-wrap
+        h1.page-title Checkout
+        .row
+            .col-8.cart-content.checkout-content
+                .cart-content__wrap
+                    .checkout-content__section
+                        h2 Delivery Details
+                        p Delivery between Mar 2nd - Mar 6th
+
+                        .checkout-content__address
+                            .address-box
+                                h4 Shipping Details
+                                p Emilia Clarke
+                                    br
+                                    | 400 Hartford Avenue, Mount street,
+                                    br
+                                    | Bellingham MA 200198.
+                            .address-box
+                                h4 Billing Details
+                                p Emilia Clarke
+                                    br
+                                    | 400 Hartford Avenue, Mount street,
+                                    br
+                                    | Bellingham MA 200198.
+
+                            a.change-link(href="#") Change Address
+
+                    .checkout-content__section
+                        h2 Order-Item Details
+                        p (
+                            span 2
+                            |  items)
+
+                        table.checkout-content__table
+                            tr
+                                td.cart-content__item
+                                    .cart-content__img
+                                        img(src="assets/images/cart/cart-img.png", alt="")
+                                    .cart-content__details
+                                        label Zapelle
+                                        h3 Cotton Poplin Two-tone Tiered Shift Dress
+                                        .cart-color
+                                            span Color: 
+                                            p Crimson red/hot pink
+                                        .cart-size
+                                            span Size
+                                            .standard-size
+                                                p Standard Size: 
+                                                    span M-10
+                                                p Height: 
+                                                    span 5.4
+
+                                        .cart-style
+                                            span Style
+                                            p As Shown
+
+
+                                td.cart-content__price
+                                    p $59.95
+                                    p $82.95
+
+                            tr
+                                td.cart-content__item
+                                    .cart-content__img
+                                        img(src="assets/images/cart/cart-img.png", alt="")
+                                    .cart-content__details
+                                        label Zapelle
+                                        h3 Cotton Poplin Two-tone Tiered Shift Dress
+                                        .cart-color
+                                            span Color: 
+                                            p Crimson red/hot pink
+                                        .cart-size
+                                            span Size
+
+                                            .custom-size
+                                                p Height: 
+                                                    span 5.4
+                                                p Length of Arm: 
+                                                    span 35
+                                                p Upperarm: 
+                                                    span 36
+                                                p Hip: 
+                                                    span 35
+                                                p Waist: 
+                                                    span 75
+                                                p Underbust: 
+                                                    span 20
+                                                p Bust: 
+                                                    span 36
+                                                p Chest: 
+                                                    span 36
+                                                p Shoulder: 
+                                                    span 75
+                                                p HPS to Bust: 
+                                                    span 75
+                                                p HPS to Waist:
+                                                    span 75
+                                                P HPS to Knee
+                                                    span 75
+
+                                        .cart-style
+                                            span Style
+                                            p As Shown
+
+
+                                td.cart-content__price
+                                    p $59.95
+                                    p $82.95
+                        
+
+            .col-4.cart-panel.checkout-panel
+                .cart-panel__card
+                    div.cart-panel__promo
+                        h4 Enter a promo or gift card
+                            i.icon-info
+                        form.row.m-0
+                            input.col-8(type="text")
+                            input.col-4(type="submit" value="Apply")
+                    div.cart-panel__suggest
+                        h4 Estimated Total
+                        p Shipping charges will be  added in checkout
+                    div.cart-panel__cost
+                        .row.align-items-center
+                            p.col-8.cost-label Subtotal (
+                                span 2 
+                                |  items)
+                            span.col-4 $99.99
+                        .row.align-items-center 
+                            p.col-8.cost-label Customisation Charges
+                            span.col-4 $18.0
+                        .row.align-items-center 
+                            p.col-8.cost-label GST
+                            span.col-4 $27.80
+                        .row.align-items-center 
+                            p.col-8.cost-label Shipping Charges
+                            span.col-4 $12.95
+                    div.cart-panel__total
+                        .row.align-items-center
+                            .col-8
+                                h4 Total Price
+                            span.col-4 $173.74
+                        a.checkout-btn(href="#") Pay Now
+                        

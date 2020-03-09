@@ -11,6 +11,8 @@ import "../pug/contact.pug";
 import "../pug/product-details.pug";
 // import "../pug/product-listing.pug";
 import "../pug/productlisting.pug";
+import "../pug/cart.pug";
+import "../pug/checkout.pug";
 
 
 import HeaderInteractions from "./components/header";

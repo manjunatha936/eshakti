@@ -1,5 +1,5 @@
-mixin header(status)
-    header.web-header
+mixin header(status,color)
+    header.web-header(class=color ? 'white-header' : '')
         .web-header__top
             .web-header__logo
                 .hamburger-menu.d-lg-none
