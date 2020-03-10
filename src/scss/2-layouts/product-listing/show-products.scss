@@ -3,6 +3,9 @@
     justify-content: space-between;
     background: #ffffff;
     width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 998;
     transition: all 0.7s ease-in-out !important;
 
     @include bpmax("phone") {
@@ -361,11 +364,6 @@
     transition: .8 ease all;
 }
 
-.sticky-block {
-    position: sticky;
-    top: 0;
-    z-index: 998;
-}
 
 .sticky-left {
     position: sticky;
@@ -376,5 +374,12 @@
     .sticky-left {
         position: fixed;
         top: 0;
+    }
+
+        
+    .sticky-block {
+        position: fixed;
+        top: 0;
+        z-index: 998;
     }
 }

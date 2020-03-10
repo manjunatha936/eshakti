@@ -1,17 +1,8 @@
-// import $ from 'jquery'
+
 /*eslint-disable*/
 // Load image after scroll
-console.log('Product listing code');
-
-
 class lazyLoader {
     constructor() {
-        // function isIE() {
-        //     var ua = navigator.userAgent;
-        //     var is_ie = ua.indexOf("MSIE ") > -1 || ua.indexOf("Trident/") > -1;
-        //     return is_ie; 
-        // }
-
         var eventList = ["load", "scroll"];
         for(event of eventList) {
             window.addEventListener(event, function() {
@@ -40,5 +31,6 @@ class lazyLoader {
         }
     }
 }
+
 
 export default lazyLoader;

@@ -135,10 +135,48 @@
         height: 11px;
     }
     .custom-style {
-        background-color: #f9fafb;
-        padding: 50px;
+        position: relative;
+        @media screen and (max-width:767px ){
+            height: 140px;
+    
+        }
+        @include bp("desktop-1200") {
+            background-color: #f9fafb;
+            padding: 50px;
+         
+          }
+    }
+    .style-contain {
+    
+        @media screen and (max-width:767px ){
+            width: 100%;
+            overflow-x: scroll;
+            left: 5px;
+            position: absolute;
+            display: none;
+            bottom: -9px;
+            
+        }
+        @include bp("tab") {
+            display: flex;
+            flex-wrap: wrap;
+         
+          }
+    }
+    .border-bttom-o {
+        @media screen and (max-width:767px ){
+             border-bottom: none !important;
+             background-color: #ffffff;
+        }
     }
     .style-head {
+        @media screen and (max-width:767px ){
+            margin-right: -4px;
+            padding: 12px 20px;
+            border: 1px solid #c7c9cb;
+            background-color: #fafafa;
+            
+        }
         font-size: 12px;
         font-weight: 700;
         letter-spacing: 0.28px;
@@ -173,18 +211,43 @@
     .modal-lg {
         .modal-content {
             padding-top: 40px;
+            @media screen and (max-width:767px ){
+                padding-bottom: 20px;
+                
+            }
         }
     }
     .slide-item {
         margin-right: 40px;
     }
+    .style-model-content {
+        display: inline-block;
+        @include bp("tab") {
+            display: block;
+            
+          }
+        & .active {
+            @media screen and (max-width:767px ){
+                display: flex;
+                
+            }
+        }
+    }
     .style-model-content:not(:last-child){
-        margin-bottom: 55px;
+        @include bp("tab") {
+            margin-bottom: 55px;
+            
+          }
     }
     .model-img {
         width: 135px;
-        height: 493px;
+        height: 380px; 
         position: relative;
+        @include bp("tab") {
+            height: 493px; 
+         
+            
+          }
     }
     .savedItem {
         transition: ease-out .5 all;
@@ -270,7 +333,9 @@
     }
 
     .modal-dialog {
-        width: 85%;
+        @media screen and (max-width:767px ){
+            width: 96%;
+        }
         max-width: 1180px;
     }
 
@@ -282,29 +347,49 @@
     }
 
     .custom-modal-head {
-        padding: 0 17px;
         margin: 0;
         margin-top: 30px;
+        @include bp("desktop-1200") {
+            padding: 0 17px;
+          }
 
         &__img {
-            max-width: 285px;
-            flex: none;
+            @media screen and (max-width:767px ){
+                width: 100% ;
+                
+            }
+            @media screen and (min-width:992px ){
+                max-width: 285px;
+                flex: none;
+                
+            }
         }
 
         &__opt {
-            max-width: calc(100% - 285px);
-            flex: none;
+
+            @include bp("desktop-1200") {
+                max-width: calc(100% - 285px);
+                flex: none;
+              }
+    
         }
     }
 
     .custom-modal-foot {
         // border-top: 1px solid #e9eef0;
-        margin: 0;
-        padding: 20px 17px;
+
+        margin-top: 15px;
+        margin-bottom: 15px;
+        @include bp("desktop-1200") {
+            padding: 20px 17px;
+            margin: 0;
+          }
+        
     }
 
     .custom-modal-heading {
         flex: none;
+        width: 100%;
         max-width: 430px;
         padding: 0 15px;
     }

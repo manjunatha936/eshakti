@@ -1,7 +1,102 @@
 console.log('Product listing code');
+// Side-sticky
+import $ from 'jquery'
+
+window.addEventListener("scroll", function (event) {
+   if (window.innerWidth > 767) {
+      var stickyLeft = document.querySelector('.side-filter');
+      var stickyFilterOff = stickyLeft.getBoundingClientRect().top;
+      var stickyft = document.querySelector('.main-footer').getBoundingClientRect().top;
+      var stickyImages = document.querySelector('.js-product-header').getBoundingClientRect().top;
+      var docHeight = window.innerHeight;
+      console.log(docHeight)
+      console.log(stickyft + "ft")
+      console.log(stickyImages)
+      if(stickyFilterOff < 0) {
+         stickyLeft.classList.add('sticky-left');
+
+         if(stickyft < docHeight) {
+            stickyLeft.classList.remove('sticky-left');
+         }
+      }
+
+      else if(stickyft < docHeight || stickyImages > 0) {
+         stickyLeft.classList.remove('sticky-left');
+      }
+      
+   }
+});
+
+function isIE() {
+   var ua = navigator.userAgent;
+   var is_ie = ua.indexOf("MSIE ") > -1 || ua.indexOf("Trident/") > -1;
+   return is_ie; 
+}
+
+if (isIE()) {
+   $(window).on('scroll', function() {
+       $('.js-loading-card__img').each(function(el) {
+           var dataSrc = $(this).attr('data');
+           if(!(onView($(this)))){
+               $(this).attr('src', dataSrc);
+               $(this).parents(".js-loading-card").addClass('active');
+           }
+       }); 
+   });
+
+   function onView(target) {
+         var $target = $(target);
+         var $window = $(window);
+         var docViewTop = $window.scrollTop();
+         var docViewBottom = docViewTop + $window.height();
+         var targetTop = $target.offset().top;
+         var targetBottom = targetTop + $target.height();
+         return ((targetTop >= docViewBottom));
+      }
+}
 
 
- 
+var eventList = ["load", "scroll"];
+        for(event of eventList) {
+            window.addEventListener(event, function() {
+                var loadingImage = document.getElementsByClassName("js-loading-card__img");
+                var loadingcard = document.getElementsByClassName("js-loading-card");
+                Array.prototype.forEach.call(loadingcard, function(el2) {
+                    var docViewBottom = window.innerHeight;
+                    var targetTop = el2.getBoundingClientRect().top + 150;
+                    if((targetTop < ((docViewBottom / 2) + 300))) {
+                    el2.classList.add('active')
+                    
+                    }
+                });
+                Array.prototype.forEach.call(loadingImage, function(el) {
+                    var docViewBottom2 = window.innerHeight;
+                    var targetTop2 = el.getBoundingClientRect().top + 150;
+                    if((targetTop2 < ((docViewBottom2 / 2) + 300))) {
+                    var DataArtr = el.getAttributeNode('data').value;
+                    el.setAttribute('src', DataArtr);
+                    
+                    }
+                });
+
+                
+            });
+        }
+
+window.addEventListener("scroll", function (event) {
+   var stickyFilter = document.querySelector('.products-header');
+   var stickyFilterOff = stickyFilter.getBoundingClientRect().top;
+   if(stickyFilterOff <= 0) {
+      stickyFilter.classList.add('sticky-block');
+   }
+   else {
+      stickyFilter.classList.remove('sticky-block');
+   }
+  
+});
+
+
+
 const listViewButton = document.querySelector('.list-view-btn');
 const gridViewButton = document.querySelector('.grid-view-btn');
 const colorList = document.querySelectorAll('.view-item');
@@ -38,39 +133,39 @@ const handleClickl = (ek) => {
 //    context: '.product-sticky'
 //  })
 // ;
-let styleSticky = `position:fixed;
-            top:0;`
-let styleRelative = `position:absolute;
-            bottom:0;`;
-let top = `top:0;`
+// let styleSticky = `position:fixed;
+//             top:0;`
+// let styleRelative = `position:absolute;
+//             bottom:0;`;
+// let top = `top:0;`
 
-let heightOfWrapper = list.scrollHeight
-// console.log(heightOfWrapper)
+// let heightOfWrapper = list.scrollHeight
+// // console.log(heightOfWrapper)
 
-let stickyELementwrp = document.querySelector('.product-sticky');
-let stickyELement = document.querySelector('.side-filter-sticky');
-let stickyELementwrpHeight = stickyELementwrp.offsetTop
-stickyHeight = stickyELement.scrollHeight
-let stickyELementOffset = stickyELement.offsetHeight;
-console.log(stickyELementwrpHeight)
-if(window.innerWidth > 767){
-   window.addEventListener("scroll", function(event) {
-      var top = this.scrollY;
-      console.log(top)
+// let stickyELementwrp = document.querySelector('.product-sticky');
+// let stickyELement = document.querySelector('.side-filter-sticky');
+// let stickyELementwrpHeight = stickyELementwrp.offsetTop
+// let stickyHeight = stickyELement.scrollHeight
+// let stickyELementOffset = stickyELement.offsetHeight;
+// // console.log(stickyELementwrpHeight)
+// if(window.innerWidth > 767){
+//    window.addEventListener("scroll", function(event) {
+//       var top = this.scrollY;
+//       // console.log(top)
    
-      if(top > (stickyELementwrpHeight - 80) && top <= (heightOfWrapper - stickyHeight + 400 ) ){
-         stickyELement.style=styleSticky;
-      }
-      else {
-         stickyELement.style=styleRelative;
+//       if(top > (stickyELementwrpHeight - 80) && top <= (heightOfWrapper - stickyHeight + 400 ) ){
+//          stickyELement.style=styleSticky;
+//       }
+//       else {
+//          stickyELement.style=styleRelative;
    
-      }
-      if( top <stickyELementOffset-50){
-         stickyELement.style=top
-      }
-   });
+//       }
+//       if( top <stickyELementOffset-50){
+//          stickyELement.style=top
+//       }
+//    });
 
-}
+// }
 
 
 let dropBtn = document.querySelector('.dropdown-select');
@@ -178,5 +273,23 @@ const accordion = new Accordion('.panel-cardtitle');
 // for open every use showAll();
 accordion.showAll();
 
+const filterMobile = document.querySelector('.product-filter-mob');
+const filterSide = document.querySelectorAll('.side-filter');
+const filterBody = document.querySelectorAll('body');
+const filterClose = document.querySelector('.btn-close');
 
+filterMobile.addEventListener('click', () => {
+   filterSide.forEach(node => {
+      node.classList.add('active');
+   })
+   filterBody.forEach(node => {
+      node.classList.add('scroll');
+   })
+});
 
+filterClose.addEventListener('click', () => {
+   filterSide.forEach(node => {
+      // event.stopPropagation();
+      node.classList.remove('active');
+   })    
+});
