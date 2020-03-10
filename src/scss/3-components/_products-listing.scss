@@ -14,18 +14,48 @@
     }
 }
 
+.bg-banner-content {
+  background: #fcfcfc;
+  &__heading {
+    font-size: 26px;
+    line-height: 36px;
+  }
+  p {
+    color: $card-title;
+  }
+  &__container {
+    max-width: 250px;
+    margin: 0 auto;
+    @include bp("tab") {
+      max-width: 350px;
+    }
+    padding: {
+      top: 2rem;
+      bottom: 2rem;
+    };
+  }
+}
+
 // Background patch
 
 .delivery-patch {
-    @extend .fnt-sm;
-    text-align-last: center;
-    padding-top: .8rem;
-    padding-bottom: .8rem;
-    color: $title-black;
-    &__date {
-        color: $bnr-red;
-        font-weight: 600;
+  @extend .fnt-sm;
+  text-align-last: center;
+  padding-top: .8rem;
+  padding-bottom: .8rem;
+  color: $title-black;
+  &__date {
+    color: $bnr-red;
+    font-weight: 600;
+  }
+  p{
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    @include bp("tab") {
+      padding-left: 1rem;
+      padding-right: 1rem;
     }
+  }
 }
 
 // Product alert

@@ -17,6 +17,7 @@
   }
 }
 
+// Accordian start
 #accordion {
     max-width: 400px;
     margin: 0 auto;
@@ -88,68 +89,7 @@
   }
 }
 
- // Colors
- .color-list {
-    padding-top: .5rem;
-    @include bpmax("phone-lg") {
-      max-width: 250px;
-      margin-right: 1.2rem;
-    }
-    &__item{
-      display: inline-block;
-      margin: 0 .8rem .6rem 0;
-      cursor: pointer;
-      &.active {
-          position: relative;
-          &::before {
-              content: "";
-              position: absolute;
-              height: 30px;
-              width: 30px;
-              border-radius: 50%;
-              top: -4px;
-              left: 50%;
-              transform: translateX(-50%);
-              border: 2px solid rgba(168, 173, 181, 0.29);
-          }
-      }
-    }
- }
-
- .color-circle {
-     height: 22px;
-     width: 22px;
-     border-radius: 50%;
-     display: block;
- }
-
- .gray {
-    background: #f5f1ee;
- }
- .blue{
-    background: #427bf0;
-}
-.black {
-    background: #17191f;
- }
-.ecc {
-    background: #4ecceb;
- }
-.gray-lght {
-    background: #eff1f5;
- }
-.violt {
-    background: #af6bfa;
-}
-.gold {
-    background: #dfc17b;
-}
-.thick-vilot {
-    background: #cdd1d7;
-}
-
 // Checkbox
-
 .label-container {
   display: block;
   position: relative;
@@ -161,14 +101,30 @@
   user-select: none;
   letter-spacing: 0.18px;
 
-//   &:hover input ~ .checkmark {
-//     background-color: #ccc;
-//   }
-
-  input:checked ~ .checkmark {
-    background-color: $bnr-red;
-    border-color: $bnr-red;
+  &--check{
+    input:checked ~ .checkmark {
+      background-color: $bnr-red;
+      border-color: $bnr-red;
+    }
   }
+  input:checked ~ .checkmark {
+    .checkborder{
+      height: 34px;
+      width: 34px;
+      border-radius: 50%;
+      /* background: black; */
+      position: absolute;
+      top: -4px;
+      border: 2px solid rgba(168, 173, 181, 0.29);
+      left: 50%;
+      transform: translateX(-50%);
+      @include bp("tab") {
+        height: 30px;
+        width: 30px;
+      }
+    }
+  }
+
   /* Hide the browser's default checkbox */
   input {
     position: absolute;
@@ -180,6 +136,7 @@
 }
 
 /* Create a custom checkbox */
+
 .checkmark {
   position: absolute;
   top: 2px;
@@ -189,14 +146,90 @@
   background-color: transparent;
   border: 1px solid #e4e5e6;
   border-radius: 2px;
+
+  &--circle {
+    height: 22px;
+    width: 22px;
+    border-radius: 50%;
+    border: none;
+    top: 0 !important;
+    @include bpmax("phone-lg") {
+      height: 26px;
+      width: 26px;
+    }
+  }
 }
+
+// Color checkbox
+
+.color-container {
+  // padding-top: .5rem;
+  @include bpmax("phone-lg") {
+    max-width: 250px;
+    margin-right: 1.2rem;
+  }
+}
+
+.color-list-item {
+  display: inline-block !important;
+  height: 22px;
+  width: 22px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 .8rem .6rem 0;
+  padding-left: 0;
+  cursor: pointer;
+
+  @include bpmax("phone-lg") {
+    height: 26px;
+    width: 26px;
+  }
+
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    top: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 2px solid rgba(168, 173, 181, 0.29);
+    border-width: 0 !important;
+  }
+}
+
+.gray {
+  background: #f5f1ee;
+}
+.blue{
+  background: #427bf0;
+}
+.black {
+  background: #17191f;
+}
+.ecc {
+  background: #4ecceb;
+}
+.gray-lght {
+  background: #eff1f5;
+}
+.violt {
+  background: #af6bfa;
+}
+.gold {
+  background: #dfc17b;
+}
+.thick-vilot {
+  background: #cdd1d7;
+}
+
 /* Create the checkmark/indicator (hidden when not checked) */
 .checkmark:after {
   content: "";
   position: absolute;
   display: none;
 }
-
 /* Show the checkmark when checked */
 .label-container input:checked ~ .checkmark:after {
   display: block;
@@ -244,21 +277,8 @@
     display: block;
   }
 }
-.js-check-clear.show {
-  background: red;
-}
 
-// Filters in mobile 
-
-.btn-close {
-  display: none;
-  @include bpmax("phone-lg") {
-    position: absolute;
-    right: 1.5rem;
-    top: 1.2rem;
-    display: block;
-  }
-}
+// Filters Apply and checking in mobile 
 
 .side-filter {
   @include bpmax("phone-lg") {
@@ -269,9 +289,29 @@
     right: 0;
     width: 100%;
     padding: 0;
-    z-index: 100;
-    overflow-x: auto;
+    z-index: 10000;
+    overflow-x: hidden;
+    // overflow-x: auto;
+    // overflow-y: scroll;
+  }
+}
+
+.side-filter {
+  @include bpmax("phone-lg") {
+    transform: translateX(-100%);
+    transition: transform .3s cubic-bezier(0.22, 0.61, 0.36, 1);
+    &.active {
+      transform: translateX(0);
+    }
+  }
+}
+
+.sticky-inner-container {
+  @include bpmax("phone-lg") {
+    position: relative;
+    height: 90%;
     overflow-y: scroll;
+    overflow-x: auto;
   }
 }
 
@@ -285,12 +325,28 @@
   }
 }
 
-.side-filter {
+.btn-close {
+  display: none;
   @include bpmax("phone-lg") {
-    transform: translateX(-100%);
-    transition: transform .3s cubic-bezier(0.22, 0.61, 0.36, 1);
-    &.active {
-      transform: translateX(0);
-    }
+    position: absolute;
+    right: 1.5rem;
+    top: 1.2rem;
+    display: block;
+  }
+}
+
+//Side-sticky Fixed bottom
+
+.filter-bottom-fixed {
+  @include bpmax("phone-lg") {
+    background: $white;
+    border-top: 1px solid #e4e6e7;
+    padding: 1rem;
+    text-align: right;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1030;
   }
 }

@@ -168,7 +168,6 @@
         @include bp("tab") {
             display: flex;
             flex-wrap: wrap;
-         
           }
     }
     // .border-bttom-o {
@@ -650,24 +649,6 @@
     background-color: #ffffff;
     }
 }
-.bttn{
-    border: none;
-    outline: none;
-    font-size: 13px;
-    font-weight: 600;
-    line-height: 22px;
-    padding: 9px 21px ;
-    &__orange {
-        color: #ffffff;
-        background-color: #f25c50;
-    }
-    &__white {
-        color: #2e333d;
-        background-color: #ffffff;
-        border: 1px solid #141313;  
-    }
-}
-
 
 .saveditem-container {
     border-top: 1px solid #e9eef0;

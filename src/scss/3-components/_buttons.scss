@@ -1,0 +1,35 @@
+.bttn{
+    border: none;
+    outline: none;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 22px;
+    padding: 9px 21px ;
+    &__orange {
+        color: #ffffff;
+        background-color: #f25c50;
+    }
+    &__white {
+        color: #2e333d;
+        background-color: #ffffff;
+        border: 1px solid #141313;  
+    }
+}
+
+// Custom buttons info
+.btn {
+    font-size: 14px;
+    line-height: 24px;
+    padding: .65rem 1.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 0;
+    &--danger {
+        background-color: $bnr-red;
+        color: $white;
+    }
+    &:focus {
+        color: $white;
+        box-shadow: none;
+    }
+}
