@@ -1,6 +1,10 @@
 .products-header {
     display: flex;
     justify-content: space-between;
+    background: #ffffff;
+    width: 100%;
+    transition: all 0.7s ease-in-out !important;
+
     @include bpmax("phone") {
         flex-direction: column-reverse;
     }
@@ -11,6 +15,8 @@
     &__right-info {
         display: flex;
         position: relative;
+      
+
         @include bpmax("phone") {
             padding-top: .8rem;
             padding-bottom: .8rem;
@@ -134,6 +140,10 @@
     width: 50%;
     flex: 0 0 50%;
     @include bp("tab") {
+        width: 33.3%;
+        flex: 0 0 33.3%;
+    }
+    @include bp("desktop") {
         width: 25.3%;
         flex: 0 0 25%;
     }
@@ -328,6 +338,26 @@
 }
 
 
+// Lazyloading on scroll images
+
+// .js-loading-card {
+//     opacity: 0;
+//     transition: all 1.5s ease-in-out !important;
+
+//     &.active {
+//         opacity: 1;
+//     }
+
+//     &__img {
+//         min-height: 100px;
+//         transition: all .9s ease-in-out !important;
+    
+//         @media (min-width: 768px) {
+//             min-height: 200px;
+//         }
+//     }
+// }
+
 // Product filters-side sticky
 
 .side-filter-sticky {
@@ -335,5 +365,36 @@
     max-width: 100%;
     background: $white;
     z-index: 1;
-    transition: .8 ease all;
+    // transition: .8 ease all;
+    @include bp("tab") {
+        width: 150px;
+    }
+    @include bp("tab-lg") {
+        width: 210px;
+    }
+    @include bp("desktop-1200") {
+        width: 255px;
+    }
+}
+
+.sticky-block {
+    @include bpmax("phone-lg") {
+        position: sticky;
+        top: 0;
+        z-index: 998;
+    }
+}
+
+.sticky-left {
+    @include bpmax("phone-lg") {
+        position: sticky;
+        top: 0;
+    }
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .sticky-left {
+        position: fixed;
+        top: 0;
+    }
 }
