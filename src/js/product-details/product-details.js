@@ -2,7 +2,7 @@
 import Swiper from 'swiper';
 import $ from 'jquery'
 
-
+import 'bootstrap/js/src/tab'
 class ProductDetais {
     constructor() {
       if (document.querySelector(".product-details")){
@@ -171,23 +171,15 @@ class ProductDetais {
           swiperStyle.removeSlide(slideIndex  );
           swiperStyle.update()
         })
-        $('.style-head').click(function(){
-          $('.style-head').removeClass("border-bttom-o")
-          $(this).addClass("border-bttom-o")
-          $(".style-contain").removeClass("active")
-          $(this).siblings(".style-contain").addClass("active")
-        })
-        // $('.close-card').on('click',function(){
-        //   alert(parseInt($(this).attr("slide-id")))
-        //   let slideIndex = parseInt($(this).attr("slide-id"))
-        //   swiperStyle.removeSlide(slideIndex);
-        // })
-        // $('.close-card span').click(function(){
-        //   alert(parseInt($(this).attr("slide-id")))
-        //   let slideIndex = parseInt($(this).attr("slide-id"))
-        //   swiperStyle.removeSlide(slideIndex);
-        // })
-
+       
+        if(window.innerWidth > 767){
+          $(".style-model-content").removeClass("fade")
+          
+        }
+        else{
+          $(".style-model-content").addClass("fade")
+          
+        }
      })
 
     }

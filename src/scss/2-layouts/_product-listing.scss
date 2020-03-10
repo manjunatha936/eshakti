@@ -1,5 +1,17 @@
 .product-listing {
-    padding-top: 11rem;
+    padding-top: 5rem;
+    @media screen and (min-width: 768px) {
+        
+        padding-top: 6rem;
+    }
+    @media screen and (min-width: 992px) {
+        
+        padding-top: 9rem;
+    }
+    @media screen and (min-width: 1024px) {
+        
+        padding-top: 11rem;
+    }
    
     font-style: $opensans;
     .dress-details {
@@ -127,6 +139,7 @@
     font-weight: 900;
     letter-spacing: 0.51px;
 }
+
 .product-modal {
     padding-right: 0 !important;
     
@@ -136,25 +149,20 @@
     }
     .custom-style {
         position: relative;
-        @media screen and (max-width:767px ){
-            height: 140px;
-    
-        }
+      
         @include bp("desktop-1200") {
             background-color: #f9fafb;
             padding: 50px;
          
           }
     }
+   
     .style-contain {
     
         @media screen and (max-width:767px ){
             width: 100%;
             overflow-x: scroll;
-            left: 5px;
-            position: absolute;
-            display: none;
-            bottom: -9px;
+            display: flex;
             
         }
         @include bp("tab") {
@@ -163,13 +171,20 @@
          
           }
     }
-    .border-bttom-o {
-        @media screen and (max-width:767px ){
-             border-bottom: none !important;
-             background-color: #ffffff;
-        }
+    // .border-bttom-o {
+    //     @media screen and (max-width:767px ){
+    //          border-bottom: none !important;
+    //          background-color: #ffffff;
+    //     }
+    // }
+   #myTab {
+    .active {
+        border-bottom: 1px solid #ffffff !important;
+        background-color: #ffffff;
     }
+   }    
     .style-head {
+        color: #000000;
         @media screen and (max-width:767px ){
             margin-right: -4px;
             padding: 12px 20px;
@@ -221,17 +236,17 @@
         margin-right: 40px;
     }
     .style-model-content {
-        display: inline-block;
+        // display: inline-block;
         @include bp("tab") {
             display: block;
             
           }
-        & .active {
-            @media screen and (max-width:767px ){
-                display: flex;
+        // & .active {
+        //     @media screen and (max-width:767px ){
+        //         display: flex;
                 
-            }
-        }
+        //     }
+        // }
     }
     .style-model-content:not(:last-child){
         @include bp("tab") {
@@ -336,7 +351,14 @@
         @media screen and (max-width:767px ){
             width: 96%;
         }
-        max-width: 1180px;
+        @media screen and (min-width:992px ){
+            max-width: 900px;
+        }
+        @media screen and (min-width:1404px ){
+            
+            max-width: 1180px;
+        }
+
     }
 
     .prd-sub-txt {
