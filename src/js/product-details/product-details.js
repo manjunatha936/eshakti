@@ -164,12 +164,20 @@ class ProductDetais {
                 swiperStyle.appendSlide(ele);
         })
         $(document).on('click','.close-card',function(){
-          
           let slideIndex = parseInt($(this).attr("slide-id"))
           --slideIndex; 
-          console.log(slideIndex)
+          // console.log(slideIndex)
           swiperStyle.removeSlide(slideIndex  );
+          
           swiperStyle.update()
+          let length = $('.slide-item').length
+          let i=1;
+         $('.close-card').each(function(){
+           $(this).attr("slide-id",i++)
+
+         })
+     
+         
         })
        
         if(window.innerWidth > 767){
@@ -186,13 +194,6 @@ class ProductDetais {
         $(this).parent(".tab-img").siblings(".model-img-tab-container").css("background-image","url("+src+")")
         })
  
-      //   $('.model-img-tab-container').on('mousemove', function(event) {
-      //     console.log( event.clientY/100);
-      //     $(this).css({ 
-      //       'background-position-x' : 100 + '%',
-      //       'background-position-y' : -50% + (event.clientY/100) +'%' ,  
-      //   })
-      // });
         $('.model-img-tab-container').on('mousemove', function(e) {
           console.log(e.offsetY)
           var zoomer = e.currentTarget;
