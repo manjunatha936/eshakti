@@ -180,6 +180,37 @@ class ProductDetais {
           $(".style-model-content").addClass("fade")
           
         }
+        // on hover change img
+        $('.tab-img img').hover(function(){
+         let src = $(this).attr("src")
+        $(this).parent(".tab-img").siblings(".model-img-tab-container").css("background-image","url("+src+")")
+        })
+ 
+      //   $('.model-img-tab-container').on('mousemove', function(event) {
+      //     console.log( event.clientY/100);
+      //     $(this).css({ 
+      //       'background-position-x' : 100 + '%',
+      //       'background-position-y' : -50% + (event.clientY/100) +'%' ,  
+      //   })
+      // });
+        $('.model-img-tab-container').on('mousemove', function(e) {
+          console.log(e.offsetY)
+          var zoomer = e.currentTarget;
+          // e.offsetX ? offsetX = e.offsetX : offsetX = e.touches[0].pageX
+          e.offsetY ? e.offsetY = e.offsetY : e.offsetX = e.touches[0].pageX
+          // x = offsetX/zoomer.offsetWidth*100
+          let y = e.offsetY/zoomer.offsetHeight*100
+          
+          $(this).css({ 
+                  'background-position-x' : 100 + '%',
+                  'background-position-y' : y + '%' ,  
+              })
+        });
+
+      //   $(".img-zoom-close").click(function () {
+    
+      //     $(this).parent(".img-modal-lg").modal().hide();
+      // });
      })
 
     }
