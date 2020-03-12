@@ -3,15 +3,14 @@ html(lang="en")
 
   head
     include ./base/head.pug
-    +head("Home")
+    +head("Checkout")
 
   body
     include ./base/discount-bar.pug
     include ./base/header.pug
-    +header()
+    +header("repeat","white")
 
     main
-      include ./base/signup-pop-up.pug
-      include ./layouts/home/main.pug
+      include ./layouts/cart-checkout/checkout.pug
 
     include ./base/footer.pug
