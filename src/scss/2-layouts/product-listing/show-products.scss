@@ -147,15 +147,32 @@
         width: 25.3%;
         flex: 0 0 25%;
     }
-    /** mobile card-tag **/
-    .card-tag{
-        @include bpmax("phone-lg") {
-            height: 27px;
-            width: 27px;
-            top: .6rem;
-            left: .6rem;
-            font-size: 9px;
-            line-height: 18px;
+}
+
+.grid-item {
+    margin-left: -10px;
+    margin-right: -10px;
+
+    li {
+        max-width: 50%;
+        flex: 0 0 50%;
+        padding-left: 10px;
+        padding-right: 10px;
+    
+        @include bp("tab") {
+            max-width: 25%;
+            flex: 0 0 25%;
+        }
+        /** mobile card-tag **/
+        .card-tag{
+            @include bpmax("phone-lg") {
+                height: 27px;
+                width: 27px;
+                top: .6rem;
+                left: .6rem;
+                font-size: 9px;
+                line-height: 18px;
+            }
         }
     }
 }
@@ -195,6 +212,8 @@
 
 .product-card {
     position: relative;
+    width: 100%;
+
     &__view {
         position: relative;
         overflow: hidden;
@@ -237,6 +256,7 @@
     .img-scale {
         transition: all .6s ease;
         transform: scale(1);
+        width: 100%;
     }
 
     &:hover, &:focus {
