@@ -8,12 +8,13 @@ html(lang="en")
   body
     include ./base/discount-bar.pug
     include ./base/header.pug
-
+    +header()
     main.product-details
-    main
-      //- include ./layouts/product-listing/product-modal.pug
+  
       include ./layouts/product-listing/prduct-details.pug
       include ./layouts/product-listing/cards.pug
       include ./layouts/product-listing/product-modal.pug
+      include ./layouts/product-listing/img-model.pug
+      include ./layouts/product-listing/save-style-model.pug
 
     //- include ./base/footer.pug

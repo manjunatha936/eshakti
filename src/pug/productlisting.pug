@@ -6,9 +6,11 @@ html(lang="en")
     +head("Product Listing")
 
   body
-    //- include ./base/discount-bar.pug
-    //- include ./base/header.pug
+    include ./base/discount-bar.pug
+    include ./base/header.pug
     // Main
     main
       include ./layouts/product-listing/main.pug
+      include ./layouts/product-listing/product-modal.pug
+      include ./layouts/product-listing/save-style-model.pug
     include ./base/footer.pug

@@ -14,11 +14,18 @@
                     a(href="#").share-style
                         i.icon-share
                         span.txt-gry-12 Share
-                .col-md-8.custom-modal-head__opt.order-1.order-md-2
-                    .custom-style
-                        .style-model-content.neckline
-                            .style-head.border-bttom-o.pb-md-3 Neckline
-                            .style-contain.active 
+                .col-lg-8.custom-modal-head__opt.order-1.order-md-2
+                    ul#myTab.nav.d-flex.d-md-none(role='tablist')
+                        li.nav-item.mt-2
+                            a#neck-tab.nav-link.style-head.active(data-toggle='tab' href='#neck' role='tab' aria-controls='home' aria-selected='true') Neckline
+                        li.nav-item.mt-2
+                            a#sleeve-tab.nav-link.style-head(data-toggle='tab' href='#sleeve' role='tab' aria-controls='profile' aria-selected='false') Sleeve Type
+                        li.nav-item.mt-2
+                            a#length-tab.nav-link.style-head(data-toggle='tab' href='#length' role='tab' aria-controls='contact' aria-selected='false') Length
+                    #myTabContent.tab-content.custom-style.mt-2.mt-md-0
+                        #neck.tab-pane.fade.show.active.style-model-content.neckline
+                            .style-head.pb-md-3.d-none.d-md-block Neckline
+                            .style-contain
                                 label(for="check1" ).img-container.mr-4
                                     input#check1.d-none.style-check(type="radio" name="neckline" data-src="./assets/images/women.png" checked)
                                     .img-wrp.d-flex.justify-content-center.align-item-center
@@ -44,8 +51,8 @@
                                     .img-wrp
                                         img.style-img(src="./assets/images/style-img.png", alt="")
                                     p.img-txt.pt-2 Petre Pan
-                        .style-model-content.sleeve
-                            .style-head.pb-md-3 Sleeve Type
+                        #sleeve.tab-pane.fade.style-model-content.sleeve
+                            .style-head.pb-md-3.d-none.d-md-block Sleeve Type
                             .style-contain 
                                 label(for="check6").img-container.mr-4
                                     input#check6.d-none.style-check(type="radio" name="sleeveType" data-src="./assets/images/women.png" checked)
@@ -78,8 +85,8 @@
                                     .img-wrp
                                         img.style-img(src="./assets/images/style-img.png", alt="")
                                     p.img-txt.pt-2 Elbow Length
-                        .style-model-content.length
-                            .style-head.pb-md-3 Length
+                        #length.tab-pane.fade.style-model-content.length
+                            .style-head.pb-md-3.d-none.d-md-block Length
                             .style-contain 
                                 label(for="check12").img-container.mr-4
                                     input#check12.d-none.style-check(type="radio" name="length" data-src="./assets/images/women.png" checked)
@@ -109,13 +116,12 @@
             .row.custom-modal-foot
                 .col.d-flex.justify-content-center.justify-content-md-end
                     button.procced-btn.js-btn-save.bttn.bttn__orange.mr-3(type="button") Proceed with the style
-                    button.bttn.bttn__white.ml-1(type="button") Save Style
-                
+                    button.close-parent-modal.bttn.bttn__white.ml-1.mr-md-3.mr-xl-0(type="button", data-dismiss="modal") Save Style
             .container.saveditem-container
                 .savedItem
-                    p.style-head.pb-md-3 Saved Styles 
+                    p.style-head.pb-md-3.d-none.d-md-block Saved Styles 
                         span (3 items)
-                    .dynaic-slide-wrapper.d-flex
+                    .dynaic-slide-wrapper.d-flex.flex-column.flex-md-row
                         ul.slide-item-wrp
                             li.slide-item
                                 .card-wrp
@@ -124,7 +130,7 @@
                                         
                         
                                     p.fnt-11.pt-2 As shown
-                        .swiper-container.js-style-slider
+                        .swiper-container.js-style-slider.mt-3.mt-md-0
                             ul.swiper-wrapper
             .container.saveditem-container.border-0
                 .fixed-btn 

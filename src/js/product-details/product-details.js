@@ -1,10 +1,13 @@
 
 import Swiper from 'swiper';
 import $ from 'jquery'
+import 'bootstrap/js/src/tab'
 
 
 class ProductDetais {
     constructor() {
+
+
       if (document.querySelector(".product-details")){
        
         this.init();
@@ -171,24 +174,49 @@ class ProductDetais {
           swiperStyle.removeSlide(slideIndex  );
           swiperStyle.update()
         })
-        $('.style-head').click(function(){
-          $('.style-head').removeClass("border-bttom-o")
-          $(this).addClass("border-bttom-o")
-          $(".style-contain").removeClass("active")
-          $(this).siblings(".style-contain").addClass("active")
-        })
-        // $('.close-card').on('click',function(){
-        //   alert(parseInt($(this).attr("slide-id")))
-        //   let slideIndex = parseInt($(this).attr("slide-id"))
-        //   swiperStyle.removeSlide(slideIndex);
-        // })
-        // $('.close-card span').click(function(){
-        //   alert(parseInt($(this).attr("slide-id")))
-        //   let slideIndex = parseInt($(this).attr("slide-id"))
-        //   swiperStyle.removeSlide(slideIndex);
-        // })
-
+       
+        if(window.innerWidth > 767){
+          $(".style-model-content").removeClass("fade")
+          
+        }
+        else{
+          $(".style-model-content").addClass("fade")
+          
+        }
      })
+
+    //Save style popup
+    var SaveStyles = document.querySelector('.close-parent-modal');
+    SaveStyles.addEventListener("click", function (event) {
+    var SelctedSliderImage = document.querySelector('.gallery-top');
+    var GetImage = SelctedSliderImage.querySelector('.swiper-slide-active');
+    var SelectedImage = GetImage.style.backgroundImage.replace(/.*\s?url\([\'\"]?/, '').replace(/[\'\"]?\).*/, '');
+    var NewImageConatiner = document.querySelector('.saved-styles');
+    var NewpopupImage = NewImageConatiner.querySelector('.saved-styles__mainImage').setAttribute('src', SelectedImage);
+    var GetCustomStyles = document.querySelector('.dynaic-slide-wrapper');
+    var MainImges = GetCustomStyles.querySelectorAll('.slide-item');
+    var GetRealImages = GetCustomStyles.querySelectorAll('.slide-item').length;
+    var getNewsubImages = NewImageConatiner.querySelector('.saved-styles__subImages');
+      var list = getNewsubImages.querySelectorAll('.slide-item').length;
+      var Li = document.querySelector('.saved-styles__subImages');
+      Li.innerHTML = "";
+      
+      for (var i=0; i<GetRealImages; i++) {
+        var NewItems = MainImges[i].cloneNode(true);
+        getNewsubImages.appendChild(NewItems);
+        var listImages = getNewsubImages.querySelectorAll('.slide-item').length;
+        var listImages2 = getNewsubImages.querySelectorAll('.slide-item');
+      
+        for(var x=0; x<listImages; x++) {
+          listImages2[x].classList.remove("swiper-slide")
+        }
+      }
+    setTimeout(function(){ 
+      $('.bd-example-modal-lg-02').modal('show');
+      }, 200);
+
+    });
+
 
     }
 }

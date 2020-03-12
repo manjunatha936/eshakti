@@ -1,0 +1,23 @@
+.product-modal.modal.fade.bd-example-modal-lg-02(tabindex='-1' role='dialog' aria-labelledby='myLargeModalLabel' aria-hidden='true')
+  .modal-dialog.modal-lg
+    .modal-content
+        button.close-modal.d-none.d-md-block(data-dismiss="modal") &times;
+        .container.p-0
+            .row.model-head.text-center.justify-content-center.m-0
+                .custom-modal-heading
+                    h4.model-22 Customize your style with eShakti fx
+                    p.prd-sub-txt.px-5 You can customize the garment to your style or shop the style 'as shown'.
+            .d-flex.saved-styles
+                //  main image
+                .col-md-3.float-left
+                    .p-4.saved-styles__img
+                        img.saved-styles__mainImage(src="")
+                // saved styles of main image
+                .col-md-9.px-0
+                    // Dynamicaly its clone selcted item from custom style popup
+                    ul.mt-2.w-100.saved-styles__subImages.d-flex.flex-wrap.jsustify-content-aroun
+            .col-12.saved-styles-footer
+                .saved-styles-footer__btn.float-right
+                    button.mb-3.mb-md-0.mr-md-3.create-more-styles.bttn(type="button") + Create more style
+                    button.bttn.bttn__orange(type="button") Proceed with the style
+                

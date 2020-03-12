@@ -1,7 +1,16 @@
-console.log('Product listing code');
-// Side-sticky
+
+
+// import Swiper from 'swiper';
 import $ from 'jquery'
 
+import 'bootstrap/js/src/tab'
+
+
+ 
+ 
+
+console.log('Product listing code');
+// Side-sticky
 window.addEventListener("scroll", function (event) {
    if (window.innerWidth > 767) {
       var stickyLeft = document.querySelector('.side-filter');
@@ -9,9 +18,6 @@ window.addEventListener("scroll", function (event) {
       var stickyft = document.querySelector('.main-footer').getBoundingClientRect().top;
       var stickyImages = document.querySelector('.js-product-header').getBoundingClientRect().top;
       var docHeight = window.innerHeight;
-      console.log(docHeight)
-      console.log(stickyft + "ft")
-      console.log(stickyImages)
       if(stickyFilterOff < 0) {
          stickyLeft.classList.add('sticky-left');
 
@@ -19,7 +25,6 @@ window.addEventListener("scroll", function (event) {
             stickyLeft.classList.remove('sticky-left');
          }
       }
-
       else if(stickyft < docHeight || stickyImages > 0) {
          stickyLeft.classList.remove('sticky-left');
       }
@@ -27,75 +32,28 @@ window.addEventListener("scroll", function (event) {
    }
 });
 
-function isIE() {
-   var ua = navigator.userAgent;
-   var is_ie = ua.indexOf("MSIE ") > -1 || ua.indexOf("Trident/") > -1;
-   return is_ie; 
-}
-
-if (isIE()) {
-   $(window).on('scroll', function() {
-       $('.js-loading-card__img').each(function(el) {
-           var dataSrc = $(this).attr('data');
-           if(!(onView($(this)))){
-               $(this).attr('src', dataSrc);
-               $(this).parents(".js-loading-card").addClass('active');
-           }
-       }); 
-   });
-
-   function onView(target) {
-         var $target = $(target);
-         var $window = $(window);
-         var docViewTop = $window.scrollTop();
-         var docViewBottom = docViewTop + $window.height();
-         var targetTop = $target.offset().top;
-         var targetBottom = targetTop + $target.height();
-         return ((targetTop >= docViewBottom));
-      }
-}
-
-
-var eventList = ["load", "scroll"];
-        for(event of eventList) {
-            window.addEventListener(event, function() {
-                var loadingImage = document.getElementsByClassName("js-loading-card__img");
-                var loadingcard = document.getElementsByClassName("js-loading-card");
-                Array.prototype.forEach.call(loadingcard, function(el2) {
-                    var docViewBottom = window.innerHeight;
-                    var targetTop = el2.getBoundingClientRect().top + 150;
-                    if((targetTop < ((docViewBottom / 2) + 300))) {
-                    el2.classList.add('active')
-                    
-                    }
-                });
-                Array.prototype.forEach.call(loadingImage, function(el) {
-                    var docViewBottom2 = window.innerHeight;
-                    var targetTop2 = el.getBoundingClientRect().top + 150;
-                    if((targetTop2 < ((docViewBottom2 / 2) + 300))) {
-                    var DataArtr = el.getAttributeNode('data').value;
-                    el.setAttribute('src', DataArtr);
-                    
-                    }
-                });
-
-                
-            });
-        }
-
+//Top sticky menu in mobile
 window.addEventListener("scroll", function (event) {
-   var stickyFilter = document.querySelector('.products-header');
-   var stickyFilterOff = stickyFilter.getBoundingClientRect().top;
-   if(stickyFilterOff <= 0) {
-      stickyFilter.classList.add('sticky-block');
+   if (window.innerWidth < 768) {
+      var stickyFilter = document.querySelector('.products-header');
+      var stickyFilterOff = stickyFilter.getBoundingClientRect().top;
+      var stickyft = document.querySelector('.main-footer').getBoundingClientRect().top;
+      var stickyImages = document.querySelector('.js-product-header').getBoundingClientRect().top;
+      var docHeight = window.innerHeight;
+      if(stickyFilterOff < 0) {
+         stickyFilter.classList.add('sticky-block');
+
+         if(stickyft < docHeight) {
+            stickyFilter.classList.remove('sticky-block');
+         }
+      }
+
+      else if(stickyft < docHeight || stickyImages > 0) {
+         stickyFilter.classList.remove('sticky-block');
+      }
+      
    }
-   else {
-      stickyFilter.classList.remove('sticky-block');
-   }
-  
 });
-
-
 
 const listViewButton = document.querySelector('.list-view-btn');
 const gridViewButton = document.querySelector('.grid-view-btn');
@@ -127,47 +85,7 @@ const handleClickl = (ek) => {
  });
 
 
- // Side-sticky filters
-//  $('.side-filter-sticky')
-//  .sticky({
-//    context: '.product-sticky'
-//  })
-// ;
-// let styleSticky = `position:fixed;
-//             top:0;`
-// let styleRelative = `position:absolute;
-//             bottom:0;`;
-// let top = `top:0;`
-
-// let heightOfWrapper = list.scrollHeight
-// // console.log(heightOfWrapper)
-
-// let stickyELementwrp = document.querySelector('.product-sticky');
-// let stickyELement = document.querySelector('.side-filter-sticky');
-// let stickyELementwrpHeight = stickyELementwrp.offsetTop
-// let stickyHeight = stickyELement.scrollHeight
-// let stickyELementOffset = stickyELement.offsetHeight;
-// // console.log(stickyELementwrpHeight)
-// if(window.innerWidth > 767){
-//    window.addEventListener("scroll", function(event) {
-//       var top = this.scrollY;
-//       // console.log(top)
-   
-//       if(top > (stickyELementwrpHeight - 80) && top <= (heightOfWrapper - stickyHeight + 400 ) ){
-//          stickyELement.style=styleSticky;
-//       }
-//       else {
-//          stickyELement.style=styleRelative;
-   
-//       }
-//       if( top <stickyELementOffset-50){
-//          stickyELement.style=top
-//       }
-//    });
-
-// }
-
-
+// Dropdon sortby
 let dropBtn = document.querySelector('.dropdown-select');
  let dropItem = document.querySelectorAll('.dropdown-menu li');
  for(const opt of dropItem){
@@ -178,43 +96,44 @@ let dropBtn = document.querySelector('.dropdown-select');
  }
 
 
-listViewButton.addEventListener('click', () => {
-  list.classList.remove('grid-item');
-  list.classList.add('list-item');
-});
-gridViewButton.addEventListener('click', () => {
-  list.classList.remove('list-item');
-  list.classList.add('grid-item');
-});
+// Side-filter checkbox selection and clear the selection
+let checkInput = Array.from(document.querySelectorAll('.label-container input'))
 
-// Color select 
+Array.from(checkInput).forEach(node => {
+   node.addEventListener('change', (event) => {
+      let panelCard = event.target.closest(".panel-card");
+      let clearButtons = panelCard.querySelector('.js-check-clear');
+      let selectedCheckBoxCount = panelCard.querySelectorAll("input:checked");
 
-let colorPicker = document.querySelectorAll('.color-list__item');
-let colorClear = document.querySelector('.clear-color');
-
-const handleClick = (e) => {
-  e.preventDefault();
-  colorPicker.forEach(node => {
-    node.classList.remove('active');
-  });
-  e.currentTarget.classList.add('active');
-}
-colorPicker.forEach(node => {
-  node.addEventListener('click', handleClick)
-});
-
-// clear the selected colors
-
-colorClear.addEventListener('click', (event) => { 
-   colorPicker.forEach(node => {
-      event.stopPropagation();
-      node.classList.remove('active');
+      if (event.target.checked) {
+         clearButtons.classList.add('active');
+      }
+      
+      if (!selectedCheckBoxCount.length) {
+         clearButtons.classList.remove('active');
+      }
    })
-})
+});
+
+//  Clearing the buttons and button as well
+
+let clearButtons = document.querySelectorAll('.js-check-clear')
+clearButtons.forEach(clearBtn => {
+   clearBtn.addEventListener('click', (event) => {
+      event.stopPropagation();
+      let panelCard = event.target.closest(".panel-card");
+      let checkChecboxes = panelCard.querySelectorAll('.label-container input');
+
+      checkChecboxes.forEach(checkbox => {
+         checkbox.checked = false;
+      })
+      clearBtn.classList.remove('active');
+   })
+});
 
 // Product alert
 
-let alertContent = document.querySelector('.product-alert');
+const alertContent = document.querySelector('.product-alert');
 const checkbox = document.querySelectorAll('.style-check');
 const clear = document.querySelector('.clear-select');
 
@@ -291,5 +210,6 @@ filterClose.addEventListener('click', () => {
    filterSide.forEach(node => {
       // event.stopPropagation();
       node.classList.remove('active');
-   })    
+   })
 });
+
