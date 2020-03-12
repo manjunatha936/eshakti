@@ -1,0 +1,20 @@
+.product-modal.modal.fade.pop-up-signup(tabindex='-1' role='dialog' aria-labelledby='myLargeModalLabel' aria-hidden='true')
+  .modal-dialog.modal-lg
+    .modal-content
+        button.close-modal(data-dismiss="modal") &times;
+        ul#myTab.nav.d-flex.d-md-none(role='tablist')
+            li.nav-item.mt-2
+                a#return-tab.nav-link.style-head.active(data-toggle='tab' href='#return' role='tab' aria-controls='home' aria-selected='true') Neckline
+            li.nav-item.mt-2
+                a#new-customer-tab.nav-link.style-head(data-toggle='tab' href='#new-customer' role='tab' aria-controls='profile' aria-selected='false') Sleeve Type
+            
+        #myTabContent.tab-content.custom-style.mt-2.mt-md-0
+            #return.tab-pane.fade.show.active.style-model-content.neckline
+                .style-head.pb-md-3.d-none.d-md-block Neckline
+                .style-contain
+                    
+            #new-customer.tab-pane.fade.style-model-content.sleeve
+                .style-head.pb-md-3.d-none.d-md-block Sleeve Type
+                .style-contain 
+                    
+            
