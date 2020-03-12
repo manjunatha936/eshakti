@@ -136,11 +136,16 @@
     }
 }
 
-.js-products {
-    transition: all 0.3s ease;
-    
-    > li {
-        transition: all 0.3s ease;
+.grid-item li {
+    width: 50%;
+    flex: 0 0 50%;
+    @include bp("tab") {
+        width: 33.3%;
+        flex: 0 0 33.3%;
+    }
+    @include bp("desktop") {
+        width: 25.3%;
+        flex: 0 0 25%;
     }
 }
 
@@ -220,6 +225,7 @@
         display: flex;
         justify-content: space-between;
         .share {
+            cursor: pointer;
             position: relative;
             margin-right: 15px;
            i{
@@ -352,23 +358,26 @@
     display: inline-block;
 }
 
-.js-loading-card {
-    opacity: 0;
-    transition: all 1.5s ease-in-out !important;
 
-    &.active {
-        opacity: 1;
-    }
+// Lazyloading on scroll images
 
-    &__img {
-        min-height: 100px;
-        transition: all .9s ease-in-out !important;
+// .js-loading-card {
+//     opacity: 0;
+//     transition: all 1.5s ease-in-out !important;
+
+//     &.active {
+//         opacity: 1;
+//     }
+
+//     &__img {
+//         min-height: 100px;
+//         transition: all .9s ease-in-out !important;
     
-        @media (min-width: 768px) {
-            min-height: 200px;
-        }
-    }
-}
+//         @media (min-width: 768px) {
+//             min-height: 200px;
+//         }
+//     }
+// }
 
 // Product filters-side sticky
 
@@ -377,18 +386,31 @@
     max-width: 100%;
     background: $white;
     z-index: 1;
-    transition: .8 ease all;
+    // transition: .8 ease all;
+    @include bp("tab") {
+        width: 150px;
+    }
+    @include bp("tab-lg") {
+        width: 210px;
+    }
+    @include bp("desktop-1200") {
+        width: 255px;
+    }
 }
 
 .sticky-block {
-    position: sticky;
-    top: 0;
-    z-index: 998;
+    @include bpmax("phone-lg") {
+        position: sticky;
+        top: 0;
+        z-index: 998;
+    }
 }
 
 .sticky-left {
-    position: sticky;
-    top: 0;
+    @include bpmax("phone-lg") {
+        position: sticky;
+        top: 0;
+    }
 }
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {

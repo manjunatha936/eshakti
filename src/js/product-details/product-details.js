@@ -2,7 +2,7 @@
 import Swiper from 'swiper';
 import $ from 'jquery'
 
-
+import 'bootstrap/js/src/tab'
 class ProductDetais {
     constructor() {
       if (document.querySelector(".product-details")){
@@ -164,30 +164,54 @@ class ProductDetais {
                 swiperStyle.appendSlide(ele);
         })
         $(document).on('click','.close-card',function(){
-          
           let slideIndex = parseInt($(this).attr("slide-id"))
           --slideIndex; 
-          console.log(slideIndex)
+          // console.log(slideIndex)
           swiperStyle.removeSlide(slideIndex  );
+          
           swiperStyle.update()
-        })
-        $('.style-head').click(function(){
-          $('.style-head').removeClass("border-bttom-o")
-          $(this).addClass("border-bttom-o")
-          $(".style-contain").removeClass("active")
-          $(this).siblings(".style-contain").addClass("active")
-        })
-        // $('.close-card').on('click',function(){
-        //   alert(parseInt($(this).attr("slide-id")))
-        //   let slideIndex = parseInt($(this).attr("slide-id"))
-        //   swiperStyle.removeSlide(slideIndex);
-        // })
-        // $('.close-card span').click(function(){
-        //   alert(parseInt($(this).attr("slide-id")))
-        //   let slideIndex = parseInt($(this).attr("slide-id"))
-        //   swiperStyle.removeSlide(slideIndex);
-        // })
+          let length = $('.slide-item').length
+          let i=1;
+         $('.close-card').each(function(){
+           $(this).attr("slide-id",i++)
 
+         })
+     
+         
+        })
+       
+        if(window.innerWidth > 767){
+          $(".style-model-content").removeClass("fade")
+          
+        }
+        else{
+          $(".style-model-content").addClass("fade")
+          
+        }
+        // on hover change img
+        $('.tab-img img').hover(function(){
+         let src = $(this).attr("src")
+        $(this).parent(".tab-img").siblings(".model-img-tab-container").css("background-image","url("+src+")")
+        })
+ 
+        $('.model-img-tab-container').on('mousemove', function(e) {
+          console.log(e.offsetY)
+          var zoomer = e.currentTarget;
+          // e.offsetX ? offsetX = e.offsetX : offsetX = e.touches[0].pageX
+          e.offsetY ? e.offsetY = e.offsetY : e.offsetX = e.touches[0].pageX
+          // x = offsetX/zoomer.offsetWidth*100
+          let y = e.offsetY/zoomer.offsetHeight*100
+          
+          $(this).css({ 
+                  'background-position-x' : 100 + '%',
+                  'background-position-y' : y + '%' ,  
+              })
+        });
+
+      //   $(".img-zoom-close").click(function () {
+    
+      //     $(this).parent(".img-modal-lg").modal().hide();
+      // });
      })
 
     }

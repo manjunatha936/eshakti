@@ -1,26 +1,6 @@
 import $ from 'jquery'
 console.log('Product listing code');
 
-
-// // Side-sticky
-window.addEventListener("scroll", function (event) {
-   var stickyFilter = document.querySelector('.products-header');
-   var $target = $(stickyFilter);
-   var $window = $(window);
-   var docViewTop = $window.scrollTop();
-   var docViewBottom = docViewTop + $window.height();
-   var targetTop = $target.offset().top;
-   if(docViewTop == 0) {
-      stickyFilter.classList.remove('sticky-block');
-   }
-   else if(docViewTop >= targetTop) {
-      stickyFilter.classList.add('sticky-block');
-   }
-
-});
-
-
- 
 const listViewButton = document.querySelector('.list-view-btn');
 const gridViewButton = document.querySelector('.grid-view-btn');
 const colorList = document.querySelectorAll('.view-item');
@@ -91,6 +71,7 @@ if(window.innerWidth > 767){
 
 }
 
+// Dropdon sortby
 
 let dropBtn = document.querySelector('.dropdown-select');
  let dropItem = document.querySelectorAll('.dropdown-menu li');
@@ -102,43 +83,44 @@ let dropBtn = document.querySelector('.dropdown-select');
  }
 
 
-listViewButton.addEventListener('click', () => {
-  list.classList.remove('grid-item');
-  list.classList.add('list-item');
-});
-gridViewButton.addEventListener('click', () => {
-  list.classList.remove('list-item');
-  list.classList.add('grid-item');
-});
+// Side-filter checkbox selection and clear the selection
+let checkInput = Array.from(document.querySelectorAll('.label-container input'))
 
-// Color select 
+Array.from(checkInput).forEach(node => {
+   node.addEventListener('change', (event) => {
+      let panelCard = event.target.closest(".panel-card");
+      let clearButtons = panelCard.querySelector('.js-check-clear');
+      let selectedCheckBoxCount = panelCard.querySelectorAll("input:checked");
 
-let colorPicker = document.querySelectorAll('.color-list__item');
-let colorClear = document.querySelector('.clear-color');
-
-const handleClick = (e) => {
-  e.preventDefault();
-  colorPicker.forEach(node => {
-    node.classList.remove('active');
-  });
-  e.currentTarget.classList.add('active');
-}
-colorPicker.forEach(node => {
-  node.addEventListener('click', handleClick)
-});
-
-// clear the selected colors
-
-colorClear.addEventListener('click', (event) => { 
-   colorPicker.forEach(node => {
-      event.stopPropagation();
-      node.classList.remove('active');
+      if (event.target.checked) {
+         clearButtons.classList.add('active');
+      }
+      
+      if (!selectedCheckBoxCount.length) {
+         clearButtons.classList.remove('active');
+      }
    })
-})
+});
+
+//  Clearing the buttons and button as well
+
+let clearButtons = document.querySelectorAll('.js-check-clear')
+clearButtons.forEach(clearBtn => {
+   clearBtn.addEventListener('click', (event) => {
+      event.stopPropagation();
+      let panelCard = event.target.closest(".panel-card");
+      let checkChecboxes = panelCard.querySelectorAll('.label-container input');
+
+      checkChecboxes.forEach(checkbox => {
+         checkbox.checked = false;
+      })
+      clearBtn.classList.remove('active');
+   })
+});
 
 // Product alert
 
-let alertContent = document.querySelector('.product-alert');
+const alertContent = document.querySelector('.product-alert');
 const checkbox = document.querySelectorAll('.style-check');
 const clear = document.querySelector('.clear-select');
 
@@ -215,5 +197,22 @@ filterClose.addEventListener('click', () => {
    filterSide.forEach(node => {
       // event.stopPropagation();
       node.classList.remove('active');
-   })    
+   })
+});
+
+
+// // Side-sticky
+window.addEventListener("scroll", function (event) {
+   var stickyFilter = document.querySelector('.products-header');
+   var $target = $(stickyFilter);
+   var $window = $(window);
+   var docViewTop = $window.scrollTop();
+   var docViewBottom = docViewTop + $window.height();
+   var targetTop = $target.offset().top;
+   if(docViewTop == 0) {
+      stickyFilter.classList.remove('sticky-block');
+   }
+   else if(docViewTop >= targetTop) {
+      stickyFilter.classList.add('sticky-block');
+   }
 });
