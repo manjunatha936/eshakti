@@ -1,10 +1,9 @@
 
 // import Swiper from 'swiper';
 // import $ from 'jquery'
-import 'bootstrap/js/src/tab'
+// import 'bootstrap/js/src/tab'
 
 console.log('Product listing code');
-
 
 // Side-sticky
 window.addEventListener("scroll", function (event) {
@@ -82,44 +81,7 @@ listViewButton.addEventListener('click', () => {
  });
  
 
- // Side-sticky Desktop
-
-// let styleSticky = `position:fixed;
-//             top:0;`
-// let styleRelative = `position:absolute;
-//             bottom:0;`;
-// let top = `top:0;`
-
-// let heightOfWrapper = list.scrollHeight
-// // console.log(heightOfWrapper)
-
-// let stickyELementwrp = document.querySelector('.product-sticky');
-// let stickyELement = document.querySelector('.side-filter-sticky');
-// let stickyELementwrpHeight = stickyELementwrp.offsetTop
-// let stickyHeight = stickyELement.scrollHeight
-// let stickyELementOffset = stickyELement.offsetHeight;
-// console.log(stickyELementwrpHeight)
-// if(window.innerWidth > 767){
-//    window.addEventListener("scroll", function(event) {
-//       var top = this.scrollY;
-//       console.log(top)
-   
-//       if(top > (stickyELementwrpHeight - 80) && top <= (heightOfWrapper - stickyHeight + 400 ) ){
-//          stickyELement.style=styleSticky;
-//       }
-//       else {
-//          stickyELement.style=styleRelative;
-   
-//       }
-//       if( top <stickyELementOffset-50){
-//          stickyELement.style=top
-//       }
-//    });
-
-// }
-
 // Dropdon sortby
-
 window.onload = function(){
    let dropBtn = document.querySelector('.dropdown-select');
    let dropItem = document.querySelectorAll('.dropdown-menu li');
@@ -167,30 +129,37 @@ clearButtons.forEach(clearBtn => {
    })
 });
 
-// Product alert
-const alertContent = document.querySelector('.product-alert');
-const checkbox = document.querySelectorAll('.style-check');
-const clear = document.querySelector('.clear-select');
+// Single selcetion of Neckle and Product discount alert messsage
 
-checkbox.forEach(node => {
-   node.addEventListener('change', (event) => { 
-      if (event.target.checked) { 
+let checkRadio = Array.from(document.querySelectorAll('.neck-wrapper .style-check'))
+let alertContent = document.querySelector('.product-alert');
+
+Array.from(checkRadio).forEach(node => {
+   node.addEventListener('change', (event) => {
+      let panelCard = event.target.closest(".panel-card");
+      let clearButtons = panelCard.querySelector('.js-check-clear');
+      
+      if (event.target.checked) {
+         clearButtons.classList.add('active');
          alertContent.classList.add('class-cheked');
-         // event.target.nextElementSibling.children
-         // alert(event.target.nextElementSibling.children);
       }
    })
 });
 
-//Clear the selcted list
+let clearRadio = document.querySelectorAll('.js-check-clear');
+clearRadio.forEach(clearSelect => {
+   clearSelect.addEventListener('click', (event) => {
+      event.stopPropagation();
+      let panelCard = event.target.closest(".panel-card");
+      let checkRadio = panelCard.querySelectorAll('.neck-wrapper .style-check');
 
-clear.addEventListener('click', (el) => { 
-   checkbox.forEach(node => {
-      el.stopPropagation();
-      node.checked = false;
+      checkRadio.forEach(checkbox => {
+         checkbox.checked = false;
+      })
+      clearSelect.classList.remove('active');
       alertContent.classList.remove('class-cheked');
-   });
-})
+   })
+});
 
 // accordian info
 class Accordion {

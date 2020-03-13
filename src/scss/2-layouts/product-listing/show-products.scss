@@ -275,18 +275,18 @@
     }
 }
 
-.grid-item li {
-    width: 50%;
-    flex: 0 0 50%;
-    @include bp("tab") {
-        width: 33.3%;
-        flex: 0 0 33.3%;
-    }
-    @include bp("desktop") {
-        width: 25.3%;
-        flex: 0 0 25%;
-    }
-}
+// .grid-item li {
+//     width: 50%;
+//     flex: 0 0 50%;
+//     @include bp("tab") {
+//         width: 33.3%;
+//         flex: 0 0 33.3%;
+//     }
+//     @include bp("tab-lg") {
+//         width: 25.3%;
+//         flex: 0 0 25%;
+//     }
+// }
 
 .grid-item {
     margin-left: -10px;
@@ -299,6 +299,10 @@
         padding-right: 10px;
     
         @include bp("tab") {
+            max-width: 33.3%;
+            flex: 0 0 33.3%;
+        }
+        @include bp("desktop-1200") {
             max-width: 25%;
             flex: 0 0 25%;
         }
@@ -318,7 +322,7 @@
 
 .js-products li{
     margin-bottom: 1rem;
-    transition: all .3s ease;
+    transition: all .4s ease-in-out;
     @include bpmax("phone-lg") {
         padding: 0 .5rem;
     }
@@ -513,8 +517,7 @@
 
 .js-loading-card {
     opacity: 0;
-    transition: all 1.5s ease-in-out !important;
-
+    // transition: all 1.5s ease-in-out !important;
     &.active {
         opacity: 1;
     }
