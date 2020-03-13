@@ -62,4 +62,12 @@ $(document).ready(function(){
 
         }
     })
+    $(".select-btn").change(function(){
+        $(this).siblings(".select-input").val($(this).val())
+    })
+    $('.form-address .address-btn').on('click', function () {
+        $('.form-address').parsley().validate();
+      
+      });
+
 });
