@@ -1,0 +1,109 @@
+.product-modal.modal.fade.address.pop-up(tabindex='-1' role='dialog' aria-labelledby='myLargeModalLabel' aria-hidden='true')
+  .modal-dialog.modal-lg
+    .modal-content
+        button.close-modal(data-dismiss="modal") &times;
+        .container
+            .from-wrapper-cont.d-flex.justify-content-center
+                .from-wrapper
+                    form.form
+                        p.pop-head Shipping Information
+                        .row
+                            .col-lg-6.form-group
+                                label(for="") Name*
+                                input.form-input(type="text" data-parsley-validate="true" data-parsley-minlength="3" data-parsley-error-message="something is wrong"  data-parsley-trigger="input keyup change")
+                            .col-lg-6.form-group
+                                label(for="") Phone*
+                                input.form-input(type="number" data-parsley-validate="false" data-parsley-type="number"  data-parsley-max="12" data-parsley-error-message="something is wrong" data-parsley-trigger="input keyup change"  )
+                        .row
+                            .col.form-group
+                                label(for="") Address 1*
+                                input.form-input(type="text" data-parsley-validate="false"    data-parsley-trigger="input keyup change" data-parsley-error-message="something is wrong"  )
+                        .row
+                            .col.form-group
+                                label(for="") Address 2*
+                                input.form-input(type="text" data-parsley-validate="false"    data-parsley-trigger="input keyup change" data-parsley-error-message="something is wrong"  )
+                                p.shop-info.mt-2 *Our shipping partners do not deliver to PO Boxes / APO, Virgin Islands and Puerto Rico addresses. Please provide a full street address.
+                        .row
+                            .col-lg-6.form-group
+                                label(for="") Country*
+                                .drop-container.mb-3.mb-md-4
+                                    .select-style
+                                        span.triangle-icon
+                                        select.form-input.txt-gry-12
+                                            option(disable) select
+                                            option(value='saab') Saab
+                                            option(value='mercedes') Mercedes
+                                            option(value='audi') Audi
+                            .col-lg-6.form-group
+                                label(for="") Zipcode*
+                                input.form-input(type="text")
+                        .row
+                            .col-lg-6.form-group
+                                label(for="") City*
+                                input.form-input(type="text")
+                            .col-lg-6.form-group
+                                label(for="") State*
+                                .drop-container.mb-3.mb-md-4
+                                    .select-style
+                                        span.triangle-icon
+                                        select.form-input.txt-gry-12
+                                            option(disable) select
+                                            option(value='saab') Saab
+                                            option(value='mercedes') Mercedes
+                                            option(value='audi') Audi
+                        .row
+                            .col-12
+                                .change-address
+                                    p.pop-head.mb-2 Shipping Information
+                                    label.label-container.label-container--check
+                                        | Same as shipping address
+                                        input.address-checkbox(type="checkbox" name="selectPlant" value="" checked)
+                                        span.checkmark
+                                    .change-address-form
+                                        .row
+                                            .col-lg-6.form-group
+                                                label(for="") Name*
+                                                input.form-input(type="text")
+                                            .col-lg-6.form-group
+                                                label(for="") Phone*
+                                                input.form-input(type="text")
+                                        .row
+                                            .col.form-group
+                                                label(for="") Address 1*
+                                                input.form-input(type="text")
+                                        .row
+                                            .col.form-group
+                                                label(for="") Address 1*
+                                                input.form-input(type="text")
+                                                p.shop-info.mt-2 *Our shipping partners do not deliver to PO Boxes / APO, Virgin Islands and Puerto Rico addresses. Please provide a full street address.
+                                        .row
+                                            .col-lg-6.form-group
+                                                label(for="") Country*
+                                                .drop-container.mb-3.mb-md-4
+                                                    .select-style
+                                                        span.triangle-icon
+                                                        select.form-input.txt-gry-12
+                                                            option(disable) select
+                                                            option(value='saab') Saab
+                                                            option(value='mercedes') Mercedes
+                                                            option(value='audi') Audi
+                                            .col-lg-6.form-group
+                                                label(for="") Zipcode*
+                                                input.form-input(type="text")
+                                        .row
+                                            .col-lg-6.form-group
+                                                label(for="") City*
+                                                input.form-input(type="text")
+                                            .col-lg-6.form-group
+                                                label(for="") State*
+                                                .drop-container.mb-3.mb-md-4
+                                                    .select-style
+                                                        span.triangle-icon
+                                                        select.form-input.txt-gry-12
+                                                            option(disable) select
+                                                            option(value='saab') Saab
+                                                            option(value='mercedes') Mercedes
+                                                            option(value='audi') Audi
+                                
+
+                        button.bttn.bttn__orange.mt-4(type="button") Save and Continue

@@ -5,6 +5,12 @@
     width: 100%;
     transition: all 0.7s ease-in-out !important;
 
+    @media (max-width: 767px) {
+        position: sticky;
+        top: 0;
+        z-index: 998;
+    }
+
     @include bpmax("phone") {
         flex-direction: column-reverse;
     }
@@ -280,15 +286,32 @@
         width: 25.3%;
         flex: 0 0 25%;
     }
-    /** mobile card-tag **/
-    .card-tag{
-        @include bpmax("phone-lg") {
-            height: 27px;
-            width: 27px;
-            top: .6rem;
-            left: .6rem;
-            font-size: 9px;
-            line-height: 18px;
+}
+
+.grid-item {
+    margin-left: -10px;
+    margin-right: -10px;
+
+    li {
+        max-width: 50%;
+        flex: 0 0 50%;
+        padding-left: 10px;
+        padding-right: 10px;
+    
+        @include bp("tab") {
+            max-width: 25%;
+            flex: 0 0 25%;
+        }
+        /** mobile card-tag **/
+        .card-tag{
+            @include bpmax("phone-lg") {
+                height: 27px;
+                width: 27px;
+                top: .6rem;
+                left: .6rem;
+                font-size: 9px;
+                line-height: 18px;
+            }
         }
     }
 }
@@ -329,6 +352,8 @@
 
 .product-card {
     position: relative;
+    width: 100%;
+
     &__view {
         position: relative;
         overflow: hidden;
@@ -340,6 +365,7 @@
         display: flex;
         justify-content: space-between;
         .share {
+            cursor: pointer;
             position: relative;
             margin-right: 15px;
            i{
@@ -362,6 +388,7 @@
         // transform: translateX(-50%);
         padding: .5rem 2rem;
         transform: translate(-50%, -0px);
+        z-index: 9;
         @extend .fnt-sm;
         text-transform: uppercase;
         white-space: nowrap;
@@ -370,6 +397,7 @@
     .img-scale {
         transition: all .6s ease;
         transform: scale(1);
+        width: 100%;
     }
 
     &:hover, &:focus {
@@ -481,25 +509,25 @@
 }
 
 
-// Lazyloading on scroll images
+// Lazy loading on scroll images
 
-// .js-loading-card {
-//     opacity: 0;
-//     transition: all 1.5s ease-in-out !important;
+.js-loading-card {
+    opacity: 0;
+    transition: all 1.5s ease-in-out !important;
 
-//     &.active {
-//         opacity: 1;
-//     }
+    &.active {
+        opacity: 1;
+    }
 
-//     &__img {
-//         min-height: 100px;
-//         transition: all .9s ease-in-out !important;
+    &__img {
+        min-height: 100px;
+        transition: all .9s ease-in-out !important;
     
-//         @media (min-width: 768px) {
-//             min-height: 200px;
-//         }
-//     }
-// }
+        @media (min-width: 768px) {
+            min-height: 200px;
+        }
+    }
+}
 
 // Product filters-side sticky
 
@@ -539,5 +567,141 @@
     .sticky-left {
         position: fixed;
         top: 0;
+    }
+
+        
+    .sticky-block {
+        @media (max-width: 767px) {
+            position: fixed;
+            top: 0;
+            z-index: 998;
+        }
+       
+    }
+}
+
+//Custom style popop
+.saved-styles {
+    &__img {
+        height: 350px;
+
+        @media (min-width: 768px) { 
+            height: 300px;
+        }
+
+        @media (min-width: 992px) { 
+            height: 400px;
+        }
+
+        @media (min-width: 1400px) { 
+            height: 600px;
+        }
+
+        img {
+            height: 100%;
+            // object-fit: contain;
+
+        }
+       
+    }
+
+   &__subImages {
+       padding-right: 25px;
+        height: 300px;
+        overflow-y: auto;
+
+        @media (min-width: 768px) { 
+            height: 300px;
+            padding: 0 25px;
+        }
+
+        @media (min-width: 800px) { 
+            height: 300px;
+        }
+
+        @media (min-width: 992px) { 
+            height: 400px;
+        }
+        
+
+        @media (min-width: 1300px) { 
+            height: 400px;
+        }
+
+        @media (min-width: 1400px) { 
+            height: 550px;
+        }
+
+
+        .slide-item {
+            max-width: 100%;
+            min-width: 100%;
+            margin: 5% !important;
+            text-align: center;
+            
+            @media (min-width: 768px) {
+                max-width: 45%;
+                min-width: 45%;
+                margin: 2.5% 5% 2.5% 0 !important;
+                float: left;
+            }
+
+            @media (min-width: 992px) {
+                max-width: 30%;
+                min-width: 30%;
+                margin: 2.5% 5% 2.5% 0 !important;
+
+            }
+
+            .card-wrp {
+                width: 100%;
+            }
+
+        .style-card {
+                height: 200px !important;
+
+                @media (min-width: 992px) {
+                    height: 250px !important;
+                }
+
+                @media (min-width: 1400px) {
+                    height: 350px !important;
+                }
+
+                img {
+                    height: 100%;
+                    //  object-fit: contain;
+                }
+            }
+
+            &:nth-child(2n) {
+                @media (min-width: 768px) and (max-width: 991px) {
+                    margin-right: 0 !important;
+                }
+            }
+
+            &:nth-child(3n) {
+                @media (min-width: 992px) {
+                    margin-right: 0 !important;
+                }
+            }
+        }
+    }
+}
+
+.saved-styles-footer {
+    border-top: 1px solid #e4e4e4;
+    text-align: center;
+
+    &__btn {
+        padding: 15px;
+
+        .create-more-styles {
+            opacity: 0.88;
+            color: $title-black;
+            background: inherit;
+            border: 1px solid #e4e4e4;
+            min-width: 181px;
+        }
     }
 }

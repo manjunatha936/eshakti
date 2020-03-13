@@ -297,7 +297,14 @@
 
 // Filters Apply and checking in mobile 
 
+
+
 .side-filter {
+  @media (min-width: 768px) {
+    position: sticky;
+    top: 0;
+  }
+
   @include bpmax("phone-lg") {
     position: fixed;
     top: 0;

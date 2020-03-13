@@ -1,10 +1,13 @@
 
 import Swiper from 'swiper';
 import $ from 'jquery'
+import 'bootstrap/js/src/tab'
 
 
 class ProductDetais {
     constructor() {
+
+
       if (document.querySelector(".product-details")){
        
         this.init();
@@ -164,31 +167,88 @@ class ProductDetais {
                 swiperStyle.appendSlide(ele);
         })
         $(document).on('click','.close-card',function(){
-          
           let slideIndex = parseInt($(this).attr("slide-id"))
           --slideIndex; 
-          console.log(slideIndex)
+          // console.log(slideIndex)
           swiperStyle.removeSlide(slideIndex  );
+          
           swiperStyle.update()
-        })
-        $('.style-head').click(function(){
-          $('.style-head').removeClass("border-bttom-o")
-          $(this).addClass("border-bttom-o")
-          $(".style-contain").removeClass("active")
-          $(this).siblings(".style-contain").addClass("active")
-        })
-        // $('.close-card').on('click',function(){
-        //   alert(parseInt($(this).attr("slide-id")))
-        //   let slideIndex = parseInt($(this).attr("slide-id"))
-        //   swiperStyle.removeSlide(slideIndex);
-        // })
-        // $('.close-card span').click(function(){
-        //   alert(parseInt($(this).attr("slide-id")))
-        //   let slideIndex = parseInt($(this).attr("slide-id"))
-        //   swiperStyle.removeSlide(slideIndex);
-        // })
+          let length = $('.slide-item').length
+          let i=1;
+         $('.close-card').each(function(){
+           $(this).attr("slide-id",i++)
 
+         })
+     
+         
+        })
+       
+        if(window.innerWidth > 767){
+          $(".style-model-content").removeClass("fade")
+          
+        }
+        else{
+          $(".style-model-content").addClass("fade")
+          
+        }
+        // on hover change img
+        $('.tab-img img').hover(function(){
+         let src = $(this).attr("src")
+        $(this).parent(".tab-img").siblings(".model-img-tab-container").css("background-image","url("+src+")")
+        })
+ 
+        $('.model-img-tab-container').on('mousemove', function(e) {
+          console.log(e.offsetY)
+          var zoomer = e.currentTarget;
+          // e.offsetX ? offsetX = e.offsetX : offsetX = e.touches[0].pageX
+          e.offsetY ? e.offsetY = e.offsetY : e.offsetX = e.touches[0].pageX
+          // x = offsetX/zoomer.offsetWidth*100
+          let y = e.offsetY/zoomer.offsetHeight*100
+          
+          $(this).css({ 
+                  'background-position-x' : 100 + '%',
+                  'background-position-y' : y + '%' ,  
+              })
+        });
+
+      //   $(".img-zoom-close").click(function () {
+    
+      //     $(this).parent(".img-modal-lg").modal().hide();
+      // });
      })
+
+    //Save style popup
+    var SaveStyles = document.querySelector('.close-parent-modal');
+    SaveStyles.addEventListener("click", function (event) {
+    var SelctedSliderImage = document.querySelector('.gallery-top');
+    var GetImage = SelctedSliderImage.querySelector('.swiper-slide-active');
+    var SelectedImage = GetImage.style.backgroundImage.replace(/.*\s?url\([\'\"]?/, '').replace(/[\'\"]?\).*/, '');
+    var NewImageConatiner = document.querySelector('.saved-styles');
+    var NewpopupImage = NewImageConatiner.querySelector('.saved-styles__mainImage').setAttribute('src', SelectedImage);
+    var GetCustomStyles = document.querySelector('.dynaic-slide-wrapper');
+    var MainImges = GetCustomStyles.querySelectorAll('.slide-item');
+    var GetRealImages = GetCustomStyles.querySelectorAll('.slide-item').length;
+    var getNewsubImages = NewImageConatiner.querySelector('.saved-styles__subImages');
+      var list = getNewsubImages.querySelectorAll('.slide-item').length;
+      var Li = document.querySelector('.saved-styles__subImages');
+      Li.innerHTML = "";
+      
+      for (var i=0; i<GetRealImages; i++) {
+        var NewItems = MainImges[i].cloneNode(true);
+        getNewsubImages.appendChild(NewItems);
+        var listImages = getNewsubImages.querySelectorAll('.slide-item').length;
+        var listImages2 = getNewsubImages.querySelectorAll('.slide-item');
+      
+        for(var x=0; x<listImages; x++) {
+          listImages2[x].classList.remove("swiper-slide")
+        }
+      }
+    setTimeout(function(){ 
+      $('.bd-example-modal-lg-02').modal('show');
+      }, 200);
+
+    });
+
 
     }
 }

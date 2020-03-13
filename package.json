@@ -80,6 +80,7 @@
     "hammerjs": "^2.0.8",
     "jquery": "^3.4.1",
     "nodelist-foreach-polyfill": "^1.2.0",
+    "parsleyjs": "^2.9.2",
     "popper": "^1.0.1",
     "popper.js": "^1.16.1",
     "swiper": "^5.3.1",

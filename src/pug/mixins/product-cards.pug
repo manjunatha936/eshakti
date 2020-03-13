@@ -1,12 +1,12 @@
 mixin product-card(srcimg, img, name, type, cost)
-    a.product-card(href="javascript:void(0);")
+    a.product-card(href="javascript:void(0);" )
         .product-card__view(href="#")
             .card-tag Fx
             picture
                 //- source(srcset=srcimg)
-                //- img.js-loading-card__img.img-fluid.img-scale(src="", data=img)
-                img.js-loading-card__img.img-fluid.img-scale(src=img)
-            div.product-card__customize
+                img.js-loading-card__img.img-fluid.img-scale(src="", data=img)
+                //- img.js-loading-card__img.img-fluid.img-scale(src=img)
+            div.product-card__customize(data-toggle='modal', data-target='.bd-example-modal-lg')
                 img(src="./assets/images/product-listing/product-card/customize.svg" alt="customize")
                 span.fnt-sm.ml-2 Customize style 
         .product-card__body

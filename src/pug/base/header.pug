@@ -1,5 +1,5 @@
-mixin header(status)
-    header.web-header
+mixin header(status,color)
+    header.web-header(class=color ? 'white-header' : '')
         .web-header__top
             .web-header__logo
                 .hamburger-menu.d-lg-none
@@ -7,7 +7,7 @@ mixin header(status)
                     span
                     span
                 a(href="index.html")
-                    img(src="assets/images/logo.svg", alt="")
+                    img(src="../assets/images/logo.svg", alt="")
             form.web-header__search
                 input(type="text" placeholder="Search Products")
                 button(type="submit")
@@ -15,7 +15,7 @@ mixin header(status)
 
             ul.web-header__toplinks
                 li
-                    a(href="#")
+                    a(href="#" data-toggle='modal', data-target='.pop-up-signup')
                         span
                             i.icon-account
                         if status
@@ -131,13 +131,13 @@ mixin header(status)
                                         h3 Get our basics                        
                                         .dropdown-menuwrap__img
                                             a.full-link(href="#")
-                                            img(src="assets/images/menu-img1.jpg", alt="")
+                                            img(src="../assets/images/menu-img1.jpg", alt="")
 
                                     .dropdown-menuwrap__box
                                         h3 New arrivals
                                         .dropdown-menuwrap__img
                                             a.full-link(href="#")
-                                            img(src="assets/images/menu-img2.jpg", alt="")
+                                            img(src="../assets/images/menu-img2.jpg", alt="")
                                 
                                 a.web-link(href='#') All the women collection
                 

@@ -1,17 +1,6 @@
 section.product-listing
     .container
-        mixin dropdown(text)
-            .drop-container.mb-3.mb-md-4
-                    .drop-title
-                        span.prd-sub-txt.text-capitalize.fnt-600=text
-                        img.pl-1(src="./assets/images/i.png", alt="")
-                    .select-style
-                        span.triangle-icon
-                        select.txt-gry-12
-                            option(disable) select
-                            option(value='saab') Saab
-                            option(value='mercedes') Mercedes
-                            option(value='audi') Audi
+        include ../../mixins/dropdown.pug
         .row
             .col-md-7.slider-style-thumb
                 .swiper-container.gallery-top
@@ -30,20 +19,22 @@ section.product-listing
                         .img-card-wrp
                             p.prod-label.fnt-700.pb-2.mb-1 Neckline
                             img.img-50(src="./assets/images/style-guid.png", alt="")
-                            p.fnt-xs.drk-gry.pt-2 Mandarin Collar
+                            p.fnt-12.drk-gry.pt-2 Mandarin Collar
                         .img-card-wrp
                             p.prod-label.fnt-700.pb-2.mb-1 Sleeve Type
                             img.img-50(src="./assets/images/style-guid.png", alt="")
-                            p.fnt-xs.drk-gry.pt-2 Mandarin Collar
+                            p.fnt-12.drk-gry.pt-2 Mandarin Collar
                         .img-card-wrp
                             p.prod-label.fnt-700.pb-2.mb-1 Length
                             img.img-50(src="./assets/images/style-guid.png", alt="")
-                            p.fnt-xs.drk-gry.pt-2 Mandarin Collar
-                        a(href="" type='button', data-toggle='modal', data-target='.bd-example-modal-lg').fnt-12-black 
+                            p.fnt-12.drk-gry.pt-2 Mandarin Collar
+                        a(href="" , data-toggle='modal', data-target='.bd-example-modal-lg').custom-stye-br.fnt-12-black 
                             img(src="./assets/images/product-listing/product-card/customize.svg" alt="customize")
-                            span.ml-2.d-none.d-md-inline-block Customize style                     
+                            span.ml-2.d-none.d-md-inline-block.text-uppercase Customize style                     
                             span.ml-2.d-md-none Customize                    
                             // Add Arrows
+                .info-stamp
+                    span Styled by you
                 .swiper-pagination-bullets.d-md-none
                     //- .swiper-button-next.swiper-button-white
                     //- .swiper-button-prev.swiper-button-white
@@ -76,7 +67,9 @@ section.product-listing
                     span.d-block.prd-price.mt-3 $64.95
                     p.txt-gry-12.pt-1.pb-4 or 3 interest-free payments of $18 with Affirm. Learn more
                         a.learn-link(href="#") Learn more
-                    span.txt-gry-12 2 reviews
+                    .d-flex
+                        img(src="./assets/images/product-listing/stars.png", alt="")
+                        span.pl-3.txt-gry-12 2 reviews
                     .fnt-xs.drk-gry.py-4 Pleated cotton chambray brings draped flair to our flattering frock that boasts a cross-front with ties at the waist for a wrap silhouette. Available: Additional 3 neckline, 4 sleeve type... 
                         p.more-info hambray brings draped flair to our flatte
                         a.js-read-more.learn-link.fnt-700(href="#")  Product Details
@@ -88,7 +81,7 @@ section.product-listing
                     ul#pills-tab.nav.d-flex.justify-content-between(role='tablist')
                         li.nav-item.ml-2.ml-md-0
                             a#pills-home-tab.nav-link.active(data-toggle='pill', href='#pills-home', role='tab', aria-controls='pills-home', aria-selected='true') Standard Size
-                        li.nav-item
+                        li.ml-md-3.nav-item
                             a#pills-profile-tab.nav-link(data-toggle='pill', href='#pills-profile', role='tab', aria-controls='pills-profile', aria-selected='false') Custom size(Charges apply)
                         
                 #pills-tabContent.tab-content.mb-2
@@ -209,8 +202,8 @@ section.product-listing
                             option(value='mercedes') Mercedes
                             option(value='audi') Audi
                 .btn-wrp.d-flex.justify-content-between.mt-3.mt-md-4
-                    button.px-5.bttn.bttn__orange(type="button") Add to Cart
+                    button.px-5.bttn.bttn__orange(type="button", data-toggle='modal', data-target='.bd-example-modal-lg-02') Add to Cart
                     .share.my-auto
-                        i.mr-2.icon-share
+                        i.mt-2.mr-2.icon-share
                         span.txt-gry-12 Share
             
