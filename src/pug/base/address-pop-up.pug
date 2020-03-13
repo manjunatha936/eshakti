@@ -5,7 +5,7 @@
         .container
             .from-wrapper-cont.d-flex.justify-content-center
                 .from-wrapper
-                    form.form(data-parsley-validate)
+                    form.form-address(data-parsley-validate)
                         p.pop-head Shipping Information
                         .row
                             .col-lg-6.form-group
@@ -13,44 +13,51 @@
                                 input.form-input(type="text"  data-parsley-minlength="3" data-parsley-minlength-message="Please enter a valid Name min 3 characters" data-parsley-error-message="Please enter a valid Name min 3 characters"  data-parsley-trigger="input keyup change" data-parsley-required)
                             .col-lg-6.form-group
                                 label(for="") Phone*
-                                input.form-input(type="number"  data-parsley-type="number"  data-parsley-min="10" data-parsley-error-message="something is wrong" data-parsley-trigger="input keyup change" data-parsley-required )
+                                input.form-input(type="number"  data-parsley-type="number" data-parsley-maxlength="12" data-parsley-min="10" data-parsley-error-message="Provide your phone number" data-parsley-trigger="input keyup change" data-parsley-required )
                         .row
                             .col.form-group
                                 label(for="") Address 1*
-                                input.form-input(type="text"     data-parsley-trigger="input keyup change" data-parsley-error-message="something is wrong"  )
+                                input.form-input(type="text"     data-parsley-trigger="input keyup change" data-parsley-error-message="Please provide your Address" data-parsley-required )
                         .row
                             .col.form-group
                                 label(for="") Address 2*
-                                input.form-input(type="text"     data-parsley-trigger="input keyup change" data-parsley-error-message="something is wrong"  )
+                                input.form-input(type="text"     data-parsley-trigger="input keyup change" data-parsley-error-message="Please provide your Address" data-parsley-required  )
                                 p.shop-info.mt-2 *Our shipping partners do not deliver to PO Boxes / APO, Virgin Islands and Puerto Rico addresses. Please provide a full street address.
                         .row
                             .col-lg-6.form-group
                                 label(for="") Country*
-                                .drop-container.mb-3.mb-md-4
+                                .drop-container
                                     .select-style
                                         span.triangle-icon
-                                        select.form-input.txt-gry-12
+                                        select.form-input.select-btn.txt-gry-12
                                             option(disable) select
                                             option(value='saab') Saab
                                             option(value='mercedes') Mercedes
                                             option(value='audi') Audi
+                                        input.select-input.d-none(type="text" data-parsley-errors-container="#errorBlock1" data-parsley-error-message="Please select your country" data-parsley-required)
+                                #errorBlock1
+                                
                             .col-lg-6.form-group
                                 label(for="") Zipcode*
-                                input.form-input(type="text" data-parsley-minlength="6" data-parsley-minlength-message="minimum 6 charectors" data-parsley-trigger="input keyup change")
+                                input.form-input(type="text" data-parsley-minlength="6" data-parsley-minlength-message="minimum 6 charectors" 
+                                data-parsley-trigger="input keyup change" 
+                                data-parsley-error-message="Please enter valid your Zipcode" data-parsley-required)
                         .row
                             .col-lg-6.form-group
                                 label(for="") City*
-                                input.form-input(type="text")
+                                input.form-input(type="text" data-parsley-error-message="Please provide your City"  data-parsley-required)
                             .col-lg-6.form-group
                                 label(for="") State*
-                                .drop-container.mb-3.mb-md-4
+                                .drop-container
                                     .select-style
                                         span.triangle-icon
-                                        select.form-input.txt-gry-12(data-parsley-required)
+                                        select.form-input.select-btn.txt-gry-12
                                             option(disable) select
                                             option(value='saab') Saab
                                             option(value='mercedes') Mercedes
                                             option(value='audi') Audi
+                                        input.select-input.d-none(type="text" data-parsley-errors-container="#errorBlock1" data-parsley-error-message="Please select your country" data-parsley-required)
+                                #errorBlock2
                         .row
                             .col-12
                                 .change-address
@@ -106,4 +113,4 @@
                                                             option(value='audi') Audi
                                 
 
-                        button.bttn.bttn__orange.mt-4(type="button") Save and Continue
+                        button.address-btn.bttn.bttn__orange.mt-4(type="button") Save and Continue
