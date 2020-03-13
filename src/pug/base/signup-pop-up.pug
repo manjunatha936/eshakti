@@ -1,5 +1,5 @@
 .product-modal.modal.fade.pop-up-signup.pop-up(tabindex='-1' role='dialog' aria-labelledby='myLargeModalLabel' aria-hidden='true')
-  .modal-dialog.modal-lg
+  .modal-dialog.modal-lg.modal-dialog-centered
     .modal-content.pt-lg-0
         .container.px-md-0
             button.close-modal(data-dismiss="modal") &times;
@@ -13,13 +13,13 @@
                 #return.col-lg-6.d-lg-flex.tab-pane.fade.show.active
                     .return
                         p.pop-head.d-none.d-lg-block Returning Customers
-                        form(action="")
+                        form(action="" data-parsley-validate)
                             .form-group
                                 label(for="") Email address
-                                input.form-input(type="text")
+                                input.form-input(type="email" data-parsley-type="email" data-parsley-trigger="input keyup change" data-parsley-error-message="Please provide your Email" data-parsley-required )
                             .form-group
                                 label(for="") Password
-                                input.form-input(type="text")
+                                input.form-input(type="password" data-parsley-error-message="Please provide your Password" data-parsley-required)
                                 a.link-pop(href="") Forgot your password?
                             button.bttn.bttn__orange.px-5(type="submit") 
                                 span.px-2 Sign in
@@ -27,13 +27,13 @@
                 #new-customer.col-lg-6.d-lg-flex.tab-pane.fade     
                     .new-customer  
                         p.pop-head.d-none.d-lg-block New Customers
-                        form(action="")
+                        form(action="" data-parsley-validate)
                             .form-group
                                 label(for="") Email address
-                                input.form-input(type="text")
+                                input.form-input(type="text" data-parsley-type="email" data-parsley-trigger="input keyup change" data-parsley-error-message="Please provide your Address" data-parsley-required)
                             .form-group
                                 label(for="") Mobile Number (optional)
-                                input.form-input(type="text")
+                                input.form-input(type="number" data-parsley-type="number" data-parsley-maxlength="12" data-parsley-min="10" data-parsley-error-message="Provide your phone number" data-parsley-trigger="input keyup change" data-parsley-required)
                                 p.fnt-11.mt-2 (This will be used to notify you of any valuable news.)
                             button.bttn.bttn__orange(type="submit") 
                                 span Create an account
