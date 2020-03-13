@@ -22,7 +22,7 @@
         border-bottom: 1px solid #dfdfdf;
     }
     .drk-gry {
-        color: #2e333d;
+        color: $title-black;
     }
     .lt-gry {
         color: #83868a !important;
@@ -38,12 +38,7 @@
         font-size: 18px;
         font-weight: 600;
     }
-    .txt-gry-12 {
-        color: #969696;
-        // font-family: "Open Sans";
-        font-size: 12px;
-        font-weight: 400;
-    }
+    
     .prd-price {
         @extend .head-prd;
         color: #f25c50;
@@ -59,7 +54,7 @@
     }
     .prd-sub-txt {
         text-transform: uppercase;
-        color: #2e333d;
+        color: $title-black;
         font-size: 13px;
         font-weight: 700;
         letter-spacing: 0.3px;
@@ -174,6 +169,12 @@
             display: flex;
             flex-wrap: wrap;
           }
+    }
+    .txt-gry-12 {
+        color: #969696;
+        // font-family: "Open Sans";
+        font-size: 12px;
+        font-weight: 400;
     }
     // .border-bttom-o {
     //     @media screen and (max-width:767px ){
@@ -343,7 +344,7 @@
         padding: 5px;
         display: flex;
         align-items: center;
-        color: #2e333d;
+        color: $title-black;
 
         i {
             font-size: 16px;
@@ -352,7 +353,7 @@
 
         span {
             font-weight: 600;
-            color: #2e333d;
+            color: $title-black;
         }
     }
     .style-card {
@@ -400,7 +401,7 @@
         display: inline-block;
     }
     .fnt-11 {
-        color: #2e333d;
+        color: $title-black;
         font-size: 11px;
         font-weight: 400;
     }

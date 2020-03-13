@@ -1,20 +1,43 @@
-.product-modal.modal.fade.pop-up-signup(tabindex='-1' role='dialog' aria-labelledby='myLargeModalLabel' aria-hidden='true')
+.product-modal.modal.fade.pop-up-signup.pop-up(tabindex='-1' role='dialog' aria-labelledby='myLargeModalLabel' aria-hidden='true')
   .modal-dialog.modal-lg
-    .modal-content
-        button.close-modal(data-dismiss="modal") &times;
-        ul#myTab.nav.d-flex.d-md-none(role='tablist')
-            li.nav-item.mt-2
-                a#return-tab.nav-link.style-head.active(data-toggle='tab' href='#return' role='tab' aria-controls='home' aria-selected='true') Neckline
-            li.nav-item.mt-2
-                a#new-customer-tab.nav-link.style-head(data-toggle='tab' href='#new-customer' role='tab' aria-controls='profile' aria-selected='false') Sleeve Type
+    .modal-content.pt-lg-0
+        .container.px-md-0
+            button.close-modal(data-dismiss="modal") &times;
+            ul#myTabSign.nav.d-flex.d-lg-none.sign-up(role='tablist')
+                li.nav-item.mt-2
+                    a#return-tab.pop-head.nav-link.active.mb-0(data-toggle='tab' href='#return' role='tab' aria-controls='home' aria-selected='true') Returning Customers
+                li.nav-item.mt-2
+                    a#new-customer-tab.pop-head.nav-link(data-toggle='tab' href='#new-customer' role='tab' aria-controls='profile' aria-selected='false') New Customers
+                
+            #sign-popup.row.tab-content.d-flex
+                #return.col-lg-6.d-lg-flex.tab-pane.fade.show.active
+                    .return
+                        p.pop-head.d-none.d-lg-block Returning Customers
+                        form(action="")
+                            .form-group
+                                label(for="") Email address
+                                input.form-input(type="text")
+                            .form-group
+                                label(for="") Password
+                                input.form-input(type="text")
+                                a.link-pop(href="") Forgot your password?
+                            button.bttn.bttn__orange.px-5(type="submit") 
+                                span.px-2 Sign in
             
-        #myTabContent.tab-content.custom-style.mt-2.mt-md-0
-            #return.tab-pane.fade.show.active.style-model-content.neckline
-                .style-head.pb-md-3.d-none.d-md-block Neckline
-                .style-contain
-                    
-            #new-customer.tab-pane.fade.style-model-content.sleeve
-                .style-head.pb-md-3.d-none.d-md-block Sleeve Type
-                .style-contain 
-                    
-            
+                #new-customer.col-lg-6.d-lg-flex.tab-pane.fade     
+                    .new-customer  
+                        p.pop-head.d-none.d-lg-block New Customers
+                        form(action="")
+                            .form-group
+                                label(for="") Email address
+                                input.form-input(type="text")
+                            .form-group
+                                label(for="") Mobile Number (optional)
+                                input.form-input(type="text")
+                                p.fnt-11.mt-2 (This will be used to notify you of any valuable news.)
+                            button.bttn.bttn__orange(type="submit") 
+                                span Create an account
+                        .add-offer.mt-3.pt-2.d-flex 
+                            i.icon-offer.mr-2
+                            p.add-text Register and get 35% OFF on your purchase
+        
