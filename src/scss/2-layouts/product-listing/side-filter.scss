@@ -17,6 +17,14 @@
   }
 }
 
+.sticky-inner-container {
+  @include bp("tab") {
+    max-height: 680px;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+}
+
 // Accordian start
 #accordion {
     max-width: 400px;
@@ -42,12 +50,12 @@
         &::before {
             width: 1px;
             height: 12px;
-            right: 0px;
+            right: 5px;
         }
         &::after {
             width: 12px;
             height: 1px;
-            right: -5px;
+            right: 0px;
             transition: all .6s ease;
         }
 
@@ -164,6 +172,7 @@
 
 .color-container {
   // padding-top: .5rem;
+  padding-left: .3rem;
   @include bpmax("phone-lg") {
     max-width: 250px;
     margin-right: 1.2rem;
@@ -183,6 +192,14 @@
   @include bpmax("phone-lg") {
     height: 26px;
     width: 26px;
+  }
+
+  @include bp("tab") {
+    margin: 0 .6rem .6rem 0;
+  }
+  
+  @include bp("tab-lg") {
+    margin: 0 .8rem .6rem 0;
   }
 
   .checkmark:after {

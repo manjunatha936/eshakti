@@ -10,10 +10,22 @@
 
 // Neckline checkbox
 
+.neck-container {
+    max-width: 255px;
+    overflow-x: auto;
+    // overflow-y: auto;
+}
+
 .neck-wrapper {
     max-width: 50px;
     text-align: center;
     margin-right: 1.8rem;
+    @include bp("tab") {
+        margin-right: 1rem;
+    }
+    @include bp("tab-lg") {
+        margin-right: 1.8rem;
+    }
 }
 
 .neck-type {
@@ -28,4 +40,12 @@
     height: 50px;
     width: 50px;
     object-fit: contain;
+    @include bp("tab") {
+        height: 45px;
+        width: 45px;
+    }
+    @include bp("tab-lg") {
+        height: 50px;
+        width: 50px;
+    }
 }
