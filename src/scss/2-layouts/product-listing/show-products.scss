@@ -17,6 +17,11 @@
     &__label {
         @extend .fnt-xs;
         color: rgba($color: $card-title, $alpha: .7);
+        .dropdown-select, .caret {
+            @include bpmax("phone-lg") {
+                display: none;
+            }
+        }
     }
     &__right-info {
         display: flex;
@@ -66,10 +71,138 @@
     } 
 }
 
+
+// Sort by filter Both Mobile and Desktop
+
 .filter-sort {
+    position: relative;
     @include bpmax("phone-lg") {
-        position: relative;
         text-align: center;
+    }
+    #dLabel {
+      border-radius: 4px;
+      background-color: #fff;
+      text-align: left;
+      color: #ccc;
+      border: 0;
+      cursor: pointer;
+    }
+    .caret {
+        @include bp("tab") {
+            float: right;
+            margin-top: 9px;
+            display: block;
+            margin-left: 2px;
+            vertical-align: middle;
+            border-top: 4px dashed;
+            border-right: 4px solid transparent;
+            border-left: 4px solid transparent;
+        }
+    }
+    .dropdown-menu {
+        margin: 0;
+        border: none;
+        //   min-width: auto !important;
+        right: 0;
+        @include bp("tab") {
+            text-align: end;
+            box-shadow: 0 1px 7px rgba(0, 0, 0, 0.09);
+            min-width: 8.5rem !important;
+            padding: 0;
+            left: initial !important;
+            transform: translate3d(15px, 22px, 0px) !important;
+        }
+    }
+    .dropdown button {
+        &:hover, &:focus {
+            outline: 0;
+            border: none;
+        }
+    }
+    .dropdown.open button#dLabel {
+        border: solid 1px #666;
+        border-bottom: none;
+    }
+    .dropdown.open ul {
+        box-shadow: 0 1px 7px rgba(0, 0, 0, 0.09);
+        background-color: #ffffff;
+        border: none;
+    }
+    .dropdown-menu li {
+        color: #3f4145 ;
+        font-size: 14px ;
+        line-height: 24px;
+        cursor: pointer;
+        border: none;
+        @include bp("tab") {
+            padding: 6px 15px;
+            font-weight: 400;
+            font-size: 13px ;
+            line-height: 23px;
+            &:hover {
+                background-color: #ccc;
+            }
+        }
+    }
+    .btn-close {
+       display: none;
+    }
+    // ONLY FOR MOBILE
+    @include bpmax("phone-lg") {
+        .dropdown{
+            display: block;
+            position: fixed;
+            top: 0;
+            height: 40%;
+            width: 100%;
+            text-align: left;
+            padding: 1.5rem 1.5rem;
+            border-radius: 0;
+            z-index: 10000;
+            background: $white;
+            left: 0;
+            right: 0;
+            transform: translateY(-100%);
+            transition: transform 0.3s cubic-bezier(0.22, 0.61, 0.36, 1);
+            .dropdown-menu {
+                position: relative !important;
+                display: block;
+                width: 100%;
+                background: transparent;
+                top: 0;
+                li {
+                    border-bottom: 1px solid #e4e6e7;
+                    padding: {
+                        top: .8rem;
+                        bottom: .8rem;
+                    }
+                }
+            }
+            &.active{
+                transform: translateY(0%);
+            }
+            .btn-close {
+               display: block;
+            }
+        }
+    }
+}
+
+// sorty by popup and overlay
+@include bpmax("phone-lg") {
+    .show{
+        position: fixed;
+        background: rgba(0, 0, 0, .8);
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        transition: all 0.3s cubic-bezier(.4,0,.2,1);
+    }
+    .scroll {
+        overflow: hidden;
     }
 }
 
@@ -142,18 +275,18 @@
     }
 }
 
-.grid-item li {
-    width: 50%;
-    flex: 0 0 50%;
-    @include bp("tab") {
-        width: 33.3%;
-        flex: 0 0 33.3%;
-    }
-    @include bp("desktop") {
-        width: 25.3%;
-        flex: 0 0 25%;
-    }
-}
+// .grid-item li {
+//     width: 50%;
+//     flex: 0 0 50%;
+//     @include bp("tab") {
+//         width: 33.3%;
+//         flex: 0 0 33.3%;
+//     }
+//     @include bp("tab-lg") {
+//         width: 25.3%;
+//         flex: 0 0 25%;
+//     }
+// }
 
 .grid-item {
     margin-left: -10px;
@@ -166,6 +299,10 @@
         padding-right: 10px;
     
         @include bp("tab") {
+            max-width: 33.3%;
+            flex: 0 0 33.3%;
+        }
+        @include bp("desktop-1200") {
             max-width: 25%;
             flex: 0 0 25%;
         }
@@ -185,6 +322,7 @@
 
 .js-products li{
     margin-bottom: 1rem;
+    transition: all .4s ease-in-out;
     @include bpmax("phone-lg") {
         padding: 0 .5rem;
     }
@@ -267,7 +405,7 @@
     }
 
     &:hover, &:focus {
-        @include bp("tab") {
+        @include bp("tab-lg") {
             .product-card__customize{
                 transform: translate(-50%, -60px);
                 opacity: 1;
@@ -290,7 +428,7 @@
 // grid-view mobile changes
 
 .product-card__customize {
-    @include bpmax("phone-lg") {
+    @include bpmax("tab-sm") {
         transform: translate(-50%, -60px);
         opacity: 1 !important;
         .img-scale {
@@ -301,7 +439,7 @@
 
 .grid-item {
     .product-card__customize {
-        @include bpmax("phone-lg") {
+        @include bpmax("tab-sm") {
             padding: 0;
             left: auto;
             right: 0.5rem;
@@ -340,6 +478,14 @@
     align-items: center;
     justify-content: center;
     z-index: 1;
+    @include bp("tab") {
+        top: .6rem;
+        left: .6rem;
+    }
+    @include bp("tab-lg") {
+        top: 1rem;
+        left: 1rem;
+    }
 }
 
 .product-name {
@@ -348,6 +494,7 @@
     display: block;
     color: $title-black;
     letter-spacing: $letter-spacing02;
+    font-weight: 600;
 }
 
 .product-type {
@@ -370,8 +517,7 @@
 
 .js-loading-card {
     opacity: 0;
-    transition: all 1.5s ease-in-out !important;
-
+    // transition: all 1.5s ease-in-out !important;
     &.active {
         opacity: 1;
     }

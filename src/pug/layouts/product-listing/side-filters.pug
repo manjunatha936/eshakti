@@ -114,23 +114,23 @@ aside.side-filter.d-md-block.side-filter-sticky
             .panel-card
                 .panel-cardtitle.panel-clear-container
                     span Neckline
-                    a(href="javascript:void(0);").clear-select clear
+                    a(href="javascript:void(0);").clear-color.js-check-clear clear
                 .accordion-content.py-1
-                    .d-flex
+                    .d-flex.neck-container
+                        .neck-wrapper
+                            input#check1.d-none.style-check(type="radio" name="neckline" data-src="./assets/images/women.png") 
+                            label(for="check1" ).img-wrp
+                                img.img50x50.style-img(src="./assets/images/style-img.png", alt="")
+                                span.neck-type Petre Pan
                         .neck-wrapper
                             input#check2.d-none.style-check(type="radio" name="neckline" data-src="./assets/images/women.png") 
                             label(for="check2" ).img-wrp
-                                img.img50x50(src="./assets/images/style-img.png", alt="")
-                                span.neck-type Petre Pan
+                                img.img50x50.style-img(src="./assets/images/style-img.png", alt="")
+                                span.neck-type Mandarin collar
                         .neck-wrapper
                             input#check3.d-none.style-check(type="radio" name="neckline" data-src="./assets/images/women.png") 
                             label(for="check3" ).img-wrp
-                                img.img50x50(src="./assets/images/style-img.png", alt="")
-                                span.neck-type Mandarin collar
-                        .neck-wrapper
-                            input#check4.d-none.style-check(type="radio" name="neckline" data-src="./assets/images/women.png") 
-                            label(for="check4" ).img-wrp
-                                img.img50x50(src="./assets/images/style-img.png", alt="")
+                                img.img50x50.style-img(src="./assets/images/style-img.png", alt="")
                                 span.neck-type Round Collar
             
             .panel-card
