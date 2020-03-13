@@ -1,17 +1,6 @@
 section.product-listing
     .container
-        mixin dropdown(text)
-            .drop-container.mb-3.mb-md-4
-                    .drop-title
-                        span.prd-sub-txt.text-capitalize.fnt-600=text
-                        img.pl-1(src="./assets/images/i.png", alt="")
-                    .select-style
-                        span.triangle-icon
-                        select.txt-gry-12
-                            option(disable) select
-                            option(value='saab') Saab
-                            option(value='mercedes') Mercedes
-                            option(value='audi') Audi
+        include ../../mixins/dropdown.pug
         .row
             .col-md-7.slider-style-thumb
                 .swiper-container.gallery-top

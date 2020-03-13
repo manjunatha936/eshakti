@@ -1,0 +1,65 @@
+
+//Share social
+.share {
+    .icon-share {
+        position: relative;
+        &:hover {
+            & + .tooltip-share {
+                opacity: 1 !important;
+                transition: ease-in-out all .3s;
+            }
+        }
+    }
+    .tooltip-share {
+        // transition: ease-in-out all .6s;
+        opacity: 0;
+        padding: 14px 20px ;
+        box-shadow: 0 1px 7px rgba(0, 0, 0, 0.09);
+        background-color: #ffffff;
+        position: absolute;     
+        top: -5px;
+        transform: translate(-100%,-100%);
+        left: 15px;
+        padding-top: 0;
+        z-index: 10;
+        &__item {
+            margin-top: 14px;
+        }
+        .facebook {
+            .tip-icon{ 
+                background-color: #3b5998;
+                &::before {
+                    font-size: 12px;
+                }
+            }
+        }
+        .twitter {
+            .tip-icon{ 
+                background-color: #55acee;
+                &::before {
+                    font-size: 9px;
+                }
+            }
+        }
+        .tip-icon{
+            margin-right: 10px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            position: relative;
+            &::before {
+                top: 50%;
+                font-size: 12px;
+                position: absolute;
+                color: #ffffff;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+     
+        .icon-pinterest{
+            background-color: #cb2027;
+            position: relative;
+        }   
+    }
+}
