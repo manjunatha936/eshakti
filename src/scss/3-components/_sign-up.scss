@@ -7,6 +7,10 @@
     }
     .close-modal {
         top : -40px ;
+        @media screen and (min-width:768px ){
+           top: -3px;
+   
+        }
     }
     .pop-head {
         font-style: $opensans !important;
