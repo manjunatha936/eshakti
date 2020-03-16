@@ -88,6 +88,7 @@
 .size {
     margin-right: 5px;
     margin-bottom: 1.2rem;
+    // @extend .flex-center;
 }
 
 .size-hd {
@@ -95,17 +96,18 @@
     @extend .fnt-sm;
     letter-spacing: 0.24px;
     text-transform: uppercase;
+    display: block;
 }
 
 .size-number {
-    width: 40px;
-    height: 31px;
-    border: 1px solid #e0e2e3;
+    // width: 40px;
+    // height: 31px;
+    // border: 1px solid #e0e2e3;
     background-color: $white;
-    @extend .flex-center;
     @extend .fnt-xxs;
     letter-spacing: $letter-spacing02;
     font-weight: 600;
+    display: inline-block;
     margin: {
         right: .3rem;
         top: .2rem;
@@ -115,8 +117,31 @@
         top: 1px;
         margin-bottom: 0;
         color: #72777e;
+        @extend .flex-center;
+    }
+    &__label{
+        width: 40px;
+        height: 31px;
+        border: 1px solid #e0e2e3;
     }
 }
+
+// size selections
+
+.size-select {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.size-select:checked + .size-number__label {
+    background: $black;
+    color: $white;
+}
+
 
 //Product recent items
 

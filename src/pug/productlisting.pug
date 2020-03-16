@@ -8,8 +8,9 @@ html(lang="en")
   body
     include ./base/discount-bar.pug
     include ./base/header.pug
+    +header("repeat")
     // Main
-    main
+    main.maintp9
       include ./layouts/product-listing/main.pug
       include ./layouts/product-listing/product-listing-model.pug
       include ./layouts/product-listing/save-style-model.pug

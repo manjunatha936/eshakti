@@ -69,7 +69,6 @@ listViewButton.addEventListener('click', () => {
  });
 
  // Changing mode of the view
-
  const handleClickl = (ek) => {
    ek.preventDefault();
    viewList.forEach(node => {
@@ -211,7 +210,6 @@ filterClose.forEach(closeBtn => {
 });
 
 
-
 // sort by
 if(window.innerWidth < 768) { 
    sortBy.addEventListener('click', (e) => {
@@ -229,9 +227,6 @@ if(window.innerWidth < 768) {
       filterBody.classList.remove('scroll');
    });
 }
-
-
-
 
 //Prodct details popup js code
 $(document).ready(function(){
@@ -256,10 +251,6 @@ $(document).ready(function(){
        console.log(lengthText)
 
      })
-
-
-       
-
 
     var imageSource = $('.js-style-img').attr('src');
      $('.style-check').on('click',function(){
@@ -371,9 +362,6 @@ $(document).ready(function(){
 
            }
            cardTitle = neckText+","+sleeveText+","+lengthText;
-           
-      
-         
          
          const ele = '<li class="slide-item swiper-slide"><div class="card-wrp"><div class="style-card"><img class="saved-img" src="'+imageSource+'" alt="style image" /><div class="close-card" slide-id="'+ index +'"><span></span><span></span></div></div><div class="d-flex pt-2 align-items-center  " ><p class="fnt-11 w-100 pr-2">'+cardTitle+'</p><i class="share-icon icon-share mr-2"  ></i></div></div></li>'
              swiperStyle = new Swiper('.js-style-slider', {
