@@ -27,6 +27,8 @@ const headerfns = new HeaderInteractions();
 import ProductDetais from './product-listing'
 const productDetais = new ProductDetais();
 
+
+
 import lazyLoader from './image-loader'
 const lazyImages = new lazyLoader();
 // console.log("Hi, this page is common page!"); // eslint-disable-line no-console

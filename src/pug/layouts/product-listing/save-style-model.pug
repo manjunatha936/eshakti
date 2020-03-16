@@ -1,4 +1,4 @@
-.product-modal.modal.fade.bd-example-modal-lg-02(tabindex='-1' role='dialog' aria-labelledby='myLargeModalLabel' aria-hidden='true')
+.product-modal.modal.fade.save-style-model(tabindex='-1' role='dialog' aria-labelledby='myLargeModalLabel' aria-hidden='true')
   .modal-dialog.modal-lg
     .modal-content
         button.close-modal.d-none.d-md-block(data-dismiss="modal") &times;
@@ -10,14 +10,37 @@
             .d-flex.saved-styles
                 //  main image
                 .col-md-3.float-left
-                    .p-4.saved-styles__img
-                        img.saved-styles__mainImage(src="")
+                    .p-4.saved-styles__img.text-center
+                        img.saved-styles__mainImage(src="./assets/images/women.png")
                 // saved styles of main image
                 .col-md-9.px-0
                     // Dynamicaly its clone selcted item from custom style popup
-                    ul.mt-2.w-100.saved-styles__subImages.d-flex.flex-wrap.jsustify-content-aroun
+                    ul.mt-2.w-100.saved-styles__subImages.d-flex.flex-wrap.jsustify-content-around
+                        //- li.dyanamic-img-data
+                        //-     .dyanamic-img-data__src.text-center
+                        //-         img.img-fluid(src='./assets/images/women.png')
+                        //-     .d-flex.align-items-center.mt-1.mt-md-2
+                        //-         p.dyanamic-img-data__info.d-inline-block.pr-4 As shown
+                        //-         i.share-icon.icon-share.pr-3.ml-auto
+                        //-     span.d-inline-block.dyanamic-img-data__close &times
+                        //- li.dyanamic-img-data
+                        //-     .dyanamic-img-data__src.text-center
+                        //-         img.img-fluid(src='./assets/images/women.png')
+                        //-     .d-flex.align-items-center.mt-1.mt-md-2
+                        //-         p.dyanamic-img-data__info.d-inline-block.pr-4 As shown
+                        //-         i.share-icon.icon-share.pr-3.ml-auto
+                        //-     span.d-inline-block.dyanamic-img-data__close &times
+                        //- li.dyanamic-img-data
+                        //-     .dyanamic-img-data__src.text-center
+                        //-         img.img-fluid(src='./assets/images/women.png')
+                        //-     .d-flex.align-items-center.mt-1.mt-md-2
+                        //-         p.dyanamic-img-data__info.d-inline-block.pr-4 As shown
+                        //-         i.share-icon.icon-share.pr-3.ml-auto
+                        //-     span.d-inline-block.dyanamic-img-data__close &times
+
+                            
             .col-12.saved-styles-footer
                 .saved-styles-footer__btn.float-right
-                    button.mb-3.mb-md-0.mr-md-3.create-more-styles.bttn(type="button") + Create more style
-                    button.bttn.bttn__orange(type="button") Proceed with the style
+                    button.mb-3.mb-md-0.mr-md-3.create-more-styles.bttn(type="button", data-dismiss="modal") + Create more style
+                    a(href="product-details.html").bttn.bttn__orange Proceed with the style
                 

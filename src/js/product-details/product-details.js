@@ -35,14 +35,38 @@ class ProductDetais {
           console.log(lengthText)
 
         })
+
+
+
        var imageSource = $('.js-style-img').attr('src');
         $('.style-check').on('click',function(){
-          
             imageSource = $(this).attr('data-src');
                 // alert(imageSource)
               
             $('.js-style-img').attr('src',imageSource)
+            var $styleLen = $(this).parents('.style-model-content').index();
+           $('.saved-styles__subImages').find('.dyanamic-img-data').eq($styleLen).addClass('active');
         })
+
+
+
+
+
+      //2nd popup save styles
+      $('.close-parent-modal').on('click', function() {
+        var index = $(".slide-item").length;
+        const newdata = '<li class="slide-item"><div class="card-wrp"><div class="style-card"><img class="saved-img" src="'+ imageSource+'" alt="style image" /><div class="close-card" slide-id="'+ index +'"><span></span><span></span></div></div><div class="d-flex pt-2 align-items-center  " ><p class="fnt-11 w-100 pr-2 text-left">'+neckText+" , "+sleeveText+" , "+lengthText+'</p><i class="share-icon icon-share mr-2" ></i></div></div></li>'
+        $('.saved-styles__subImages').append(newdata);
+
+        setTimeout(function(){ 
+          $('.save-style-model').modal('show');
+          }, 650);
+  
+      });
+
+
+
+
         //thumbs
         var galleryThumbs = new Swiper('.js-slider-img', {
             spaceBetween: 10,
@@ -164,11 +188,14 @@ class ProductDetais {
                 
                 swiperStyle.appendSlide(ele);
         })
+
+
         $(document).on('click','.close-card',function(){
+          var $parent = $(this).parents('.slide-item').remove();
           let slideIndex = parseInt($(this).attr("slide-id"))
           --slideIndex; 
           // console.log(slideIndex)
-          swiperStyle.removeSlide(slideIndex  );
+          // swiperStyle.removeSlide(slideIndex  );
           
           swiperStyle.update()
           let length = $('.slide-item').length
@@ -216,36 +243,17 @@ class ProductDetais {
      })
 
     //Save style popup
-    var SaveStyles = document.querySelector('.close-parent-modal');
-    SaveStyles.addEventListener("click", function (event) {
-    var SelctedSliderImage = document.querySelector('.gallery-top');
-    var GetImage = SelctedSliderImage.querySelector('.swiper-slide-active');
-    var SelectedImage = GetImage.style.backgroundImage.replace(/.*\s?url\([\'\"]?/, '').replace(/[\'\"]?\).*/, '');
-    var NewImageConatiner = document.querySelector('.saved-styles');
-    var NewpopupImage = NewImageConatiner.querySelector('.saved-styles__mainImage').setAttribute('src', SelectedImage);
-    var GetCustomStyles = document.querySelector('.dynaic-slide-wrapper');
-    var MainImges = GetCustomStyles.querySelectorAll('.slide-item');
-    var GetRealImages = GetCustomStyles.querySelectorAll('.slide-item').length;
-    var getNewsubImages = NewImageConatiner.querySelector('.saved-styles__subImages');
-      var list = getNewsubImages.querySelectorAll('.slide-item').length;
-      var Li = document.querySelector('.saved-styles__subImages');
-      Li.innerHTML = "";
-      
-      for (var i=0; i<GetRealImages; i++) {
-        var NewItems = MainImges[i].cloneNode(true);
-        getNewsubImages.appendChild(NewItems);
-        var listImages = getNewsubImages.querySelectorAll('.slide-item').length;
-        var listImages2 = getNewsubImages.querySelectorAll('.slide-item');
-      
-        for(var x=0; x<listImages; x++) {
-          listImages2[x].classList.remove("swiper-slide")
-        }
-      }
-    setTimeout(function(){ 
-      $('.bd-example-modal-lg-02').modal('show');
-      }, 200);
 
-    });
+
+    //Save style model
+ var CreateMoreStyles = document.querySelector('.create-more-styles')
+ CreateMoreStyles.addEventListener("click", function (event) {
+  setTimeout(function(){ 
+    $('.bd-example-modal-lg').modal('show');
+    }, 650);
+  });
+
+
 
 
     }
