@@ -10,11 +10,18 @@ html(lang="en")
     include ./base/header.pug
     +header()
     main.product-details
-  
+      
+      //START: PRODUCT-DETAILS 
       include ./layouts/product-listing/prduct-details.pug
+
+      //START: RECENT VIEW CARDS
       include ./layouts/product-listing/cards.pug
+
+      //START: PRODUTC CUSTOMIZE POPUP
       include ./layouts/product-listing/product-modal.pug
+
+      //START: PRODUCT IMGS-SLIDER MODAL
       include ./layouts/product-listing/img-model.pug
       include ./layouts/product-listing/save-style-model.pug
 
-    //- include ./base/footer.pug
+    include ./base/footer.pug

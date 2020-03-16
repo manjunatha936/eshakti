@@ -1,6 +1,7 @@
 /*eslint-disable*/
 import $ from "jquery"
 import "bootstrap/js/src/modal";
+import 'parsleyjs';
 class HeaderInteractions {
   constructor() {
     if (document.querySelector(".web-header")){

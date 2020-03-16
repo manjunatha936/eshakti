@@ -6,14 +6,12 @@ import 'bootstrap/js/src/tab'
 
 class ProductDetais {
     constructor() {
-
-
       if (document.querySelector(".product-details")){
        
         this.init();
       }
     }
-  
+
     init() {
      $(document).ready(function(){
       var swiperStyle;

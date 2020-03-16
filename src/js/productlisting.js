@@ -218,14 +218,14 @@ if(window.innerWidth < 768) {
       e.stopPropagation();
       sortDropdown.classList.add('active');
       sortBy.before(overlayDiv);
-      overlayDiv.classList.add('show');
+      overlayDiv.classList.add('overlay-show');
       filterBody.classList.add('scroll');
    });
    // Sortclose
    sortClose.addEventListener('click', (e) => {
       e.stopPropagation()
       sortDropdown.classList.remove('active')
-      overlayDiv.classList.remove('show');
+      overlayDiv.classList.remove('overlay-show');
       filterBody.classList.remove('scroll');
    });
 }

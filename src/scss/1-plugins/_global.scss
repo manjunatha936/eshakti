@@ -57,11 +57,14 @@ ol {
   } 
 }
 
-.fnt-xs {
-  font-size: 12px;
-  line-height: 22px;
+
+.fnt-xlg {
+  font-size: 16px;
+  line-height: 26px;
+  
   @include bp("tab") {
-    font-size: 13px;
+    font-size: 18px;
+    line-height: 28px;
   }
 }
 
@@ -73,6 +76,22 @@ ol {
     font-size: 14px;
     line-height: 24px;
   }
+}
+
+.fnt-xs {
+  font-size: 12px;
+  line-height: 22px;
+  @include bp("tab") {
+    font-size: 13px;
+  }
+}
+
+.fnt-xxs {
+  font-size: 11px;
+  line-height: 22px;
+  @include bp("tab") {
+    font-size: 12px;
+  } 
 }
 
 // section-headings
@@ -105,5 +124,18 @@ ol {
       left: 0;
       right: 0;
     }
+  }
+}
+
+// images
+
+.img-70x70 {
+  width: 40px;
+  height: 40px;
+  border-radius: 75px;
+  background-color: #f0f0f0;
+  @include bp('desktop') {
+      width: 70px;
+      height: 70px;
   }
 }

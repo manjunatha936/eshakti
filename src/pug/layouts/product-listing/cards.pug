@@ -1,21 +1,21 @@
-
-section.style-cards.js-img-lazy
+section.product-recent-view.js-img-lazy
     .container
         .row
-            .col
-                p.pb-3.pl-3.head-prd.text-uppercase Recently Viewed
-        ol.js-products.row.list-item.px-3
-            li.col-md-4.js-loading-card(data-toggle='modal', data-target='.img-modal-lg')
-                //- img.img-fluid(src="./assets/images/product-listing/product1.png" alt="Product1")
-                include ../../mixins/product-cards.pug
-                +product-card("./assets/images/product-listing/product1.png", "./assets/images/product-listing/product1.png", "Zapelle", "Pleat front cotton", "$39.95")
-            li.col-md-4.js-loading-card
-                +product-card("./assets/images/product-listing/product-2.png", "./assets/images/product-listing/product-2.png", "Elements", "Ruffle flora Print Crepe shift dress", "$39.95")
-            li.col-md-4.js-loading-card
-                +product-card("./assets/images/product-listing/product-3.png", "./assets/images/product-listing/product-3.png",  "Zapelle", "Pleat front cotton", "$39.95")
-            li.col-md-4.js-loading-card
-                +product-card("./assets/images/product-listing/product1.png", "./assets/images/product-listing/product1.png", "Elements", "Ruffle flora Print Crepe shift dress", "$39.95")
-            li.col-md-4.js-loading-card
-                +product-card("./assets/images/product-listing/product-2.png", "./assets/images/product-listing/product-2.png",  "Zapelle", "Pleat front cotton", "$39.95")
-            li.col-md-4.js-loading-card
-                +product-card("./assets/images/product-listing/product-2.png", "./assets/images/product-listing/product-2.png",  "Zapelle", "Pleat front cotton", "$39.95")
+            .col-12
+                h6.pb-2.pb-md-3.product-recent-view__title Recently Viewed
+        .row.js-recently-viewed.swiper-container
+            ol.js-products.list-item.swiper-wrapper.card-slider-overide
+                li.col-md-4.js-loading-card.swiper-slide
+                    //- img.img-fluid(src="./assets/images/product-listing/product1.png" alt="Product1")
+                    include ../../mixins/product-cards.pug
+                    +product-card("./assets/images/product-listing/product1.png", "./assets/images/product-listing/product1.png", "Zapelle", "Pleat front cotton", "$39.95")
+                li.col-md-4.js-loading-card.swiper-slide
+                    +product-card("./assets/images/product-listing/product-2.png", "./assets/images/product-listing/product-2.png", "Elements", "Ruffle flora Print Crepe shift dress", "$39.95")
+                li.col-md-4.js-loading-card.swiper-slide
+                    +product-card("./assets/images/product-listing/product-3.png", "./assets/images/product-listing/product-3.png",  "Zapelle", "Pleat front cotton", "$39.95")
+                //- li.col-md-4.js-loading-card.swiper-slide
+                //-     +product-card("./assets/images/product-listing/product1.png", "./assets/images/product-listing/product1.png", "Elements", "Ruffle flora Print Crepe shift dress", "$39.95")
+                //- li.col-md-4.js-loading-card.swiper-slide
+                //-     +product-card("./assets/images/product-listing/product-2.png", "./assets/images/product-listing/product-2.png",  "Zapelle", "Pleat front cotton", "$39.95")
+                //- li.col-md-4.js-loading-card.swiper-slide
+                //-     +product-card("./assets/images/product-listing/product-2.png", "./assets/images/product-listing/product-2.png",  "Zapelle", "Pleat front cotton", "$39.95")
