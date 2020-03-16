@@ -36,21 +36,33 @@ $(document).ready(function(){
 
         var topVal = parseInt($('.checkout-panel').css('top').replace('px', ''));
 
-        if(($(this).scrollTop() + topVal + $('.checkout-panel').outerHeight()) > ($('.cart-content__wrap').offset().top + $('.cart-content__wrap').outerHeight()) || ($(this).scrollTop() + $(this).outerHeight()) > ($('.checkout-content__section').offset().top + $('.checkout-content__section').outerHeight())) {
+        if(($(this).scrollTop() + topVal + $('.checkout-panel').outerHeight()) > ($('.cart-content__wrap').offset().top + $('.cart-content__wrap').outerHeight()) && ($(this).scrollTop() + $(this).outerHeight()) > ($('.cart-content__wrap').offset().top + $('.cart-content__wrap').outerHeight())) {
             $('.checkout-panel').addClass('stick-bottom');
         }
 
         else {
             $('.checkout-panel').removeClass('stick-bottom');
         }
-        
+    });
 
-        // if(($('.checkout-panel').offset().top + $('.checkout-panel').outerHeight())> ($('.checkout-content__section').offset().top + $('.checkout-content__section').outerHeight())) {
-        //     $('.checkout-panel').addClass('stick-bottom');
-        // }
-        // else {
-        //     $('.checkout-panel').removeClass('stick-bottom');
-        // }
+    $('.checkout-panel__couponwrap input').change(function(){
+        var coupVal = $(this).val();
+        if ($(this).is(':checked')) {
+            var coupPrice = $(this).attr('data-price');
+            var coupType = $(this).attr('data-type');
+            if(coupType == 'Gift Coupon') {
+                $('.checkout-panel__coupontags span[data-type="Gift Coupon"]').remove();
+            }
+            $('.checkout-panel__coupontags').append('<span data-val="'+coupVal+'" data-type="'+coupType+'"> '+ coupVal + ' - ' + coupPrice + ' ('+ coupType +') ' + '<i>&times;</i></span>');
+        }
+        else {
+            $('.checkout-panel__coupontags span[data-val=' + coupVal +']').remove();
+        }
+    });
 
+    $(document).on('click', '.checkout-panel__coupontags span i', function(){
+        $(this).parents('span').remove();
+        var spanVal = $(this).parents('span').attr('data-val');
+        $("input[value=" + spanVal +"]").prop("checked",false);
     });
 });
