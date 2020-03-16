@@ -1,8 +1,9 @@
 
 import Swiper from 'swiper';
 import $ from 'jquery'
-
 import 'bootstrap/js/src/tab'
+
+
 class ProductDetais {
     constructor() {
       if (document.querySelector(".product-details")){
@@ -10,7 +11,7 @@ class ProductDetais {
         this.init();
       }
     }
-  
+
     init() {
      $(document).ready(function(){
       var swiperStyle;
@@ -34,14 +35,38 @@ class ProductDetais {
           console.log(lengthText)
 
         })
+
+
+
        var imageSource = $('.js-style-img').attr('src');
         $('.style-check').on('click',function(){
-          
             imageSource = $(this).attr('data-src');
                 // alert(imageSource)
               
             $('.js-style-img').attr('src',imageSource)
+            var $styleLen = $(this).parents('.style-model-content').index();
+           $('.saved-styles__subImages').find('.dyanamic-img-data').eq($styleLen).addClass('active');
         })
+
+
+
+
+
+      //2nd popup save styles
+      $('.close-parent-modal').on('click', function() {
+        var index = $(".slide-item").length;
+        const newdata = '<li class="slide-item"><div class="card-wrp"><div class="style-card"><img class="saved-img" src="'+ imageSource+'" alt="style image" /><div class="close-card" slide-id="'+ index +'"><span></span><span></span></div></div><div class="d-flex pt-2 align-items-center  " ><p class="fnt-11 w-100 pr-2 text-left">'+neckText+" , "+sleeveText+" , "+lengthText+'</p><i class="share-icon icon-share mr-2" ></i></div></div></li>'
+        $('.saved-styles__subImages').append(newdata);
+
+        setTimeout(function(){ 
+          $('.save-style-model').modal('show');
+          }, 650);
+  
+      });
+
+
+
+
         //thumbs
         var galleryThumbs = new Swiper('.js-slider-img', {
             spaceBetween: 10,
@@ -163,11 +188,14 @@ class ProductDetais {
                 
                 swiperStyle.appendSlide(ele);
         })
+
+
         $(document).on('click','.close-card',function(){
+          var $parent = $(this).parents('.slide-item').remove();
           let slideIndex = parseInt($(this).attr("slide-id"))
           --slideIndex; 
           // console.log(slideIndex)
-          swiperStyle.removeSlide(slideIndex  );
+          // swiperStyle.removeSlide(slideIndex  );
           
           swiperStyle.update()
           let length = $('.slide-item').length
@@ -213,6 +241,20 @@ class ProductDetais {
       //     $(this).parent(".img-modal-lg").modal().hide();
       // });
      })
+
+    //Save style popup
+
+
+    //Save style model
+ var CreateMoreStyles = document.querySelector('.create-more-styles')
+ CreateMoreStyles.addEventListener("click", function (event) {
+  setTimeout(function(){ 
+    $('.bd-example-modal-lg').modal('show');
+    }, 650);
+  });
+
+
+
 
     }
 }

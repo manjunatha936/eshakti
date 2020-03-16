@@ -1,51 +1,47 @@
 section.product-listing
     .container
-        mixin dropdown(text)
-            .drop-container.mb-3.mb-md-4
-                    .drop-title
-                        span.prd-sub-txt.text-capitalize.fnt-600=text
-                        img.pl-1(src="./assets/images/i.png", alt="")
-                    .select-style
-                        span.triangle-icon
-                        select.txt-gry-12
-                            option(disable) select
-                            option(value='saab') Saab
-                            option(value='mercedes') Mercedes
-                            option(value='audi') Audi
+        include ../../mixins/dropdown.pug
         .row
             .col-md-7.slider-style-thumb
                 .swiper-container.gallery-top
                     .swiper-wrapper
-                        .swiper-slide(style='background-image:url(./assets/images/women.png)')
-                        .swiper-slide(style='background-image:url(./assets/images/women.png)')
-                        .swiper-slide(style='background-image:url(./assets/images/women.png)')
-                        .swiper-slide(style='background-image:url(./assets/images/women.png)')
-                        .swiper-slide(style='background-image:url(./assets/images/women.png)')
-                        .swiper-slide(style='background-image:url(./assets/images/women.png)')
-                        .swiper-slide(style='background-image:url(./assets/images/women.png)')
-                        .swiper-slide(style='background-image:url(./assets/images/women.png)')
-                        .swiper-slide(style='background-image:url(./assets/images/women.png)')
+                        .swiper-slide(style='background-image:url(./assets/images/women.png)' data-toggle='modal', data-target='.img-modal-lg')
+                        .swiper-slide(style='background-image:url(./assets/images/women.png)' data-toggle='modal', data-target='.img-modal-lg')
+                        .swiper-slide(style='background-image:url(./assets/images/women.png)' data-toggle='modal', data-target='.img-modal-lg')
+                        .swiper-slide(style='background-image:url(./assets/images/women.png)' data-toggle='modal', data-target='.img-modal-lg')
+                        .swiper-slide(style='background-image:url(./assets/images/women.png)' data-toggle='modal', data-target='.img-modal-lg')
+                        .swiper-slide(style='background-image:url(./assets/images/women.png)' data-toggle='modal', data-target='.img-modal-lg')
+                        .swiper-slide(style='background-image:url(./assets/images/women.png)' data-toggle='modal', data-target='.img-modal-lg')
+                        .swiper-slide(style='background-image:url(./assets/images/women.png)' data-toggle='modal', data-target='.img-modal-lg')
+                        .swiper-slide(style='background-image:url(./assets/images/women.png)' data-toggle='modal', data-target='.img-modal-lg')
                 
                     .style-guid
                         .img-card-wrp
-                            p.prod-label.fnt-700.pb-2.mb-1 Neckline
-                            img.img-50(src="./assets/images/style-guid.png", alt="")
-                            p.fnt-12.drk-gry.pt-2 Mandarin Collar
+                            p.prod-label.pb-2.mb-1 Neckline
+                            .img-wrp
+                                img.img50x50(src="./assets/images/style-img.png", alt="")
+                                span.neck-type Petre Pan
+                            //- img.img-50(src="./assets/images/style-guid.png", alt="")
+                            //- p.fnt-12.drk-gry.pt-2 Mandarin Collar
                         .img-card-wrp
-                            p.prod-label.fnt-700.pb-2.mb-1 Sleeve Type
-                            img.img-50(src="./assets/images/style-guid.png", alt="")
-                            p.fnt-12.drk-gry.pt-2 Mandarin Collar
+                            p.prod-label.pb-2.mb-1 Sleeve Type
+                            .img-wrp
+                                    img.img50x50(src="./assets/images/style-img.png", alt="")
+                                    span.neck-type Elbow Length
                         .img-card-wrp
-                            p.prod-label.fnt-700.pb-2.mb-1 Length
-                            img.img-50(src="./assets/images/style-guid.png", alt="")
-                            p.fnt-12.drk-gry.pt-2 Mandarin Collar
+                            p.prod-label.pb-2.mb-1 Length
+                            .img-wrp
+                                img.img50x50(src="./assets/images/style-img.png", alt="")
+                                span.neck-type Knee Length
                         a(href="" , data-toggle='modal', data-target='.bd-example-modal-lg').custom-stye-br.fnt-12-black 
                             img(src="./assets/images/product-listing/product-card/customize.svg" alt="customize")
                             span.ml-2.d-none.d-md-inline-block.text-uppercase Customize style                     
-                            span.ml-2.d-md-none Customize                    
+                            span.ml-2.d-md-none Customize                  
                             // Add Arrows
-                .info-stamp
-                    span Styled by you
+                
+                .patch-styled
+                    span.patch-styled__text Styled by you
+                
                 .swiper-pagination-bullets.d-md-none
                     //- .swiper-button-next.swiper-button-white
                     //- .swiper-button-prev.swiper-button-white
@@ -54,155 +50,186 @@ section.product-listing
                         .swiper-slide.thumb-slide-img(style='background-image:url(./assets/images/thumbimg.png)')
                     .swiper-container.gallery-thumbs
                         .swiper-wrapper
-                            .swiper-slide.thumb-slide(style='background-image:url(./assets/images/thumbimg.png)')
-                            .swiper-slide.thumb-slide(style='background-image:url(./assets/images/thumbimg.png)')
-                            .swiper-slide.thumb-slide(style='background-image:url(./assets/images/thumbimg.png)')
-                            .swiper-slide.thumb-slide(style='background-image:url(./assets/images/thumbimg.png)')
-                            .swiper-slide.thumb-slide(style='background-image:url(./assets/images/thumbimg.png)')
-                            .swiper-slide.thumb-slide(style='background-image:url(./assets/images/thumbimg.png)')
-                            .swiper-slide.thumb-slide(style='background-image:url(./assets/images/thumbimg.png)')
-                            .swiper-slide.thumb-slide(style='background-image:url(./assets/images/thumbimg.png)')
-                            .swiper-slide.thumb-slide(style='background-image:url(./assets/images/thumbimg.png)')
-                            .swiper-slide.thumb-slide(style='background-image:url(./assets/images/thumbimg.png)')
+                            .swiper-slide.thumb-slide(style='background-image:url(./assets/images/thumbimg.png)' data-toggle='modal', data-target='.img-modal-lg')
+                            .swiper-slide.thumb-slide(style='background-image:url(./assets/images/thumbimg.png)' data-toggle='modal', data-target='.img-modal-lg')
+                            .swiper-slide.thumb-slide(style='background-image:url(./assets/images/thumbimg.png)' data-toggle='modal', data-target='.img-modal-lg')
+                            .swiper-slide.thumb-slide(style='background-image:url(./assets/images/thumbimg.png)' data-toggle='modal', data-target='.img-modal-lg')
+                            .swiper-slide.thumb-slide(style='background-image:url(./assets/images/thumbimg.png)' data-toggle='modal', data-target='.img-modal-lg')
+                            .swiper-slide.thumb-slide(style='background-image:url(./assets/images/thumbimg.png)' data-toggle='modal', data-target='.img-modal-lg')
+                            .swiper-slide.thumb-slide(style='background-image:url(./assets/images/thumbimg.png)' data-toggle='modal', data-target='.img-modal-lg')
+                            .swiper-slide.thumb-slide(style='background-image:url(./assets/images/thumbimg.png)' data-toggle='modal', data-target='.img-modal-lg')
+                            .swiper-slide.thumb-slide(style='background-image:url(./assets/images/thumbimg.png)' data-toggle='modal', data-target='.img-modal-lg')
+                            .swiper-slide.thumb-slide(style='background-image:url(./assets/images/thumbimg.png)' data-toggle='modal', data-target='.img-modal-lg')
                         .swiper-arrow
-                            .arrow.left-arrow
-                                span
                             .arrow.right-arrow
+                                span
+                            .arrow.left-arrow
                                 span
                 
             .col-md-5.mt-5.mt-md-0
+                // Dress-details info
                 .dress-details
-                    span.prod-label ZAPELLE
-                    p.head-prd.py-2 Pleat Front Cotton Chambray Wrap Dress
-                    span.txt-gry-12 Style #CL0062013
-                    span.d-block.prd-price.mt-3 $64.95
-                    p.txt-gry-12.pt-1.pb-4 or 3 interest-free payments of $18 with Affirm. Learn more
-                        a.learn-link(href="#") Learn more
-                    .d-flex
+                    .product-info
+                        span.pdp-title ZAPELLE
+                        h1.fnt-xlg.pdp-name Pleat Front Cotton Chambray Wrap Dress
+                        span.product-info__style-code Style #CL0062013
+                    
+                    .product-price  
+                        span.product-price__text $64.95
+                        p.pdt-sell-price.fnt-xxs
+                            | or 3 interest-free payments of $18 with Affirm
+                            a.learn-link(href="#") Learn more
+                    .reviews
                         img(src="./assets/images/product-listing/stars.png", alt="")
-                        span.pl-3.txt-gry-12 2 reviews
-                    .fnt-xs.drk-gry.py-4 Pleated cotton chambray brings draped flair to our flattering frock that boasts a cross-front with ties at the waist for a wrap silhouette. Available: Additional 3 neckline, 4 sleeve type... 
+                        span.pl-3.txt-gry-12.reviews__rating 2 reviews
+                    .fnt-xs.drk-gry.py-3 Pleated cotton chambray brings draped flair to our flattering frock that boasts a cross-front with ties at the waist for a wrap silhouette. Available: Additional 3 neckline, 4 sleeve type... 
                         p.more-info hambray brings draped flair to our flatte
                         a.js-read-more.learn-link.fnt-700(href="#")  Product Details
-                    .prd-color.txt-gry-12.pb-3
+                    .prd-color.txt-gry-12.fnt-xxs.mt-2
                         span Color: 
                         span Indigo chambray
-                .prd-size.fnt-xs.d-flex.flex-column.flex-md-row.align-items-md-center.mt-4.mt-md-0
-                    p.prd-sub-txt.my-auto.mr-md-4 Select Size
-                    ul#pills-tab.nav.d-flex.justify-content-between(role='tablist')
-                        li.nav-item.ml-2.ml-md-0
-                            a#pills-home-tab.nav-link.active(data-toggle='pill', href='#pills-home', role='tab', aria-controls='pills-home', aria-selected='true') Standard Size
-                        li.ml-md-3.nav-item
-                            a#pills-profile-tab.nav-link(data-toggle='pill', href='#pills-profile', role='tab', aria-controls='pills-profile', aria-selected='false') Custom size(Charges apply)
+                
+                //START: PROJECT-SIZE-CHART
+                .pdp-size-container
+                    .prd-size.fnt-xs.d-flex.flex-column.flex-md-row.align-items-md-center.mt-2.mt-md-0.mb-2
+                        p.prd-sub-txt.my-auto.mr-md-4 Select Size
+                        ul#pills-tab.nav.d-flex.justify-content-between(role='tablist')
+                            li.nav-item.ml-2.ml-md-0
+                                a#pills-home-tab.nav-link.active(data-toggle='pill', href='#pills-home', role='tab', aria-controls='pills-home', aria-selected='true') Standard Size
+                            li.ml-md-3.nav-item
+                                a#pills-profile-tab.nav-link(data-toggle='pill', href='#pills-profile', role='tab', aria-controls='pills-profile', aria-selected='false') Custom size(Charges apply)
+                            
+                    #pills-tabContent.tab-content.mb-2
                         
-                #pills-tabContent.tab-content.mb-2
-                    
-                    #pills-home.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='pills-home-tab')
-                        .row
-                            .col-md-10
-                                p.txt-gry-12 XS to 6X sizes are available 
-                                    a.learn-link.fnt-700(href="#")  Size Chart
-                        .measures-drop-wrp.d-flex.flex-md-wrap.pt-2
-                            .size.text-center   
-                                span.size-hd.pb-1 XS
-                                .size-range.d-flex
-                                    label(for="size01").py-2.mr-1.txt-gry-12 0 
-                                    input#size01.d-none(type="checkbox")
-                                    label(for="size02").py-2.txt-gry-12 2
-                                    input#size02.d-none(type="checkbox")
-                            .size.text-center   
-                                span.size-hd.pb-1 S
-                                .size-range.d-flex
-                                    label(for="").py-2.mr-1.txt-gry-12 4 
-                                    input#size03.d-none(type="checkbox")
-                                    label(for="size03").py-2.txt-gry-12 6
-                                    input.d-none(type="checkbox")
-                            .size.text-center   
-                                span.size-hd.pb-1 M
-                                .size-range.d-flex
-                                    label(for="size04").py-2.mr-1.txt-gry-12 8 
-                                    input#size04.d-none(type="checkbox")
-                                    label(for="size05").py-2.txt-gry-12 10
-                                    input#size05.d-none(type="checkbox")
-                            .size.text-center   
-                                span.size-hd.pb-1 L
-                                .size-range.d-flex
-                                    label(for="size06").py-2.mr-1.txt-gry-12 12 
-                                    input#size06.d-none(type="checkbox")
-                                    label(for="size07").py-2.txt-gry-12 14
-                                    input#size07.d-none(type="checkbox")
-                            .size.text-center   
-                                span.size-hd.pb-1 XL
-                                .size-range.d-flex
-                                    label(for="").py-2.mr-1.txt-gry-12 16
-                                    input.d-none(type="checkbox")
-                                    label(for="").py-2.txt-gry-12 18
-                                    input.d-none(type="checkbox")
-                            .size.text-center   
-                                span.size-hd.pb-1 1X
-                                .size-range.d-flex
-                                    label(for="").py-2.mr-1.txt-gry-12 16w
-                                    input.d-none(type="checkbox")
-                                    label(for="").py-2.txt-gry-12 18w
-                                    input.d-none(type="checkbox")
-                            .size.text-center   
-                                span.size-hd.pb-1 2X
-                                .size-range.d-flex
-                                    label(for="").py-2.mr-1.txt-gry-12 20W
-                                    input.d-none(type="checkbox")
-                                    label(for="").py-2.txt-gry-12 22W
-                                    input.d-none(type="checkbox")
-                            .size.text-center   
-                                span.size-hd.pb-1 3X
-                                .size-range.d-flex
-                                    label(for="").py-2.mr-1.txt-gry-12 24W
-                                    input.d-none(type="checkbox")
-                                    label(for="").py-2.txt-gry-12 26W
-                                    input.d-none(type="checkbox")
-                            .size.text-center   
-                                span.size-hd.pb-1 4X
-                                .size-range.d-flex
-                                    label(for="").py-2.mr-1.txt-gry-12 28W
-                                    input.d-none(type="checkbox")
-                                    label(for="").py-2.txt-gry-12 30W
-                                    input.d-none(type="checkbox")
-                            .size.text-center   
-                                span.size-hd.pb-1 5X
-                                .size-range.d-flex
-                                    label(for="").py-2.mr-1.txt-gry-12 32W
-                                    input.d-none(type="checkbox")
-                                    label(for="").py-2.txt-gry-12 34W
-                                    input.d-none(type="checkbox")
-                            .size.text-center   
-                                span.size-hd.pb-1 6X
-                                .size-range.d-flex
-                                    label(for="").py-2.mr-1.txt-gry-12 36W
-                                    input.d-none(type="checkbox")
+                        #pills-home.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='pills-home-tab')
+                            .row
+                                .col-md-10
+                                    p.txt-gry-12.fnt-xxs XS to 6X sizes are available 
+                                        a.learn-link.fnt-700(href="#")  Size Chart
+                            .measures-drop-wrp.d-flex.flex-md-wrap.pt-3
+                                .size.text-center   
+                                    span.size-hd XS
+                                    .size-range.d-flex
+                                        .size-number
+                                            input#size01.d-none(type="radio")
+                                            label(for="size01") 0
+                                        .size-number
+                                            input#size02.d-none(type="radio")
+                                            label(for="size02") 2
+
+                                .size.text-center   
+                                    span.size-hd S
+                                    .size-range.d-flex
+                                        .size-number
+                                            input#size01.d-none(type="radio")
+                                            label(for="size01") 4
+                                        .size-number
+                                            input#size02.d-none(type="radio")
+                                            label(for="size02") 6
+
+                                .size.text-center   
+                                    span.size-hd M
+                                    .size-range.d-flex
+                                        .size-number
+                                            input#size01.d-none(type="radio")
+                                            label(for="size01") 8
+                                        .size-number
+                                            input#size02.d-none(type="radio")
+                                            label(for="size02") 10
+                                .size.text-center   
+                                    span.size-hd L
+                                    .size-range.d-flex
+                                        .size-number
+                                            input#size01.d-none(type="radio")
+                                            label(for="size01") 11
+                                        .size-number
+                                            input#size02.d-none(type="radio")
+                                            label(for="size02") 14
+                                .size.text-center   
+                                    span.size-hd XL
+                                    .size-range.d-flex
+                                        .size-number
+                                            input#size01.d-none(type="radio")
+                                            label(for="size01") 16
+                                        .size-number
+                                            input#size02.d-none(type="radio")
+                                            label(for="size02") 18
+                                .size.text-center   
+                                    span.size-hd 1X
+                                    .size-range.d-flex
+                                        .size-number
+                                            input#size01.d-none(type="radio")
+                                            label(for="size01") 16w
+                                        .size-number
+                                            input#size02.d-none(type="radio")
+                                            label(for="size02") 18w
+                                .size.text-center   
+                                    span.size-hd 2X
+                                    .size-range.d-flex
+                                        .size-number
+                                            input#size01.d-none(type="radio")
+                                            label(for="size01") 20w
+                                        .size-number
+                                            input#size02.d-none(type="radio")
+                                            label(for="size02") 22w
+                                .size.text-center   
+                                    span.size-hd 3X
+                                    .size-range.d-flex
+                                        .size-number
+                                            input#size01.d-none(type="radio")
+                                            label(for="size01") 24w
+                                        .size-number
+                                            input#size02.d-none(type="radio")
+                                            label(for="size02") 26w
+                                .size.text-center   
+                                    span.size-hd 4X
+                                    .size-range.d-flex
+                                        .size-number
+                                            input#size01.d-none(type="radio")
+                                            label(for="size01") 28w
+                                        .size-number
+                                            input#size02.d-none(type="radio")
+                                            label(for="size02") 30w
+                                .size.text-center   
+                                    span.size-hd 5X
+                                    .size-range.d-flex
+                                        .size-number
+                                            input#size01.d-none(type="radio")
+                                            label(for="size01") 28w
+                                        .size-number
+                                            input#size02.d-none(type="radio")
+                                            label(for="size02") 30w
+                                .size.text-center   
+                                    span.size-hd 6X
+                                    .size-range.d-flex
+                                        .size-number
+                                            input#size01.d-none(type="radio")
+                                            label(for="size01") 28w
                                    
                             
-                    #pills-profile.tab-pane.fade(role='tabpanel', aria-labelledby='pills-profile-tab')
-                        .row
-                            .col-md-10
-                                p.txt-gry-12 (For custom size and/or custom style, a single fee of $9.95 per garment will apply)
-                                    a.learn-link.fnt-700(href="#")  Measure
-                        .row
-                            .col
-                                
-                                .measures-drop-wrp.d-flex.flex-wrap.pt-4
-                                    +dropdown("Shoulder")
-                                    +dropdown("Chest ")
-                                    +dropdown("Bust")
-                                    +dropdown("Under Bust")
-                                    +dropdown("Hip")
+                        #pills-profile.tab-pane.fade(role='tabpanel', aria-labelledby='pills-profile-tab')
+                            .row
+                                .col-md-10
+                                    p.txt-gry-12 (For custom size and/or custom style, a single fee of $9.95 per garment will apply)
+                                        a.learn-link.fnt-700(href="#")  Measure
+                            .row
+                                .col
                                     
-                                    
-                                p.txt-gry-12 Optional Measurements
-                                    img.pl-1(src="./assets/images/i.png", alt="")
-                                p.fnt-xs.drk-gry.pt-2 From shoulder high point to 
-                                .drop-wrp.d-flex.flex-wrap.pt-3
-                                    +dropdown("Waist ")
-                                    +dropdown("Waist Point  ")
-                                    +dropdown("Knee Point ")
+                                    .measures-drop-wrp.d-flex.flex-wrap.pt-4
+                                        +dropdown("Shoulder")
+                                        +dropdown("Chest ")
+                                        +dropdown("Bust")
+                                        +dropdown("Under Bust")
+                                        +dropdown("Hip")
+                                        
+                                        
+                                    p.txt-gry-12 Optional Measurements
+                                        img.pl-1(src="./assets/images/i.png", alt="")
+                                    p.fnt-xs.drk-gry.pt-2 From shoulder high point to 
+                                    .drop-wrp.d-flex.flex-wrap.pt-3
+                                        +dropdown("Waist ")
+                                        +dropdown("Waist Point  ")
+                                        +dropdown("Knee Point ")
                 .select-Height.d-flex.align-items-center
                     span.prd-sub-txt.mr-4 Select Height
                     .select-style.mt-0
@@ -213,8 +240,8 @@ section.product-listing
                             option(value='mercedes') Mercedes
                             option(value='audi') Audi
                 .btn-wrp.d-flex.justify-content-between.mt-3.mt-md-4
-                    button.px-5.bttn.bttn__orange(type="button") Add to Cart
-                    .share.my-auto
-                        i.mt-2.mr-2.icon-share
-                        span.txt-gry-12 Share
+                    button.px-5.btn.btn--danger(type="button", data-toggle='modal', data-target='.bd-example-modal-lg-02') Add to Cart
+                    .share.my-auto.flex-center
+                        i.mr-2.icon-share
+                        span.txt-gry-12.fnt-xxs Share
             

@@ -1,6 +1,6 @@
 import 'bootstrap/js/src/collapse';
 import $ from 'jquery';
-
+import 'parsleyjs'
 $(document).ready(function(){
     $('.suggest-content__cancel').on('click', function(e){
         e.preventDefault();
@@ -65,4 +65,21 @@ $(document).ready(function(){
         var spanVal = $(this).parents('span').attr('data-val');
         $("input[value=" + spanVal +"]").prop("checked",false);
     });
+    $(".address-checkbox").on("click",function(){
+        if($(this).is(":not(:checked)")){
+            $(this).parent(".label-container").siblings(".change-address-form").css("display","block")
+        }
+        else{
+            $(this).parent(".label-container").siblings(".change-address-form").css("display","none")
+
+        }
+    })
+    $(".select-btn").change(function(){
+        $(this).siblings(".select-input").val($(this).val())
+    })
+    $('.form-address .address-btn').on('click', function () {
+        $('.form-address').parsley().validate();
+      
+      });
+
 });
