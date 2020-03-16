@@ -12,6 +12,7 @@ class HeaderInteractions {
   init() {
     $(window).on('scroll', function () {
         if ($(this).scrollTop() > 1) {
+          console.log($(this).scrollTop())
           $('header').addClass("sticky");
         }
         else {

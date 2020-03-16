@@ -35,8 +35,8 @@ section.product-listing
                                 span.neck-type Knee Length
                         a(href="" , data-toggle='modal', data-target='.bd-example-modal-lg').custom-stye-br.fnt-12-black 
                             img(src="./assets/images/product-listing/product-card/customize.svg" alt="customize")
-                            span.ml-2.d-none.d-md-inline-block.text-uppercase Customize style                     
-                            span.ml-2.d-md-none Customize                  
+                            span.ml-2.d-none.d-lg-inline-block.text-uppercase Customize style                     
+                            span.ml-2.d-lg-none Customize                  
                             // Add Arrows
                 
                 .patch-styled
@@ -71,7 +71,10 @@ section.product-listing
                 .dress-details
                     .product-info
                         span.pdp-title ZAPELLE
-                        h1.fnt-xlg.pdp-name Pleat Front Cotton Chambray Wrap Dress
+                        .prod-head.d-flex.justify-content-between
+                            h1.fnt-xlg.pdp-name Pleat Front Cotton Chambray Wrap Dress
+                            div.favourite.my-md-auto
+                                i.icon-wishlist
                         span.product-info__style-code Style #CL0062013
                     
                     .product-price  
@@ -91,12 +94,12 @@ section.product-listing
                 
                 //START: PROJECT-SIZE-CHART
                 .pdp-size-container
-                    .prd-size.fnt-xs.d-flex.flex-column.flex-md-row.align-items-md-center.mt-2.mt-md-0.mb-2
+                    .prd-size.fnt-xs.d-flex.flex-column.flex-lg-row.align-items-lg-center.mt-2.mt-md-0.mb-2
                         p.prd-sub-txt.my-auto.mr-md-4 Select Size
                         ul#pills-tab.nav.d-flex.justify-content-between(role='tablist')
-                            li.nav-item.ml-2.ml-md-0
+                            li.nav-item.ml-2
                                 a#pills-home-tab.nav-link.active(data-toggle='pill', href='#pills-home', role='tab', aria-controls='pills-home', aria-selected='true') Standard Size
-                            li.ml-md-3.nav-item
+                            li.ml-2.ml-lg-3.nav-item
                                 a#pills-profile-tab.nav-link(data-toggle='pill', href='#pills-profile', role='tab', aria-controls='pills-profile', aria-selected='false') Custom size(Charges apply)
                             
                     #pills-tabContent.tab-content.mb-2
@@ -111,100 +114,100 @@ section.product-listing
                                     span.size-hd XS
                                     .size-range.d-flex
                                         .size-number
-                                            input#size01.d-none(type="radio")
-                                            label(for="size01") 0
+                                            input#size01.d-none(type="radio" name="sizexs")
+                                            label.size-lbl(for="size01") 0
                                         .size-number
-                                            input#size02.d-none(type="radio")
-                                            label(for="size02") 2
+                                            input#size02.d-none(type="radio" name="sizexs")
+                                            label.size-lbl(for="size02") 2
 
                                 .size.text-center   
                                     span.size-hd S
                                     .size-range.d-flex
                                         .size-number
                                             input#size01.d-none(type="radio")
-                                            label(for="size01") 4
+                                            label.size-lbl(for="size01") 4
                                         .size-number
                                             input#size02.d-none(type="radio")
-                                            label(for="size02") 6
+                                            label.size-lbl(for="size02") 6
 
                                 .size.text-center   
                                     span.size-hd M
                                     .size-range.d-flex
                                         .size-number
                                             input#size01.d-none(type="radio")
-                                            label(for="size01") 8
+                                            label.size-lbl(for="size01") 8
                                         .size-number
                                             input#size02.d-none(type="radio")
-                                            label(for="size02") 10
+                                            label.size-lbl(for="size02") 10
                                 .size.text-center   
                                     span.size-hd L
                                     .size-range.d-flex
                                         .size-number
                                             input#size01.d-none(type="radio")
-                                            label(for="size01") 11
+                                            label.size-lbl(for="size01") 11
                                         .size-number
                                             input#size02.d-none(type="radio")
-                                            label(for="size02") 14
+                                            label.size-lbl(for="size02") 14
                                 .size.text-center   
                                     span.size-hd XL
                                     .size-range.d-flex
                                         .size-number
                                             input#size01.d-none(type="radio")
-                                            label(for="size01") 16
+                                            label.size-lbl(for="size01") 16
                                         .size-number
                                             input#size02.d-none(type="radio")
-                                            label(for="size02") 18
+                                            label.size-lbl(for="size02") 18
                                 .size.text-center   
                                     span.size-hd 1X
                                     .size-range.d-flex
                                         .size-number
                                             input#size01.d-none(type="radio")
-                                            label(for="size01") 16w
+                                            label.size-lbl(for="size01") 16w
                                         .size-number
                                             input#size02.d-none(type="radio")
-                                            label(for="size02") 18w
+                                            label.size-lbl(for="size02") 18w
                                 .size.text-center   
                                     span.size-hd 2X
                                     .size-range.d-flex
                                         .size-number
                                             input#size01.d-none(type="radio")
-                                            label(for="size01") 20w
+                                            label.size-lbl(for="size01") 20w
                                         .size-number
                                             input#size02.d-none(type="radio")
-                                            label(for="size02") 22w
+                                            label.size-lbl(for="size02") 22w
                                 .size.text-center   
                                     span.size-hd 3X
                                     .size-range.d-flex
                                         .size-number
                                             input#size01.d-none(type="radio")
-                                            label(for="size01") 24w
+                                            label.size-lbl(for="size01") 24w
                                         .size-number
                                             input#size02.d-none(type="radio")
-                                            label(for="size02") 26w
+                                            label.size-lbl(for="size02") 26w
                                 .size.text-center   
                                     span.size-hd 4X
                                     .size-range.d-flex
                                         .size-number
                                             input#size01.d-none(type="radio")
-                                            label(for="size01") 28w
+                                            label.size-lbl(for="size01") 28w
                                         .size-number
                                             input#size02.d-none(type="radio")
-                                            label(for="size02") 30w
+                                            label.size-lbl(for="size02") 30w
                                 .size.text-center   
                                     span.size-hd 5X
                                     .size-range.d-flex
                                         .size-number
                                             input#size01.d-none(type="radio")
-                                            label(for="size01") 28w
+                                            label.size-lbl(for="size01") 28w
                                         .size-number
                                             input#size02.d-none(type="radio")
-                                            label(for="size02") 30w
+                                            label.size-lbl(for="size02") 30w
                                 .size.text-center   
                                     span.size-hd 6X
                                     .size-range.d-flex
                                         .size-number
                                             input#size01.d-none(type="radio")
-                                            label(for="size01") 28w
+                                            label.size-lbl(for="size01") 28w
                                    
                             
                         #pills-profile.tab-pane.fade(role='tabpanel', aria-labelledby='pills-profile-tab')
@@ -236,10 +239,10 @@ section.product-listing
                         span.triangle-icon
                         select.txt-gry-12
                             option(disable) select
-                            option(value='saab') Saab
-                            option(value='mercedes') Mercedes
-                            option(value='audi') Audi
-                .btn-wrp.d-flex.justify-content-between.mt-3.mt-md-4
+                            option(value='saab') 9.5
+                            option(value='mercedes') 6.7
+                            option(value='audi') 7.9
+                .btn-wrp.mt-3.mt-md-4
                     button.px-5.btn.btn--danger(type="button", data-toggle='modal', data-target='.bd-example-modal-lg-02') Add to Cart
                     .share.my-auto.flex-center
                         i.mr-2.icon-share

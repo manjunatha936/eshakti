@@ -115,6 +115,8 @@
         top: 1px;
         margin-bottom: 0;
         color: #72777e;
+        cursor: pointer;
+        width: 100%;
     }
 }
 
@@ -142,4 +144,20 @@
     @include bp("tab") {
         flex-wrap: wrap;
     }
+}
+
+.btn-wrp {
+    background-color: #ffffff;
+    position: sticky;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    @media screen and (min-width:768px) {
+        position: relative;
+ 
+    }
+}
+.size-active {
+    background-color: #000000;
+    clear: #fff;
 }

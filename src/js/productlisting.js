@@ -358,7 +358,7 @@ $(document).ready(function(){
          if($(".saveditem-container").css("display","none")){
              $(".saveditem-container").css({"display":"block"})
              $(".saved-btn").css({"display":"block"})
-             $(".procced-btn").css({"display":"none"})
+            //  $(".procced-btn").css({"display":"none"})
 
          }
          // let flag = lengthText.localeCompare(neckText.localeCompare(sleeveText))

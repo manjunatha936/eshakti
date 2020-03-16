@@ -121,7 +121,19 @@
 
 .product-modal {
     padding-right: 0 !important;
-    
+    .overflowScroll {
+        height: 720px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        // &::-webkit-scrollbar {
+        //     display: none;
+        //   }
+          
+        //   /* Hide scrollbar for IE and Edge */
+        // & {
+        // -ms-overflow-style: none;
+        // }
+    }
     .share-icon {
         width: 9px;
         height: 11px;
@@ -138,15 +150,18 @@
    
     .style-contain {
     
+          
+    
         @media screen and (max-width:767px ){
             width: 100%;
             overflow-x: scroll;
             display: flex;
             
+            
         }
         @include bp("tab") {
             display: flex;
-            flex-wrap: wrap;
+            // flex-wrap: wrap;
           }
     }
     .txt-gry-12 {
@@ -240,17 +255,23 @@
     }
     .model-img {
         
-        @media screen and (max-width: 378px){
+        width: 235px;
+        height: 451px;
+        @media screen and (min-width: 378px){
             width: 324px;
             height: 518px;
         }            
         @media screen and (max-width: 374px){
-            width: 324px;
-            height: 483px;
+        }
+        @media screen and (min-width:1024px) and (max-width: 1404px){
+            width: 351px;
+            height: 539px;
         }            
-        width: 375px;
-        // height: 380px; 
-        height: 558px; 
+        @media screen and (min-width: 1404px){
+            width: 375px;
+            // height: 380px; 
+            height: 558px; 
+        }            
         position: relative;
         @include bp("tab") {
          
@@ -259,44 +280,66 @@
             position: absolute;
             top: 0;
             left: 0;
-            width: 155px;
-            height: 292px;
-            @media screen and (max-width: 378px){
+         
+            width: 98px;
+            @media screen and (min-width: 378px){
                 width: 134px;
             } 
             @media screen and (max-width: 374px){
-                width: 115px;
             } 
+            @media screen and (min-width:1024px) and (max-width: 1404px){
+                width: 145px;
+                height: 292px;
+            }            
+            @media screen and (min-width: 1404px){
+                width: 155px;
+                height: 292px;
+            }
         }
         .right-arm {
             position: absolute;
             top: 0;
             right: 0;
-            width: 147px;
-            height: 292px;
-            @media screen and (max-width: 378px){
+            width: 93px;
+            
+            @media screen and (min-width: 378px){
                 
                 width: 127px;
             } 
             @media screen and (max-width: 374px){
                 
-                width: 109px;
             } 
+            @media screen and (min-width:1024px) and (max-width: 1404px){
+                width: 138px;
+                height: 292px;
+            }            
+            @media screen and (min-width: 1404px){
+                width: 147px;
+                height: 292px;
+            }
         }
         .neck-body {
             position: absolute;
             top: 0;
-            right: 147px;
-            width: 73px;
-            height: 292px;
-            @media screen and (max-width: 378px){
+            right: 92px;
+            width: 47px;
+            
+            @media screen and (min-width: 378px){
                 right: 127px;
                 width: 63px;
             } 
             @media screen and (max-width: 374px){
-                right: 109px;
-                width: 55px;
             } 
+            @media screen and (min-width:1024px) and (max-width: 1404px){
+                right: 138px;
+                width: 69px;
+                
+            }            
+            @media screen and (min-width: 1404px){
+                right: 147px;
+                width: 73px;
+                height: 292px;
+            }
             
         }
         .length {
@@ -392,6 +435,17 @@
     }
 
     .modal-dialog {
+        height: 818px;
+        overflow-y: scroll;
+        &::-webkit-scrollbar {
+            display: none;
+          }
+          
+          /* Hide scrollbar for IE and Edge */
+          & {
+            -ms-overflow-style: none;
+          }
+          
         @media screen and (max-width:767px ){
             width: 96%;
         }
@@ -400,8 +454,8 @@
             max-width: 970px;
         }
         @media screen and (min-width:1404px ){
-            
             max-width: 1180px;
+            
         }
 
     }
@@ -476,13 +530,10 @@
         border: 1px solid #c2cfd4;
         background-color: $white;
         position: absolute;
-        left: calc(100% + 10px);
+        left: calc(100% - 38px);
         top: 3px;
         cursor: pointer;
-        @media screen and (max-width : 992px){
-            left: calc(100% - 38px);
 
-        }
     }
     .img-zoom-close {
         z-index: 11;
