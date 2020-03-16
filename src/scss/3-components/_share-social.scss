@@ -3,6 +3,12 @@
 .share {
     .icon-share {
         position: relative;
+        font-size: 14px;
+        line-height: 24px;
+        @include bp("tab") {
+            font-size: 16px;
+            line-height: 26px;
+        }
         &:hover {
             & + .tooltip-share {
                 opacity: 1 !important;

@@ -1,0 +1,145 @@
+// Product-details
+
+.prod-label  {
+    @extend .fnt-xxs;
+    text-transform: uppercase;
+    letter-spacing: $letter-spacing03;
+    font-weight: 700;
+}
+
+// Product content
+
+.dress-details {
+    border-bottom: 1px solid #dfdfdf;
+    padding-bottom: 1.2rem;
+}
+
+.pdp-name {
+    font-family: $opensans;
+    color: $black;
+    font-weight: 600;
+    margin: {
+        top: .2rem;
+        bottom: .2rem;
+    };
+}
+.pdp-title {
+    @extend .fnt-xxs;
+    font-weight: 600;
+    letter-spacing: $letter-spacing03;
+}
+.product-info {
+    &__style-code {
+        @extend .fnt-xxs;
+        color: rgba($color: #1f1f1f, $alpha: .7);
+    }
+}
+
+// Product price
+
+.product-price {
+    margin : {
+        top: .8rem;
+        bottom: 1rem;
+    }
+    &__text {
+        color: #f25c50;
+        letter-spacing: 0.4px;
+        font-weight: 700;
+        @extend .fnt-xlg;
+        letter-spacing: $letter-spacing04;
+    }
+}
+
+.patch-styled {
+    position: absolute;
+    z-index: 11;
+    top: 15px;
+    left: 30px;
+    border-radius: 12px;
+    background: rgba(46, 51, 61, .067);
+    padding: 3px 16px;
+    display: inline-flex;
+    &__text {
+        font-size: 10px;
+        font-weight: 600;
+        line-height: 20px;
+        color: rgba($color: $title-black, $alpha: .67);
+    }
+}
+
+.reviews {
+    display: flex;
+    align-items: center;
+    &__rating {
+        @extend .fnt-xxs;
+        color: #252424;
+    }
+}
+
+// Product-sizes info
+
+.pdp-size-container {
+    padding: {
+        top: .8rem;
+        bottom: .8rem;
+    };
+}
+.size {
+    margin-right: 5px;
+    margin-bottom: 1.2rem;
+}
+
+.size-hd {
+    color: #3f4145;
+    @extend .fnt-sm;
+    letter-spacing: 0.24px;
+    text-transform: uppercase;
+}
+
+.size-number {
+    width: 40px;
+    height: 31px;
+    border: 1px solid #e0e2e3;
+    background-color: $white;
+    @extend .flex-center;
+    @extend .fnt-xxs;
+    letter-spacing: $letter-spacing02;
+    font-weight: 600;
+    margin: {
+        right: .3rem;
+        top: .2rem;
+    }
+    label {
+        position: relative;
+        top: 1px;
+        margin-bottom: 0;
+        color: #72777e;
+    }
+}
+
+//Product recent items
+
+.product-recent-view {
+   padding-top: 4rem;
+   &__title {
+       font-family: $opensans;
+       text-transform: uppercase;
+       @extend .fnt-xlg;
+       @extend .fnt-600;
+   }
+}
+
+.card-slider-overide {
+    .swiper-slide{
+        @include bpmax("phone-lg") {
+            padding: {
+                right: 1rem;
+                left: 1rem;           
+            }
+        }
+    }
+    @include bp("tab") {
+        flex-wrap: wrap;
+    }
+}
