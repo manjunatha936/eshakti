@@ -1,3 +1,13 @@
+body.checkout-body {
+    .modal-backdrop {
+        background: $white;
+
+        &.show {
+            opacity: 0.9;
+        }
+    }
+}
+
 .cart-contain-wrap {
     .page-title {
         color: $text-black;
@@ -444,7 +454,7 @@
         transition: all 0.2s ease;
         opacity: 0;
         pointer-events: none;
-        max-height: 230px;
+        max-height: 240px;
         overflow: auto;
 
         &.show-box {
@@ -657,4 +667,8 @@
             text-align: right;
         }
     }
+}
+
+.payment-popup {
+
 }

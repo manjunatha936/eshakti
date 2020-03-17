@@ -5,13 +5,14 @@ html(lang="en")
     include ./base/head.pug
     +head("Checkout")
 
-  body
+  body.checkout-body
     include ./base/discount-bar.pug
     include ./base/header.pug
     +header("repeat","white")
 
     main
-      include ./base/address-pop-up.pug
       include ./layouts/cart-checkout/checkout.pug
+      include ./base/address-pop-up.pug
+      include ./base/payment-popup.pug
 
     include ./base/footer.pug

@@ -185,12 +185,14 @@ $circle-clr : #f5f5f5;
         min-width: 116px;
         text-align: left;
         border-bottom: 1px solid #5f5f5f;
+        border-radius: 0 !important;
 
         @include bpmax('tab-mid') {
             margin-left: 20px;
             padding: 4px 20px 4px 4px;
             min-width: 90px;
-            font-size: 12px;
+            font-size: 12px !important;
+            margin-bottom: 15px;
         }
 
         &::after {
