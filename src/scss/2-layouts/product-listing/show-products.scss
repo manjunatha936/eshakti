@@ -111,6 +111,7 @@
             padding: 0;
             left: initial !important;
             transform: translate3d(15px, 22px, 0px) !important;
+            padding: .3rem .8rem;
         }
     }
     .dropdown button {
@@ -133,14 +134,18 @@
         font-size: 14px ;
         line-height: 24px;
         cursor: pointer;
+        display: inline-block;
         border: none;
+        transition: all 0.3s ease;
         @include bp("tab") {
-            padding: 6px 15px;
+            padding: 5px 0;
             font-weight: 400;
             font-size: 13px ;
             line-height: 23px;
+            border-bottom: 1px solid transparent;
             &:hover {
-                background-color: #ccc;
+                // background-color: #ccc;
+                border-bottom: 1px solid $black;
             }
         }
     }

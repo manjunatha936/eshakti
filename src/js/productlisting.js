@@ -70,7 +70,6 @@ listViewButton.addEventListener('click', () => {
  });
 
  // Changing mode of the view
-
  const handleClickl = (ek) => {
    ek.preventDefault();
    viewList.forEach(node => {
@@ -210,7 +209,6 @@ filterClose.forEach(closeBtn => {
       })
    });
 });
-
 
 
 // sort by
