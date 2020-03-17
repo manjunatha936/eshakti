@@ -80,6 +80,7 @@
     }
     
     .select-style select {
+        cursor: pointer;
         padding: 5px 8px;
         // width: 130%;
         border: none;
@@ -169,6 +170,7 @@
         // font-family: "Open Sans";
         font-size: 12px;
         font-weight: 400;
+
     }
     // .border-bttom-o {
     //     @media screen and (max-width:767px ){
@@ -774,12 +776,17 @@
 
     }
     .tab-img {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        left: 30px;
+        width: 150px;
+        height: 100%;
         left: 30px;
         top: 0;
         position: absolute;
-        width: 75px;
         & img {
-            width: 100%;
+            width: 75px;
             height: 100px;
             object-fit: contain;
         }
