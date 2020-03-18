@@ -20,6 +20,12 @@ class ProductDetais {
         $(".js-read-more").click(function(e){
           e.preventDefault()
           $(this).siblings('.more-info').toggle()
+          
+          if( $(this).siblings('.more-info').css('display') == 'block'){
+            $(this).css({marginLeft:"0"})
+          }else {
+            $(this).css({marginLeft:"8px"})
+          }
         })
         $('.neckline').children('.style-contain').find('.img-container').click(function(){
           neckText = $(this).children(".img-txt").text()
@@ -236,11 +242,14 @@ class ProductDetais {
               })
         });
 
-      //   $(".img-zoom-close").click(function () {
-    
-      //     $(this).parent(".img-modal-lg").modal().hide();
-      // });
+        $(".size-lbl").click(function(){
+          $(".size-number").removeClass("size-active")
+          if($(this).siblings("input").is(":checked")){
+            $(this).parent(".size-number").addClass("size-active")
+          }
+        })
      })
+
 
     //Save style popup
 

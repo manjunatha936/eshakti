@@ -33,6 +33,17 @@ ol {
   font-weight: 800;
 }
 
+// main
+
+.maintp9 {
+  margin-top: 4rem;
+  @include bp("tab") {
+    margin-top: 9rem;
+  }
+}
+
+// Headings
+
 .h2heading {
   font-size: 32px;
   
@@ -56,7 +67,6 @@ ol {
     font-size: 32px;
   } 
 }
-
 
 .fnt-xlg {
   font-size: 16px;
