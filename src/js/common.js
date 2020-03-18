@@ -1,14 +1,11 @@
 import "../scss/main.scss";
-// import "@babel/polyfill";
+
+import "core-js/stable";
+import "regenerator-runtime/runtime";
+
 import "bootstrap/js/src/dropdown";
 import "bootstrap/js/src/tab";
 import "bootstrap/js/src/modal"
-
-import '@babel/polyfill';
-
-if (window.NodeList && !NodeList.prototype.forEach) { NodeList.prototype.forEach = Array.prototype.forEach; }
-
-import 'nodelist-foreach-polyfill';
 
 import "../pug/index.pug";
 import "../pug/repeat-customer.pug";
