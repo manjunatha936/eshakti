@@ -91,7 +91,7 @@ section.product-listing
                 
                 //START: PROJECT-SIZE-CHART
                 .pdp-size-container
-                    .prd-size.fnt-xs.d-flex.flex-column.flex-md-row.align-items-md-center.mt-2.mt-md-0.mb-2
+                    .prd-size.fnt-xs.d-flex.flex-column.flex-md-row.align-items-md-center.mt-2.mt-md-0.mb-2.mb-md-0
                         p.prd-sub-txt.my-auto.mr-md-4 Select Size
                         ul#pills-tab.nav.d-flex.justify-content-between(role='tablist')
                             li.nav-item.ml-2.ml-md-0
@@ -105,7 +105,7 @@ section.product-listing
                             .row
                                 .col-md-10
                                     p.txt-gry-12.fnt-xxs XS to 6X sizes are available 
-                                        a.learn-link.fnt-700(href="#")  Size Chart
+                                        a.learn-link(href="#")  Size Chart
                             .measures-drop-wrp.d-flex.flex-md-wrap.pt-3
                                 .size.text-center   
                                     span.size-hd XS
@@ -152,56 +152,55 @@ section.product-listing
                                 .size.text-center   
                                     span.size-hd 1X
                                     span.size-number
-                                        input#size01.size-select(type="radio" name="size")
-                                        label.size-number__label(for="size01") 16w
+                                        input#sizex11.size-select(type="radio" name="size")
+                                        label.size-number__label(for="sizex11") 16w
                                     span.size-number
-                                        input#size02.size-select(type="radio")
-                                        label.size-number__label(for="size02") 18w
+                                        input#sizex12.size-select(type="radio" name="size")
+                                        label.size-number__label(for="sizex12") 18w
                                 .size.text-center   
                                     span.size-hd 2X
                                     span.size-number
-                                        input#size01.size-select(type="radio" name="size")
-                                        label.size-number__label(for="size01") 20w
+                                        input#size2x1.size-select(type="radio" name="size")
+                                        label.size-number__label(for="size2x1") 20w
                                     span.size-number
-                                        input#size02.size-select(type="radio" name="size")
-                                        label.size-number__label(for="size02") 22w
+                                        input#size2x2.size-select(type="radio" name="size")
+                                        label.size-number__label(for="size2x2") 22w
                                 .size.text-center   
                                     span.size-hd 3X
                                     span.size-number
-                                        input#size01.size-select(type="radio" name="size")
-                                        label.size-number__label(for="size01") 24w
+                                        input#size3x1.size-select(type="radio" name="size")
+                                        label.size-number__label(for="size3x1") 24w
                                     span.size-number
-                                        input#size02.size-select(type="radio" name="size")
-                                        label.size-number__label(for="size02") 26w
+                                        input#size3x2.size-select(type="radio" name="size")
+                                        label.size-number__label(for="size3x2") 26w
                                 .size.text-center   
                                     span.size-hd 4X
                                     span.size-number
-                                        input#size01.size-select(type="radio" name="size")
-                                        label.size-number__label(for="size01") 28w
+                                        input#size4x1.size-select(type="radio" name="size")
+                                        label.size-number__label(for="size4x1") 28w
                                     span.size-number
-                                        input#size02.size-select(type="radio" name="size")
-                                        label.size-number__label(for="size02") 30w
+                                        input#size4x2.size-select(type="radio" name="size")
+                                        label.size-number__label(for="size4x2") 30w
                                 .size.text-center   
                                     span.size-hd 5X
                                     span.size-number
-                                        input#size01.size-select(type="radio" name="size")
-                                        label.size-number__label(for="size01") 28w
+                                        input#size5x1.size-select(type="radio" name="size")
+                                        label.size-number__label(for="size5x1") 28w
                                     span.size-number
-                                        input#size02.size-select(type="radio" name="size")
-                                        label.size-number__label(for="size02") 30w
+                                        input#size5x2.size-select(type="radio" name="size")
+                                        label.size-number__label(for="size5x2") 30w
                                 .size.text-center   
                                     span.size-hd 6X
                                     span.size-range.d-flex
                                         .size-number
-                                            input#size01.size-select(type="radio" name="size")
-                                            label.size-number__label(for="size01") 28w
+                                            input#size6x1.size-select(type="radio" name="size")
+                                            label.size-number__label(for="size6x1") 28w
                                    
                             
                         #pills-profile.tab-pane.fade(role='tabpanel', aria-labelledby='pills-profile-tab')
-                            .row
-                                .col-md-10
-                                    p.txt-gry-12 (For custom size and/or custom style, a single fee of $9.95 per garment will apply)
-                                        a.learn-link.fnt-700(href="#")  Measure
+                            p.text-des
+                                | (For custom size and/or custom style, a single fee of $9.95 per garment will apply)
+                                a.learn-link(href="#") Measure
                             .row
                                 .col
                                     

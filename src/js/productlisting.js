@@ -1,9 +1,9 @@
 
 
-import Swiper from 'swiper';
-import $ from 'jquery'
-import "bootstrap/js/src/modal";
-import "bootstrap/js/src/tab";
+// import Swiper from 'swiper';
+// import $ from 'jquery'
+// import "bootstrap/js/src/modal";
+// import "bootstrap/js/src/tab";
 
 console.log('Product listing code');
 
@@ -136,20 +136,21 @@ let alertContent = document.querySelector('.product-alert');
 
 Array.from(checkRadio).forEach(node => {
    node.addEventListener('change', (event) => {
+      event.stopPropagation();
       let panelCard = event.target.closest(".panel-card");
-      let clearButtons = panelCard.querySelector('.js-check-clear');
+      let clearNecks = panelCard.querySelector('.js-check-clear');
       
       if (event.target.checked) {
-         clearButtons.classList.add('active');
+         clearNecks.classList.add('active');
          alertContent.classList.add('class-cheked');
       }
    })
 });
 
 let clearRadio = document.querySelectorAll('.js-check-clear');
+
 clearRadio.forEach(clearSelect => {
    clearSelect.addEventListener('click', (event) => {
-      event.stopPropagation();
       let panelCard = event.target.closest(".panel-card");
       let checkRadio = panelCard.querySelectorAll('.neck-wrapper .style-check');
 

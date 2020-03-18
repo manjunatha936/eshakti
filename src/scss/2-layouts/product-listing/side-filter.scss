@@ -19,10 +19,13 @@
 
 .sticky-inner-container {
   @include bp("tab") {
-    max-height: 600px;
+    // max-height: 100vh;
+    max-height: calc(100vh - 120px);
     overflow-y: auto;
-    overflow-x: hidden;
-    padding-right: .3rem;
+    padding-right: .4rem;
+    // max-height: 600px;
+    // overflow-y: auto;
+    // overflow-x: hidden;
   }
 }
 
@@ -278,7 +281,7 @@
 
 .clear-select, .clear-color {
   text-transform: capitalize;
-  margin-right: 1rem;
+  margin-right: 1.4rem;
   color: $bnr-red;
   text-decoration: underline;
   position: absolute;

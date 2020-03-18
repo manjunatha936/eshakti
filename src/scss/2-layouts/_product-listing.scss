@@ -15,6 +15,7 @@
     }
    
     font-style: $opensans;
+    
     .share {
         cursor: pointer;
     }
@@ -23,21 +24,6 @@
     }
     .lt-gry {
         color: #83868a !important;
-    }
-    .learn-link {
-        @extend .txt-gry-12;
-        color: #0f0f0f;
-        font-weight: 700;
-        text-decoration: underline;
-        margin-left: 8px;
-    }
-    .prd-sub-txt {
-        text-transform: uppercase;
-        color: $title-black;
-        font-size: 13px;
-        font-weight: 700;
-        letter-spacing: 0.3px;
-        // text-transform: uppercase;
     }
     .nav-link {
         color: #2a2a2a;
@@ -67,32 +53,6 @@
             z-index: 1;
         }
        
-    }
-    .select-style {
-        margin-top: 11px;
-        position: relative;
-        padding: 0;
-        border: 1px solid #cdcecf;
-        background-color: #fcfcfc;
-        width: 90px;
-        overflow: hidden;
-        margin-right: 21px;
-    }
-    
-    .select-style select {
-        padding: 5px 8px;
-        // width: 130%;
-        border: none;
-        box-shadow: none;
-        background-color: transparent;
-        background-image: none;
-        -webkit-appearance: none;
-           -moz-appearance: none;
-                appearance: none;
-    }
-    
-    .select-style select:focus {
-        outline: none;
     }
     .triangle-icon {
         position: absolute;
