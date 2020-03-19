@@ -1,9 +1,4 @@
-
-
-// import Swiper from 'swiper';
-// import $ from 'jquery'
-// import "bootstrap/js/src/modal";
-// import "bootstrap/js/src/tab";
+import popupInit from './custom-popup';
 
 console.log('Product listing code');
 
@@ -55,7 +50,7 @@ window.addEventListener("scroll", function (event) {
 // List view and grid view 
 const listViewButton = document.querySelector('.list-view-btn');
 const gridViewButton = document.querySelector('.grid-view-btn');
-const viewList = document.querySelectorAll('.view-item');
+const viewList = Array.from(document.querySelectorAll('.view-item'));
 const list = document.querySelector('.js-products');
 
 listViewButton.addEventListener('click', () => {
@@ -84,7 +79,7 @@ listViewButton.addEventListener('click', () => {
 // Dropdon sortby
 window.onload = function(){
    let dropBtn = document.querySelector('.dropdown-select');
-   let dropItem = document.querySelectorAll('.dropdown-menu li');
+   let dropItem = Array.from(document.querySelectorAll('.dropdown-menu li'));
    for(const opt of dropItem){
       opt.addEventListener("click",(e)=>{
          let val = e.target.textContent;
@@ -115,12 +110,12 @@ Array.from(checkInput).forEach(node => {
 });
 
 //  Clearing the buttons and button as well
-let clearButtons = document.querySelectorAll('.js-check-clear')
+let clearButtons = Array.from(document.querySelectorAll('.js-check-clear'));
 clearButtons.forEach(clearBtn => {
    clearBtn.addEventListener('click', (event) => {
       event.stopPropagation();
       let panelCard = event.target.closest(".panel-card");
-      let checkChecboxes = panelCard.querySelectorAll('.label-container input');
+      let checkChecboxes = Array.from(panelCard.querySelectorAll('.label-container input'));
 
       checkChecboxes.forEach(checkbox => {
          checkbox.checked = false;
@@ -147,12 +142,11 @@ Array.from(checkRadio).forEach(node => {
    })
 });
 
-let clearRadio = document.querySelectorAll('.js-check-clear');
-
+let clearRadio = Array.from(document.querySelectorAll('.js-check-clear'));
 clearRadio.forEach(clearSelect => {
    clearSelect.addEventListener('click', (event) => {
       let panelCard = event.target.closest(".panel-card");
-      let checkRadio = panelCard.querySelectorAll('.neck-wrapper .style-check');
+      let checkRadio = prray.from(anelCard.querAySelectorAll('.neck-wrapper .style-check'));
 
       checkRadio.forEach(checkbox => {
          checkbox.checked = false;
@@ -168,7 +162,7 @@ class Accordion {
       this.heading = heading;
    }   
    showAll() {
-      const accordionHeading = document.querySelectorAll(this.heading);
+      const accordionHeading = Array.from(document.querySelectorAll(this.heading));
       accordionHeading.forEach((item, key) => {
          item.addEventListener('click', (event) => {
             item.classList.contains('active') ? 
@@ -186,9 +180,9 @@ accordion.showAll();
 
 // SIDE FILTERS ONLY FOR MOBILE
 const filterMobile = document.querySelector('.product-filter-mob');
-const filterSide = document.querySelectorAll('.side-filter');
+const filterSide = Array.from(document.querySelectorAll('.side-filter'));
 const filterBody = document.querySelector('body');
-const filterClose = document.querySelectorAll('.btn-close');
+const filterClose = Array.from(document.querySelectorAll('.btn-close'));
 const sortBy = document.querySelector('.filter-sort');
 const sortDropdown = document.querySelector('.dropdown');
 const overlayDiv = document.createElement('div');
@@ -229,9 +223,6 @@ if(window.innerWidth < 768) {
    });
 }
 
-
-
-import popupInit from './custom-popup'
 const Showpopup = new popupInit();
 
 // Mobile Show-products sticky

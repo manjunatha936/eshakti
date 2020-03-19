@@ -1,0 +1,11 @@
+mixin wishlistcards(status, name, cost, text-des)
+    if status
+        .product-card__body
+            .product-info
+                span.product-name= name
+                span.product-cost= cost
+            .favourite
+                i.icon-wishlist
+    else
+        span.product-name= text-des
+

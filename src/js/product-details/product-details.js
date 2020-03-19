@@ -20,6 +20,12 @@ class ProductDetais {
         $(".js-read-more").click(function(e){
           e.preventDefault()
           $(this).siblings('.more-info').toggle()
+          
+          if( $(this).siblings('.more-info').css('display') == 'block'){
+            $(this).css({marginLeft:"0"})
+          }else {
+            $(this).css({marginLeft:"8px"})
+          }
         })
         $('.neckline').children('.style-contain').find('.img-container').click(function(){
           neckText = $(this).children(".img-txt").text()
@@ -48,10 +54,6 @@ class ProductDetais {
            $('.saved-styles__subImages').find('.dyanamic-img-data').eq($styleLen).addClass('active');
         })
 
-
-
-
-
       //2nd popup save styles
       $('.close-parent-modal').on('click', function() {
         var index = $(".slide-item").length;
@@ -63,9 +65,6 @@ class ProductDetais {
           }, 650);
   
       });
-
-
-
 
         //thumbs
         var galleryThumbs = new Swiper('.js-slider-img', {
@@ -89,9 +88,7 @@ class ProductDetais {
             }
           });
 
-
           //
-
           var galleryThumbs = new Swiper('.gallery-thumbs', {
             spaceBetween: 10,
             slidesPerView: 3.5,
@@ -109,11 +106,11 @@ class ProductDetais {
             grabCursor: true,
             breakpoints: {
              
-              768: {
+              360: {
                 slidesPerView: 2.5,
          
               },
-              1024: {
+              768: {
                 slidesPerView: 3.5,
              
               },
@@ -157,10 +154,7 @@ class ProductDetais {
 
               }
               cardTitle = neckText+","+sleeveText+","+lengthText;
-              
-         
-            
-            
+
             const ele = '<li class="slide-item swiper-slide"><div class="card-wrp"><div class="style-card"><img class="saved-img" src="'+imageSource+'" alt="style image" /><div class="close-card" slide-id="'+ index +'"><span></span><span></span></div></div><div class="d-flex pt-2 align-items-center  " ><p class="fnt-11 w-100 pr-2">'+cardTitle+'</p><i class="share-icon icon-share mr-2"  ></i></div></div></li>'
             // $('.slide-item-wrp').append(ele)
             // if($(".slide-item").length> 4){
@@ -236,11 +230,14 @@ class ProductDetais {
               })
         });
 
-      //   $(".img-zoom-close").click(function () {
-    
-      //     $(this).parent(".img-modal-lg").modal().hide();
-      // });
+        $(".size-lbl").click(function(){
+          $(".size-number").removeClass("size-active")
+          if($(this).siblings("input").is(":checked")){
+            $(this).parent(".size-number").addClass("size-active")
+          }
+        })
      })
+
 
     //Save style popup
 

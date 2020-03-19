@@ -5,6 +5,7 @@
     text-transform: uppercase;
     letter-spacing: $letter-spacing03;
     font-weight: 700;
+    color: $title-black;
 }
 
 // Product content
@@ -85,9 +86,25 @@
         bottom: .8rem;
     };
 }
+
+.prd-size {
+    display: flex;
+    @include bp("tab-lg") {
+        display: block;
+    }
+    @include bp("desktop-1200") {
+        display: flex;
+    }
+}
+
 .size {
     margin-right: 5px;
-    margin-bottom: 1.2rem;
+    @include bp("tab") {
+        margin-bottom: .8rem;
+    }
+    @include bp("desktop-1200") {
+        margin-bottom: 1.2rem;
+    }
     // @extend .flex-center;
 }
 
@@ -117,6 +134,8 @@
         top: 1px;
         margin-bottom: 0;
         color: #72777e;
+        cursor: pointer;
+        // width: 100%;
         @extend .flex-center;
     }
     &__label{
@@ -177,7 +196,8 @@
     padding: 0;
     border: 1px solid #cdcecf;
     background-color: #fcfcfc;
-    width: 90px;
+    // width: 90px;
+    width: auto;
     overflow: hidden;
     margin-right: 21px;
 }
@@ -197,6 +217,22 @@
 .select-style select:focus {
     outline: none;
 }
+
+.select-label {
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+// colors
+
+.prd-color {
+    &__label {
+        color: #1f1f1f;
+        margin-bottom: .5rem;
+        display: block;
+    }
+}
+
 
 //Product recent items
 
@@ -222,4 +258,20 @@
     @include bp("tab") {
         flex-wrap: wrap;
     }
+}
+
+.btn-wrp {
+    background-color: #ffffff;
+    position: sticky;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    @media screen and (min-width:768px) {
+        position: relative;
+ 
+    }
+}
+.size-active {
+    background-color: #000000;
+    clear: #fff;
 }
