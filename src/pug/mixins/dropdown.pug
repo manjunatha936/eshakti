@@ -4,9 +4,9 @@ mixin dropdown(text)
                 span.prd-sub-txt.text-capitalize.fnt-600=text
                 img.pl-1(src="./assets/images/i.png", alt="")
             .select-style
-                span.triangle-icon
-                select.txt-gry-12
-                    option(disable) select
+                //- span.triangle-icon
+                select.txt-gry-12.select_box
+                    option(disabled selected) select
                     option(value='saab') Saab
                     option(value='mercedes') Mercedes
                     option(value='audi') Audi

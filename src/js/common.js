@@ -31,3 +31,5 @@ import lazyLoader from './image-loader'
 const lazyImages = new lazyLoader();
 // console.log("Hi, this page is common page!"); // eslint-disable-line no-console
 
+import "../js/components/select-drop";
+

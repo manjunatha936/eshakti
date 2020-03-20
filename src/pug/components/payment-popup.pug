@@ -1,0 +1,18 @@
+.product-modal.modal.fade.payment-popup.pop-up(tabindex='-1' role='dialog' aria-labelledby='myLargeModalLabel' aria-hidden='true')
+  .modal-dialog.modal-lg
+    .modal-content
+      button.close-modal(data-dismiss="modal") &times;
+      .payment-popupcontent
+        h3 Pay with
+        .nav.nav-tabs(role='tablist')
+          a.nav-item.nav-link.active(data-toggle='tab', href='#pay-card', role='tab') Credit Card
+          a.nav-item.nav-link(data-toggle='tab', href='#pay-pal', role='tab')
+            img(src="../assets/images/cart/paypal.png", alt="Paypal")
+        .tab-content
+          #pay-card.tab-pane.fade.show.active(role='tabpanel')
+            form
+              
+          #pay-pal.tab-pane.fade(role='tabpanel') bbb
+
+
+        

@@ -72,10 +72,10 @@
         margin-top: 11px;
         position: relative;
         padding: 0;
-        border: 1px solid #cdcecf;
+        // border: 1px solid #cdcecf;
         background-color: #fcfcfc;
-        width: 90px;
-        overflow: hidden;
+        // width: 90px;
+        // overflow: hidden;
         margin-right: 21px;
     }
     
@@ -580,12 +580,12 @@
     // padding: 10px 0;
     height: 190px !important;
 }
-.measures-drop-wrp {
-    overflow-x: scroll;
-    @include bp('desktop'){
-        overflow: hidden;
-    }
-}
+// .measures-drop-wrp {
+//     overflow-x: scroll;
+//     @include bp('desktop'){
+//         overflow: hidden;
+//     }
+// }
 .swiper-pagination-bullets {
     position: absolute;
     bottom: -40px !important;
