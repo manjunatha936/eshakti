@@ -230,7 +230,7 @@ section.product-listing
                         #pills-profile.tab-pane.fade(role='tabpanel', aria-labelledby='pills-profile-tab')
                             p.text-des
                                 | (For custom size and/or custom style, a single fee of $9.95 per garment will apply)
-                                a.learn-link(href="#") Measure
+                                a.learn-link(href="#" data-toggle='modal', data-target='.js-size-measure-modal-wrp') Measure
                             .drop-wrp.d-flex.flex-wrap.pt-2
                                 .select-style
                                     span.triangle-icon
@@ -240,10 +240,7 @@ section.product-listing
                                         option(value='mercedes') Mercedes
                                         option(value='audi') Audi
                             
-                            .row
-                                .col-md-10
-                                    p.txt-gry-12 (For custom size and/or custom style, a single fee of $9.95 per garment will apply)
-                                        a.learn-link.fnt-700(href="#" data-toggle='modal', data-target='.js-size-measure-modal-wrp')  Measure
+                           
                             .row
                                 .col-12
                                     .measures-drop-wrp.d-flex.flex-wrap.pt-4
