@@ -27,8 +27,17 @@ import ProductDetais from './product-listing'
 const productDetais = new ProductDetais();
 
 
-
 import lazyLoader from './image-loader'
 const lazyImages = new lazyLoader();
 // console.log("Hi, this page is common page!"); // eslint-disable-line no-console
 
+
+// Favourite
+const favouriteToggle = Array.from(document.querySelectorAll('.favourite'));
+
+Array.from(favouriteToggle).forEach(node => {
+    node.addEventListener('click', (event) => {
+        event.stopPropagation();
+        node.classList.toggle('active');
+    })
+});

@@ -468,6 +468,21 @@
             }
         }
     }
+
+    .checkmark--circle {
+        height: 18px;
+        width: 18px;
+    }
+    .label-container input:checked ~ .checkmark .checkborder {
+        height: 26px;
+        width: 26px;
+    }
+    .color-list-item {
+        @include bpmax("phone-lg") {
+            margin-right: .6rem !important;
+        }
+    }
+
 }
 
 .product-info {
@@ -524,6 +539,16 @@
     display: inline-block;
 }
 
+
+// Favourite icon
+.favourite {
+    &.active  {
+        .icon-wishlist::before{
+            content: "\e912" !important;
+            color: #f25c50;
+        }
+    }
+}
 
 // Lazy loading on scroll images
 

@@ -9,7 +9,7 @@ mixin product-card(srcimg, img, name, type, cost)
             div.product-card__customize(data-toggle='modal', data-target='.bd-example-modal-lg')
                 img(src="./assets/images/product-listing/product-card/customize.svg" alt="customize")
                 span.fnt-sm.ml-2 Customize style 
-        a(href="#").product-card__body
+        .product-card__body
             .product-info
                 span.product-name=name 
                 span.product-type=type

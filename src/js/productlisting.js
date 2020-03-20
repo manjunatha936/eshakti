@@ -143,10 +143,11 @@ Array.from(checkRadio).forEach(node => {
 });
 
 let clearRadio = Array.from(document.querySelectorAll('.js-check-clear'));
-clearRadio.forEach(clearSelect => {
+
+Array.from(clearRadio).forEach(clearSelect => {
    clearSelect.addEventListener('click', (event) => {
       let panelCard = event.target.closest(".panel-card");
-      let checkRadio = prray.from(anelCard.querAySelectorAll('.neck-wrapper .style-check'));
+      let checkRadio = Array.from(panelCard.querySelectorAll('.neck-wrapper .style-check'));
 
       checkRadio.forEach(checkbox => {
          checkbox.checked = false;
@@ -173,6 +174,7 @@ class Accordion {
       });
    }
 }
+
 
 const accordion = new Accordion('.panel-cardtitle');
 // for open every use showAll();
