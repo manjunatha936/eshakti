@@ -684,6 +684,7 @@ body.checkout-body {
         
         .modal-content {
             padding-top: 0;
+            overflow: visible;
         }
     }
 
@@ -705,6 +706,7 @@ body.checkout-body {
     .nav-tabs {
         padding: 10px;
         padding-bottom: 15px;
+        border-bottom-color: #f1f1f1;
     }
 
     form {

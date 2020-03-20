@@ -10,7 +10,12 @@
             img(src="../assets/images/cart/paypal.png", alt="Paypal")
         .tab-content
           #pay-card.tab-pane.fade.show.active(role='tabpanel')
-            form
+            form.payment-form
+              input.payment-form__number(required="required" data-parsley-creditcard="" type="tel")
+              input.payment-form__expiry(required="required" data-parsley-cvv="" type="tel")
+              input.payment-form__cvv(required="required" data-parsley-expirydate="" type="tel")
+
+              input(type="submit")
               
           #pay-pal.tab-pane.fade(role='tabpanel') bbb
 
