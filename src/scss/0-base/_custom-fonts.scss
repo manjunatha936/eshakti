@@ -104,4 +104,26 @@
 }
 .icon-fillwishlist::before {
     content: "\e912";
+    color: #f25c50;
+}
+.icon-delete::before {
+    content: "\e919";
+}
+.icon-edit::before {
+    content: "\e91a";
+}
+.icon-privilege::before {
+    content: "\e915";
+}
+.icon-myorders::before {
+    content: "\e913";
+}
+.icon-coupon::before {
+    content: "\e914";
+}
+.icon-sizechart::before {
+    content: "\e917";
+}
+.icon-address::before {
+    content: "\e918";
 }

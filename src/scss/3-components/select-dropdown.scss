@@ -1,0 +1,114 @@
+.select_wrap {
+	position: relative;
+	display: inline-block;
+	background: $white;
+	min-width: 90px;
+	border: 1px solid #cdcecf;
+}
+
+.select_wrap::after {
+	content: "\e902";
+    font-family: 'icomoon';
+    position: absolute;
+    top: 53%;
+    transform: translateY(-50%);
+	font-size: 4.5px;
+    right: 13px;
+    color: #838383;
+    transition: all 0.3s ease;
+	transform-origin: top;
+	pointer-events: none;
+}
+
+.select_wrap.open {
+	&::after {
+		top: 48%;
+		transform: rotate(-180deg) translateY(-50%);
+	}
+}
+
+.select_wrap ul {
+	opacity: 0;
+	pointer-events: none;
+	-webkit-transform: translate(0, -15px);
+	-ms-transform: translate(0, -15px);
+	-moz-transform: translate(0, -15px);
+	transform: translate(0, -15px);
+	position: absolute;
+	z-index: 1;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+	min-width: 120px;
+	background: $white;
+	left: -1px;
+	border-radius: 0;
+	top: 100%;
+	line-height: 1.8;
+	border: none;
+	width: 100%;
+
+	li {
+		font-size: 12px;
+		padding: 6px 35px 6px 10px;
+		line-height: 1.5;
+		cursor: pointer;
+		color: #141414;
+		background-color: #ffffff;
+		border: 1px solid #cdcecf;
+		
+		&:not(:first-of-type) {
+			border-top: none;
+		}
+
+		&:hover {
+			background-color: #ececec;
+		}
+	}
+}
+
+.select_wrap ul.open {
+	opacity: 1;
+	pointer-events: all;
+	-webkit-transform: translate(0, 0);
+	-ms-transform: translate(0, 0);
+	-moz-transform: translate(0, 0);
+	transform: translate(0, 0);
+	z-index: 101;
+}
+
+.select_wrap ul li[disabled='disabled'] {
+	pointer-events: none !important;
+	color: #7B83A8;
+}
+
+.select_wrap span {
+	cursor: pointer;
+	color: #2a2a2a;
+	background-color: #fcfcfc;
+	padding: 6px 35px 6px 10px;
+	line-height: 1.5;
+	display: inline-block;
+	width: 100%;
+	font-size: 12px;
+	font-weight: 500;
+
+	&[value=''] {
+		opacity: 0.7;
+	}
+}
+
+.select_wrap select {
+	display: none;
+}
+
+.select_wrap .overlay {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 100;
+}

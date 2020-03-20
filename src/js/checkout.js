@@ -1,6 +1,8 @@
 import 'bootstrap/js/src/collapse';
 import $ from 'jquery';
-import 'parsleyjs'
+import 'parsleyjs';
+import './components/cardvalidate';
+
 $(document).ready(function(){
     $('.suggest-content__cancel').on('click', function(e){
         e.preventDefault();
@@ -78,8 +80,11 @@ $(document).ready(function(){
         $(this).siblings(".select-input").val($(this).val())
     })
     $('.form-address .address-btn').on('click', function () {
-        $('.form-address').parsley().validate();
-      
-      });
+        $('.form-address').parsley().validate();  
+    });
+
+    $(".payment-form input[type='submit']").on('click', function () {
+        $(this).parents('form').parsley().validate();  
+    });
 
 });
