@@ -3,7 +3,7 @@ import Swiper from 'swiper';
 // import $ from 'jquery'
 
 var swiper = new Swiper('.js-wishlist-slider', {
-    init: false,
+    // init: false,
     slidesPerView: 4,
     spaceBetween: 0,
     observer: true,
