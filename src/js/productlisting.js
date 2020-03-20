@@ -6,6 +6,8 @@ import "bootstrap/js/src/modal";
 import "bootstrap/js/src/tab";
 import popupInit from './custom-popup';
 
+import OverlayScrollbar from './components/overlay-scrollbar';
+const overScrollbar = new OverlayScrollbar(".save-item-transition")
 console.log('Product listing code');
 
 // Side-sticky
