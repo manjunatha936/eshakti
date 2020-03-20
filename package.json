@@ -80,6 +80,7 @@
     "hammerjs": "^2.0.8",
     "jquery": "^3.4.1",
     "overlay.js": "^1.2.0",
+    "overlayscrollbars": "^1.11.0",
     "parsleyjs": "^2.9.2",
     "popper": "^1.0.1",
     "popper.js": "1.14.3",
