@@ -77,12 +77,14 @@
 
 .prd-size {
     display: flex;
-    @include bp("tab-lg") {
-        display: block;
+    flex-direction: column;
+    @media screen and (min-width:425px) {
+        flex-direction: row;
+        
     }
-    @include bp("desktop-1200") {
-        display: flex;
-    }
+    // @include bp("desktop-1200") {
+    //     display: flex;
+    // }
 }
 
 .size {
@@ -149,6 +151,7 @@
 }
 
 .icon-modify {
+    cursor: pointer;
     position: relative;
     top: 2px;
 }
