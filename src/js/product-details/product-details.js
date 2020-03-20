@@ -253,10 +253,8 @@ class ProductDetais {
           });
 
         $(".js-size-model").click(function(){
-          $(".size-modal").modal("show")
+          $(".js-size-modal-wrp").modal("show")
         })
-
-
     }
 }
 
