@@ -4,18 +4,33 @@ section.product-listing
         .row
             .col-lg-7.slider-style-thumb
                 .swiper-container.gallery-top
-                    .swiper-wrapper
-                        .swiper-slide(style='background-image:url(./assets/images/women.png)' data-toggle='modal', data-target='.img-modal-lg')
-                        .swiper-slide(style='background-image:url(./assets/images/women.png)' data-toggle='modal', data-target='.img-modal-lg')
-                        .swiper-slide(style='background-image:url(./assets/images/women.png)' data-toggle='modal', data-target='.img-modal-lg')
-                        .swiper-slide(style='background-image:url(./assets/images/women.png)' data-toggle='modal', data-target='.img-modal-lg')
-                        .swiper-slide(style='background-image:url(./assets/images/women.png)' data-toggle='modal', data-target='.img-modal-lg')
-                        .swiper-slide(style='background-image:url(./assets/images/women.png)' data-toggle='modal', data-target='.img-modal-lg')
-                        .swiper-slide(style='background-image:url(./assets/images/women.png)' data-toggle='modal', data-target='.img-modal-lg')
-                        .swiper-slide(style='background-image:url(./assets/images/women.png)' data-toggle='modal', data-target='.img-modal-lg')
-                        .swiper-slide(style='background-image:url(./assets/images/women.png)' data-toggle='modal', data-target='.img-modal-lg')
+                    .swiper-wrapper.gallery-wrp
+                        .swiper-slide(data-toggle='modal', data-target='.img-modal-lg')
+                            img.img-fluid(src="./assets/images/women.png", alt="")
+                        .swiper-slide(data-toggle='modal', data-target='.img-modal-lg')
+                            img.img-fluid(src="./assets/images/women.png", alt="")
+                        .swiper-slide(data-toggle='modal', data-target='.img-modal-lg')
+                            img.img-fluid(src="./assets/images/women.png", alt="")
+                        .swiper-slide(data-toggle='modal', data-target='.img-modal-lg')
+                            img.img-fluid(src="./assets/images/women.png", alt="")
+                        .swiper-slide(data-toggle='modal', data-target='.img-modal-lg')
+                            img.img-fluid(src="./assets/images/women.png", alt="")
+                        .swiper-slide(data-toggle='modal', data-target='.img-modal-lg')
+                            img.img-fluid(src="./assets/images/women.png", alt="")
+                        .swiper-slide(data-toggle='modal', data-target='.img-modal-lg')
+                            img.img-fluid(src="./assets/images/women.png", alt="")
+                        .swiper-slide(data-toggle='modal', data-target='.img-modal-lg')
+                            img.img-fluid(src="./assets/images/women.png", alt="")
+                        //- .swiper-slide(style='background-image:url(./assets/images/women.png)' data-toggle='modal', data-target='.img-modal-lg')
+                        //- .swiper-slide(style='background-image:url(./assets/images/women.png)' data-toggle='modal', data-target='.img-modal-lg')
+                        //- .swiper-slide(style='background-image:url(./assets/images/women.png)' data-toggle='modal', data-target='.img-modal-lg')
+                        //- .swiper-slide(style='background-image:url(./assets/images/women.png)' data-toggle='modal', data-target='.img-modal-lg')
+                        //- .swiper-slide(style='background-image:url(./assets/images/women.png)' data-toggle='modal', data-target='.img-modal-lg')
+                        //- .swiper-slide(style='background-image:url(./assets/images/women.png)' data-toggle='modal', data-target='.img-modal-lg')
+                        //- .swiper-slide(style='background-image:url(./assets/images/women.png)' data-toggle='modal', data-target='.img-modal-lg')
+                        //- .swiper-slide(style='background-image:url(./assets/images/women.png)' data-toggle='modal', data-target='.img-modal-lg')
                 
-                    .style-guid
+                    .style-guid.my-auto
                         .img-card-wrp
                             p.prod-label.pb-2.mb-1 Neckline
                             .img-wrp
@@ -226,8 +241,11 @@ section.product-listing
                                         option(value='audi') Audi
                             
                             .row
+                                .col-md-10
+                                    p.txt-gry-12 (For custom size and/or custom style, a single fee of $9.95 per garment will apply)
+                                        a.learn-link.fnt-700(href="#" data-toggle='modal', data-target='.js-size-measure-modal-wrp')  Measure
+                            .row
                                 .col-12
-                                    
                                     .measures-drop-wrp.d-flex.flex-wrap.pt-4
                                         +dropdown("Shoulder")
                                         +dropdown("Chest ")

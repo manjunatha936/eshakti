@@ -8537,6 +8537,11 @@ oust@^0.5.2:
     cheerio "^0.22.0"
     minimist "^1.2.0"
 
+overlay.js@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/overlay.js/-/overlay.js-1.2.0.tgz#7ffee9fda4a8336cacc2af2e536584c2a0ca2785"
+  integrity sha512-xBIOt+SjiopkSsQBFRnf51xzbZ71fA201K2xuIXCpEZnrcCU0dInMpCAfWUetqzr2qrqyH6WHcMuOLcHSD+Xxg==
+
 p-cancelable@^0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/p-cancelable/-/p-cancelable-0.3.0.tgz#b9e123800bcebb7ac13a479be195b507b98d30fa"
