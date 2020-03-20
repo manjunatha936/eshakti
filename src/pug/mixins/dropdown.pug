@@ -1,13 +1,13 @@
 mixin dropdown(text)
-    .drop-container.mb-3
-        .drop-title
-            span.seletion-label=text
-            i.icon-info.ml-1.icon-modify.js-size-model
-            //- img.pl-1(src="./assets/images/i.png", alt="")
-        .select-style
-            span.triangle-icon
-            select.txt-gry-12
-                option(disable) select
-                option(value='saab') Saab
-                option(value='mercedes') Mercedes
-                option(value='audi') Audi
+    .drop-container.mb-2.mb-md-3
+            .drop-title
+                span.selection-label=text
+                i.icon-info.pl-1
+                //- img.pl-1(src="./assets/images/i.png", alt="")
+            .select-style
+                //- span.triangle-icon
+                select.txt-gry-12.select_box
+                    option(disabled selected) select
+                    option(value='saab') Saab
+                    option(value='mercedes') Mercedes
+                    option(value='audi') Audi

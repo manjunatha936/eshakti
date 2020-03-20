@@ -25,6 +25,12 @@
         right: 10px;
         padding-top: 0;
         z-index: 15;
+
+        &--right {
+            top: calc(100% - 160px);
+            right: 15px;
+        }
+
         &__item {
             margin-top: 14px;
         }

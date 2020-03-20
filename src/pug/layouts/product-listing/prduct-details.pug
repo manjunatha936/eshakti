@@ -30,7 +30,8 @@ section.product-listing
                         //- .swiper-slide(style='background-image:url(./assets/images/women.png)' data-toggle='modal', data-target='.img-modal-lg')
                         //- .swiper-slide(style='background-image:url(./assets/images/women.png)' data-toggle='modal', data-target='.img-modal-lg')
                 
-                    .style-guid.my-auto
+                    .style-guid
+                        p.style-guid__des.mb-2 Styled by you
                         .img-card-wrp
                             p.prod-label.pb-2.mb-1 Neckline
                             .img-wrp
@@ -53,10 +54,9 @@ section.product-listing
                             span.ml-2.d-none.d-lg-inline-block.text-uppercase Customize style                     
                             span.ml-2.d-lg-none Customize                  
                             // Add Arrows
-                
-                .patch-styled
-                    span.patch-styled__text Styled by you
-                
+                        .mt-2
+                            a.learn-link.fnt-xxs(href="javascript:void(0)") Reset style
+                                
                 .swiper-pagination-bullets.d-md-none
                     //- .swiper-button-next.swiper-button-white
                     //- .swiper-button-prev.swiper-button-white
@@ -134,7 +134,7 @@ section.product-listing
                         #pills-home.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='pills-home-tab')
                             .row
                                 .col-md-10
-                                    p.txt-gry-12.fnt-xxs XS to 6X sizes are available 
+                                    p.text-des-s XS to 6X sizes are available 
                                         a.learn-link(href="#")  Size Chart
                             .measures-drop-wrp.d-flex.flex-md-wrap.pt-3
                                 .size.text-center   
@@ -232,13 +232,22 @@ section.product-listing
                                 | (For custom size and/or custom style, a single fee of $9.95 per garment will apply)
                                 a.learn-link(href="#" data-toggle='modal', data-target='.js-size-measure-modal-wrp') Measure
                             .drop-wrp.d-flex.flex-wrap.pt-2
+
                                 .select-style
-                                    span.triangle-icon
-                                    select.txt-gry-12
-                                        option(disable) choose Size profile
+                                    //- span.triangle-icon
+                                    select.txt-gry-12.select_box
+                                        option(disabled selected) Choose Size profile
                                         option(value='saab') Saab
                                         option(value='mercedes') Mercedes
                                         option(value='audi') Audi
+
+                                //- .select-style
+                                //-     span.triangle-icon
+                                //-     select.txt-gry-12
+                                //-         option(disable) choose Size profile
+                                //-         option(value='saab') Saab
+                                //-         option(value='mercedes') Mercedes
+                                //-         option(value='audi') Audi
                             
                            
                             .row
@@ -246,30 +255,48 @@ section.product-listing
                                     .measures-drop-wrp.d-flex.flex-wrap.pt-4
                                         +dropdown("Shoulder")
                                         +dropdown("Chest ")
-                                        +dropdown("Bust")
-                                        +dropdown("Under Bust")
+                                        +dropdown("Bust ")
+                                        +dropdown("Under Bust ")
                                         +dropdown("Hip")
+                                        +dropdown("Waist ")
+                                        +dropdown("Upper Arms")
                                         
                                         
                                     p.text-des Optional Measurements
                                         img.pl-1(src="./assets/images/i.png", alt="")
-                                    p.fnt-xs.drk-gry.mt-1 From shoulder high point to 
+                                    p.fnt-xs.drk-gry.my-1 From shoulder high point to 
                                     .drop-wrp.d-flex.flex-wrap.pt-2
                                         +dropdown("Bus Point")
                                         +dropdown("Waist Point  ")
                                         +dropdown("Knee Point ")
                 .select-Height.d-flex.align-items-center
-                    span.prd-sub-txt.mr-4 Select Height
-                    .select-style.mt-0
-                        span.triangle-icon
-                        select.txt-gry-12
-                            option(disable) select
+                    span.select-label.mr-4 Select Height
+                    .select-style.select-style--height.mt-0
+                        //- span.triangle-icon
+                        select.txt-gry-12.select_box
+                            option(disabled selected) select
                             option(value='saab') 9.5
                             option(value='mercedes') 6.7
                             option(value='audi') 7.9
-                .btn-wrp.mt-3.mt-md-4
+                
+                p.text-des-s.mt-2 Selected styles - Mandarin collar, long length, below knee length
+                
+                .btn-wrp.mt-2.mt-md-3
                     button.px-5.btn.btn--danger(type="button", data-toggle='modal', data-target='.bd-example-modal-lg-02') Add to Cart
-                    .share.my-auto.flex-center
-                        i.mr-2.icon-share
-                        span.txt-gry-12.fnt-xxs Share
+                    
+                    //START: SHARE
+                    div.share.flex-center
+                        .share.flex-center
+                            i.mr-2.icon-share
+                            span.txt-gry-12.fnt-xxs Share
+                        .tooltip-share.tooltip-share--right
+                            .tooltip-share__item.pinterest.d-flex
+                                i.icon-pinterest.tip-icon
+                                p.prd-sub-txt Pinterest
+                            .tooltip-share__item.facebook.d-flex
+                                i.icon-facebook.tip-icon
+                                p.prd-sub-txt Facebook
+                            .tooltip-share__item.twitter.d-flex
+                                i.icon-twitter.tip-icon
+                                p.prd-sub-txt Twitter
             

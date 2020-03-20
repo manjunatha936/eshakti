@@ -54,6 +54,21 @@
         }
        
     }
+    .select-style select {
+        cursor: pointer;
+        padding: 5px 8px;
+        border: none;
+        box-shadow: none;
+        background-color: transparent;
+        background-image: none;
+        -webkit-appearance: none;
+           -moz-appearance: none;
+                appearance: none;
+    }
+    
+    .select-style select:focus {
+        outline: none;
+    }
     .triangle-icon {
         position: absolute;
         right: 12px;
@@ -578,12 +593,12 @@
     // padding: 10px 0;
     height: 190px !important;
 }
-.measures-drop-wrp {
-    overflow-x: scroll;
-    @include bp('desktop'){
-        overflow: hidden;
-    }
-}
+// .measures-drop-wrp {
+//     overflow-x: scroll;
+//     @include bp('desktop'){
+//         overflow: hidden;
+//     }
+// }
 .swiper-pagination-bullets {
     position: absolute;
     bottom: -40px !important;
@@ -718,18 +733,23 @@
 // Product info styling
 
 .style-guid {
-    display: table;
+    // display: table;
     z-index: 11;
     text-align: center;
-    padding-top: 17px ;
+    padding-top: 1.2rem;
     // position: absolute;
     // right: 0;
     // top: 50%;
     // transform: translateY(-50%);
     background-color: #f9f9f9;
     @include bp('desktop') {
-        padding-top: 35px; 
+        padding-top: 3rem; 
 
+    }
+    &__des{
+        @extend .fnt-xxxs;
+        color: $title-black;
+        font-weight: 600;
     }
     .neck-type {
         line-height: inherit !important;

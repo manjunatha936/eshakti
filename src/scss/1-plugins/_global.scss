@@ -107,6 +107,14 @@ ol {
   } 
 }
 
+.fnt-xxxs {
+  font-size: 10px;
+  line-height: 20px;
+  @include bp("tab") {
+    font-size: 11px;
+  } 
+}
+
 // section-headings
 
 .section-heading {
