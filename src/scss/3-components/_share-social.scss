@@ -1,31 +1,28 @@
 
 //Share social
 .share {
+    position: relative;
     .icon-share {
-        position: relative;
         font-size: 14px;
-        
+        // line-height: 24px;
         @include bp("tab") {
             font-size: 16px;
-
-        }
-        &:hover {
-            & + .tooltip-share {
-                opacity: 1 !important;
-                transition: ease-in-out all .3s;
-            }
+            // line-height: 26px;
         }
     }
+
+    // Tooltip-share
     .tooltip-share {
         // transition: ease-in-out all .6s;
+        pointer-events: none;
         opacity: 0;
         padding: 14px 20px ;
         box-shadow: 0 1px 7px rgba(0, 0, 0, 0.09);
         background-color: #ffffff;
         position: absolute;     
-        top: -5px;
-        transform: translate(-100%,-100%);
-        left: 15px;
+        top: calc(100% - 140px);
+        // transform: translate(-100%,-100%);
+        right: 10px;
         padding-top: 0;
         z-index: 15;
         &__item {
@@ -67,5 +64,12 @@
             background-color: #cb2027;
             position: relative;
         }   
+    }
+    &:hover {
+        .tooltip-share {
+            opacity: 1;
+            transition: ease-in-out all .3s;
+            pointer-events: all;
+        }
     }
 }

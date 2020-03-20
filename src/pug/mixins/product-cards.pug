@@ -1,6 +1,6 @@
 mixin product-card(srcimg, img, name, type, cost)
-    a.product-card(href="javascript:void(0);" )
-        .product-card__view(href="#")
+    .product-card()
+        a.product-card__view(href="#")
             .card-tag Fx
             picture
                 //- source(srcset=srcimg)
@@ -9,7 +9,7 @@ mixin product-card(srcimg, img, name, type, cost)
             div.product-card__customize(data-toggle='modal', data-target='.bd-example-modal-lg')
                 img(src="./assets/images/product-listing/product-card/customize.svg" alt="customize")
                 span.fnt-sm.ml-2 Customize style 
-        .product-card__body
+        a(href="#").product-card__body
             .product-info
                 span.product-name=name 
                 span.product-type=type

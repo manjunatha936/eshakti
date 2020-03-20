@@ -5,6 +5,7 @@
     text-transform: uppercase;
     letter-spacing: $letter-spacing03;
     font-weight: 700;
+    color: $title-black;
 }
 
 // Product content
@@ -85,9 +86,25 @@
         bottom: .8rem;
     };
 }
+
+.prd-size {
+    display: flex;
+    @include bp("tab-lg") {
+        display: block;
+    }
+    @include bp("desktop-1200") {
+        display: flex;
+    }
+}
+
 .size {
     margin-right: 5px;
-    margin-bottom: 1.2rem;
+    @include bp("tab") {
+        margin-bottom: .8rem;
+    }
+    @include bp("desktop-1200") {
+        margin-bottom: 1.2rem;
+    }
     // @extend .flex-center;
 }
 
@@ -141,6 +158,78 @@
 .size-select:checked + .size-number__label {
     background: $black;
     color: $white;
+}
+
+.icon-modify {
+    position: relative;
+    top: 2px;
+}
+
+.text-des {
+    font-size: 10px;
+    line-height: 20px;
+    color: rgba(47, 47, 47, .8);
+    @include bp("tab") {
+        font-size: 11px;
+        line-height: 22px;
+    }
+}
+
+.learn-link {
+    @extend .txt-gry-12;
+    color: #0f0f0f;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.seletion-label {
+    font-size: 13px;
+    line-height: 23px;
+    font-weight: 600;
+    color: $selection-label;
+}
+
+.select-style {
+    margin-top: 8px;
+    position: relative;
+    padding: 0;
+    border: 1px solid #cdcecf;
+    background-color: #fcfcfc;
+    // width: 90px;
+    width: auto;
+    overflow: hidden;
+    margin-right: 21px;
+}
+
+.select-style select {
+    padding: 5px 8px;
+    // width: 130%;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    background-image: none;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+}
+
+.select-style select:focus {
+    outline: none;
+}
+
+.select-label {
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+// colors
+
+.prd-color {
+    &__label {
+        color: #1f1f1f;
+        margin-bottom: .5rem;
+        display: block;
+    }
 }
 
 

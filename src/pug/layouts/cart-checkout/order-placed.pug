@@ -3,6 +3,19 @@
         h1.page-title Checkout
         .row
             .col-8.cart-content.checkout-content
+                .order-success
+                    img(src="../assets/images/cart/order-placed.svg", alt="")
+                    h3 Order placed successfully
+                    p Thank you for your order. You will receive shortly a copy of this order receipt via mail. If you wish to make any changes to a confirmed order (address,size or coupon/discounts), please contact our customer support at 
+                        a(href="mailto:customerchampion@eshakti.com") customerchampion@eshakti.com
+                        |  within 24hours from order confirmation.
+
+                    .order-success__bottom
+                        p Order Number
+                            span #1344434
+                        p Order Placed
+                            span 12 Mar 2020
+
                 .cart-content__wrap
                     .checkout-content__section
                         h2 Delivery Details
@@ -24,7 +37,7 @@
                                     br
                                     | Bellingham MA 200198.
 
-                            a.change-link(href="#" data-toggle='modal', data-target='.address') Change Address
+                            a.change-link(href="#") Change Address
 
                     .checkout-content__section
                         h2 Order-Item Details
@@ -109,71 +122,29 @@
                                     p $82.95
                         
 
-            .col-4.cart-panel.checkout-panel
+            .col-4.cart-panel.orderplace-panel
                 .cart-panel__card
-                    .checkout-panel__scroll
-                        .checkout-panel__promo
-                            h4 Enter a promo or gift card
-                                .web-tooltip
-                                    i.icon-info
-                                    .web-tooltip__content
-                                        div
-                                            p 1. Only one gift coupon can be applied to an order. However, you can apply multiple Gift Cards.
-                                            p 2. These codes have limited time validity and will expire if not used within the validity period.
-                            form.row.m-0
-                                .col-8.text-group.p-0
-                                    input(type="text")
-                                    .checkout-panel__couponwrap
-                                        .coupon-group
-                                            h4 Gift Coupons
-                                            .form-group
-                                                input(type="radio" value="16EST1642JkAu" data-type="Gift Coupon" data-price="$15.00" id="coupon-1" name="cart-coupons")
-                                                label(for="coupon-1") $20.00 OFF Valid Till Apr 30, 2020 Minimum Order Value $40.00 [16EST1642JkAu]
-                                            .form-group
-                                                input(type="radio" value="26EST1642JkAu" data-type="Gift Coupon" data-price="$20.00" id="coupon-2" name="cart-coupons")
-                                                label(for="coupon-2") $20.00 OFF Valid Till Apr 30, 2020 Minimum Order Value $40.00 [26EST1642JkAu]
-                                        .card-group
-                                            h4 Gift Cards
-                                            .form-group
-                                                input(type="checkbox" value="15EST67273eQT" data-type="Gift Cards" data-price="$15.00" id="card-1" name="card-1")
-                                                label(for="card-1") $15.00 OFF Valid Till Apr 30, 2020 [15EST67273eQT]
-                                            .form-group
-                                                input(type="checkbox" value="25EST67273eQT" data-type="Gift Cards" data-price="$20.00" id="card-2" name="card-2")
-                                                label(for="card-2") $15.00 OFF Valid Till Apr 30, 2020 [25EST67273eQT]
-                                .col-4.submit-group.p-0
-                                    input(type="submit" value="Apply")
-                                .checkout-panel__coupontags
-                                    
-                        .checkout-panel__suggest
-                            .suggest-head(data-toggle="collapse" data-target="#suggest-content")
-                                h4 For Special instruction on your order
-                                p Shipping charges will be  added in checkout
-                            .suggest-content#suggest-content.collapse
-                                form
-                                    textarea.suggest-content__box It would be really helpful if I can get the product 2 days before christmas
-                                    input.suggest-content__save(type="submit" value="Save")
-                                    a.suggest-content__cancel(href="#") Cancel
-                                //- p It would be really helpful if I can get the product 2 days before christmas
-                        .cart-panel__cost
-                            .row.align-items-center
-                                p.col-8.cost-label Subtotal (
-                                    span 2 
-                                    |  items)
-                                span.col-4 $99.99
-                            .row.align-items-center 
-                                p.col-8.cost-label Customisation Charges
-                                span.col-4 $18.0
-                            .row.align-items-center 
-                                p.col-8.cost-label GST
-                                span.col-4 $27.80
-                            .row.align-items-center 
-                                p.col-8.cost-label Shipping Charges
-                                span.col-4 $12.95
-                                    
-                    .cart-panel__total
+                    .cart-panel__cost
+                        h4 Order Summary
                         .row.align-items-center
-                            .col-8
-                                h4 Total Price
+                            p.col-8.cost-label Subtotal (
+                                span 2 
+                                |  items)
+                            span.col-4 $99.99
+                        .row.align-items-center 
+                            p.col-8.cost-label Customisation Charges
+                            span.col-4 $18.0
+                        .row.align-items-center 
+                            p.col-8.cost-label GST
+                            span.col-4 $27.80
+                        .row.align-items-center 
+                            p.col-8.cost-label Shipping Charges
+                            span.col-4 $12.95
+                        .row.align-items-center 
+                            p.col-8.cost-label Coupons Discount
+                            span.col-4 - $27.95
+                    .orderplace-panel__total
+                        .row.align-items-center 
+                            p.col-8 Total Price
                             span.col-4 $173.74
-                        a.checkout-btn(href="#" data-toggle="modal" data-target=".payment-popup") Pay Now
-                        
+                    

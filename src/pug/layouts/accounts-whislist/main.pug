@@ -1,0 +1,20 @@
+section.pt-2
+    .container
+        .row
+            .col-md-12
+                ul#whishlistTab.nav.nav-tabs.favourite-tabs(role='tablist')
+                    li.nav-item
+                        a#wishlist-tab.nav-link.active(data-toggle='tab' href='#wislist' role='tab' aria-controls='wishlist' aria-selected='true')
+                            | Wishlist
+                            span.whislist-number 2 products
+                    li.nav-item
+                        a#profile-tab.nav-link(data-toggle='tab' href='#savedstyle' role='tab' aria-controls='Saved' aria-selected='false') Saved style
+                #whishlistTabContent.tab-content.tab-content__cards
+                    
+                    //START: WHISLIST
+                    #wislist.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='home-tab')
+                        include whislist.pug
+                    
+                    //START: SAVESTYLE
+                    #savedstyle.tab-pane.fade(role='tabpanel' aria-labelledby='profile-tab')
+                        include saved-style

@@ -23,11 +23,11 @@
   "browserslist": [
     "last 2 version",
     "> 1%",
-    "not dead"
+    "not dead",
+    "ie >= 11"
   ],
   "devDependencies": {
     "@babel/core": "7.6.4",
-    "@babel/polyfill": "7.4.4",
     "@babel/preset-env": "7.6.3",
     "babel-eslint": "10.0.2",
     "babel-loader": "^8.0.6",
@@ -74,16 +74,15 @@
     "webpack-messages": "2.0.4"
   },
   "dependencies": {
-    "boostrap": "^2.0.0",
     "bootstrap": "^4.4.1",
+    "core-js": "^3.6.4",
     "gulp": "^4.0.2",
     "hammerjs": "^2.0.8",
     "jquery": "^3.4.1",
-    "nodelist-foreach-polyfill": "^1.2.0",
-    "overlayscrollbars": "^1.11.0",
     "parsleyjs": "^2.9.2",
     "popper": "^1.0.1",
     "popper.js": "1.14.3",
+    "regenerator-runtime": "^0.13.5",
     "swiper": "^5.3.1",
     "terser-webpack-plugin": "^2.3.4",
     "url-loader": "^3.0.0",

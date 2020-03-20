@@ -3,16 +3,14 @@ html(lang="en")
 
   head
     include ./base/head.pug
-    +head("Checkout")
+    +head("Order placed")
 
-  body.checkout-body
+  body
     include ./base/discount-bar.pug
     include ./base/header.pug
     +header("repeat","white")
 
     main
-      include ./layouts/cart-checkout/checkout.pug
-      include ./base/address-pop-up.pug
-      include ./base/payment-popup.pug
+      include ./layouts/cart-checkout/order-placed.pug
 
     include ./base/footer.pug

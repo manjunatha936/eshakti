@@ -134,10 +134,10 @@
         font-size: 14px ;
         line-height: 24px;
         cursor: pointer;
-        display: inline-block;
         border: none;
         transition: all 0.3s ease;
         @include bp("tab") {
+            display: inline-block;
             padding: 5px 0;
             font-weight: 400;
             font-size: 13px ;
@@ -323,6 +323,12 @@
             }
         }
     }
+    .product-card__customize {
+        padding: {
+            left: .8rem;
+            right: .8rem;
+        }
+    }
 }
 
 .js-products li{
@@ -353,7 +359,7 @@
         transition: all .6s ease;
         .rect-box {
             background: $black;
-        } 
+        }
     }
 }
 
@@ -373,6 +379,7 @@
         padding-left: .2rem;
         display: flex;
         justify-content: space-between;
+        align-items: flex-start;
         .share {
             cursor: pointer;
             position: relative;

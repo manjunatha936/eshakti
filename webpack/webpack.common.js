@@ -28,7 +28,8 @@ module.exports = {
     "product-details": [path.join(paths.dirSrcJs, "product-details")],
     "repeat-customer": [path.join(paths.dirSrcJs, "repeat-customer")],
     cart: [path.join(paths.dirSrcJs, "cart")],
-    checkout: [path.join(paths.dirSrcJs, "checkout")]
+    checkout: [path.join(paths.dirSrcJs, "checkout")],
+    "account-wishlist": [path.join(paths.dirSrcJs, "account-wishlist")],
   },
   output: {
     path: paths.dirDist,
