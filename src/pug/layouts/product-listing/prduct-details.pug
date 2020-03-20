@@ -2,20 +2,35 @@ section.product-listing
     .container
         include ../../mixins/dropdown.pug
         .row
-            .col-md-7.slider-style-thumb
+            .col-lg-7.slider-style-thumb
                 .swiper-container.gallery-top
-                    .swiper-wrapper
-                        .swiper-slide(style='background-image:url(./assets/images/women.png)' data-toggle='modal', data-target='.img-modal-lg')
-                        .swiper-slide(style='background-image:url(./assets/images/women.png)' data-toggle='modal', data-target='.img-modal-lg')
-                        .swiper-slide(style='background-image:url(./assets/images/women.png)' data-toggle='modal', data-target='.img-modal-lg')
-                        .swiper-slide(style='background-image:url(./assets/images/women.png)' data-toggle='modal', data-target='.img-modal-lg')
-                        .swiper-slide(style='background-image:url(./assets/images/women.png)' data-toggle='modal', data-target='.img-modal-lg')
-                        .swiper-slide(style='background-image:url(./assets/images/women.png)' data-toggle='modal', data-target='.img-modal-lg')
-                        .swiper-slide(style='background-image:url(./assets/images/women.png)' data-toggle='modal', data-target='.img-modal-lg')
-                        .swiper-slide(style='background-image:url(./assets/images/women.png)' data-toggle='modal', data-target='.img-modal-lg')
-                        .swiper-slide(style='background-image:url(./assets/images/women.png)' data-toggle='modal', data-target='.img-modal-lg')
+                    .swiper-wrapper.gallery-wrp
+                        .swiper-slide(data-toggle='modal', data-target='.img-modal-lg')
+                            img.img-fluid(src="./assets/images/women.png", alt="")
+                        .swiper-slide(data-toggle='modal', data-target='.img-modal-lg')
+                            img.img-fluid(src="./assets/images/women.png", alt="")
+                        .swiper-slide(data-toggle='modal', data-target='.img-modal-lg')
+                            img.img-fluid(src="./assets/images/women.png", alt="")
+                        .swiper-slide(data-toggle='modal', data-target='.img-modal-lg')
+                            img.img-fluid(src="./assets/images/women.png", alt="")
+                        .swiper-slide(data-toggle='modal', data-target='.img-modal-lg')
+                            img.img-fluid(src="./assets/images/women.png", alt="")
+                        .swiper-slide(data-toggle='modal', data-target='.img-modal-lg')
+                            img.img-fluid(src="./assets/images/women.png", alt="")
+                        .swiper-slide(data-toggle='modal', data-target='.img-modal-lg')
+                            img.img-fluid(src="./assets/images/women.png", alt="")
+                        .swiper-slide(data-toggle='modal', data-target='.img-modal-lg')
+                            img.img-fluid(src="./assets/images/women.png", alt="")
+                        //- .swiper-slide(style='background-image:url(./assets/images/women.png)' data-toggle='modal', data-target='.img-modal-lg')
+                        //- .swiper-slide(style='background-image:url(./assets/images/women.png)' data-toggle='modal', data-target='.img-modal-lg')
+                        //- .swiper-slide(style='background-image:url(./assets/images/women.png)' data-toggle='modal', data-target='.img-modal-lg')
+                        //- .swiper-slide(style='background-image:url(./assets/images/women.png)' data-toggle='modal', data-target='.img-modal-lg')
+                        //- .swiper-slide(style='background-image:url(./assets/images/women.png)' data-toggle='modal', data-target='.img-modal-lg')
+                        //- .swiper-slide(style='background-image:url(./assets/images/women.png)' data-toggle='modal', data-target='.img-modal-lg')
+                        //- .swiper-slide(style='background-image:url(./assets/images/women.png)' data-toggle='modal', data-target='.img-modal-lg')
+                        //- .swiper-slide(style='background-image:url(./assets/images/women.png)' data-toggle='modal', data-target='.img-modal-lg')
                 
-                    .style-guid
+                    .style-guid.my-auto
                         .img-card-wrp
                             p.prod-label.pb-2.mb-1 Neckline
                             .img-wrp
@@ -66,12 +81,12 @@ section.product-listing
                             .arrow.left-arrow
                                 span
                 
-            .col-md-5.mt-5.mt-md-0
+            .col-lg-5.mt-5.mt-md-0.pt-md-3.pt-lg-0
                 // Dress-details info
                 .dress-details
                     .product-info
                         span.pdp-title ZAPELLE
-                        .prod-head.d-flex.justify-content-between
+                        .prod-head.d-flex.justify-content-between.align-item-center
                             h1.fnt-xlg.pdp-name Pleat Front Cotton Chambray Wrap Dress
                             div.favourite.my-md-auto
                                 i.icon-wishlist
@@ -81,22 +96,34 @@ section.product-listing
                         span.product-price__text $64.95
                         p.pdt-sell-price.fnt-xxs
                             | or 3 interest-free payments of $18 with Affirm
-                            a.learn-link(href="#") Learn more
+                            a.learn-link.ml-1(href="#") Learn more
                     .reviews
                         img(src="./assets/images/product-listing/stars.png", alt="")
                         span.pl-3.txt-gry-12.reviews__rating 2 reviews
                     .fnt-xs.drk-gry.py-3 Pleated cotton chambray brings draped flair to our flattering frock that boasts a cross-front with ties at the waist for a wrap silhouette. Available: Additional 3 neckline, 4 sleeve type... 
                         p.more-info hambray brings draped flair to our flatte
                         a.js-read-more.learn-link.fnt-700(href="#")  Product Details
-                    .prd-color.txt-gry-12.fnt-xxs.mt-2
-                        span Color: 
-                        span Indigo chambray
+                    .prd-color.fnt-xxs.mt-1
+                        span.prd-color__label.fnt-xxs.mb-2 Color
+                        .color-container
+                            label.label-container.color-list-item.mb-0
+                                input(type="radio" name="color-select" checked)
+                                span.checkmark.checkmark--circle.medhi
+                                    .checkborder
+                            label.label-container.color-list-item.mb-0
+                                input(type="radio" name="color-select")
+                                span.checkmark.checkmark--circle.black-dark
+                                    .checkborder
+                            label.label-container.color-list-item.mb-0
+                                input(type="radio" name="color-select")
+                                span.checkmark.checkmark--circle.mareen
+                                    .checkborder
                 
                 //START: PROJECT-SIZE-CHART
                 .pdp-size-container
-                    .prd-size.fnt-xs.d-flex.flex-column.flex-xl-row.align-items-xl-center.mt-2.mt-md-0.mb-2
-                        p.prd-sub-txt.my-auto.mr-md-4 Select Size
-                        ul#pills-tab.nav.d-flex.justify-content-between(role='tablist')
+                    .prd-size.fnt-xs.mt-2.mt-md-0.mb-2.mb-md-0
+                        span.select-label.fnt-xs.my-auto.mr-md-4 Select Size
+                        ul#pills-tab.nav.d-flex.justify-content-xl-between(role='tablist')
                             li.nav-item.ml-2
                                 a#pills-home-tab.nav-link.active(data-toggle='pill', href='#pills-home', role='tab', aria-controls='pills-home', aria-selected='true') Standard Size
                             li.ml-2.ml-lg-3.nav-item
@@ -108,7 +135,7 @@ section.product-listing
                             .row
                                 .col-md-10
                                     p.txt-gry-12.fnt-xxs XS to 6X sizes are available 
-                                        a.learn-link.fnt-700(href="#")  Size Chart
+                                        a.learn-link(href="#")  Size Chart
                             .measures-drop-wrp.d-flex.flex-md-wrap.pt-3
                                 .size.text-center   
                                     span.size-hd XS
@@ -155,59 +182,67 @@ section.product-listing
                                 .size.text-center   
                                     span.size-hd 1X
                                     span.size-number
-                                        input#size01.size-select(type="radio" name="size")
-                                        label.size-number__label(for="size01") 16w
+                                        input#sizex11.size-select(type="radio" name="size")
+                                        label.size-number__label(for="sizex11") 16w
                                     span.size-number
-                                        input#size02.size-select(type="radio")
-                                        label.size-number__label(for="size02") 18w
+                                        input#sizex12.size-select(type="radio" name="size")
+                                        label.size-number__label(for="sizex12") 18w
                                 .size.text-center   
                                     span.size-hd 2X
                                     span.size-number
-                                        input#size01.size-select(type="radio" name="size")
-                                        label.size-number__label(for="size01") 20w
+                                        input#size2x1.size-select(type="radio" name="size")
+                                        label.size-number__label(for="size2x1") 20w
                                     span.size-number
-                                        input#size02.size-select(type="radio" name="size")
-                                        label.size-number__label(for="size02") 22w
+                                        input#size2x2.size-select(type="radio" name="size")
+                                        label.size-number__label(for="size2x2") 22w
                                 .size.text-center   
                                     span.size-hd 3X
                                     span.size-number
-                                        input#size01.size-select(type="radio" name="size")
-                                        label.size-number__label(for="size01") 24w
+                                        input#size3x1.size-select(type="radio" name="size")
+                                        label.size-number__label(for="size3x1") 24w
                                     span.size-number
-                                        input#size02.size-select(type="radio" name="size")
-                                        label.size-number__label(for="size02") 26w
+                                        input#size3x2.size-select(type="radio" name="size")
+                                        label.size-number__label(for="size3x2") 26w
                                 .size.text-center   
                                     span.size-hd 4X
                                     span.size-number
-                                        input#size01.size-select(type="radio" name="size")
-                                        label.size-number__label(for="size01") 28w
+                                        input#size4x1.size-select(type="radio" name="size")
+                                        label.size-number__label(for="size4x1") 28w
                                     span.size-number
-                                        input#size02.size-select(type="radio" name="size")
-                                        label.size-number__label(for="size02") 30w
+                                        input#size4x2.size-select(type="radio" name="size")
+                                        label.size-number__label(for="size4x2") 30w
                                 .size.text-center   
                                     span.size-hd 5X
                                     span.size-number
-                                        input#size01.size-select(type="radio" name="size")
-                                        label.size-number__label(for="size01") 28w
+                                        input#size5x1.size-select(type="radio" name="size")
+                                        label.size-number__label(for="size5x1") 28w
                                     span.size-number
-                                        input#size02.size-select(type="radio" name="size")
-                                        label.size-number__label(for="size02") 30w
+                                        input#size5x2.size-select(type="radio" name="size")
+                                        label.size-number__label(for="size5x2") 30w
                                 .size.text-center   
                                     span.size-hd 6X
                                     span.size-range.d-flex
                                         .size-number
-                                            input#size01.size-select(type="radio" name="size")
-                                            label.size-number__label(for="size01") 28w
+                                            input#size6x1.size-select(type="radio" name="size")
+                                            label.size-number__label(for="size6x1") 28w
                                    
                             
                         #pills-profile.tab-pane.fade(role='tabpanel', aria-labelledby='pills-profile-tab')
+                            p.text-des
+                                | (For custom size and/or custom style, a single fee of $9.95 per garment will apply)
+                                a.learn-link(href="#" data-toggle='modal', data-target='.js-size-measure-modal-wrp') Measure
+                            .drop-wrp.d-flex.flex-wrap.pt-2
+                                .select-style
+                                    span.triangle-icon
+                                    select.txt-gry-12
+                                        option(disable) choose Size profile
+                                        option(value='saab') Saab
+                                        option(value='mercedes') Mercedes
+                                        option(value='audi') Audi
+                            
+                           
                             .row
-                                .col-md-10
-                                    p.txt-gry-12 (For custom size and/or custom style, a single fee of $9.95 per garment will apply)
-                                        a.learn-link.fnt-700(href="#")  Measure
-                            .row
-                                .col
-                                    
+                                .col-12
                                     .measures-drop-wrp.d-flex.flex-wrap.pt-4
                                         +dropdown("Shoulder")
                                         +dropdown("Chest ")
@@ -216,11 +251,11 @@ section.product-listing
                                         +dropdown("Hip")
                                         
                                         
-                                    p.txt-gry-12 Optional Measurements
+                                    p.text-des Optional Measurements
                                         img.pl-1(src="./assets/images/i.png", alt="")
-                                    p.fnt-xs.drk-gry.pt-2 From shoulder high point to 
-                                    .drop-wrp.d-flex.flex-wrap.pt-3
-                                        +dropdown("Waist ")
+                                    p.fnt-xs.drk-gry.mt-1 From shoulder high point to 
+                                    .drop-wrp.d-flex.flex-wrap.pt-2
+                                        +dropdown("Bus Point")
                                         +dropdown("Waist Point  ")
                                         +dropdown("Knee Point ")
                 .select-Height.d-flex.align-items-center

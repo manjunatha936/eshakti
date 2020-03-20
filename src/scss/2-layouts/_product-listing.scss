@@ -15,6 +15,7 @@
     }
    
     font-style: $opensans;
+    
     .share {
         cursor: pointer;
     }
@@ -23,21 +24,6 @@
     }
     .lt-gry {
         color: #83868a !important;
-    }
-    .learn-link {
-        @extend .txt-gry-12;
-        color: #0f0f0f;
-        font-weight: 700;
-        text-decoration: underline;
-        margin-left: 8px;
-    }
-    .prd-sub-txt {
-        text-transform: uppercase;
-        color: $title-black;
-        font-size: 13px;
-        font-weight: 700;
-        letter-spacing: 0.3px;
-        // text-transform: uppercase;
     }
     .nav-link {
         color: #2a2a2a;
@@ -119,13 +105,15 @@
     font-weight: 900;
     letter-spacing: 0.51px;
 }
-
+.model-wrp {
+    height: 708px;
+}
 .product-modal {
     padding-right: 0 !important;
-    .overflowScroll {
-        height: 720px;
-        overflow-y: auto;
-        overflow-x: hidden;
+    // .overflowScroll {
+    //     height: 720px;
+    //     overflow-y: auto;
+    //     overflow-x: hidden;
         // &::-webkit-scrollbar {
         //     display: none;
         //   }
@@ -134,7 +122,7 @@
         // & {
         // -ms-overflow-style: none;
         // }
-    }
+    // }
     .share-icon {
         width: 9px;
         height: 11px;
@@ -150,20 +138,39 @@
     }
    
     .style-contain {
+        white-space: nowrap;
+        // height: 50px;
     
-          
-    
-        @media screen and (max-width:767px ){
-            width: 100%;
+        
+        //     width: 100%;
+
             overflow-x: scroll;
-            display: flex;
+            display: block;
             
-            
+            &::-webkit-scrollbar {
+                display: none;
+            }
+          
+          /* Hide scrollbar for IE and Edge */
+            & {
+            -ms-overflow-style: none;
+            }
+        
+        // @include bp("tab") {
+        //     display: flex;
+        //     // flex-wrap: wrap;
+        //   }
+
+        //   & .product-wrapper {
+        //       display: flex;
+        //       width: 100%;
+        //       height: 100%;
+        //   }
+        .check-wrp {
+            display: block;
+            width: 100%;
+            height: 100%;
         }
-        @include bp("tab") {
-            display: flex;
-            // flex-wrap: wrap;
-          }
     }
     .txt-gry-12 {
         color: #969696;
@@ -212,6 +219,7 @@
         font-weight: 400;
         line-height: 1.2;
         text-align: center;
+        white-space: normal;
 
         &__inner-txt {
             font-size: 8px;
@@ -221,12 +229,18 @@
         }
     }
     .img-container {
+        vertical-align: top;
         width: 50px;
         cursor: pointer;
     }
     .modal-lg {
         .modal-content {
-            padding-top: 40px;
+            overflow: hidden;
+            @media screen and (min-width:1404px ){
+                padding-top: 40px;
+             
+                
+            }
             @media screen and (max-width:767px ){
                 padding-bottom: 20px;
                 
@@ -251,6 +265,10 @@
     }
     .style-model-content:not(:last-child){
         @include bp("tab") {
+            margin-bottom: 20px
+            
+          }
+        @include bp("desktop-lg") {
             margin-bottom: 55px;
             
           }
@@ -389,31 +407,6 @@
         padding: 8px;
         text-align: center;
     }
-    .close-card {
-        cursor: pointer;
-        width: 20px;
-        height: 20px;
-        top: 8px;
-        right: 8px;
-        
-        position: absolute;
-         & span {
-             position:inherit;
-             height: 11px;
-             width: 2px;
-             background-color: #585d61;
-             transform: rotate(-45deg);
-             &:first-child {
-                 transform: rotate(-45deg);
-                
-             }
-             &:last-child {
-                 transform: rotate(45deg);
-                
-             }
-         }
-
-    }
     .card-wrp {
         width: 200px;
     }
@@ -437,7 +430,7 @@
     }
 
     .modal-dialog {
-        height: 818px;
+        height: 90vh;
         overflow-y: scroll;
         &::-webkit-scrollbar {
             display: none;
@@ -489,7 +482,7 @@
         }
 
         &__opt {
-
+            position: relative;
             @include bp("desktop-1200") {
                 // max-width: calc(100% - 285px);
                 flex: none;
@@ -522,6 +515,7 @@
     }
 
     .close-modal {
+        z-index: 11;
         width: 32px;
         height: 32px;
         color:#a3abb0;
@@ -543,6 +537,37 @@
         left: calc(100% - 50px) !important;
     }
 }
+
+// closed button
+
+.close-card, .btn-close-sm {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    top: 8px;
+    right: 8px;
+    
+    position: absolute;
+     & span {
+         position:inherit;
+         height: 11px;
+         width: 2px;
+         background-color: #585d61;
+         transform: rotate(-45deg);
+         &:first-child {
+             transform: rotate(-45deg);
+            
+         }
+         &:last-child {
+             transform: rotate(45deg);
+            
+         }
+     }
+
+}
+
+
+
 .style-img {
     width: 100%;
     height: 100%;
@@ -616,7 +641,12 @@
         // }
         
     }
+    
     .gallery-top {
+        white-space: normal;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
         height: 460px;
         width: 100%;
         border: 1px solid #ebebeb;
@@ -626,6 +656,28 @@
             height: 620px;
         }
         // margin-bottom: 28px;
+    }
+    .gallery-wrp {
+        
+        width: 64%;
+        
+        @media screen and (min-width: 425px) {
+            width: 73%;
+        }
+        @media screen and (min-width: 768px) {
+            width: 64%;
+        }
+        @media screen and (min-width: 1336px) {
+            width: 72%;
+        }
+        & .swiper-slide {
+            padding: 30px;
+            text-align: center;
+            width: 100% !important;
+            & img {
+                height: 100%;
+            }
+        }
     }
     .gallery-thumbs {
         height: 20%;
@@ -693,13 +745,14 @@
 // Product info styling
 
 .style-guid {
+    display: table;
     z-index: 11;
     text-align: center;
     padding-top: 17px ;
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
+    // position: absolute;
+    // right: 0;
+    // top: 50%;
+    // transform: translateY(-50%);
     background-color: #f9f9f9;
     @include bp('desktop') {
         padding-top: 35px; 
@@ -820,6 +873,120 @@
         @media screen and (max-width : 992px){
             left: calc(100% - 38px);
 
+        }
+    }
+}
+.save-btn-foot {
+    position: relative;
+    .save-item-btns {
+        position: absolute;
+        top: 76px;
+        opacity: 0;
+        transition: ease-in-out .5s ;
+        transition-property: top,opacity;
+    }
+    .save-btn-transition {
+        top: 0;
+        opacity: 1;
+        transition:  ease-in-out .5s ;
+        transition-property: top,opacity;
+    }
+    .procced-save-style {
+        opacity: 1;
+        transform: translateY(0);
+        transition: ease-in-out .7s ;
+        transition-property:opacity, transform;
+    }
+    .procced-save-style-transiton {
+        opacity: 0;
+        transform: translateY(40px);
+        transition: ease-in-out .7s ;
+        transition-property:opacity, transform;
+    }
+}
+
+.size-modal {
+    .size-modal-dialog {
+        max-width: 745px !important;
+        height: 90%;
+        width: 87%;
+        background-color: #ffffff;
+        @media screen and (min-width:768px){
+            max-height: 369px;
+            
+        }
+        
+    }
+    .modal-content {
+        overflow-y: scroll;
+        height: 100%;
+        padding: 8px 8px 8px 8px;
+        box-shadow: 0 1px 7px rgba(0, 0, 0, 0.1);
+        border: none;
+        @media screen and (min-width:425px){
+            padding: 32px 65px 53px 48px;
+              
+        }
+        
+    }
+    .head-text {
+        font-style: $opensans !important;
+        // color: $title-black;
+        color: #000000;
+        font-size: 13px;
+        font-weight: 600;
+        margin-bottom: 22px;
+        @media screen and (min-width:768px ){
+            font-size: 18px;
+   
+        }
+    }
+    .img-wrp {
+        /* Style for "Mask" */
+        padding: 4px;
+        width: 240px;
+        height: 240px;
+        border: 1px solid #dadcde;
+        background-color: #ffffff;
+    }
+    h5 {
+        color: #2e333d;
+        font-family: $opensans !important;
+        font-size: 14px;
+        font-weight: 600;
+    }
+    .sub-text {
+        color: #2e333d;
+        font-size: 13px;
+        font-weight: 400;
+        letter-spacing: 0.3px;
+    }
+    .close-modal {
+        z-index: 11;
+        width: 32px;
+        height: 32px;
+        color:#a3abb0;
+        font-size: 20px;
+        line-height: 1;
+        border-radius: 50%;
+        padding: 0;
+        border: 1px solid #c2cfd4;
+        background-color: $white;
+        position: absolute;
+        left: calc(100% + 10px);
+        top: 3px;
+        cursor: pointer;
+        @media screen and (max-width:375px){
+            left: calc(100% + 1px);
+
+        }
+
+    }
+    .measure-dialog {
+        max-height: 501px !important;
+        .measure-card {
+            padding-top: 20px;
+            padding-bottom: 20px;
         }
     }
 }

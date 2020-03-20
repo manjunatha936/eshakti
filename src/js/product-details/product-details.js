@@ -54,10 +54,6 @@ class ProductDetais {
            $('.saved-styles__subImages').find('.dyanamic-img-data').eq($styleLen).addClass('active');
         })
 
-
-
-
-
       //2nd popup save styles
       $('.close-parent-modal').on('click', function() {
         var index = $(".slide-item").length;
@@ -69,9 +65,6 @@ class ProductDetais {
           }, 650);
   
       });
-
-
-
 
         //thumbs
         var galleryThumbs = new Swiper('.js-slider-img', {
@@ -95,9 +88,7 @@ class ProductDetais {
             }
           });
 
-
           //
-
           var galleryThumbs = new Swiper('.gallery-thumbs', {
             spaceBetween: 10,
             slidesPerView: 3.5,
@@ -115,11 +106,11 @@ class ProductDetais {
             grabCursor: true,
             breakpoints: {
              
-              768: {
+              360: {
                 slidesPerView: 2.5,
          
               },
-              1024: {
+              768: {
                 slidesPerView: 3.5,
              
               },
@@ -163,10 +154,7 @@ class ProductDetais {
 
               }
               cardTitle = neckText+","+sleeveText+","+lengthText;
-              
-         
-            
-            
+
             const ele = '<li class="slide-item swiper-slide"><div class="card-wrp"><div class="style-card"><img class="saved-img" src="'+imageSource+'" alt="style image" /><div class="close-card" slide-id="'+ index +'"><span></span><span></span></div></div><div class="d-flex pt-2 align-items-center  " ><p class="fnt-11 w-100 pr-2">'+cardTitle+'</p><i class="share-icon icon-share mr-2"  ></i></div></div></li>'
             // $('.slide-item-wrp').append(ele)
             // if($(".slide-item").length> 4){
@@ -193,78 +181,80 @@ class ProductDetais {
       
                 
                 swiperStyle.appendSlide(ele);
-        })
+            })
 
 
-        $(document).on('click','.close-card',function(){
-          var $parent = $(this).parents('.slide-item').remove();
-          let slideIndex = parseInt($(this).attr("slide-id"))
-          --slideIndex; 
-          // console.log(slideIndex)
-          // swiperStyle.removeSlide(slideIndex  );
-          
-          swiperStyle.update()
-          let length = $('.slide-item').length
-          let i=1;
-         $('.close-card').each(function(){
-           $(this).attr("slide-id",i++)
+            $(document).on('click','.close-card',function(){
+              var $parent = $(this).parents('.slide-item').remove();
+              let slideIndex = parseInt($(this).attr("slide-id"))
+              --slideIndex; 
+              // console.log(slideIndex)
+              // swiperStyle.removeSlide(slideIndex  );
+              
+              swiperStyle.update()
+              let length = $('.slide-item').length
+              let i=1;
+            $('.close-card').each(function(){
+              $(this).attr("slide-id",i++)
 
-         })
-     
-         
-        })
+            })
+        
+            
+            })
        
-        if(window.innerWidth > 767){
-          $(".style-model-content").removeClass("fade")
-          
-        }
-        else{
-          $(".style-model-content").addClass("fade")
-          
-        }
-        // on hover change img
-        $('.tab-img img').hover(function(){
-         let src = $(this).attr("src")
-        $(this).parent(".tab-img").siblings(".model-img-tab-container").css("background-image","url("+src+")")
+            if(window.innerWidth > 767){
+              $(".style-model-content").removeClass("fade")
+              
+            }
+            else{
+              $(".style-model-content").addClass("fade")
+              
+            }
+            // on hover change img
+            $('.tab-img img').hover(function(){
+            let src = $(this).attr("src")
+            $(this).parent(".tab-img").siblings(".model-img-tab-container").css("background-image","url("+src+")")
+            })
+    
+            $('.model-img-tab-container').on('mousemove', function(e) {
+              console.log(e.offsetY)
+              var zoomer = e.currentTarget;
+              // e.offsetX ? offsetX = e.offsetX : offsetX = e.touches[0].pageX
+              e.offsetY ? e.offsetY = e.offsetY : e.offsetX = e.touches[0].pageX
+              // x = offsetX/zoomer.offsetWidth*100
+              let y = e.offsetY/zoomer.offsetHeight*100
+              
+              $(this).css({ 
+                      'background-position-x' : 100 + '%',
+                      'background-position-y' : y + '%' ,  
+                  })
+            });
+
+            $(".size-lbl").click(function(){
+              $(".size-number").removeClass("size-active")
+              if($(this).siblings("input").is(":checked")){
+                $(this).parent(".size-number").addClass("size-active")
+              }
+            })
         })
- 
-        $('.model-img-tab-container').on('mousemove', function(e) {
-          console.log(e.offsetY)
-          var zoomer = e.currentTarget;
-          // e.offsetX ? offsetX = e.offsetX : offsetX = e.touches[0].pageX
-          e.offsetY ? e.offsetY = e.offsetY : e.offsetX = e.touches[0].pageX
-          // x = offsetX/zoomer.offsetWidth*100
-          let y = e.offsetY/zoomer.offsetHeight*100
-          
-          $(this).css({ 
-                  'background-position-x' : 100 + '%',
-                  'background-position-y' : y + '%' ,  
-              })
-        });
 
-        $(".size-lbl").click(function(){
-          $(".size-number").removeClass("size-active")
-          if($(this).siblings("input").is(":checked")){
-            $(this).parent(".size-number").addClass("size-active")
-          }
+        $(".js-size-model").click(function(){
+          $(".js-size-modal-wrp").modal("show")
         })
-     })
-
-
     //Save style popup
 
 
     //Save style model
- var CreateMoreStyles = document.querySelector('.create-more-styles')
- CreateMoreStyles.addEventListener("click", function (event) {
-  setTimeout(function(){ 
-    $('.bd-example-modal-lg').modal('show');
-    }, 650);
-  });
+        var CreateMoreStyles = document.querySelector('.create-more-styles')
+        CreateMoreStyles.addEventListener("click", function (event) {
+          setTimeout(function(){ 
+            $('.bd-example-modal-lg').modal('show');
+            }, 650);
+          });
 
-
-
-
+        $(".js-size-model").click(function(){
+          $(".js-size-modal-wrp").modal("show")
+        })
     }
 }
 

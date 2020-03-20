@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+html(lang="en")
+
+  head
+    include ./base/head.pug
+    +head("Accounts-whishlist")
+
+  body
+    //START: HEADER
+    include ./base/discount-bar.pug
+    include ./base/header.pug
+    +header()
+
+    //START: MAIN
+    main.maintp9
+        //START: WISHLIST-MAIN
+        include ./layouts/accounts-whislist/main.pug
+
+    include ./base/footer.pug
