@@ -2,7 +2,8 @@
 import Swiper from 'swiper';
 // import $ from 'jquery'
 
-var wishlistSlider = new Swiper('.js-wishlist-slider', {
+var swiper = new Swiper('.js-wishlist-slider', {
+    init: false,
     slidesPerView: 4,
     spaceBetween: 0,
     observer: true,
@@ -13,4 +14,3 @@ var wishlistSlider = new Swiper('.js-wishlist-slider', {
         prevEl: '.right-arrow',
     }
 });
-console.log(wishlistSlider);
