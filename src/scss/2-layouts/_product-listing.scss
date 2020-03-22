@@ -843,6 +843,7 @@
 
 .img-modal-lg {
     .close-modal {
+        cursor: pointer;
         z-index: 11;
         width: 32px;
         height: 32px;
@@ -980,4 +981,10 @@
     color: $title-black;
     font-size: 11px;
     font-weight: 400;
+}
+.product-custome-content {
+    height: 100%;
+}
+.js-size-model {
+    cursor: pointer;
 }
