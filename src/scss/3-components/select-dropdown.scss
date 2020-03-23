@@ -89,7 +89,7 @@
 	color: #2a2a2a;
 	background-color: #fcfcfc;
 	padding: 6px 35px 6px 10px;
-	line-height: 1.5;
+	line-height: 1.7;
 	display: inline-block;
 	width: 100%;
 	font-size: 12px;
@@ -111,4 +111,18 @@
 	width: 100vw;
 	height: 100vh;
 	z-index: 100;
+}
+
+//selection labels styling
+
+.selection-label {
+	@extend .fnt-xs;
+	font-weight: 600;
+	color: $selection-label;
+}
+
+.drop-title .icon-info {
+	position: relative;
+	top: 2px;
+	cursor: pointer;
 }

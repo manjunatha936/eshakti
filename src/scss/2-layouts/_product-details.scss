@@ -8,6 +8,11 @@
     color: $title-black;
 }
 
+.text-des-s {
+    @extend .fnt-xxxs;
+    color: $selection-label;
+}
+
 // Product content
 
 .dress-details {
@@ -49,23 +54,6 @@
         font-weight: 700;
         @extend .fnt-xlg;
         letter-spacing: $letter-spacing04;
-    }
-}
-
-.patch-styled {
-    position: absolute;
-    z-index: 7;
-    top: 15px;
-    left: 30px;
-    border-radius: 12px;
-    background: rgba(46, 51, 61, .067);
-    padding: 3px 16px;
-    display: inline-flex;
-    &__text {
-        font-size: 10px;
-        font-weight: 600;
-        line-height: 20px;
-        color: rgba($color: $title-black, $alpha: .67);
     }
 }
 
@@ -198,6 +186,14 @@
     padding: 0;
     background-color: #fcfcfc;
     margin-right: 21px;
+    &--height {
+        .select_wrap ul {
+            min-width: 90px !important;
+            &.open {
+                min-width: 90px !important;
+            }
+        }
+    }
 }
 
 .select-style select {
@@ -210,15 +206,19 @@
     -webkit-appearance: none;
        -moz-appearance: none;
             appearance: none;
+
 }
 
 .select-style select:focus {
     outline: none;
 }
 
+
+
 .select-label {
     font-weight: 700;
     text-transform: uppercase;
+    letter-spacing: $letter-spacing03;
 }
 
 // colors
