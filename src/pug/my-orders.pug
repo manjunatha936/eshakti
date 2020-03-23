@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+html(lang="en")
+
+  head
+    include ./base/head.pug
+    +head("Order placed")
+
+  body
+    include ./base/discount-bar.pug
+    include ./base/header.pug
+    +header("repeat","white")
+
+    main
+      include ./layouts/accounts/my-orders-main.pug
+
+    include ./base/footer.pug

@@ -11,13 +11,31 @@
         .tab-content
           #pay-card.tab-pane.fade.show.active(role='tabpanel')
             form.payment-form
-              input.payment-form__number(required="required" data-parsley-creditcard="" type="tel")
-              input.payment-form__expiry(required="required" data-parsley-cvv="" type="tel")
-              input.payment-form__cvv(required="required" data-parsley-expirydate="" type="tel")
+              .d-flex
+                .form-group
+                  label Card Number*
+                  input.payment-form__number(required="required" data-parsley-creditcard="" type="tel" data-parsley-error-message="Please enter a valid card number")
+                .form-group
+                  label MM/YY*
+                  input.payment-form__expiry(required="required" data-parsley-expirydate="" type="tel" data-parsley-error-message="Invalid date")
+                .form-group
+                  label CVV*
+                  input.payment-form__cvv(required="required" data-parsley-cvv="" type="password" maxlength="3" data-parsley-error-message="Invalid CVV")
 
-              input(type="submit")
+              .form-group.w-100
+                input(type="checkbox" name="save-check" id="save-check")
+                label(for="save-check") Save these details for future purchases
+
+              button.payment-subbtn.checkout-btn(type="submit") Confirm Payment - 
+                span $173.74
               
-          #pay-pal.tab-pane.fade(role='tabpanel') bbb
+          #pay-pal.tab-pane.fade(role='tabpanel')
+            p By clicking on Confirm payment you will be redirected to the payment gateway, where you will be asked to enter your payment details.
+            .form-group.w-100.mb-0
+              input(type="checkbox" name="save-check" id="save-check")
+              label(for="save-check") Remember your PayPal details for future purchases.
+            a.paypal-btn(href="#")
+              img(src="../assets/images/cart/paypal-btn.png", alt="")
 
 
         

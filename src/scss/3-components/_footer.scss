@@ -15,15 +15,6 @@ $circle-clr : #f5f5f5;
 .main-footer {
     padding: 1.8rem 0;
     position: relative;
-    
-    &::before {
-        content: "";
-        position: absolute;
-        width: calc(100% - 30px);
-        left: 15px;
-        border-top: 1px solid #393939;
-        top: 1px;
-    }
 
     @include bpmax("phone-lg") {
         text-align: center;

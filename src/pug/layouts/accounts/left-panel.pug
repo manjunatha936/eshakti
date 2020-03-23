@@ -1,0 +1,28 @@
+mixin leftpanel(value)
+    .accounts-contain__left
+        h2 My Account
+        ul
+            li
+                a(href="#" class=(value === "profile" ? 'active' : ''))
+                    i.icon-account
+                    | Profile
+            li
+                a(href="#" class=(value === "orders" ? 'active' : ''))
+                    i.icon-myorders
+                    | My Orders
+            li
+                a(href="#" class=(value === "address" ? 'active' : ''))
+                    i.icon-address
+                    | Manage Address
+            li
+                a(href="#" class=(value === "coupons" ? 'active' : ''))
+                    i.icon-coupon
+                    | Gift Coupons & Cards
+            li
+                a(href="#" class=(value === "privilege" ? 'active' : ''))
+                    i.icon-privilege
+                    | Privilege Club
+            li
+                a(href="#" class=(value === "size" ? 'active' : ''))
+                    i.icon-sizechart
+                    | Size Profile
