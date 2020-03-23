@@ -37,8 +37,8 @@
 }
 
 .img50x50 {
-    height: 50px;
-    width: 50px;
+    height: 42px;
+    width: 42px;
     object-fit: contain;
     @include bp("tab") {
         height: 45px;

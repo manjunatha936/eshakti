@@ -83,8 +83,61 @@ $(document).ready(function(){
         $('.form-address').parsley().validate();  
     });
 
-    $(".payment-form input[type='submit']").on('click', function () {
+    $(".payment-form .payment-subbtn").on('click', function () {
         $(this).parents('form').parsley().validate();  
     });
 
+    $(".payment-form__number").on("keydown", function(e) {
+        var cursor = this.selectionStart;
+        if (this.selectionEnd != cursor) return;
+        if (e.which == 46) {
+            if (this.value[cursor] == "-") this.selectionStart++;
+        } else if (e.which == 8) {
+            if (cursor && this.value[cursor - 1] == "-") this.selectionEnd--;
+        }
+    }).on("input", function() {
+        var value = this.value;
+        var cursor = this.selectionStart;
+        var matches = value.substring(0, cursor).match(/[^0-9]/g);
+        if (matches) cursor -= matches.length;
+        value = value.replace(/[^0-9]/g, "").substring(0, 16);
+        var formatted = "";
+        for (var i=0, n=value.length; i<n; i++) {
+            if (i && i % 4 == 0) {
+                if (formatted.length <= cursor) cursor=cursor+3;
+                formatted += " - ";
+            }
+            formatted += value[i];
+        }
+        if (formatted == this.value) return;
+        this.value = formatted;
+        this.selectionEnd = cursor;
+    });
+
+    $(".payment-form__expiry").on("keydown", function(e) {
+        var cursor = this.selectionStart;
+        if (this.selectionEnd != cursor) return;
+        if (e.which == 46) {
+            if (this.value[cursor] == "/") this.selectionStart++;
+        } else if (e.which == 8) {
+            if (cursor && this.value[cursor - 1] == "/") this.selectionEnd--;
+        }
+    }).on("input", function() {
+        var value = this.value;
+        var cursor = this.selectionStart;
+        var matches = value.substring(0, cursor).match(/[^0-9]/g);
+        if (matches) cursor -= matches.length;
+        value = value.replace(/[^0-9]/g, "").substring(0, 4);
+        var formatted = "";
+        for (var i=0, n=value.length; i<n; i++) {
+            if (i && i % 2 == 0) {
+                if (formatted.length <= cursor) cursor++;
+                formatted += "/";
+            }
+            formatted += value[i];
+        }
+        if (formatted == this.value) return;
+        this.value = formatted;
+        this.selectionEnd = cursor;
+    });
 });

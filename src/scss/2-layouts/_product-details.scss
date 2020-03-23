@@ -68,6 +68,15 @@
 
 // Product-sizes info
 
+.measures-drop-wrp {
+    @include bpmax("phone-lg") {
+        white-space: nowrap;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        padding-bottom: 1rem;
+    }
+}
+
 .pdp-size-container {
     padding: {
         top: .8rem;
@@ -76,15 +85,9 @@
 }
 
 .prd-size {
-    display: flex;
-    flex-direction: column;
-    @media screen and (min-width:425px) {
-        flex-direction: row;
-        
+    @include bp("desktop-1200") {
+        display: flex;
     }
-    // @include bp("desktop-1200") {
-    //     display: flex;
-    // }
 }
 
 .size {

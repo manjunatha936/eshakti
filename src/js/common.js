@@ -7,6 +7,19 @@ import "bootstrap/js/src/dropdown";
 import "bootstrap/js/src/tab";
 import "bootstrap/js/src/modal"
 
+import "../pug/index.pug";
+import "../pug/repeat-customer.pug";
+// import "../pug/about.pug";
+import "../pug/contact.pug";
+import "../pug/product-details.pug";
+// import "../pug/product-listing.pug";
+import "../pug/productlisting.pug";
+import "../pug/cart.pug";
+import "../pug/checkout.pug";
+import "../pug/order-placed.pug";
+import "../pug/account-wishlist.pug";
+import "../pug/my-orders.pug";
+
 // import "../pug/index.pug";
 // import "../pug/repeat-customer.pug";
 // // import "../pug/about.pug";

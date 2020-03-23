@@ -570,12 +570,7 @@
     // padding: 10px 0;
     height: 190px !important;
 }
-// .measures-drop-wrp {
-//     overflow-x: scroll;
-//     @include bp('desktop'){
-//         overflow: hidden;
-//     }
-// }
+
 .swiper-pagination-bullets {
     position: absolute;
     bottom: -40px !important;
@@ -720,6 +715,11 @@
     // top: 50%;
     // transform: translateY(-50%);
     background-color: #f9f9f9;
+    @include bpmax('tab-sm') {
+        height: 100%;
+        overflow-y: scroll;
+        padding-bottom: 1rem;
+    }
     @include bp('desktop') {
         padding-top: 3rem; 
 
@@ -735,10 +735,12 @@
 }
 
 .img-card-wrp {
-    margin-bottom: 27px;
+    margin-bottom: 15px;
+    @include bp('tab-') {
+        margin-bottom: 40px;
+    }
     @include bp('desktop') {
         margin-bottom: 40px;
-
     }
 }
 .custom-stye-br {
