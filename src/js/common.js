@@ -18,6 +18,8 @@ import "../pug/cart.pug";
 import "../pug/checkout.pug";
 import "../pug/order-placed.pug";
 import "../pug/account-wishlist.pug";
+import "../pug/my-orders.pug";
+
 
 import HeaderInteractions from "./components/header";
 const headerfns = new HeaderInteractions();

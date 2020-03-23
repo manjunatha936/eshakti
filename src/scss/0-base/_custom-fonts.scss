@@ -117,13 +117,18 @@
 }
 .icon-myorders::before {
     content: "\e913";
+    font-size: 75%;
+    line-height: 150%;
 }
 .icon-coupon::before {
     content: "\e914";
+    font-size: 90%;
+    line-height: 120%;
 }
 .icon-sizechart::before {
     content: "\e917";
 }
 .icon-address::before {
     content: "\e918";
+    font-size: 130%;
 }
