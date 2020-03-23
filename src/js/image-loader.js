@@ -16,11 +16,13 @@ class lazyLoader {
         }
 
         var viewList = document.querySelector('.grid-view-btn');
-        viewList.addEventListener('click', function() {
-            setTimeout(function(){ 
-            loadImage();
-            }, 500);
-        });
+        window.onload=function(){
+            viewList.addEventListener('click', () => {
+                setTimeout(function(){ 
+                loadImage();
+                }, 500);
+            });
+        };
 
         function loadImage() {
             var loadingcard = document.getElementsByClassName("js-loading-card");

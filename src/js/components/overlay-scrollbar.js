@@ -20,6 +20,9 @@ class OverlayScrollbar {
       let productScroll = OverlayScrollbars(document.querySelector(".model-wrp"), { overflowBehavior : {
           x : "never",
         },});
+      let custompopupScroll = OverlayScrollbars(document.querySelector(".js-custom-scroll"), { overflowBehavior : {
+          x : "never",
+        },});
       let measureScroll = OverlayScrollbars(document.querySelector(".js-measure-content"), { overflowBehavior : {
           x : "never",
         },});

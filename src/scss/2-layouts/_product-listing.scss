@@ -54,14 +54,6 @@
         }
        
     }
-    .select-style {
-        margin-top: 11px;
-        position: relative;
-        padding: 0;
-        background-color: #fcfcfc;
-        margin-right: 21px;
-    }
-    
     .select-style select {
         cursor: pointer;
         padding: 5px 8px;
@@ -103,22 +95,15 @@
 }
 .model-wrp {
     height: 708px;
+   
 }
 .product-modal {
     padding-right: 0 !important;
-    // .overflowScroll {
-    //     height: 720px;
-    //     overflow-y: auto;
-    //     overflow-x: hidden;
-        // &::-webkit-scrollbar {
-        //     display: none;
-        //   }
-          
-        //   /* Hide scrollbar for IE and Edge */
-        // & {
-        // -ms-overflow-style: none;
-        // }
-    // }
+    
+    .modal-dialog {
+        box-shadow: 0 1px 7px rgba(0, 0, 0, 0.1);
+        background-color: #ffffff;
+    }
     .share-icon {
         width: 9px;
         height: 11px;
@@ -152,16 +137,7 @@
             -ms-overflow-style: none;
             }
         
-        // @include bp("tab") {
-        //     display: flex;
-        //     // flex-wrap: wrap;
-        //   }
-
-        //   & .product-wrapper {
-        //       display: flex;
-        //       width: 100%;
-        //       height: 100%;
-        //   }
+      
         .check-wrp {
             display: block;
             width: 100%;
@@ -175,12 +151,7 @@
         font-weight: 400;
 
     }
-    // .border-bttom-o {
-    //     @media screen and (max-width:767px ){
-    //          border-bottom: none !important;
-    //          background-color: #ffffff;
-    //     }
-    // }
+   
    #myTab {
     .active {
         border-bottom: 1px solid #ffffff !important;
@@ -231,6 +202,8 @@
     }
     .modal-lg {
         .modal-content {
+            box-shadow: 0 1px 7px rgba(0, 0, 0, 0.1);
+            background-color: #ffffff;
             overflow: hidden;
             @media screen and (min-width:1404px ){
                 padding-top: 40px;
@@ -413,11 +386,7 @@
         object-position: center;
         display: inline-block;
     }
-    .fnt-11 {
-        color: $title-black;
-        font-size: 11px;
-        font-weight: 400;
-    }
+    
     
     .modal-content {
         box-shadow: 0 1px 7px rgba(0, 0, 0, 0.1);
@@ -667,6 +636,7 @@
             width: 72%;
         }
         & .swiper-slide {
+            cursor: pointer;
             padding: 30px;
             text-align: center;
             width: 100% !important;
@@ -741,18 +711,23 @@
 // Product info styling
 
 .style-guid {
-    display: table;
+    // display: table;
     z-index: 11;
     text-align: center;
-    padding-top: 17px ;
+    padding-top: 1.2rem;
     // position: absolute;
     // right: 0;
     // top: 50%;
     // transform: translateY(-50%);
     background-color: #f9f9f9;
     @include bp('desktop') {
-        padding-top: 35px; 
+        padding-top: 3rem; 
 
+    }
+    &__des{
+        @extend .fnt-xxxs;
+        color: $title-black;
+        font-weight: 600;
     }
     .neck-type {
         line-height: inherit !important;
@@ -835,6 +810,7 @@
         top: 0;
         position: absolute;
         & img {
+            cursor: pointer;
             width: 75px;
             height: 100px;
             object-fit: contain;
@@ -852,6 +828,7 @@
 
 .img-modal-lg {
     .close-modal {
+        cursor: pointer;
         z-index: 11;
         width: 32px;
         height: 32px;
@@ -914,9 +891,8 @@
         
     }
     .modal-content {
-        overflow-y: scroll;
-        height: 100%;
-        padding: 8px 8px 8px 8px;
+        // height: 100%;
+        padding: 10px 10px 16px 10px;
         box-shadow: 0 1px 7px rgba(0, 0, 0, 0.1);
         border: none;
         @media screen and (min-width:425px){
@@ -940,7 +916,7 @@
     .img-wrp {
         /* Style for "Mask" */
         padding: 4px;
-        width: 240px;
+        min-width: 240px;
         height: 240px;
         border: 1px solid #dadcde;
         background-color: #ffffff;
@@ -985,4 +961,15 @@
             padding-bottom: 20px;
         }
     }
+}
+.fnt-11 {
+    color: $title-black;
+    font-size: 11px;
+    font-weight: 400;
+}
+.product-custome-content {
+    height: 100%;
+}
+.js-size-model {
+    cursor: pointer;
 }

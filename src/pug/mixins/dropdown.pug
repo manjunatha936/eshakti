@@ -1,8 +1,9 @@
 mixin dropdown(text)
-    .drop-container.mb-3.mb-md-4
-            .drop-title
-                span.prd-sub-txt.text-capitalize.fnt-600=text
-                img.pl-1(src="./assets/images/i.png", alt="")
+    .drop-container.mb-2.mb-md-3
+        .drop-title
+            span.selection-label=text
+            i.js-size-model.icon-info.pl-1
+              
             .select-style
                 //- span.triangle-icon
                 select.txt-gry-12.select_box
