@@ -88,3 +88,6 @@ $(document).ready(function(){
     });
 
 });
+
+import OverlayScrollbar from './components/overlay-scrollbar';
+const addressScrollbar = new OverlayScrollbar()
