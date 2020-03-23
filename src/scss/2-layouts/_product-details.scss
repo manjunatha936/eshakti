@@ -88,7 +88,6 @@
     @include bp("desktop-1200") {
         display: flex;
     }
-<<<<<<< HEAD
     @media screen and (min-width:1024px) {
         flex-direction: column;
         
@@ -98,8 +97,6 @@
         
     }
     
-=======
->>>>>>> 2ee7c5ebb72bc819c14fb52501adc41150b7d06e
 }
 
 .size {
