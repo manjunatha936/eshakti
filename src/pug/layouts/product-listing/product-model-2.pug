@@ -1,8 +1,10 @@
+
+//MODEL 2 
 .product-modal.modal.fade.bd-example-modal-lg(tabindex='-1' role='dialog' aria-labelledby='myLargeModalLabel' aria-hidden='true')
   .modal-dialog.modal-lg
-    .modal-content.pt-5
+    .modal-content.pt-5.product-custome-content
         button.close-modal(data-dismiss="modal") &times;
-        .model-wrp
+        .model-wrp.js-custom-scroll.h-100
             .container.p-0
                 .row.model-head.text-center.justify-content-center.m-0
                     .custom-modal-heading
@@ -10,7 +12,7 @@
                         p.prd-sub-txt.px-5 You can customize the garment to your style or shop the style 'as shown'.
                 .overflowScroll
                     .row.custom-modal-head
-                        .col-lg-5.d-flex.justify-content-center.custom-modal-head__img.order-2.order-md-1
+                        .col-lg-5.d-flex.flex-column.justify-content-center.custom-modal-head__img.order-2.order-md-1
                             .model-img
                                 .left-arm
                                     img.img.img-fluid(src="./assets/images/product-listing/parts/left-sleeve.png", alt="")
@@ -23,6 +25,8 @@
                             a(href="#").share-style
                                 i.icon-share
                                 span.txt-gry-12 Share
+                            p.fnt-11.text-center.pb-2 As Shown - Mandarin collar, Elbow length, Mini 
+                            
                         .col-lg-7.custom-modal-head__opt.order-1.order-md-2
                             ul#myTab.nav.d-flex.d-md-none(role='tablist')
                                 li.nav-item.mt-2
@@ -35,28 +39,28 @@
                                 #neck.tab-pane.fade.show.active.style-model-content.neckline
                                     .style-head.pb-md-3.d-none.d-md-block Neckline
                                     .style-contain
-                                        label(for="check10" ).img-container.mr-4
-                                            input#check10.d-none.style-check(type="radio" name="neckline" data-src="./assets/images/women.png" checked)
+                                        label(for="check1" ).img-container.mr-4
+                                            input#check1.d-none.style-check(type="radio" name="neckline" data-src="./assets/images/women.png" checked)
                                             .img-wrp.d-flex.justify-content-center.align-item-center
                                                 span.style-img.text-center.pt-3.m-auto.img-txt__inner-txt Default
                                             p.img-txt.pt-2 As shown collar style
-                                        label(for="check20" ).img-container.mr-4
-                                            input#check20.d-none.style-check(type="radio" name="neckline" data-src="./assets/images/women.png") 
+                                        label(for="check2" ).img-container.mr-4
+                                            input#check2.d-none.style-check(type="radio" name="neckline" data-src="./assets/images/women.png") 
                                             .img-wrp
                                                 img.style-img(src="./assets/images/style-img.png", alt="")
                                             p.img-txt.pt-2 Petre Pan
-                                        label(for="check30").img-container.mr-4
-                                            input#check30.d-none.style-check(type="radio" name="neckline" data-src="./assets/images/women.png") 
+                                        label(for="check3").img-container.mr-4
+                                            input#check3.d-none.style-check(type="radio" name="neckline" data-src="./assets/images/women.png") 
                                             .img-wrp
                                                 img.style-img(src="./assets/images/style-img.png", alt="")
                                             p.img-txt.pt-2 Mandarin Collar
-                                        label(for="check40").img-container.mr-4
-                                            input#check40.d-none.style-check(type="radio" name="neckline" data-src="./assets/images/women.png") 
+                                        label(for="check4").img-container.mr-4
+                                            input#check4.d-none.style-check(type="radio" name="neckline" data-src="./assets/images/women.png") 
                                             .img-wrp
                                                 img.style-img(src="./assets/images/style-img.png", alt="")
                                             p.img-txt.pt-2 Round Collar
-                                        label(for="check50").img-container.mr-4
-                                            input#check50.d-none.style-check(type="radio" name="neckline" data-src="./assets/images/women.png") 
+                                        label(for="check5").img-container.mr-4
+                                            input#check5.d-none.style-check(type="radio" name="neckline" data-src="./assets/images/women.png") 
                                             .img-wrp
                                                 img.style-img(src="./assets/images/style-img.png", alt="")
                                             p.img-txt.pt-2 Petre Pan
@@ -64,34 +68,34 @@
                                 #sleeve.tab-pane.fade.style-model-content.sleeve
                                     .style-head.pb-md-3.d-none.d-md-block Sleeve Type
                                     .style-contain 
-                                        label(for="check60").img-container.mr-4
-                                            input#check60.d-none.style-check(type="radio" name="sleeveType" data-src="./assets/images/women.png" checked)
+                                        label(for="check6").img-container.mr-4
+                                            input#check6.d-none.style-check(type="radio" name="sleeveType" data-src="./assets/images/women.png" checked)
                                             .img-wrp.d-flex.justify-content-center.align-item-center
                                                 span.style-img.text-center.pt-3.m-auto.img-txt__inner-txt Default
                                             p.img-txt.pt-2 As shown  collar style
-                                        label(for="check70").img-container.mr-4
-                                            input#check70.d-none.style-check(type="radio" name="sleeveType" data-src="./assets/images/women.png") 
+                                        label(for="check7").img-container.mr-4
+                                            input#check7.d-none.style-check(type="radio" name="sleeveType" data-src="./assets/images/women.png") 
                                             .img-wrp
                                                 img.style-img(src="./assets/images/style-img.png", alt="")
                                             p.img-txt.pt-2 Sleeveless
                                         
-                                        label(for="check80").img-container.mr-4
-                                            input#check80.d-none.style-check(type="radio" name="sleeveType" data-src="./assets/images/women.png") 
+                                        label(for="check8").img-container.mr-4
+                                            input#check8.d-none.style-check(type="radio" name="sleeveType" data-src="./assets/images/women.png") 
                                             .img-wrp
                                                 img.style-img(src="./assets/images/style-img.png", alt="")
                                             p.img-txt.pt-2 Elbow Length
-                                        label(for="check90").img-container.mr-4
-                                            input#check90.d-none.style-check(type="radio" name="sleeveType" data-src="./assets/images/women.png") 
+                                        label(for="check9").img-container.mr-4
+                                            input#check9.d-none.style-check(type="radio" name="sleeveType" data-src="./assets/images/women.png") 
                                             .img-wrp
                                                 img.style-img(src="./assets/images/style-img.png", alt="")
                                             p.img-txt.pt-2 Bracelet Length
-                                        label(for="check100").img-container.mr-4
-                                            input#check100.d-none.style-check(type="radio" name="sleeveType" data-src="./assets/images/women.png") 
+                                        label(for="check10").img-container.mr-4
+                                            input#check10.d-none.style-check(type="radio" name="sleeveType" data-src="./assets/images/women.png") 
                                             .img-wrp
                                                 img.style-img(src="./assets/images/style-img.png", alt="")
                                             p.img-txt.pt-2 Sleeveless
-                                        label(for="check101").img-container.mr-4
-                                            input#check101.d-none.style-check(type="radio" name="sleeveType" data-src="./assets/images/women.png") 
+                                        label(for="check11").img-container.mr-4
+                                            input#check11.d-none.style-check(type="radio" name="sleeveType" data-src="./assets/images/women.png") 
                                             .img-wrp
                                                 img.style-img(src="./assets/images/style-img.png", alt="")
                                             p.img-txt.pt-2 Elbow Length
@@ -99,33 +103,37 @@
                                 #length.tab-pane.fade.style-model-content.length
                                     .style-head.pb-md-3.d-none.d-md-block Length
                                     .style-contain 
-                                        label(for="check102").img-container.mr-4
-                                            input#check102.d-none.style-check(type="radio" name="length" data-src="./assets/images/women.png" checked)
+                                        label(for="check12").img-container.mr-4
+                                            input#check12.d-none.style-check(type="radio" name="length" data-src="./assets/images/women.png" checked)
                                             .img-wrp.d-flex.justify-content-center.align-item-center
                                                 span.style-img.text-center.pt-3.m-auto.img-txt__inner-txt Default
                                             p.img-txt.pt-2 As shown collar style
-                                        label(for="check103").img-container.mr-4
-                                            input#check103.d-none.style-check(type="radio" name="length" data-src="./assets/images/women.png") 
+                                        label(for="check13").img-container.mr-4
+                                            input#check13.d-none.style-check(type="radio" name="length" data-src="./assets/images/women.png") 
                                             .img-wrp
                                                 img.style-img(src="./assets/images/style-img.png", alt="")
                                             p.img-txt.pt-2 Mini
-                                        label(for="check104").img-container.mr-4
-                                            input#check104.d-none.style-check(type="radio" name="length" data-src="./assets/images/women.png") 
+                                        label(for="check14").img-container.mr-4
+                                            input#check14.d-none.style-check(type="radio" name="length" data-src="./assets/images/women.png") 
                                             .img-wrp
                                                 img.style-img(src="./assets/images/style-img.png", alt="")
                                             p.img-txt.pt-2 Knee Length
-                                        label(for="check105").img-container.mr-4
-                                            input#check105.d-none.style-check(type="radio" name="length" data-src="./assets/images/women.png") 
+                                        label(for="check15").img-container.mr-4
+                                            input#check15.d-none.style-check(type="radio" name="length" data-src="./assets/images/women.png") 
                                             .img-wrp
                                                 img.style-img(src="./assets/images/style-img.png", alt="")
                                             p.img-txt.pt-2 Below Knee Length
-                                        label(for="check106").img-container.mr-4
-                                            input#check106.d-none.style-check(type="radio" name="length" data-src="./assets/images/women.png") 
+                                        label(for="check16").img-container.mr-4
+                                            input#check16.d-none.style-check(type="radio" name="length" data-src="./assets/images/women.png") 
                                             .img-wrp
                                                 img.style-img(src="./assets/images/style-img.png", alt="")
                                             p.img-txt.pt-2 Mini
                             ul.mt-2.w-100.saved-styles__subImages.d-flex.flex-wrap.justify-content-center.jsustify-content-md-around                 
-                 
+                         
+        //- .row.custom-modal-foot
+        //-     .col.d-flex.justify-content-center.justify-content-md-end
+        //-         a.bttn.bttn__orange.mr-3(type="button", data-dismiss="modal") Proceed with the style
+        //-         button.js-btn-save.bttn.bttn__white.ml-1.mr-md-3.mr-xl-0(type="button") Save Style
         .row.custom-modal-foot.save-btn-foot
             .col.d-flex.justify-content-center.justify-content-md-end.position-relative
                 
@@ -133,4 +141,3 @@
                 .save-item-btns
                     button.mb-3.mb-md-0.mr-md-3.create-more-styles.bttn(type="button") + Create more style
                     button.bttn.bttn__orange.ml-1.mr-md-3.mr-xl-0(type="button") Proceed with the style
-                

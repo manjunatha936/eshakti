@@ -82,9 +82,15 @@
         flex-direction: row;
         
     }
-    // @include bp("desktop-1200") {
-    //     display: flex;
-    // }
+    @media screen and (min-width:1024px) {
+        flex-direction: column;
+        
+    }
+    @media screen and (min-width:1336px) {
+        flex-direction: row;
+        
+    }
+    
 }
 
 .size {

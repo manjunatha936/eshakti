@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+html(lang="en")
+
+  head
+    include ./base/head.pug
+    +head("Manage-Address")
+
+  body
+    //START: HEADER
+    include ./base/discount-bar.pug
+    include ./base/header.pug
+    +header()
+
+    //START: MAIN
+    main.maintp9
+        //START: WISHLIST-MAIN
+        include ./layouts/manage-address.pug/main.pug
+
+    include ./base/footer.pug

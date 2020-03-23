@@ -9,7 +9,7 @@ class OverlayScrollbar {
   }
 
   init() {
-      let overscroll = OverlayScrollbars(document.querySelectorAll(this.wrapper), {  
+      let overscroll = OverlayScrollbars(document.querySelectorAll(".style-contain"), {  
                 scrollbars : {
                     clickScrolling : true
                 },
@@ -45,6 +45,9 @@ class OverlayScrollbar {
         // overscroll.update();
         productScroll.update();
         // do something...
+      })
+      $('.js-save-style-item').on('click', function() {
+        custompopupScroll.update();
       })
   }
 }
