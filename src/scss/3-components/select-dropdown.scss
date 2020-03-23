@@ -41,7 +41,8 @@
 	-o-transition: all 0.2s ease-in-out;
 	-ms-transition: all 0.2s ease-in-out;
 	transition: all 0.2s ease-in-out;
-	min-width: 120px;
+	// min-width: 120px;
+	min-width: 90px;
 	background: $white;
 	left: -1px;
 	border-radius: 0;
