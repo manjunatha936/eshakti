@@ -60,10 +60,10 @@ section.product-listing
                 .swiper-pagination-bullets.d-md-none
                     //- .swiper-button-next.swiper-button-white
                     //- .swiper-button-prev.swiper-button-white
-                .thumb-wrp.flex-row.d-none.d-md-flex
+                .thumb-wrp.flex-row.d-none.d-md-flex.pb-2
                     .preview-img
                         .swiper-slide.thumb-slide-img(style='background-image:url(./assets/images/thumbimg.png)')
-                        span.prdt-caption.mt-3 Style By You
+                        
                     .swiper-container.gallery-thumbs
                         .swiper-wrapper
                             .swiper-slide.thumb-slide(style='background-image:url(./assets/images/thumbimg.png)')
@@ -81,7 +81,11 @@ section.product-listing
                                 span
                             .arrow.left-arrow
                                 span
-                    span.prdt-caption.prdt-caption--modify Product As Shown
+                .thumb-text-wrp.d-flex.flex-row
+                    .preve-img-text 
+                        span.prdt-caption.prdt-caption--modify Style By You
+                    .thumb-text    
+                        span.prdt-caption.prdt-caption--modify Product As Shown
                 
             .col-lg-5.mt-5.mt-md-0.pt-md-3.pt-lg-0
                 // Dress-details info
