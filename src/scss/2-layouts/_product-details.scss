@@ -8,6 +8,14 @@
     color: $title-black;
 }
 
+.prdt-caption {
+    @extend .fnt-xxs;
+    font-weight: 600;
+    letter-spacing: 0.18px;
+    color: $text-black;
+    display: block;
+}
+
 .text-des-s {
     @extend .fnt-xxxs;
     color: $selection-label;
@@ -93,10 +101,8 @@
         
     }
     @media screen and (min-width:1336px) {
-        flex-direction: row;
-        
+        flex-direction: row;   
     }
-    
 }
 
 .size {
