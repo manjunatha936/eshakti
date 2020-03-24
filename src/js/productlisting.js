@@ -1,7 +1,8 @@
 import popupInit from './custom-popup';
-
+const Showpopup = new popupInit();
 import OverlayScrollbar from './components/overlay-scrollbar';
 const overScrollbar = new OverlayScrollbar(".save-item-transition")
+const innerScrollbar = new OverlayScrollbar(".style-contain")
 console.log('Product listing code');
 
 // Side-sticky
@@ -227,7 +228,7 @@ if(window.innerWidth < 768) {
    });
 }
 
-const Showpopup = new popupInit();
+
 
 // Mobile Show-products sticky
 

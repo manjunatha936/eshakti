@@ -9,7 +9,7 @@ class OverlayScrollbar {
   }
 
   init() {
-      let overscroll = OverlayScrollbars(document.querySelectorAll(this.wrapper), {  
+      let overscroll = OverlayScrollbars(document.querySelectorAll(".style-contain"), {  
                 scrollbars : {
                     clickScrolling : true
                 },
@@ -20,9 +20,19 @@ class OverlayScrollbar {
       let productScroll = OverlayScrollbars(document.querySelector(".model-wrp"), { overflowBehavior : {
           x : "never",
         },});
+
+      let addressScroll = OverlayScrollbars(document.querySelector(".js-address-wrp"), { overflowBehavior : {
+          x : "never",
+        },});
+
+      // let productScroll = OverlayScrollbars(document.querySelector(".model-wrp"), { overflowBehavior : {
+      //     x : "never",
+      //   },});
+
       let custompopupScroll = OverlayScrollbars(document.querySelector(".js-custom-scroll"), { overflowBehavior : {
           x : "never",
         },});
+
       let measureScroll = OverlayScrollbars(document.querySelector(".js-measure-content"), { overflowBehavior : {
           x : "never",
         },});
@@ -35,6 +45,9 @@ class OverlayScrollbar {
         // overscroll.update();
         productScroll.update();
         // do something...
+      })
+      $('.js-save-style-item').on('click', function() {
+        custompopupScroll.update();
       })
   }
 }

@@ -1,0 +1,24 @@
+.form-element-container {
+    max-width: 662px;
+    width: 100%;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.06);
+    background-color: #ffffff;
+    padding: 16px 16px;
+    @media screen and (min-width: 768px) {
+        padding: 34px 32px;
+        
+        
+    }
+    .form-group-container {
+        max-width: 457px;
+        width: 100%;
+    }
+}
+.address-management-rigt {
+    width: 100%;
+    @media screen and (min-width: 768px) {
+        width: calc(100% - 285px);
+        margin-left: 30px;
+        
+    }
+}

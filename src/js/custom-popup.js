@@ -48,6 +48,7 @@ class SavePopup {
         
             //2nd popup save styles
             $('.js-save-style-item').on('click', function() {
+    
                 var index = $(".slide-item").length;
                 const newdata = '<li class="slide-item"><div class="card-wrp"><div class="style-card"><img class="saved-img" src="'+ imageSource+'" alt="style image" /><div class="close-card" slide-id="'+ index +'"><span></span><span></span></div></div><div class="d-flex pt-2 align-items-center  " ><p class="fnt-11 w-100 pr-2 text-left">'+neckText+" , "+sleeveText+" , "+lengthText+'</p><i class="share-icon icon-share mr-2" ></i></div></div></li>'
                 $(this).addClass("procced-save-style-transiton")

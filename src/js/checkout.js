@@ -141,3 +141,6 @@ $(document).ready(function(){
         this.selectionEnd = cursor;
     });
 });
+
+import OverlayScrollbar from './components/overlay-scrollbar';
+const addressScrollbar = new OverlayScrollbar()
