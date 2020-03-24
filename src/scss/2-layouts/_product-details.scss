@@ -76,7 +76,7 @@
 
 // Product-sizes info
 
-.measures-drop-wrp {
+.pdt-size-select {
     @include bpmax("phone-lg") {
         white-space: nowrap;
         overflow-x: scroll;
@@ -230,8 +230,6 @@
 .select-style select:focus {
     outline: none;
 }
-
-
 
 .select-label {
     font-weight: 700;

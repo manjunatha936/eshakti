@@ -102,6 +102,7 @@
     padding-right: 0 !important;
     
     .modal-dialog {
+        overflow: visible !important;
         box-shadow: 0 1px 7px rgba(0, 0, 0, 0.2);
         background-color: #ffffff;
     }
@@ -390,6 +391,7 @@
     
     
     .modal-content {
+        overflow: auto !important;
         box-shadow: 0 1px 7px rgba(0, 0, 0, 0.1);
         border: none;
         border-radius: 0;
@@ -412,12 +414,13 @@
         }
         @media screen and (min-width:992px ){
             // max-width: 900px;
-            max-width: 970px;
+            max-width: 886px;
         }
         @media screen and (min-width:1404px ){
             max-width: 1180px;
             
         }
+        
 
     }
 
@@ -493,7 +496,7 @@
         border: 1px solid #c2cfd4;
         background-color: $white;
         position: absolute;
-        left: calc(100% - 38px);
+        left: calc(100%  + 8px);
         top: 3px;
         cursor: pointer;
 
@@ -568,6 +571,7 @@
     height: 100% !important;
     background-color: #f4f5f7;
 }
+
 .thumb-wrp {
     // padding: 10px 0;
     height: 190px !important;
@@ -647,6 +651,7 @@
         box-sizing: border-box;
         
     }
+
     .gallery-thumbs .swiper-slide {
         width: 25%;
         background-position: center;
@@ -665,6 +670,10 @@
         border: 1px solid #464748;
         background-color: #ffffff;
         // margin-right: 12px;
+      }
+      .preve-img-text  {
+        width: 120px;
+        margin-right: 20px;
       }
 }
 .swiper-arrow {
@@ -855,25 +864,30 @@
 .save-btn-foot {
     position: relative;
     .save-item-btns {
-        position: absolute;
-        top: 76px;
-        opacity: 0;
-        transition: ease-in-out .5s ;
-        transition-property: top,opacity;
+        // position: absolute;
+        display: none;
+        transform: translateY(73px);
+        opacity: 0; 
+        transition: ease-in-out .9s ;
+        transition-property: transition,opacity;
     }
     .save-btn-transition {
-        top: 0;
+        display: block;
+        transform: translateY(0);
+        
         opacity: 1;
-        transition:  ease-in-out .5s ;
-        transition-property: top,opacity;
+        transition:  ease-in-out .9s ;
+        transition-property: transition,opacity;
     }
     .procced-save-style {
+        display: block;
         opacity: 1;
         transform: translateY(0);
         transition: ease-in-out .7s ;
         transition-property:opacity, transform;
     }
     .procced-save-style-transiton {
+        display: none;
         opacity: 0;
         transform: translateY(40px);
         transition: ease-in-out .7s ;

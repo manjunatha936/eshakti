@@ -6,9 +6,38 @@
         padding-top: 150px;
     }
 
+    @include bpmax('tab-mid') {
+        padding-top: 90px; 
+    }
+
+    @include bpmax('phone-lg') {
+        padding-top: 65px; 
+    }
+
     &-wrap {
         padding-top: 30px;
         padding-bottom: 55px;
+
+        @include bpmax('tab-mid') {
+            padding-top: 25px;
+            padding-bottom: 45px;
+        }
+
+        @include bpmax('phone-lg') {
+            padding-bottom: 35px;
+        }
+
+        > .row {
+            @include bpmax('desktop') {
+                margin-right: -10px;
+                margin-left: -10px;
+
+                > div {
+                    padding-left: 10px;
+                    padding-right: 10px;
+                }
+            }
+        }
     }
 }
 
@@ -16,7 +45,15 @@
     &-content {
         max-width: none;
         flex: none;
-        width: calc(100% - (350px + 30px));
+        width: calc(100% - 380px);
+
+        @include bpmax('desktop') {
+            width: calc(100% - 300px);
+        }
+
+        @include bpmax('tab-mid') {
+            width: 100%;
+        }
 
         &__wrap {
             background: $white;
@@ -27,6 +64,15 @@
             padding: 25px 20px;
             background-color: #f2f4f5;
             margin-top: 20px;
+
+            @include bpmax('phone-lg') {
+                padding: 17px 20px;
+                margin-top: 15px;
+            }
+
+            @media only screen and (max-width: 479.9px) {
+                padding: 15px 15px;
+            }
 
             p {
                 color: #61666d;
@@ -46,6 +92,14 @@
                 margin-bottom: 20px;
                 margin-right: 10px;
                 display: inline-block;
+
+                @include bpmax('phone-lg') {
+                    margin-bottom: 10px;
+                }
+
+                @include bpmax('phone') {
+                    margin-bottom: 7px;
+                }
             }
 
             p {
@@ -75,33 +129,86 @@
                 padding: 20px;
                 text-align: center;
                 padding-top: 35px;
+                width: 100%;
+
+                @media only screen and (max-width: 479.9px) {
+                    padding: 15px;
+                }
 
                 &:nth-of-type(1) {
                     padding-top: 20px;
                     text-align: left;
-                    width: calc(100% - 270px);
-                    padding-right: 0;
+
+                    @include bp('tab') {
+                        width: calc(100% - 270px);
+                        padding-right: 0;
+                    }
                 }
 
                 &:nth-of-type(2) {
-                    width: 100px;
+                    @include bp('tab') {
+                        width: 100px;
+                    }
                 }
 
                 &:nth-of-type(3) {
-                    width: 80px;
+                    @include bp('tab') {
+                        width: 80px;
+                    }
                 }
 
                 &:nth-of-type(4) {
-                    width: 90px;
+                    @include bp('tab') {
+                        width: 90px;
+                    }
+                }
+
+                @include bpmax('phone-lg') {
+                    display: block;
+                    padding-left: 165px;
+                    position: relative;
+                    text-align: left;
+
+                    &:not(:first-of-type) {
+                        padding-top: 0;
+                    }
+
+                    &:not(:last-of-type) {
+                        padding-bottom: 0;
+                    }
+                }
+
+                @media only screen and (max-width: 479.9px) {
+                    padding-left: 147px;
+                }
+
+                @media only screen and (max-width: 349.9px) {
+                    padding-left: 130px;
                 }
             }
         }
 
         &__price {
+            @include bpmax('phone-lg') {
+                display: inline-block !important;
+                width: auto !important;
+                padding-right: 8px !important;
+            }
+
             p {
                 color: $black;
                 font-size: 13px;
                 font-weight: 600;
+
+                @include bpmax('phone-lg') {
+                    display: inline-block;
+                    margin-left: 3px;
+                    vertical-align: middle;
+
+                    &:first-of-type {
+                        margin-left: 0;
+                    }
+                }
 
                 &:last-of-type:not(:first-of-type) {
                     font-size: 11px;
@@ -119,6 +226,26 @@
             img {
                 width: 100%;
             }
+
+            @include bpmax('desktop') {
+                width: 100px;
+            }
+
+            @include bpmax('phone-lg') {
+                position: absolute;
+                width: 130px;
+                left: 20px;
+                top: 20px;
+            }
+
+            @media only screen and (max-width: 479.9px) {
+                width: 120px;
+                left: 15px;
+            }
+
+            @media only screen and (max-width: 349.9px) {
+                width: 105px;
+            }
         }
 
         &__details {
@@ -126,6 +253,16 @@
             padding-left: 15px;
             float: left;
             margin-right: -20px;
+
+            @include bpmax('desktop') {
+                width: calc(100% - 100px);
+            }
+
+            @include bpmax('phone-lg') {
+                width: 100%;
+                padding-left: 0;
+                float: none;
+            }
 
             > div {
                 margin: 7px 0;
@@ -147,15 +284,36 @@
                         margin-left: 3px;
                     }
                 }
+
+                a {
+                    opacity: 0.9;
+                    color: $title-black;
+                    font-size: 12px;
+                    font-weight: 600;
+                    line-height: 1.33;
+                    border-bottom: 1px solid;
+                    margin: 5px 0;
+                }
             }
 
             .custom-size {
                 display: flex;
                 flex-wrap: wrap;
+
+                @include bpmax('phone-lg') {
+                    height: 36px;
+                    overflow: hidden;
+                }
                 
                 p {
                     max-width: 50%;
                     flex: 0 0 50%;
+
+                    @media only screen and (max-width: 399.9px) {
+                        max-width: none;
+                        flex: none;
+                        margin-right: 10px;
+                    }
                 }
             }
 
@@ -165,6 +323,7 @@
                 font-size: 13px;
                 font-weight: 400;
                 margin: 0;
+                line-height: 1.4;
             }
 
             label {
@@ -195,6 +354,18 @@
         }
 
         &__qty {
+            @include bpmax('phone-lg') {
+                display: inline-block !important;
+                width: auto !important;
+                padding-left: 0 !important;
+                padding-right: 0 !important;
+            }
+
+            @media only screen and (max-width: 349.9px) {
+                display: block !important;
+                padding-left: 130px !important;
+            }
+
             p {
                 line-height: 24px;
                 border-radius: 3px;
@@ -203,16 +374,59 @@
                 font-size: 12px;
                 display: inline-block;
                 padding: 0 12.5px;
+
+                @include bpmax('phone-lg') {
+                    background: transparent;
+                    padding: 0;
+                    border-radius: 0;
+                    line-height: 1;
+                    font-weight: 600;
+                    letter-spacing: 0.22px;
+                    color: #7f8286;
+                    
+                    &::before {
+                        content: attr(data-text)" - ";
+                        border-left: 1px solid $black;
+                        padding-left: 7px;
+                        margin-right: 3px;
+                        line-height: 1;
+                        padding-bottom: 1px;
+                        display: inline-block;
+                        font-size: 12px;
+                        font-weight: 600;
+                        letter-spacing: 0.22px;
+                        color: #7f8286;
+                        text-transform: uppercase;
+
+                        @media only screen and (max-width: 349.9px) {
+                            border-left: none;
+                            padding-left: 0;
+                        }
+                    }
+                }
             }
         }
 
         &__remove {
+            @include bpmax('phone-lg') {
+                text-align: right !important;
+            }
+
+            @media only screen and (max-width: 479.9px) {
+                padding-bottom: 20px !important;
+            }
+            
             a {
                 font-size: 12px;
                 font-weight: 600;
                 color: $bnr-red;
                 line-height: 1.5;
                 border-bottom: 1px solid;
+
+                @include bpmax('phone-lg') {
+                    line-height: 1.2;
+                    margin-top: 10px;
+                }
             }
         }
 
@@ -221,6 +435,10 @@
                 display: flex;
                 margin-left: -20px;
                 margin-right: -20px;
+
+                @include bpmax('phone-lg') {
+                    display: none;
+                }
 
                 p {
                     font-size: 11px;
@@ -262,13 +480,42 @@
         flex: none;
         width: 380px;
 
+        @include bpmax('desktop') {
+            width: 300px;
+        }
+
+        @include bpmax('tab-mid') {
+            width: 70%;
+            margin-top: 30px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @include bpmax('phone-lg') {
+            width: 100%;
+            margin-top: 25px;
+        }
+
+        @include bpmax('phone') {
+            width: 100%;
+            margin-top: 20px;
+        }
+
         &__card {
             box-shadow: 0 1px 5px rgba(0, 0, 0, 0.06);
             background-color: #ffffff;
             padding: 20px;
 
+            @media only screen and (max-width: 479.9px) {
+                padding: 20px 15px;
+            }
+
             &:not(:first-of-type) {
                 margin-top: 20px;
+
+                @include bpmax('phone-lg') {
+                    margin-top: 15px;
+                }
             }
 
             > div {
@@ -336,6 +583,10 @@
                 color: $text-black;
                 font-size: 14px;
                 margin: 0;
+
+                @include bpmax('desktop') {
+                    font-size: 13px;
+                }
 
                 span {
                     font-weight: normal;
