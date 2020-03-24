@@ -96,13 +96,13 @@
     @include bp("desktop-1200") {
         display: flex;
     }
-    @media screen and (min-width:1024px) {
-        flex-direction: column;
+    // @media screen and (min-width:1024px) {
+    //     flex-direction: column;
         
-    }
-    @media screen and (min-width:1336px) {
-        flex-direction: row;   
-    }
+    // }
+    // @media screen and (min-width:1336px) {
+    //     flex-direction: row;   
+    // }
 }
 
 .size {
@@ -277,14 +277,13 @@
 }
 
 .btn-wrp {
-    background-color: #ffffff;
-    position: sticky;
-    bottom: 0;
-    display: flex;
-    justify-content: space-between;
-    @media screen and (min-width:768px) {
-        position: relative;
- 
+    @include bpmax("phone-lg") {
+        background-color: #ffffff;
+        position: sticky;
+        bottom: 0;
+        display: flex;
+        justify-content: space-between;
+        z-index: 10;
     }
 }
 .size-active {
