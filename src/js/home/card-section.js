@@ -13,13 +13,18 @@ class CardSwiper {
     const cardSwiper = new Swiper(".js-homecard-slider", {
         slidesPerView: 1,
         spaceBetween: 0,
+        speed: 500,
         loop: true,
         effect: 'fade',
         fadeEffect: {
           crossFade: true
         },
+        autoplay: {
+          delay: 5000,
+        },
         pagination: {
-          el: '.swiper-pagination'
+          el: '.swiper-pagination',
+          clickable: true
         }
     });
 

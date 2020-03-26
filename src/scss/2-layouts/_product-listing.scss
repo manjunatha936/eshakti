@@ -499,7 +499,7 @@
         left: calc(100%  + 8px);
         top: 3px;
         cursor: pointer;
-
+        pointer-events: all;
     }
     .img-zoom-close {
         z-index: 11;
@@ -561,10 +561,10 @@
         }
     }
 }
-.product-details ~ .modal-backdrop {
-    background-color: #ffffff;
-    opacity: 0.9;
-}
+// .product-details ~ .modal-backdrop {
+//     background-color: #ffffff;
+//     opacity: 0.9;
+// }
 .slider-style-thumb .gallery-thumbs {
     padding: 15px 0 15px 15px;
     // width: 80% !important;
