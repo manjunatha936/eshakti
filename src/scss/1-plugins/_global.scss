@@ -160,3 +160,10 @@ ol {
       height: 70px;
   }
 }
+
+
+//  Modal-popup over-ride
+
+.modal {
+  z-index: 100000 !important;
+}

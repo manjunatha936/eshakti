@@ -1,0 +1,12 @@
+
+.field {
+    margin-top: 1.5rem;
+    margin-bottom: .5rem;
+}
+
+.form-label {
+    @extend .fnt-xs;
+    color: $form-label;
+    display: block;
+    margin-bottom: .25rem;
+}

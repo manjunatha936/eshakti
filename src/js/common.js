@@ -20,6 +20,7 @@ import "../pug/order-placed.pug";
 import "../pug/account-wishlist.pug";
 import "../pug/my-orders.pug";
 import "../pug/address-management.pug";
+import "../pug/accounts-personal.pug";
 
 
 
