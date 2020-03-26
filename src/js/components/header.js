@@ -25,13 +25,29 @@ class HeaderInteractions {
       $('.web-header').css('top', discountht);
   });
 
+  //Hamburger functions
   $('.hamburger-menu').click(function () {
-    $('.web-header__bottom.container').addClass('show');
+    $('.web-header__bottom').addClass('show');
+  });
+
+  $('.web-header__bottom .close').click(function () {
+    $('.web-header__bottom').removeClass('show');
   });
 
   $('.dropdown-menulink').click(function () {
     $(this).toggleClass('show-menu');
   });
+
+  if($(".account-menu").hasClass("not-logged")) {
+    var accountClones = $('.account-menu').clone();
+    $('.web-header__menulinks').prepend(accountClones);
+  }
+  
+  else if($(".account-menu").hasClass("logged")) {
+    var title = "<li><a href='javascript:void(0)' class='border-0'>My Account</a></li>";
+    var ulClone = $('.account-menu').find("ul").clone().addClass("account-info");
+    $('.web-header__menulinks').append(title,ulClone);
+  }
 
     var data_breaks = $('.web-header__menulinks').attr('data-breaks').split(',');
     var break_count = 0;

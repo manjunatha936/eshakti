@@ -16,6 +16,11 @@ body.checkout-body {
         font-weight: 700;
         line-height: 1.4;
         margin-bottom: 15px;
+        display: inline-block;
+
+        & + a {
+            margin-left: 20px;
+        }
     }
 
     .order-success {
@@ -209,13 +214,33 @@ body.checkout-body {
     right: 0;
     top: 70px;
 
+    @include bpmax('desktop') {
+        right: 5px;
+    }
+
+    @include bpmax('tab-mid') {
+        position: relative;
+        left: 0;
+        top: 0;
+    }
+
     &.sticky {
         position: fixed;
         right: calc((100% - 1140px) / 2);
         top: 110px;
 
+        @include bpmax('desktop') {
+            right: calc((100% - 960px) / 2);
+        }
+
         @media only screen and (min-width: 1300px) {
             top: 120px;
+        }
+
+        @include bpmax('tab-mid') {
+            position: relative;
+            left: 0;
+            top: 0;
         }
     }
 
@@ -224,6 +249,12 @@ body.checkout-body {
         bottom: 55px;
         right: 0;
         top: auto;
+
+        @include bpmax('tab-mid') {
+            position: relative;
+            left: 0;
+            top: 0;
+        }
     }
 
     .cart-panel__card {
@@ -590,6 +621,10 @@ body.checkout-body {
             max-height: calc(100vh - 260px);
         }
 
+        &.no-scroll {
+            overflow: visible;
+        }
+
         overflow: auto;
         padding: 0 !important;
 
@@ -947,5 +982,53 @@ body.checkout-body {
                 opacity: 1;
             }
         }
+    }
+}
+
+.failure-popup {
+    &.pop-up {
+        .modal-dialog {
+            max-width: 595px;
+            height: auto;
+            overflow: visible;
+        }
+
+        .close-modal {
+            top: 0;
+            left: calc(100% + 14px);
+        }
+        
+        .modal-content {
+            overflow: visible;
+            padding: 45px;
+        }
+    }
+
+    h2 {
+        color: $title-black;
+        font-size: 18px;
+        font-weight: 900;
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 0;
+    }
+
+    p {
+        color: #3f4145;
+        font-size: 12px;
+        line-height: 1.67;
+        max-width: 300px;
+        padding: 0 5px;
+        margin: 0 auto;
+        text-align: center;
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    a {
+        font-weight: 600;
+        border-bottom: 1px solid;
+        color: inherit;
+        line-height: 1.3;
     }
 }

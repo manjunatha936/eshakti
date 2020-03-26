@@ -100,6 +100,11 @@
 		box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
 		z-index: 1000;
 
+		@media only screen and (max-width: 369.9px) {
+			padding-right: 15px;
+			padding-left: 15px;
+		}
+
 		.web-header__logo {
 			padding: 3px 25px;
 			height: 48px;
@@ -110,6 +115,10 @@
 			
 			@include bpmax('phone-lg') {
 				padding: 6px 0px;
+			}
+
+			@media only screen and (max-width: 349.9px) {
+				height: 42px;
 			}
 		}
 
@@ -144,6 +153,11 @@
 	&__bottom {
 		position: relative;
 
+		.web-header__logo,
+		.close {
+			display: none;
+		}
+
 		@include bpmax('tab-mid') {
 			height: 100vh;
 			position: fixed;
@@ -152,11 +166,36 @@
 			background: $white;
 			transform: translateX(-100%);
 			transition: all ease 0.4s;
-			padding: 150px 35px 0;
+			padding: 100px 35px 0;
 			overflow-y: auto;
+
+			.web-header__logo {
+				position: absolute;
+				top: 35px;
+				left: 35px;
+				display: block;
+			}
+
+			.close {
+				position: absolute;
+				top: 35px;
+				right: 35px;
+				display: block;
+
+				img {
+					height: 19px;
+					width: 19px;
+				}
+			}
 
 			&.show {
 				transform: translateX(0);
+			}
+
+			.account-menu {
+				span {
+					margin-right: 10px;
+				}
 			}
 
 			.web-header__menulinks {
@@ -167,10 +206,26 @@
 					padding: 20px 0;
 					border-bottom: 1px solid #e4e6e7;
 				}
+
+				.account-info {
+					a {
+						border: none;
+						padding: 0;
+						font-weight: 400 !important;
+						font-size: 13px;
+						margin-bottom: 25px;
+
+					}
+				}
+
+				&>li:last-child {
+					a {
+						border-bottom: none;
+					}
+				}
 				
 				&>li.dropdown-menulink {
 					position: relative;
-					border-bottom: 1px solid #e4e6e7;
 
 					&::after {
 						content: "";
@@ -214,6 +269,7 @@
 							&__box {
 								width: 100%;
 								margin-bottom: 20px;
+								height: 0;
 
 								h3 {
 									margin: 0;
@@ -236,6 +292,12 @@
 					}
 
 					&.show-menu {
+						border-bottom: 1px solid #e4e6e7;
+
+						.dropdown-menuwrap__box {
+							height: auto;
+						}
+
 						&::before {
 							transform: rotate(90deg);
 						}
@@ -271,6 +333,11 @@
 		@include bpmax('phone-lg') {
 			padding: 8px 0;
 			height: 46px;
+		}
+
+		@media only screen and (max-width: 349.9px) {
+			height: 42px;
+			padding: 6px 0;
 		}
 
 		a {
