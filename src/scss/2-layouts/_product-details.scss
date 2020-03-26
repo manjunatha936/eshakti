@@ -275,12 +275,13 @@
 }
 
 .btn-wrp {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     @include bpmax("phone-lg") {
         background-color: #ffffff;
         position: sticky;
         bottom: 0;
-        display: flex;
-        justify-content: space-between;
         z-index: 10;
     }
 }

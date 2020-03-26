@@ -114,6 +114,12 @@ $circle-clr : #f5f5f5;
     }
 
     .accredition-img {
+        @include bpmax('phone-lg') {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
         a {
             text-align: center;
             color: $black;
