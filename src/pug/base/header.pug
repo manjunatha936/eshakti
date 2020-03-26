@@ -14,7 +14,7 @@ mixin header(status,color)
                     i.icon-search
 
             ul.web-header__toplinks
-                li
+                li.account-menu(class=status ? 'logged' : 'not-logged')
                     a(href="#" data-toggle='modal', data-target='.pop-up-signup')
                         span
                             i.icon-account
