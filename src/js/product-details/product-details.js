@@ -17,16 +17,7 @@ class ProductDetais {
       var swiperStyle;
        var neckText,sleeveText,lengthText;
        neckText = sleeveText = lengthText = "As shown";
-        $(".js-read-more").click(function(e){
-          e.preventDefault()
-          $(this).siblings('.more-info').toggle()
-          
-          if( $(this).siblings('.more-info').css('display') == 'block'){
-            $(this).css({marginLeft:"0"})
-          }else {
-            $(this).css({marginLeft:"8px"})
-          }
-        })
+    
         $('.neckline').children('.style-contain').find('.img-container').click(function(){
           neckText = $(this).children(".img-txt").text()
           console.log(neckText)
@@ -89,10 +80,10 @@ class ProductDetais {
             watchSlidesVisibility: true,
             watchSlidesProgress: true,
               // Navigation arrows
-          navigation: {
-            nextEl: '.left-arrow',
-            prevEl: '.right-arrow',
-          },
+            navigation: {
+              nextEl: '.left-arrow',
+              prevEl: '.right-arrow',
+            },
     
             grabCursor: true,
             breakpoints: {
@@ -125,6 +116,9 @@ class ProductDetais {
           });
         //save style
         $(".js-btn-save").click(function(e){
+          
+            $(".js-proceed").addClass("btn-visible-true")
+          
           var index = $(".slide-item").length
           
             // e.preventDefault();

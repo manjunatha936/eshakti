@@ -17,10 +17,7 @@ class SavePopup {
             var swiperStyle;
             var neckText,sleeveText,lengthText;
             neckText = sleeveText = lengthText = "As shown";
-            $(".js-read-more").click(function(e){
-                e.preventDefault()
-                $(this).siblings('.more-info').toggle()
-            })
+  
             $('.neckline').children('.style-contain').find('.img-container').click(function(){
                 neckText = $(this).children(".img-txt").text()
                 console.log(neckText)
