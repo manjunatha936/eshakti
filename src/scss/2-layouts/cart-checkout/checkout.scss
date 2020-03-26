@@ -214,6 +214,16 @@ body.checkout-body {
     right: 0;
     top: 70px;
 
+    @include bpmax('desktop') {
+        right: 5px;
+    }
+
+    @include bpmax('tab-mid') {
+        position: relative;
+        left: 0;
+        top: 0;
+    }
+
     &.sticky {
         position: fixed;
         right: calc((100% - 1140px) / 2);
@@ -226,6 +236,12 @@ body.checkout-body {
         @media only screen and (min-width: 1300px) {
             top: 120px;
         }
+
+        @include bpmax('tab-mid') {
+            position: relative;
+            left: 0;
+            top: 0;
+        }
     }
 
     &.stick-bottom {
@@ -233,6 +249,12 @@ body.checkout-body {
         bottom: 55px;
         right: 0;
         top: auto;
+
+        @include bpmax('tab-mid') {
+            position: relative;
+            left: 0;
+            top: 0;
+        }
     }
 
     .cart-panel__card {
@@ -597,6 +619,10 @@ body.checkout-body {
 
         @media only screen and (min-width: 1300px) {
             max-height: calc(100vh - 260px);
+        }
+
+        &.no-scroll {
+            overflow: visible;
         }
 
         overflow: auto;
