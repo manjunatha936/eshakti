@@ -1,7 +1,7 @@
-.product-modal.modal.fade.bd-example-modal-lg(tabindex='-1' role='dialog' aria-labelledby='myLargeModalLabel' aria-hidden='true')
+.product-modal.modal.fade.bd-example-modal-lg.custom-product-model(tabindex='-1' role='dialog' aria-labelledby='myLargeModalLabel' aria-hidden='true')
   .modal-dialog.modal-lg
     button.close-modal(data-dismiss="modal") &times;
-    .modal-content.pt-5.product-custome-content
+    .modal-content.pt-5.product-custome-content.pb-0
         .model-wrp.js-custom-scroll
             .container.p-0
                 .row.model-head.text-center.justify-content-center.m-0
@@ -10,8 +10,8 @@
                         p.prd-sub-txt.px-5 You can customize the garment to your style or shop the style 'as shown'.
                 .overflowScroll
                     .row.custom-modal-head
-                        .col-lg-5.d-flex.flex-column.justify-content-center.custom-modal-head__img.order-2.order-md-1.position-relative
-                            .model-img
+                        .col-lg-5.d-flex.flex-column.justify-content-center.custom-modal-head__img.order-2.order-md-1.position-relative.pt-3.pt-md-0
+                            .model-img.mx-auto
                                 .left-arm
                                     img.img.img-fluid(src="./assets/images/product-listing/parts/left-sleeve.png", alt="")
                                 .neck-body
@@ -142,9 +142,9 @@
                                             p.fnt-11.pt-2 As shown
                                 .swiper-container.js-style-slider.mt-3.mt-md-0
                                     ul.swiper-wrapper
-        .row.custom-modal-foot
-            .col.d-flex.justify-content-center.justify-content-md-end
-                a.bttn.bttn__orange.mr-3(type="button", data-dismiss="modal") Proceed with the style
+        .custom-modal-foot
+            .d-flex.justify-content-center.justify-content-md-end
+                a.bttn.bttn__orange.mr-3.js-proceed(type="button", data-dismiss="modal") Proceed with the style
                 button.js-btn-save.bttn.bttn__white.ml-1.mr-md-3.mr-xl-0(type="button") Save Style
                 //- .container.saveditem-container.border-0
                 //-     .fixed-btn 

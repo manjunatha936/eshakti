@@ -58,6 +58,7 @@
 }
 .icon-wishlist::before {
     content: "\e909";
+    cursor: pointer;
 }
 .icon-mail::before {
     content: "\e90a";
