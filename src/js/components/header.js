@@ -26,8 +26,6 @@ class HeaderInteractions {
     });
 
     //Hamburger functions
-    if ($(window).width < 991) {
-
       $('.hamburger-menu').click(function () {
         $('.web-header__bottom').addClass('show');
       });
@@ -41,17 +39,15 @@ class HeaderInteractions {
       });
 
       if ($(".account-menu").hasClass("not-logged")) {
-        var accountClones = $('.account-menu').clone();
+        var accountClones = $('.account-menu').clone().addClass("d-lg-none");
         $('.web-header__menulinks').prepend(accountClones);
       }
 
       else if ($(".account-menu").hasClass("logged")) {
-        var title = "<li><a href='javascript:void(0)' class='border-0'>My Account</a></li>";
-        var ulClone = $('.account-menu').find("ul").clone().addClass("account-info");
+        var title = "<li><a href='javascript:void(0)' class='border-0 d-lg-none'>My Account</a></li>";
+        var ulClone = $('.account-menu').find("ul").clone().addClass("account-info d-lg-none");
         $('.web-header__menulinks').append(title, ulClone);
       }
-
-    }
 
     var data_breaks = $('.web-header__menulinks').attr('data-breaks').split(',');
     var break_count = 0;
