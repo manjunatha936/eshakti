@@ -153,8 +153,167 @@
 	&__bottom {
 		position: relative;
 
-		@include bpmax('tab-mid') {
+		.web-header__logo,
+		.close {
 			display: none;
+		}
+
+		@include bpmax('tab-mid') {
+			height: 100vh;
+			position: fixed;
+			top: 0;
+			left: 0;
+			background: $white;
+			transform: translateX(-100%);
+			transition: all ease 0.4s;
+			padding: 100px 35px 0;
+			overflow-y: auto;
+
+			.web-header__logo {
+				position: absolute;
+				top: 35px;
+				left: 35px;
+				display: block;
+			}
+
+			.close {
+				position: absolute;
+				top: 35px;
+				right: 35px;
+				display: block;
+
+				img {
+					height: 19px;
+					width: 19px;
+				}
+			}
+
+			&.show {
+				transform: translateX(0);
+			}
+
+			.account-menu {
+				span {
+					margin-right: 10px;
+				}
+			}
+
+			.web-header__menulinks {
+				display: block;
+
+				a {
+					font-size: 14px;
+					padding: 20px 0;
+					border-bottom: 1px solid #e4e6e7;
+				}
+
+				.account-info {
+					a {
+						border: none;
+						padding: 0;
+						font-weight: 400 !important;
+						font-size: 13px;
+						margin-bottom: 25px;
+
+					}
+				}
+
+				&>li:last-child {
+					a {
+						border-bottom: none;
+					}
+				}
+				
+				&>li.dropdown-menulink {
+					position: relative;
+
+					&::after {
+						content: "";
+						height: 3px;
+						width: 18px;
+						background-color: #333333;
+						position: absolute;
+						right: 20px;
+						top: 29px;
+						border-radius: 2px;
+					}
+					
+					&::before {
+						content: "";
+						height: 18px;
+						width: 3px;
+						background-color: #333333;
+						position: absolute;
+						right: 27px;
+    					top: 21.5px;
+						border-radius: 2px;
+						transition: all ease 0.4s;
+					}
+
+					.dropdown-menucontain {
+						position: relative;
+						width: 100%;
+						transform: none;
+						left: unset;
+						top: unset;
+						height: 0;
+						opacity: 0;
+						transition: all ease 0.2s;
+
+						.dropdown-menuwrap {
+							width: 100%;
+							margin: 0;
+							padding: 0;
+							border: none;
+
+							&__box {
+								width: 100%;
+								margin-bottom: 20px;
+								height: 0;
+
+								h3 {
+									margin: 0;
+									padding: 5px 0;
+									font-weight: 700;
+								}
+
+								a {
+									border: none;
+									padding: 5px 0;
+									font-weight: 400 !important;
+								}
+							}
+
+							.web-link {
+								margin: 0;
+    							border-bottom: 0;
+							}
+						}
+					}
+
+					&.show-menu {
+						border-bottom: 1px solid #e4e6e7;
+
+						.dropdown-menuwrap__box {
+							height: auto;
+						}
+
+						&::before {
+							transform: rotate(90deg);
+						}
+
+						a {
+							border: none;
+						}
+
+						.dropdown-menucontain {
+							height: auto;
+							opacity: 1;
+						}
+					}
+				}
+
+			}
 		}
 	}
 	

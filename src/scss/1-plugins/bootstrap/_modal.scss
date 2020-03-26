@@ -73,6 +73,11 @@
   outline: 0;
 }
 
+.modal {
+  background: rgba(0,0,0,0.5);
+  transition: all 0.2s ease;
+}
+
 // Modal background
 .modal-backdrop {
   position: fixed;
@@ -81,11 +86,11 @@
   bottom: 0;
   left: 0;
   z-index: $zindex-modal-backdrop;
-  background-color: $modal-backdrop-bg;
+  // background-color: $modal-backdrop-bg;
 
   // Fade for backdrop
   &.fade { opacity: 0; }
-  &.show { opacity: $modal-backdrop-opacity; }
+  &.show { opacity: $modal-backdrop-opacity !important; }
 }
 
 // Modal header
