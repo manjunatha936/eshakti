@@ -17,10 +17,7 @@ class SavePopup {
             var swiperStyle;
             var neckText,sleeveText,lengthText;
             neckText = sleeveText = lengthText = "As shown";
-            $(".js-read-more").click(function(e){
-                e.preventDefault()
-                $(this).siblings('.more-info').toggle()
-            })
+  
             $('.neckline').children('.style-contain').find('.img-container').click(function(){
                 neckText = $(this).children(".img-txt").text()
                 console.log(neckText)
@@ -50,17 +47,17 @@ class SavePopup {
             $('.js-save-style-item').on('click', function() {
     
                 var index = $(".slide-item").length;
-                const newdata = '<li class="slide-item"><div class="card-wrp"><div class="style-card"><img class="saved-img" src="'+ imageSource+'" alt="style image" /><div class="close-card" slide-id="'+ index +'"><span></span><span></span></div></div><div class="d-flex pt-2 align-items-center  " ><p class="fnt-11 w-100 pr-2 text-left">'+neckText+" , "+sleeveText+" , "+lengthText+'</p><i class="share-icon icon-share mr-2" ></i></div></div></li>'
+                const newdata = '<li class="slide-item"><div class="card-wrp"><div class="close-card" ><span></span><span></span></div><input id="img'+ index +'" type="radio" name="img-check" class="d-none img-check"/><div class="check-circle"><span></span></div><label for="img'+ index +'" class="style-card"><img class="saved-img" src="'+ imageSource+'" alt="style image" /></div><div class="d-flex pt-2 align-items-center  " ><p class="fnt-11 w-100 pr-2 text-left">'+neckText+" , "+sleeveText+" , "+lengthText+'</p><i class="share-icon icon-share mr-2" ></i></label></div></li>'
                 $(this).addClass("procced-save-style-transiton")
                 $('.saved-styles__subImages').addClass("save-item-transition")
                 $('.custom-modal-head__opt').addClass("mbl-height")
                 $('.save-item-btns').addClass("save-btn-transition")
                 $('.saved-styles__subImages').append(newdata);
         
-                setTimeout(function(){ 
+                // setTimeout(function(){ 
                     
-                    $('.save-style-model').modal('show');
-                    }, 650);
+                //     $('.save-style-model').modal('show');
+                //     }, 650);
             
             });
             
@@ -72,18 +69,19 @@ class SavePopup {
 
             })
             
-           
+           $(document).on("click",".close-card" ,function(){
+                $(this).parents(".slide-item").remove();
+           })
 
         
-        if(window.innerWidth > 767){
-            $(".style-model-content").removeClass("fade")
-            
-        }
-
-        else{
-            $(".style-model-content").addClass("fade")
-            
-        }
+            if(window.innerWidth > 767){
+                $(".style-model-content").removeClass("fade")
+                
+            }
+            else{
+                $(".style-model-content").addClass("fade")
+                
+            }
     
 
      
