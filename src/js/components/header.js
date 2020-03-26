@@ -12,7 +12,7 @@ class HeaderInteractions {
   init() {
     $(window).on('scroll', function () {
         if ($(this).scrollTop() > 1) {
-          console.log($(this).scrollTop())
+          // console.log($(this).scrollTop())
           $('header').addClass("sticky");
         }
         else {
@@ -23,6 +23,14 @@ class HeaderInteractions {
     $(window).on('load resize', function () {
       var discountht = $('.discount-bar').outerHeight();
       $('.web-header').css('top', discountht);
+  });
+
+  $('.hamburger-menu').click(function () {
+    $('.web-header__bottom.container').addClass('show');
+  });
+
+  $('.dropdown-menulink').click(function () {
+    $(this).toggleClass('show-menu');
   });
 
     var data_breaks = $('.web-header__menulinks').attr('data-breaks').split(',');
