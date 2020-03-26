@@ -247,7 +247,7 @@
     .model-img {
         
         width: 235px;
-        height: 451px;
+        height: 365px;
         @media screen and (min-width: 378px){
             width: 324px;
             height: 518px;
@@ -339,7 +339,11 @@
             left: 0;
             right: 0;
             width: 100%;
-            height: 266px;
+            height: 180px;
+            @media screen and (min-width: 425px){
+                height: 266px;
+                
+            }
         }
     }
     .savedItem {
@@ -349,6 +353,11 @@
     }
     .js-style-slider {
         width: 100%;
+        .close-card {
+            & span {
+                left: 8px;
+            }
+        }
     }
     .share-style {
         position: absolute;
@@ -373,7 +382,7 @@
         position: relative;
         border: 1px solid #e4e4e4;
         background-color: #ffffff;
-
+        width: 100%;
         height: 335px;
         padding: 8px;
         text-align: center;
@@ -470,7 +479,13 @@
             padding: 20px 17px;
             margin: 0;
           }
-        
+          .bttn {
+            @media (max-width: 375px) {
+                padding-left: 11px;
+                padding-right: 11px;
+                font-size: 11px;
+            }
+        }
     }
 
     .custom-modal-heading {
@@ -496,9 +511,13 @@
         border: 1px solid #c2cfd4;
         background-color: $white;
         position: absolute;
-        left: calc(100%  + 8px);
+        left: calc(100%  - 38px);
         top: 3px;
         cursor: pointer;
+        @media screen and (min-width: 768px) {
+            left: calc(100%  + 8px);
+           
+        }
 
     }
     .img-zoom-close {
@@ -511,6 +530,7 @@
 // closed button
 
 .close-card, .btn-close-sm {
+    z-index: 111;
     cursor: pointer;
     width: 20px;
     height: 20px;
@@ -872,7 +892,7 @@
         transition-property: transition,opacity;
     }
     .save-btn-transition {
-        display: block;
+        display: flex;
         transform: translateY(0);
         
         opacity: 1;
@@ -992,4 +1012,13 @@
 }
 .js-address-wrp {
     height: 100%;
+}
+.custom-product-model {
+    .fade {
+        @media screen and (min-width:768px ){
+            opacity: 1 !important;
+          
+        }
+    }
+
 }

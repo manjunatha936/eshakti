@@ -55,16 +55,7 @@ class ProductDetais {
         })
 
       //2nd popup save styles
-      $('.close-parent-modal').on('click', function() {
-        var index = $(".slide-item").length;
-        const newdata = '<li class="slide-item"><div class="card-wrp"><div class="style-card"><img class="saved-img" src="'+ imageSource+'" alt="style image" /><div class="close-card" slide-id="'+ index +'"><span></span><span></span></div></div><div class="d-flex pt-2 align-items-center  " ><p class="fnt-11 w-100 pr-2 text-left">'+neckText+" , "+sleeveText+" , "+lengthText+'</p><i class="share-icon icon-share mr-2" ></i></div></div></li>'
-        $('.saved-styles__subImages').append(newdata);
-
-        setTimeout(function(){ 
-          $('.save-style-model').modal('show');
-          }, 650);
-  
-      });
+   
 
         //thumbs
         var galleryThumbs = new Swiper('.js-slider-img', {
@@ -155,7 +146,9 @@ class ProductDetais {
               }
               cardTitle = neckText+","+sleeveText+","+lengthText;
 
-            const ele = '<li class="slide-item swiper-slide"><div class="card-wrp"><div class="style-card"><img class="saved-img" src="'+imageSource+'" alt="style image" /><div class="close-card" slide-id="'+ index +'"><span></span><span></span></div></div><div class="d-flex pt-2 align-items-center  " ><p class="fnt-11 w-100 pr-2">'+cardTitle+'</p><i class="share-icon icon-share mr-2"  ></i></div></div></li>'
+            const ele = '<li class="slide-item swiper-slide"><div class="card-wrp"><div class="close-card" slide-id="'+ index +'"><span></span><span></span></div><input id="img'+ index +'" type="radio" name="img-check" class="d-none img-check"/><div class="check-circle"><span></span></div><label for="img'+ index +'"  class="style-card"><img class="saved-img" src="'+imageSource+'" alt="style image" /></div><div class="d-flex pt-2 align-items-center  " ><p class="fnt-11 w-100 pr-2">'+cardTitle+'</p><i class="share-icon icon-share mr-2"  ></i></label></div></li>'
+
+            // '<li class="slide-item"><div class="card-wrp"><label for="img'+ index +'" class="style-card"><img class="saved-img" src="'+ imageSource+'" alt="style image" /></div><div class="d-flex pt-2 align-items-center  " ><p class="fnt-11 w-100 pr-2 text-left">'+neckText+" , "+sleeveText+" , "+lengthText+'</p><i class="share-icon icon-share mr-2" ></i></label></div></li>'
             // $('.slide-item-wrp').append(ele)
             // if($(".slide-item").length> 4){
                 swiperStyle = new Swiper('.js-style-slider', {
@@ -202,14 +195,14 @@ class ProductDetais {
             
             })
        
-            if(window.innerWidth > 767){
-              $(".style-model-content").removeClass("fade")
+            // if(window.innerWidth > 767){
+            //   $(".style-model-content").removeClass("fade")
               
-            }
-            else{
-              $(".style-model-content").addClass("fade")
+            // }
+            // else{
+            //   $(".style-model-content").addClass("fade")
               
-            }
+            // }
             // on hover change img
             $('.tab-img img').hover(function(){
             let src = $(this).attr("src")
