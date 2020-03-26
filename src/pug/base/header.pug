@@ -27,11 +27,19 @@ mixin header(status,color)
                         .profile-dropdown
                             ul
                                 li
-                                    a(href="#") My profile
+                                    a(href="#") Profile 
                                 li
-                                    a(href="#") Log out
+                                    a(href="#") My Orders
                                 li
-                                    a(href="#") Log out
+                                    a(href="#") Manage Address
+                                li
+                                    a(href="#") Gift Coupons & Cards
+                                li
+                                    a(href="#") Privilege Club
+                                li
+                                    a(href="#") Size Profile 
+                                li
+                                    a(href="#") Logout
                 li
                     a(href="#")
                         span
@@ -47,6 +55,11 @@ mixin header(status,color)
                             i.icon-cart
                         p Cart
         .web-header__bottom.container
+            .web-header__logo
+                a(href="index.html")
+                    img(src="./assets/images/logo.svg", alt="")
+            .close
+                img(src="./assets/images/close.png", alt="")
             ul.web-header__menulinks(data-breaks="5,4,4")
                 li
                     a(href="#") Top Sellers

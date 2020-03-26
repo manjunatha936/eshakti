@@ -8,7 +8,7 @@
     @media (max-width: 767px) {
         position: sticky;
         top: 0;
-        z-index: 998;
+        z-index: 99998;
     }
 
     @include bpmax("phone") {
@@ -436,6 +436,10 @@
     top: 1rem;
     font-weight: 600;
     @include bp("tab") {
+        right: .6rem;
+        top: 1rem;
+    }
+    @include bp("tab-lg") {
         right: 1rem;
         top: 1.4rem;
     }
@@ -443,8 +447,11 @@
 
 .prdt-out-stck {
     color: $bnr-red;
-    @extend .fnt-xs;
+    font-size: 12px;
     line-height: 20px !important;
+    @include bp("tab-lg") {
+       font-size: 13px; 
+    }
 }
 
 .prdt-stock {
@@ -489,6 +496,14 @@
                 height: 11px;
                 width: 11px;
             }
+        }
+    }
+
+    .prdt-out-stck{
+        @include bp("tab-lg") {
+            font-size: 11px !important;
+            right: .6rem !important;
+            top: 1.2rem !important;
         }
     }
 
@@ -571,6 +586,7 @@
 
 // Favourite icon
 .favourite {
+    cursor: pointer;
     &.active  {
         .icon-wishlist::before{
             content: "\e912" !important;
@@ -587,16 +603,6 @@
     &.active {
         opacity: 1;
     }
-
-    // &__img {
-    //     width: 186px;
-    //     height: 280px;
-    
-    //     @media (min-width: 768px) {
-    //         width: 186px;
-    //         height: 280px;
-    //     }
-    // }
 }
 
 // Product filters-side sticky
