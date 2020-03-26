@@ -1,33 +1,109 @@
 mixin product-card(srcimg, img, name, type, cost)
-    .product-card()
-        a.product-card__view(href="#")
-            .card-tag Fx
-            picture
-                //- source(srcset=srcimg)
-                img.js-loading-card__img.img-fluid.img-scale(src="", data=img)
-                //- img.js-loading-card__img.img-fluid.img-scale(src=img)
-            div.product-card__customize(data-toggle='modal', data-target='.bd-example-modal-lg')
-                img(src="./assets/images/product-listing/product-card/customize.svg" alt="customize")
-                span.fnt-sm.ml-2 Customize style 
-        .product-card__body
-            .product-info
-                span.product-name=name 
-                span.product-type=type
-                span.product-cost=cost
-            .product-conatct.d-flex
-                div.share
-                    i.icon-share
-                    .tooltip-share
-                        .tooltip-share__item.pinterest.d-flex
-                            i.icon-pinterest.tip-icon
-                            p.prd-sub-txt Pinterest
-                        .tooltip-share__item.facebook.d-flex
-                            i.icon-facebook.tip-icon
-                            p.prd-sub-txt Facebook
-                        .tooltip-share__item.twitter.d-flex
-                            i.icon-twitter.tip-icon
-                            p.prd-sub-txt Twitter
+    a.product-card__view(href="#")
+        .card-tag Fx
+        picture
+            //- source(srcset=srcimg)
+            img.js-loading-card__img.img-fluid.img-scale(src="", data=img)
+            //- img.js-loading-card__img.img-fluid.img-scale(src=img)
+        div.product-card__customize(data-toggle='modal', data-target='.bd-example-modal-lg')
+            img(src="./assets/images/product-listing/product-card/customize.svg" alt="customize")
+            span.fnt-sm.ml-2 Customize style
+        
+    .product-card__body
+        .product-info
+            span.product-name=name 
+            span.product-type=type
+            span.product-cost=cost
+        .product-conatct.d-flex
+            div.share
+                i.icon-share
+                .tooltip-share
+                    .tooltip-share__item.pinterest.d-flex
+                        i.icon-pinterest.tip-icon
+                        p.prd-sub-txt Pinterest
+                    .tooltip-share__item.facebook.d-flex
+                        i.icon-facebook.tip-icon
+                        p.prd-sub-txt Facebook
+                    .tooltip-share__item.twitter.d-flex
+                        i.icon-twitter.tip-icon
+                        p.prd-sub-txt Twitter
 
-                div.favourite
-                    i.icon-wishlist
-                    //- img(src="./assets/images/product-listing/product-card/favourite.svg" alt="favourite")
+            div.favourite
+                i.icon-wishlist
+                //- img(src="./assets/images/product-listing/product-card/favourite.svg" alt="favourite")
+
+
+
+mixin product-card-stock(srcimg, img, name, type, cost)
+    a.product-card__view(href="#")
+        .card-tag Fx
+        picture
+            //- source(srcset=srcimg)
+            img.js-loading-card__img.img-fluid.img-scale(src="", data=img)
+            //- img.js-loading-card__img.img-fluid.img-scale(src=img)
+        div.product-card__customize(data-toggle='modal', data-target='.bd-example-modal-lg')
+            img(src="./assets/images/product-listing/product-card/customize.svg" alt="customize")
+            span.fnt-sm.ml-2 Customize style
+        
+        span.prdt-stock New
+
+    .product-card__body
+        .product-info
+            span.product-name=name 
+            span.product-type=type
+            span.product-cost=cost
+                span.product-strike $59.95
+        .product-conatct.d-flex
+            div.share
+                i.icon-share
+                .tooltip-share
+                    .tooltip-share__item.pinterest.d-flex
+                        i.icon-pinterest.tip-icon
+                        p.prd-sub-txt Pinterest
+                    .tooltip-share__item.facebook.d-flex
+                        i.icon-facebook.tip-icon
+                        p.prd-sub-txt Facebook
+                    .tooltip-share__item.twitter.d-flex
+                        i.icon-twitter.tip-icon
+                        p.prd-sub-txt Twitter
+
+            div.favourite
+                i.icon-wishlist
+                //- img(src="./assets/images/product-listing/product-card/favourite.svg" alt="favourite")
+
+
+mixin product-card-outstock(srcimg, img, name, type, cost)
+    a.product-card__view(href="#")
+        .card-tag Fx
+        picture
+            //- source(srcset=srcimg)
+            img.js-loading-card__img.img-fluid.img-scale(src="", data=img)
+            //- img.js-loading-card__img.img-fluid.img-scale(src=img)
+        div.product-card__customize(data-toggle='modal', data-target='.bd-example-modal-lg')
+            img(src="./assets/images/product-listing/product-card/customize.svg" alt="customize")
+            span.fnt-sm.ml-2 Customize style
+        
+        span.prdt-out-stck Out of Stock
+
+    .product-card__body
+        .product-info
+            span.product-name=name 
+            span.product-type=type
+            span.product-cost=cost
+        .product-conatct.d-flex
+            div.share
+                i.icon-share
+                .tooltip-share
+                    .tooltip-share__item.pinterest.d-flex
+                        i.icon-pinterest.tip-icon
+                        p.prd-sub-txt Pinterest
+                    .tooltip-share__item.facebook.d-flex
+                        i.icon-facebook.tip-icon
+                        p.prd-sub-txt Facebook
+                    .tooltip-share__item.twitter.d-flex
+                        i.icon-twitter.tip-icon
+                        p.prd-sub-txt Twitter
+
+            div.favourite
+                i.icon-wishlist
+                //- img(src="./assets/images/product-listing/product-card/favourite.svg" alt="favourite")
