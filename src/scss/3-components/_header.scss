@@ -41,8 +41,12 @@
 	position: absolute;
 	width: 100%;
 	transition: all 0.3s ease;
-	top: 40px;
-	z-index: 10;
+	top: 0;
+	z-index: 100;
+
+	@include bpmax('tab-mid') {
+		top: 0 !important;
+	}
 
 	&.menu-hover,
 	&.white-header {
@@ -505,6 +509,11 @@
 				background: rgba(255, 255, 255, 0.95);
 				z-index: 1;
 				transition: all 0.3s ease;
+				touch-action: none;
+
+				> * {
+					touch-action: auto;
+				}
 			}
 
 			&.search-open {

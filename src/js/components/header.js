@@ -22,8 +22,10 @@ class HeaderInteractions {
     });
 
     $(window).on('load resize', function () {
-      var discountht = $('.discount-bar').outerHeight();
-      $('.web-header').css('top', discountht);
+      if($('.offer-bar').length > 0) {
+        var discountht = $('.offer-bar').outerHeight();
+        $('.web-header').css('top', discountht);
+      }
     });
 
     //Hamburger functions
