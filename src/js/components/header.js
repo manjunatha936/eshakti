@@ -62,6 +62,7 @@ class HeaderInteractions {
           slidesPerView: 1.2,
           spaceBetween: 15,
           slidesOffsetBefore: 15,
+          slidesOffsetAfter: 20,
           breakpoints: {
             375: {
               slidesPerView: 1.3,
@@ -76,6 +77,7 @@ class HeaderInteractions {
               slidesPerView: 2,
             },
             1024: {
+              slidesOffsetAfter: 0,
               slidesOffsetBefore: 0,
               slidesPerView: 2.5,
               spaceBetween: 30,

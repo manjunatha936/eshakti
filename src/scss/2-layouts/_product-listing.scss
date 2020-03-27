@@ -433,7 +433,7 @@
         }
         @media screen and (min-width:992px ){
             // max-width: 900px;
-            max-width: 886px;
+            max-width: 920px;
         }
         @media screen and (min-width:1404px ){
             max-width: 1180px;
@@ -1036,7 +1036,7 @@
     }
     .swiper-arrow .arrow:last-child {
         top: 28%;
-        right: -11px;
+        right: 0;
     }
 }
 
@@ -1123,4 +1123,22 @@
 }
 .popUp-container {
     position: relative;
+}
+
+.styleThumbSlider {
+    width: calc(100% - 50px);
+    position: relative;
+
+    .swiper-container {
+        width: calc(100% - 100px);
+    }
+
+    label.swiper-slide:last-of-type {
+        margin-right: 0 !important;
+    }
+
+    .arrow.swiper-button-disabled {
+        opacity: 0.5;
+        pointer-events: none;
+    }
 }
