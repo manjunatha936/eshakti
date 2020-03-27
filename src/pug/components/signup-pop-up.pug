@@ -2,15 +2,15 @@
   .modal-dialog.modal-lg
     button.close-modal(data-dismiss="modal") &times;
     .modal-content.pt-lg-0
-        .container.px-md-0
+        .container.px-3.px-md-0
             ul#myTabSign.nav.d-flex.d-lg-none.sign-up(role='tablist')
                 li.nav-item.mt-2
                     a#return-tab.pop-head.nav-link.active.mb-0(data-toggle='tab' href='#return' role='tab' aria-controls='home' aria-selected='true') Returning Customers
                 li.nav-item.mt-2
                     a#new-customer-tab.pop-head.nav-link(data-toggle='tab' href='#new-customer' role='tab' aria-controls='profile' aria-selected='false') New Customers
                 
-            #sign-popup.row.tab-content.d-flex
-                #return.col-lg-6.d-lg-flex.tab-pane.fade.show.active
+            #sign-popup.tab-content.d-flex
+                #return.d-lg-flex.tab-pane.fade.show.active
                     .return
                         p.pop-head.d-none.d-lg-block Returning Customers
                         form(action="" data-parsley-validate)
@@ -24,7 +24,7 @@
                             button.bttn.bttn__orange.px-5(type="submit") 
                                 span.px-2 Sign in
             
-                #new-customer.col-lg-6.d-lg-flex.tab-pane.fade     
+                #new-customer.d-lg-flex.tab-pane.fade     
                     .new-customer  
                         p.pop-head.d-none.d-lg-block New Customers
                         form(action="" data-parsley-validate)
