@@ -53,11 +53,28 @@ class HeaderInteractions {
       //Offer-card-swiper
       if($('.js-offer-card-swiper')) {
         var swiper = new Swiper('.js-offer-card-swiper', {
-          slidesPerView: 1.3,
+          slidesPerView: 1.2,
           spaceBetween: 15,
           slidesOffsetBefore: 15,
           breakpoints: {
-            992: {
+            375: {
+              slidesPerView: 1.3,
+            },
+            500: {
+              slidesPerView: 1.7,
+            },
+            700: {
+              slidesPerView: 1.9,
+            },
+            700: {
+              slidesPerView: 2,
+            },
+            1024: {
+              slidesOffsetBefore: 0,
+              slidesPerView: 2.5,
+              spaceBetween: 30,
+            },
+            1200: {
               slidesOffsetBefore: 0,
               slidesPerView: 3,
               spaceBetween: 30,
