@@ -297,6 +297,7 @@
 						height: 0;
 						opacity: 0;
 						transition: all ease 0.2s;
+						overflow: hidden;
 
 						.dropdown-menuwrap {
 							width: 100%;
@@ -955,6 +956,7 @@
 		z-index: 10;
 		padding: 11px 0;
 		box-shadow: 0px -6px 25px -13px rgba(0, 0, 0, 0.5);
+		background-color: rgba(255, 255, 255, 0.95);
 	
 		&__head {
 			text-align: left;
@@ -990,7 +992,7 @@
 
 	@include bpmax('tab-mid') {
 		padding: 11px 0;
-		background-color: $white;
+		background-color: rgba(255, 255, 255, 0.95);
 		position: relative;
 		left: unset;
 		top: unset;
@@ -999,6 +1001,11 @@
 
 		.web-link {
 			display: none;
+		}
+
+		.container {
+			width: 100%;
+			max-width: 100%;
 		}
 	}
 }
@@ -1098,8 +1105,8 @@
 
 	@include bpmax('tab-mid') {
 		padding: 11px 20px;
-		min-width: 250px;
-		width: 280px;
+		min-width: 230px;
+		// width: 280px;
 		min-height: 100px;
 		height: 105px;
 	
