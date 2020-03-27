@@ -41,8 +41,14 @@
 	position: absolute;
 	width: 100%;
 	transition: all 0.3s ease;
-	top: 40px;
-	z-index: 10;
+	top: 0;
+	z-index: 100;
+
+	@include bpmax('tab-mid') {
+		&:not(.normal-cust-header) {
+			top: 0 !important;
+		}
+	}
 
 	&.menu-hover,
 	&.white-header {
@@ -516,6 +522,11 @@
 				background: rgba(255, 255, 255, 0.95);
 				z-index: 1;
 				transition: all 0.3s ease;
+				touch-action: none;
+
+				> * {
+					touch-action: auto;
+				}
 			}
 
 			&.search-open {
@@ -884,7 +895,7 @@
 .offer-bar {
 	background-color: $white;
 	position: relative;
-	z-index: 20;
+	z-index: 101;
 	
 	&__head {
 		padding: 11px 120px;

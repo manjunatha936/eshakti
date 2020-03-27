@@ -14,6 +14,9 @@ class FeedbackSwiper {
         spaceBetween: 0,
         loop: true,
         effect: 'fade',
+        autoplay: {
+          delay: 5000,
+        },
         fadeEffect: {
           crossFade: true
         }
