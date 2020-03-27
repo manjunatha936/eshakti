@@ -118,56 +118,43 @@ class ProductDetais {
 
           var popupSlide1 = new Swiper('.js-necklineSLider', {
             spaceBetween: 10,
-            slidesPerView: 3.5,
-            breakpoints: {
-             
-              360: {
-                slidesPerView: 2.5,
-         
-              },
-              768: {
-                slidesPerView: 4.5,
-             
-              },
-            }
+            slidesPerView:'auto',
+            navigation: {
+              nextEl: '.left-arrow-necklineSLider',
+              prevEl: '.right-arrow-necklineSLider',
+            },
+            
             
           });
-          popupSlide1.update();
+          
           var popupSlide2 = new Swiper('.js-sleeveSLider', {
             spaceBetween: 10,
-            slidesPerView: 3.5,
+            slidesPerView:'auto',
             // loop: true,
-           
-            breakpoints: {
-             
-              360: {
-                slidesPerView: 2.5,
-         
-              },
-              768: {
-                slidesPerView: 4.5,
-             
-              },
-            }
+            navigation: {
+              nextEl: '.left-arrow-sleeveSLider',
+              prevEl: '.right-arrow-sleeveSLider',
+            },
+            
             
           });
           var popupSlide3 = new Swiper('.js-lengthSLider', {
             spaceBetween: 10,
-            slidesPerView: 3.5,
-        
-            breakpoints: {
-             
-              360: {
-                slidesPerView: 2.5,
-         
-              },
-              768: {
-                slidesPerView: 4.5,
-             
-              },
-            }
+            slidesPerView:'auto',
+            navigation: {
+              nextEl: '.left-arrowlengthSLider',
+              prevEl: '.right-arrowlengthSLider',
+            },
+          
             
           });
+          $(".custom-stye-br").click(function(){
+            setTimeout(function(){
+              popupSlide1.update();
+              popupSlide2.update();
+              popupSlide3.update();
+            },300)
+          })
         //save style
         $(".js-btn-save").click(function(e){
           

@@ -82,9 +82,42 @@ class SavePopup {
                 $(".style-model-content").addClass("fade")
                 
             }
-    
+            
+            var mySwiper1 = new Swiper('.js-prod-v2-neck', {
+                speed: 400,
+                // spaceBetween: 100,
+                slidesPerView:'auto',
+                navigation: {
+                    nextEl: '.left-arrow-necklineSLider-v2',
+                    prevEl: '.right-arrow-necklineSLider-v2',
+                  },
+            });
+            var mySwiper2 = new Swiper('.js-prod-v2-sleev', {
+                speed: 400,
+                // spaceBetween: 100,
+                slidesPerView:'auto',
+                navigation: {
+                    nextEl: '.left-arrow-sleeveSLider-v2',
+                    prevEl: '.right-arrow-sleeveSLider-v2',
+                  },
+            });
+            var mySwiper3 = new Swiper('.js-prod-v2-length', {
+                speed: 400,
+                // spaceBetween: 100,
+                slidesPerView:'auto',
+                navigation: {
+                    nextEl: '.left-arrowlengthSLider-v2',
+                    prevEl: '.right-arrowlengthSLider-v2',
+                  },
+            });
 
-     
+            $('.js-product-customization').click(function(){
+                setTimeout(function(){
+                    mySwiper1.update();
+                    mySwiper2.update();
+                    mySwiper3.update();
+                },300)
+            })
     })
     }
 }

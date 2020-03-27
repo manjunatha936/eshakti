@@ -1018,7 +1018,14 @@
           
         }
     }
-
+    .swiper-arrow .arrow:first-child {
+        top: 28%;
+        left: 14px;
+    }
+    .swiper-arrow .arrow:last-child {
+        top: 28%;
+        right: -11px;
+    }
 }
 
 .js-product-details-modal {
