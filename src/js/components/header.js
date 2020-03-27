@@ -47,27 +47,39 @@ class HeaderInteractions {
       }
 
       else if ($(".account-menu").hasClass("logged")) {
-        var title = "<li><a href='javascript:void(0)' class='border-0 d-lg-none'>My Account</a></li>";
+        var title = "<li><a href='javascript:void(0)' class='border-0 d-lg-none account-title'>My Account</a></li>";
         var ulClone = $('.account-menu').find("ul").clone().addClass("account-info d-lg-none");
-        $('.web-header__menulinks').append(title, ulClone);
+        $('.web-header__bottom').append(title,ulClone);
       }
 
       //Offer-card-swiper
-      var swiper = new Swiper('.js-offer-card-swiper', {
-        slidesPerView: 1.3,
-        spaceBetween: 15,
-        slidesOffsetBefore: 15,
-        breakpoints: {
-          992: {
-            slidesOffsetBefore: 0,
-            slidesPerView: 3,
-            spaceBetween: 30,
-          },
-        }
-      });
+      if($('.js-offer-card-swiper')) {
+        var swiper = new Swiper('.js-offer-card-swiper', {
+          slidesPerView: 1.3,
+          spaceBetween: 15,
+          slidesOffsetBefore: 15,
+          breakpoints: {
+            992: {
+              slidesOffsetBefore: 0,
+              slidesPerView: 3,
+              spaceBetween: 30,
+            },
+          }
+        });
+      }
 
       $('.offer-bar__toggle').click(function () {
         $(".offer-bar-c").parent(".offer-bar").toggleClass('show');
+      });
+
+      // copy link js
+      $(".copy-code").click(function () {
+        var element = $(this).parents(".offer-bar-card").find(".code");
+        var $temp = $("<input>");
+        $("body").append($temp);
+        $temp.val($(element).text()).select();
+        document.execCommand("copy");
+        $temp.remove();
       });
 
     var data_breaks = $('.web-header__menulinks').attr('data-breaks').split(',');
