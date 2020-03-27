@@ -14,6 +14,7 @@ class CardSwiper {
         slidesPerView: 1,
         spaceBetween: 0,
         speed: 500,
+        touch: true,
         loop: true,
         effect: 'fade',
         fadeEffect: {
