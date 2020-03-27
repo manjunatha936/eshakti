@@ -78,6 +78,15 @@ class HeaderInteractions {
     $('header .dropdown-menulink').on('mouseleave', function () {
       $('header').removeClass('menu-hover');
     });
+
+    $('.video-popup').on('shown.bs.modal', function () {
+      $(this).find('iframe').attr('src', "");
+      $(this).find('iframe').attr('src', ($(this).find('iframe').attr('data-src')));
+    });
+
+    $('.video-popup').on('hidden.bs.modal', function () {
+      $(this).find('iframe').attr('src', "");
+    })
   }
 }
 
