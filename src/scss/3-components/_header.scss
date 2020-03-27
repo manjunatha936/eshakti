@@ -148,6 +148,13 @@
 			top: 0;
 			z-index: 1;
 		}
+
+		@include bpmax('tab-mid') {
+			.account-menu {
+				display: none;
+			}
+		}
+
 	}
 
 	&__bottom {
@@ -166,36 +173,33 @@
 			background: $white;
 			transform: translateX(-100%);
 			transition: all ease 0.4s;
-			padding: 100px 35px 0;
+			padding: 60px 35px 0;
 			overflow-y: auto;
 
 			.web-header__logo {
 				position: absolute;
-				top: 35px;
+				top: 15px;
 				left: 35px;
 				display: block;
+				cursor: pointer;
 			}
-
+			
 			.close {
 				position: absolute;
-				top: 35px;
+				top: 15px;
 				right: 35px;
 				display: block;
-
-				img {
-					height: 19px;
-					width: 19px;
+				cursor: pointer;
+				
+				span {
+					font-weight: 100;
+					font-size: 40px;
+					line-height: 1;
 				}
 			}
 
 			&.show {
 				transform: translateX(0);
-			}
-
-			.account-menu {
-				span {
-					margin-right: 10px;
-				}
 			}
 
 			.web-header__menulinks {
@@ -214,7 +218,20 @@
 						font-weight: 400 !important;
 						font-size: 13px;
 						margin-bottom: 25px;
+						text-transform: capitalize;
+					}
 
+					li:last-child {
+						a {
+							color: #4d5156;
+							font-size: 14px;
+							font-weight: 600;
+							letter-spacing: 0.58px;
+							text-transform: uppercase;
+							padding-top: 20px;
+							margin-top: -5px;
+							border-top: 1px solid #e4e6e7;
+						}
 					}
 				}
 
@@ -229,8 +246,8 @@
 
 					&::after {
 						content: "";
-						height: 3px;
-						width: 18px;
+						height: 2px;
+						width: 16px;
 						background-color: #333333;
 						position: absolute;
 						right: 20px;
@@ -240,14 +257,18 @@
 					
 					&::before {
 						content: "";
-						height: 18px;
-						width: 3px;
+						height: 16px;
+						width: 2px;
 						background-color: #333333;
 						position: absolute;
 						right: 27px;
     					top: 21.5px;
 						border-radius: 2px;
 						transition: all ease 0.4s;
+					}
+					
+					&:hover > a::after {
+						display: none;
 					}
 
 					.dropdown-menucontain {
@@ -313,6 +334,43 @@
 					}
 				}
 
+			}
+
+			
+			.account-menu {
+				display: block;
+
+				span {
+					display: none;
+				}
+
+				a {
+					margin: 0 -35px;
+					padding: 20px 35px;
+
+					p {
+						font-weight: 700;
+					}
+				}
+			}
+		}
+
+		@media only screen and (max-width: 369.9px) {
+			padding: 60px 20px 0;
+
+			.web-header__logo {
+				left: 20px;
+			}
+
+			.close {
+				right: 20px;
+			}
+
+			.account-menu {
+				a {
+					margin: 0 -20px;
+    				padding: 20px 20px;
+				}
 			}
 		}
 	}
