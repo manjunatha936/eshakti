@@ -1,12 +1,5 @@
 // Product-details
 
-.product-details {
-    @include bpmax("phone-lg") {
-        overflow: hidden;
-    }
-}
-
-
 .prod-label  {
     @extend .fnt-xxs;
     text-transform: uppercase;
@@ -258,7 +251,18 @@
 //Product recent items
 
 .product-recent-view {
-   padding-top: 4rem;
+    padding-top: 1rem;
+    @include bpmax("phone-lg") {
+        overflow: hidden;
+    }
+    @media screen and (min-width: 768px){
+        padding-top: 2rem;
+        
+    }
+    @media screen and (min-width: 1024px){
+        padding-top: 4rem;
+        
+    }
    &__title {
        font-family: $opensans;
        text-transform: uppercase;

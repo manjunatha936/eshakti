@@ -8537,14 +8537,11 @@ oust@^0.5.2:
     cheerio "^0.22.0"
     minimist "^1.2.0"
 
-<<<<<<< HEAD
-=======
 overlay.js@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/overlay.js/-/overlay.js-1.2.0.tgz#7ffee9fda4a8336cacc2af2e536584c2a0ca2785"
   integrity sha512-xBIOt+SjiopkSsQBFRnf51xzbZ71fA201K2xuIXCpEZnrcCU0dInMpCAfWUetqzr2qrqyH6WHcMuOLcHSD+Xxg==
 
->>>>>>> b195ca755453ad34c77e4427d1cf9a3e0afb8a77
 overlayscrollbars@^1.11.0:
   version "1.11.0"
   resolved "https://registry.yarnpkg.com/overlayscrollbars/-/overlayscrollbars-1.11.0.tgz#374a14f37b78214e0166db50c1a489b6af53eddb"

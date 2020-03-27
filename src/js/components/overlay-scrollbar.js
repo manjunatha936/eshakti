@@ -9,13 +9,13 @@ class OverlayScrollbar {
   }
 
   init() {
-      let overscroll = OverlayScrollbars(document.querySelectorAll(".style-contain"), {  
-                scrollbars : {
-                    clickScrolling : true
-                },
-                overflowBehavior : {
-            y : "never",
-          }, });
+      // let overscroll = OverlayScrollbars(document.querySelectorAll(".style-contain"), {  
+      //           scrollbars : {
+      //               clickScrolling : true
+      //           },
+      //           overflowBehavior : {
+      //       y : "never",
+      //     }, });
   
       let productScroll = OverlayScrollbars(document.querySelector(".model-wrp"), { overflowBehavior : {
           x : "never",
@@ -34,6 +34,10 @@ class OverlayScrollbar {
         },});
 
       let measureScroll = OverlayScrollbars(document.querySelector(".js-measure-content"), { overflowBehavior : {
+          x : "never",
+        },});
+        
+      let productDetails = OverlayScrollbars(document.querySelector(".product-details-list"), { overflowBehavior : {
           x : "never",
         },});
         

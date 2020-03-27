@@ -27,6 +27,9 @@ import "../pug/accounts-personal.pug";
 import HeaderInteractions from "./components/header";
 const headerfns = new HeaderInteractions();
 
+import leftSticky from "./components/left-sticky";
+const leftsticky = new leftSticky();
+
 // import "./components/header";
 import ProductDetais from './product-listing'
 const productDetais = new ProductDetais();

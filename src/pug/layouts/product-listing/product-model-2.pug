@@ -1,9 +1,9 @@
 
 //MODEL 2 
-.product-modal.modal.fade.bd-example-modal-lg(tabindex='-1' role='dialog' aria-labelledby='myLargeModalLabel' aria-hidden='true')
+.product-modal.modal.fade.bd-example-modal-lg.custom-product-model(tabindex='-1' role='dialog' aria-labelledby='myLargeModalLabel' aria-hidden='true')
   .modal-dialog.modal-lg
     button.close-modal(data-dismiss="modal") &times;
-    .modal-content.pt-5.product-custome-content
+    .modal-content.pt-5.product-custome-content.pb-0
         .model-wrp.js-custom-scroll.h-100
             .container.p-0
                 .row.model-head.text-center.justify-content-center.m-0
@@ -12,8 +12,8 @@
                         p.prd-sub-txt.px-5 You can customize the garment to your style or shop the style 'as shown'.
                 .overflowScroll
                     .row.custom-modal-head
-                        .col-lg-5.d-flex.flex-column.justify-content-center.custom-modal-head__img.order-2.order-md-1
-                            .model-img
+                        .col-lg-5.d-flex.flex-column.justify-content-center.custom-modal-head__img.order-2.order-md-1.pt-3.pt-md-0
+                            .model-img.mx-auto
                                 .left-arm
                                     img.img.img-fluid(src="./assets/images/product-listing/parts/left-sleeve.png", alt="")
                                 .neck-body
@@ -22,8 +22,18 @@
                                     img.img.img-fluid(src="./assets/images/product-listing/parts/right-sleeve.png", alt="")
                                 .length
                                     img.img.img-fluid(src="./assets/images/product-listing/parts/length.png", alt="")
-                            a(href="#").share-style
+                            a(href="#").share-style.share
                                 i.icon-share
+                                .tooltip-share
+                                    .tooltip-share__item.pinterest.d-flex
+                                        i.icon-pinterest.tip-icon
+                                        p.prd-sub-txt Pinterest
+                                    .tooltip-share__item.facebook.d-flex
+                                        i.icon-facebook.tip-icon
+                                        p.prd-sub-txt Facebook
+                                    .tooltip-share__item.twitter.d-flex
+                                        i.icon-twitter.tip-icon
+                                        p.prd-sub-txt Twitter
                                 span.txt-gry-12 Share
                             p.fnt-11.text-center.pb-2 As Shown - Mandarin collar, Elbow length, Mini 
                             
@@ -134,10 +144,10 @@
         //-     .col.d-flex.justify-content-center.justify-content-md-end
         //-         a.bttn.bttn__orange.mr-3(type="button", data-dismiss="modal") Proceed with the style
         //-         button.js-btn-save.bttn.bttn__white.ml-1.mr-md-3.mr-xl-0(type="button") Save Style
-        .row.custom-modal-foot.save-btn-foot
-            .col.d-flex.justify-content-center.justify-content-md-end.position-relative
+        .custom-modal-foot.save-btn-foot
+            .d-flex.justify-content-center.justify-content-md-end.position-relative
                 
                 button.js-save-style-item.procced-save-style.bttn.bttn__orange.ml-1.mr-md-3.mr-xl-0(type="button") Save the Style
                 .save-item-btns
-                    button.mb-3.mb-md-0.mr-md-3.create-more-styles.bttn(type="button") + Create more style
-                    button.bttn.bttn__orange.ml-1.mr-md-3.mr-xl-0(type="button") Proceed with the style
+                    button.mr-md-3.create-more-styles.bttn(type="button") + Create more style
+                    button.bttn.bttn__orange.proced-more-style.ml-1.mr-md-3.mr-xl-0(type="button") Proceed with the style

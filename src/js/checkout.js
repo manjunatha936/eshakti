@@ -13,18 +13,21 @@ $(document).ready(function(){
     $('.checkout-panel__promo input[type="text"]').on('focus input', function(){
         if($(this).val() == "") {
             $(this).siblings('.checkout-panel__couponwrap').addClass('show-box');
+            $('.checkout-panel__scroll').addClass('no-scroll');
             if($(this).parents('.checkout-panel__promo').find('.overlay').length <= 0) {
                 $(this).parents('.checkout-panel__promo').append("<div class='overlay'></div>");
             }
         }
         else {
             $(this).siblings('.checkout-panel__couponwrap').removeClass('show-box');
+            $('.checkout-panel__scroll').removeClass('no-scroll');
             $('.checkout-panel__promo .overlay').remove();
         }
     });
 
     $(document).on('click', '.checkout-panel__promo .overlay', function(){
         $('.checkout-panel__couponwrap').removeClass('show-box');
+        $('.checkout-panel__scroll').removeClass('no-scroll');
         $('.checkout-panel__promo .overlay').remove();
     });
 

@@ -13,9 +13,10 @@
         }
     }
     .close-modal {
+        top: 8px;
         left: calc(100% - 42px )!important ;
         @media screen and (min-width:768px ){
-            left: calc(100% + 8px )!important ;
+            left: calc(100% + 14px )!important ;
         //    top: -3px;
    
         }

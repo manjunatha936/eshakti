@@ -20,7 +20,7 @@
               <button type="submit"><i class="icon-search"></i></button>
             </form>
             <ul class="web-header__toplinks">
-              <li><a href="#" data-toggle="modal" data-target=".pop-up-signup"><span><i class="icon-account"></i></span>
+              <li class="account-menu not-logged"><a href="#" data-toggle="modal" data-target=".pop-up-signup"><span><i class="icon-account"></i></span>
                   <p>Sign in</p></a>
               </li>
               <li><a href="#"><span><i class="icon-wishlist"></i></span>
@@ -30,6 +30,8 @@
             </ul>
           </div>
           <div class="web-header__bottom container">
+            <div class="web-header__logo"><a href="index.html"><img src="./assets/images/logo.svg" alt=""/></a></div>
+            <div class="close"><img src="./assets/images/close.png" alt=""/></div>
             <ul class="web-header__menulinks" data-breaks="5,4,4">
               <li><a href="#">Top Sellers</a></li>
               <li class="dropdown-menulink"><a href="#">Dresses</a>
@@ -114,16 +116,16 @@
         </header>
     <main>
       <div class="product-modal modal fade pop-up-signup pop-up" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-dialog modal-lg">
+          <button class="close-modal" data-dismiss="modal">&times;</button>
           <div class="modal-content pt-lg-0">
-            <div class="container px-md-0">
-              <button class="close-modal" data-dismiss="modal">&times;</button>
+            <div class="container px-3 px-md-0">
               <ul class="nav d-flex d-lg-none sign-up" id="myTabSign" role="tablist">
                 <li class="nav-item mt-2"><a class="pop-head nav-link active mb-0" id="return-tab" data-toggle="tab" href="#return" role="tab" aria-controls="home" aria-selected="true">Returning Customers</a></li>
                 <li class="nav-item mt-2"><a class="pop-head nav-link" id="new-customer-tab" data-toggle="tab" href="#new-customer" role="tab" aria-controls="profile" aria-selected="false">New Customers</a></li>
               </ul>
-              <div class="row tab-content d-flex" id="sign-popup">
-                <div class="col-lg-6 d-lg-flex tab-pane fade show active" id="return">
+              <div class="tab-content d-flex" id="sign-popup">
+                <div class="d-lg-flex tab-pane fade show active" id="return">
                   <div class="return">
                     <p class="pop-head d-none d-lg-block">Returning Customers</p>
                     <form action="" data-parsley-validate="data-parsley-validate">
@@ -139,7 +141,7 @@
                     </form>
                   </div>
                 </div>
-                <div class="col-lg-6 d-lg-flex tab-pane fade" id="new-customer">    
+                <div class="d-lg-flex tab-pane fade" id="new-customer">    
                   <div class="new-customer"> 
                     <p class="pop-head d-none d-lg-block">New Customers</p>
                     <form action="" data-parsley-validate="data-parsley-validate">
@@ -170,7 +172,7 @@
             <div class="col-sm-5 order-sm-1 web-banner__textwrap">
               <div class="web-banner__text">
                 <h1 class="h2heading">Unlike others, we <span>customize </span>for you easily.</h1>
-                <p>Deliver clothing that is made just for you. It is not enough that fashion looks good on the mannequin - it needs to look good on YOU!</p><a class="web-link" href="#">Watch fx video</a>
+                <p>Deliver clothing that is made just for you. It is not enough that fashion looks good on the mannequin - it needs to look good on YOU!</p><a class="web-link" href="#" data-toggle="modal" data-target=".video-popup">Watch fx video</a>
               </div>
             </div>
             <div class="col-sm-7 order-sm-0 web-banner__imgwrap">
@@ -291,7 +293,7 @@
             <div class="home-cards__boxdata responsive-bgimage" data-src="assets/images/home/cards-media.jpg" data-sm-src="assets/images/home/cards-media-sm.jpg">
               <div class="home-cards__content">
                 <h3 class="home-cards__title h3heading">eShakti Fx</h3>
-                <p class="home-cards__desc">Check out the various styles you can have in a few clicks.</p><a href="#"><i class="icon-play"></i>Play video</a>
+                <p class="home-cards__desc">Check out the various styles you can have in a few clicks.</p><a href="#" data-toggle="modal" data-target=".video-popup"><i class="icon-play"></i>Play video</a>
               </div>
             </div>
           </div>
@@ -358,7 +360,7 @@
             </div>
           </div>
           <!--START:CARDS INFO-->
-          <div class="row mt-3 mt-sm-4 mt-md-5">
+          <div class="row mt-3 mt-sm-4 mt-md-5 home-fashion-slider">
             <div class="js-fashion-slider swiper-container">
               <div class="swiper-wrapper">
                 <div class="col-md-4 swiper-slide"><a class="ekt-card" href="javascript:void(0);">
@@ -399,6 +401,12 @@
           </div>
         </div>
       </section>
+      <div class="product-modal modal fade video-popup pop-up" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <button class="close-modal" data-dismiss="modal">&times;</button>
+          <div class="modal-content"><iframe width="560" height="315" src="https://www.youtube.com/embed/UsDw2aBLIfc" frameborder="0" showinfo="0" allow="accelerometer; autoplay; encrypted-media; gyroscope;" allowfullscreen></iframe></div>
+        </div>
+      </div>
     </main>
     <footer>
       <div class="container">

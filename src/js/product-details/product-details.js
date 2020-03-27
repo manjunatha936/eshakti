@@ -17,16 +17,7 @@ class ProductDetais {
       var swiperStyle;
        var neckText,sleeveText,lengthText;
        neckText = sleeveText = lengthText = "As shown";
-        $(".js-read-more").click(function(e){
-          e.preventDefault()
-          $(this).siblings('.more-info').toggle()
-          
-          if( $(this).siblings('.more-info').css('display') == 'block'){
-            $(this).css({marginLeft:"0"})
-          }else {
-            $(this).css({marginLeft:"8px"})
-          }
-        })
+    
         $('.neckline').children('.style-contain').find('.img-container').click(function(){
           neckText = $(this).children(".img-txt").text()
           console.log(neckText)
@@ -55,16 +46,7 @@ class ProductDetais {
         })
 
       //2nd popup save styles
-      $('.close-parent-modal').on('click', function() {
-        var index = $(".slide-item").length;
-        const newdata = '<li class="slide-item"><div class="card-wrp"><div class="style-card"><img class="saved-img" src="'+ imageSource+'" alt="style image" /><div class="close-card" slide-id="'+ index +'"><span></span><span></span></div></div><div class="d-flex pt-2 align-items-center  " ><p class="fnt-11 w-100 pr-2 text-left">'+neckText+" , "+sleeveText+" , "+lengthText+'</p><i class="share-icon icon-share mr-2" ></i></div></div></li>'
-        $('.saved-styles__subImages').append(newdata);
-
-        setTimeout(function(){ 
-          $('.save-style-model').modal('show');
-          }, 650);
-  
-      });
+   
 
         //thumbs
         var galleryThumbs = new Swiper('.js-slider-img', {
@@ -98,10 +80,10 @@ class ProductDetais {
             watchSlidesVisibility: true,
             watchSlidesProgress: true,
               // Navigation arrows
-          navigation: {
-            nextEl: '.left-arrow',
-            prevEl: '.right-arrow',
-          },
+            navigation: {
+              nextEl: '.left-arrow',
+              prevEl: '.right-arrow',
+            },
     
             grabCursor: true,
             breakpoints: {
@@ -132,8 +114,65 @@ class ProductDetais {
               swiper: galleryThumbs,
             },
           });
+
+
+          var popupSlide1 = new Swiper('.js-necklineSLider', {
+            spaceBetween: 10,
+            slidesPerView: 3.5,
+            breakpoints: {
+             
+              360: {
+                slidesPerView: 2.5,
+         
+              },
+              768: {
+                slidesPerView: 4.5,
+             
+              },
+            }
+            
+          });
+          popupSlide1.update();
+          var popupSlide2 = new Swiper('.js-sleeveSLider', {
+            spaceBetween: 10,
+            slidesPerView: 3.5,
+            // loop: true,
+           
+            breakpoints: {
+             
+              360: {
+                slidesPerView: 2.5,
+         
+              },
+              768: {
+                slidesPerView: 4.5,
+             
+              },
+            }
+            
+          });
+          var popupSlide3 = new Swiper('.js-lengthSLider', {
+            spaceBetween: 10,
+            slidesPerView: 3.5,
+        
+            breakpoints: {
+             
+              360: {
+                slidesPerView: 2.5,
+         
+              },
+              768: {
+                slidesPerView: 4.5,
+             
+              },
+            }
+            
+          });
         //save style
         $(".js-btn-save").click(function(e){
+          
+            $(".js-proceed").addClass("btn-visible-true")
+          
           var index = $(".slide-item").length
           
             // e.preventDefault();
@@ -155,7 +194,9 @@ class ProductDetais {
               }
               cardTitle = neckText+","+sleeveText+","+lengthText;
 
-            const ele = '<li class="slide-item swiper-slide"><div class="card-wrp"><div class="style-card"><img class="saved-img" src="'+imageSource+'" alt="style image" /><div class="close-card" slide-id="'+ index +'"><span></span><span></span></div></div><div class="d-flex pt-2 align-items-center  " ><p class="fnt-11 w-100 pr-2">'+cardTitle+'</p><i class="share-icon icon-share mr-2"  ></i></div></div></li>'
+            const ele = '<li class="slide-item swiper-slide"><div class="card-wrp"><div class="close-card" slide-id="'+ index +'"><span></span><span></span></div><input id="img'+ index +'" type="radio" name="img-check" class="d-none img-check"/><div class="check-circle"><span></span></div><label for="img'+ index +'"  class="style-card"><img class="saved-img" src="'+imageSource+'" alt="style image" /></div><div class="d-flex pt-2 align-items-center  " ><p class="fnt-11 w-100 pr-2">'+cardTitle+'</p><i class="share-icon icon-share mr-2"  ></i></label></div></li>'
+
+            // '<li class="slide-item"><div class="card-wrp"><label for="img'+ index +'" class="style-card"><img class="saved-img" src="'+ imageSource+'" alt="style image" /></div><div class="d-flex pt-2 align-items-center  " ><p class="fnt-11 w-100 pr-2 text-left">'+neckText+" , "+sleeveText+" , "+lengthText+'</p><i class="share-icon icon-share mr-2" ></i></label></div></li>'
             // $('.slide-item-wrp').append(ele)
             // if($(".slide-item").length> 4){
                 swiperStyle = new Swiper('.js-style-slider', {
@@ -202,14 +243,14 @@ class ProductDetais {
             
             })
        
-            if(window.innerWidth > 767){
-              $(".style-model-content").removeClass("fade")
+            // if(window.innerWidth > 767){
+            //   $(".style-model-content").removeClass("fade")
               
-            }
-            else{
-              $(".style-model-content").addClass("fade")
+            // }
+            // else{
+            //   $(".style-model-content").addClass("fade")
               
-            }
+            // }
             // on hover change img
             $('.tab-img img').hover(function(){
             let src = $(this).attr("src")
