@@ -202,6 +202,46 @@
 				transform: translateX(0);
 			}
 
+			.account-info {
+				padding-left: 15px;
+
+				a {
+					border: none;
+					padding: 0;
+					font-weight: 400 !important;
+					font-size: 13px;
+					margin-bottom: 25px;
+					text-transform: capitalize;
+					color: #4d5156;
+				}
+
+				li:last-child {
+					a {
+						color: #4d5156;
+						font-size: 14px;
+						font-weight: 600 !important;
+						letter-spacing: 0.58px;
+						text-transform: uppercase;
+						padding-top: 20px;
+						margin-top: -5px;
+						border-top: 1px solid #e4e6e7;
+						width: 100%;
+						margin-left: -15px;
+					}
+				}
+			}
+
+			.account-title {
+				color: #333333;
+				font-size: 14px;
+				display: flex;
+				align-items: center;
+				text-transform: uppercase;
+				letter-spacing: 0.5px;
+				padding: 20px 0;
+				font-weight: 600 !important;
+			}
+
 			.web-header__menulinks {
 				margin-top: 0;
 				display: block;
@@ -210,36 +250,6 @@
 					font-size: 14px;
 					padding: 20px 0;
 					border-bottom: 1px solid #e4e6e7;
-				}
-
-				.account-info {
-					a {
-						border: none;
-						padding: 0;
-						font-weight: 400 !important;
-						font-size: 13px;
-						margin-bottom: 25px;
-						text-transform: capitalize;
-					}
-
-					li:last-child {
-						a {
-							color: #4d5156;
-							font-size: 14px;
-							font-weight: 600;
-							letter-spacing: 0.58px;
-							text-transform: uppercase;
-							padding-top: 20px;
-							margin-top: -5px;
-							border-top: 1px solid #e4e6e7;
-						}
-					}
-				}
-
-				&>li:last-child {
-					a {
-						border-bottom: none;
-					}
 				}
 				
 				&>li.dropdown-menulink {
@@ -871,18 +881,20 @@
 }
 
 .offer-bar {
-	padding: 11px 40px;
 	background-color: $white;
 	position: relative;
 	z-index: 20;
-
+	
 	&__head {
+		padding: 11px 120px;
+		background-color: $white;
 		font-size: 12px;
 		font-weight: 600;
 		letter-spacing: 0.22px;
 		line-height: 1.5;
 		text-align: center;
 		color: $title-black;
+		border-bottom: 1px solid #e4e6e7;
 	}
 	
 	&__toggle {
@@ -895,7 +907,7 @@
 		position: absolute;
 		right: 40px;
 		top : 11px;
-		padding-right: 14px;
+		padding-right: 17px;
 		cursor: pointer;
 
 		&::after {
@@ -928,17 +940,19 @@
 		left: 0;
 		width: 100vw;
 		transition: all ease 0.4s;
-		transform: translateY(calc(100% - 34px));
-
-		padding: 8px 0;
+		transform: translateY(calc(100% - 40px));
+		z-index: 10;
+		padding: 11px 0;
+		box-shadow: 0px -6px 25px -13px rgba(0, 0, 0, 0.5);
 	
 		&__head {
 			text-align: left;
-			padding-left: 15px;
+			padding: 0 90px 0 15px;
+			border-bottom: none;
 		}
 
 		&__toggle {
-			top: 8px;
+			top: 11px;
 			right: 15px;
 		}
 	}
@@ -958,11 +972,13 @@
 	
 	.web-link {
 		margin-top: 8px;
+		font-size: 11px;
+		line-height: 1.6;
 	}
 
 
 	@include bpmax('tab-mid') {
-		padding: 8px 0;
+		padding: 11px 0;
 		background-color: $white;
 		position: relative;
 		left: unset;
@@ -983,6 +999,7 @@
 
 	h6 {
 		color: $white;
+		font-family: $opensans;
 		font-size: 14px;
 		font-weight: 700;
 		letter-spacing: 0.25px;
@@ -1009,6 +1026,7 @@
 		border: 1px dashed $white;
 		padding: 10px 43px;
 		margin-bottom: 13px;
+		max-width: 185px;
 	}
 
 	.date,
@@ -1025,22 +1043,24 @@
 	}
 
 	@include bpmax('tab-mid') {
-		padding: 12px 20px;
+		padding: 11px 20px;
 		min-width: 250px;
+		width: 280px;
 	
 		h6 {
 			font-size: 11px;
-			margin-bottom: 14px;
+			margin-bottom: 12px;
 		}
 	
 		.price {
 			font-size: 20px;
+			margin-bottom: 10px;
 		}
 		
 		.code {
 			font-size: 12px;
-			padding: 8px 25px;
-			margin-bottom: 11px;
+			padding: 6px 20px;
+			margin-bottom: 10px;
 		}
 	
 		.date,
