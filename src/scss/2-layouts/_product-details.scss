@@ -252,6 +252,9 @@
 
 .product-recent-view {
     padding-top: 1rem;
+    @include bpmax("phone-lg") {
+        overflow: hidden;
+    }
     @media screen and (min-width: 768px){
         padding-top: 2rem;
         
