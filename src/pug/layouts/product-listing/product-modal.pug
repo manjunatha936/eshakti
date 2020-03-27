@@ -10,14 +10,14 @@
                         p.prd-sub-txt.px-5 You can customize the garment to your style or shop the style 'as shown'.
                 .overflowScroll
                     .row.custom-modal-head
-                        .col-lg-5.d-flex.flex-column.justify-content-center.custom-modal-head__img.order-2.order-md-1.position-relative.pt-3.pt-md-0
+                        .col-lg-4.d-flex.flex-column.justify-content-center.custom-modal-head__img.order-2.order-md-1.position-relative.pt-3.pt-md-0
                             .model-img.mx-auto
                                 .left-arm
-                                    img.img.img-fluid(src="./assets/images/product-listing/parts/left-sleeve.png", alt="")
+                                    img.img.img-fluid(src="./assets/images/product-listing/parts/left.png", alt="")
                                 .neck-body
-                                    img.img.img-fluid(src="./assets/images/product-listing/parts/neck.png", alt="")
+                                    img.img.img-fluid(src="./assets/images/product-listing/parts/face.png", alt="")
                                 .right-arm
-                                    img.img.img-fluid(src="./assets/images/product-listing/parts/right-sleeve.png", alt="")
+                                    img.img.img-fluid(src="./assets/images/product-listing/parts/right.png", alt="")
                                 .length
                                     img.img.img-fluid(src="./assets/images/product-listing/parts/length.png", alt="")
                             a(href="#").share-style.share
@@ -36,7 +36,7 @@
                                 
                             p.fnt-11.text-center.pb-2 As Shown - Mandarin collar, Elbow length, Mini 
                             
-                        .col-lg-7.custom-modal-head__opt.order-1.order-md-2
+                        .col-lg-8.custom-modal-head__opt.order-1.order-md-2
                             ul#myTab.nav.d-flex.d-md-none(role='tablist')
                                 li.nav-item.mt-2
                                     a#neck-tab.nav-link.style-head.active(data-toggle='tab' href='#neck' role='tab' aria-controls='home' aria-selected='true') Neckline
@@ -44,7 +44,7 @@
                                     a#sleeve-tab.nav-link.style-head(data-toggle='tab' href='#sleeve' role='tab' aria-controls='profile' aria-selected='false') Sleeve Type
                                 li.nav-item.mt-2
                                     a#length-tab.nav-link.style-head(data-toggle='tab' href='#length' role='tab' aria-controls='contact' aria-selected='false') Length
-                            #myTabContent.tab-content.custom-style.mt-2.mt-md-0
+                            #myTabContent.tab-content.custom-style.mt-2.mt-md-3.mt-lg-0
                                 #neck.tab-pane.fade.show.active.style-model-content.neckline
                                     .style-head.pb-md-3.d-none.d-md-block Neckline
                                     .style-contain.d-flex
@@ -53,7 +53,7 @@
                                             .img-wrp.d-flex.justify-content-center.align-item-center
                                                 span.style-img.text-center.pt-3.m-auto.img-txt__inner-txt Default
                                             p.img-txt.pt-2 As shown collar style
-                                        .swiper-container.js-necklineSLider.px-4
+                                        .swiper-container.js-necklineSLider.px-4.px-lg-5
                                             .swiper-wrapper
                                                 
                                                 label.swiper-slide(for="check2" ).img-container.mr-4
@@ -101,13 +101,13 @@
                                     .style-head.pb-md-3.d-none.d-md-block Sleeve Type
                                     .style-contain.d-flex
                                         label(for="check1" ).img-container
-                                            input#check1.d-none.style-check(type="radio" name="sleeveType" data-src="./assets/images/women.png" checked)
+                                            input#check1.d-none.style-check(type="radio" name="neckline" data-src="./assets/images/women.png" checked)
                                             .img-wrp.d-flex.justify-content-center.align-item-center
                                                 span.style-img.text-center.pt-3.m-auto.img-txt__inner-txt Default
                                             p.img-txt.pt-2 As shown collar style
                                         
 
-                                        .swiper-container.js-sleeveSLider.px-4
+                                        .swiper-container.js-sleeveSLider.px-4.px-lg-5
                                             .swiper-wrapper 
                                     
                                                 label.swiper-slide(for="check7").img-container.mr-4
@@ -151,7 +151,7 @@
                                             .img-wrp.d-flex.justify-content-center.align-item-center
                                                 span.style-img.text-center.pt-3.m-auto.img-txt__inner-txt Default
                                             p.img-txt.pt-2 As shown collar style
-                                        .swiper-container.js-lengthSLider.px-4 
+                                        .swiper-container.js-lengthSLider.px-4.px-lg-5 
                                             .swiper-wrapper
                                                 label.swiper-slide(for="check13").img-container.mr-4
                                                     input#check13.d-none.style-check(type="radio" name="length" data-src="./assets/images/women.png") 
