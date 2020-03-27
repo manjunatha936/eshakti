@@ -859,12 +859,6 @@
 			border-radius: 2px;
 			transition: all ease 0.4s;
 		}
-
-		&.open {
-			&::before {
-				transform: rotate(90deg);
-			}
-		}
 	}
 
 	@include bpmax('tab-mid') {
@@ -872,15 +866,19 @@
 		bottom: 0;
 		left: 0;
 		width: 100vw;
+		transition: all ease 0.4s;
+		transform: translateY(calc(100% - 34px));
 
-		padding: 8px 15px;
+		padding: 8px 0;
 	
 		&__head {
 			text-align: left;
+			padding-left: 15px;
 		}
 
 		&__toggle {
 			top: 8px;
+			right: 15px;
 		}
 	}
 }
@@ -900,10 +898,20 @@
 	.web-link {
 		margin-top: 8px;
 	}
-	
-	&.show {
-		transform: translateY(0);
+
+
+	@include bpmax('tab-mid') {
+		padding: 8px 0;
+		background-color: $white;
+		position: relative;
+		left: unset;
+		top: unset;
+		transform: none;
 		opacity: 1;
+
+		.web-link {
+			display: none;
+		}
 	}
 }
 
@@ -953,5 +961,48 @@
 
 	.copy-code {
 		cursor: pointer;
+	}
+
+	@include bpmax('tab-mid') {
+		padding: 12px 20px;
+		min-width: 250px;
+	
+		h6 {
+			font-size: 11px;
+			margin-bottom: 14px;
+		}
+	
+		.price {
+			font-size: 20px;
+		}
+		
+		.code {
+			font-size: 12px;
+			padding: 8px 25px;
+			margin-bottom: 11px;
+		}
+	
+		.date,
+		.copy-code {
+			font-size: 9px;
+			line-height: 14px;
+		}
+	}
+}
+
+.offer-bar.show {
+	.offer-bar__toggle {
+		&::before {
+			transform: rotate(90deg);
+		}
+	}
+
+	.offer-bar-c {
+		transform: translateY(0);
+		opacity: 1;
+	}
+
+	@include bpmax('tab-mid') {
+		transform: none;
 	}
 }

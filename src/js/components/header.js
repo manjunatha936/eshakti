@@ -52,13 +52,20 @@ class HeaderInteractions {
 
       //Offer-card-swiper
       var swiper = new Swiper('.js-offer-card-swiper', {
-        slidesPerView: 3,
-        spaceBetween: 30,
+        slidesPerView: 1.3,
+        spaceBetween: 15,
+        slidesOffsetBefore: 15,
+        breakpoints: {
+          992: {
+            slidesOffsetBefore: 0,
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+        }
       });
 
       $('.offer-bar__toggle').click(function () {
-        $(this).toggleClass('open');
-        $(".offer-bar-c").toggleClass('show');
+        $(".offer-bar-c").parent(".offer-bar").toggleClass('show');
       });
 
     var data_breaks = $('.web-header__menulinks').attr('data-breaks').split(',');
