@@ -9,7 +9,9 @@ mixin header(status,color)
                 a(href="index.html")
                     img(src="./assets/images/logo.svg", alt="")
             form.web-header__search
-                input(type="text" placeholder="Search Products")
+                .search-screen
+                    span.close-search &times;
+                    input(type="text" placeholder="Search Products")
                 button(type="submit")
                     i.icon-search
 

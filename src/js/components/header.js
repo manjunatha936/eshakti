@@ -71,6 +71,11 @@ class HeaderInteractions {
       $(this).remove();
     });
 
+    $(document).on('click', '.web-header__search .close-search', function () {
+      $('.web-header__search').removeClass('search-open');
+      $('.web-header__top .overlay').remove();
+    });
+
     $('header .dropdown-menulink').on('mouseover', function () {
       $('header').addClass('menu-hover');
     });
