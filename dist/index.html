@@ -16,7 +16,9 @@
               <div class="hamburger-menu d-lg-none"><span></span><span></span><span></span></div><a href="index.html"><img src="./assets/images/logo.svg" alt=""/></a>
             </div>
             <form class="web-header__search">
-              <input type="text" placeholder="Search Products"/>
+              <div class="search-screen"><span class="close-search">&times;</span>
+                <input type="text" placeholder="Search Products"/>
+              </div>
               <button type="submit"><i class="icon-search"></i></button>
             </form>
             <ul class="web-header__toplinks">
@@ -31,7 +33,7 @@
           </div>
           <div class="web-header__bottom container">
             <div class="web-header__logo"><a href="index.html"><img src="./assets/images/logo.svg" alt=""/></a></div>
-            <div class="close"><img src="./assets/images/close.png" alt=""/></div>
+            <div class="close"><span>&times;</span></div>
             <ul class="web-header__menulinks" data-breaks="5,4,4">
               <li><a href="#">Top Sellers</a></li>
               <li class="dropdown-menulink"><a href="#">Dresses</a>
@@ -404,7 +406,7 @@
       <div class="product-modal modal fade video-popup pop-up" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <button class="close-modal" data-dismiss="modal">&times;</button>
-          <div class="modal-content"><iframe width="560" height="315" src="https://www.youtube.com/embed/UsDw2aBLIfc" frameborder="0" showinfo="0" allow="accelerometer; autoplay; encrypted-media; gyroscope;" allowfullscreen></iframe></div>
+          <div class="modal-content"><iframe width="560" height="315" data-src="https://www.youtube.com/embed/UsDw2aBLIfc" frameborder="0" showinfo="0" allow="accelerometer; autoplay; encrypted-media; gyroscope;" allowfullscreen></iframe></div>
         </div>
       </div>
     </main>
