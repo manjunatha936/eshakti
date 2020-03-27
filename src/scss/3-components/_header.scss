@@ -203,6 +203,7 @@
 			}
 
 			.web-header__menulinks {
+				margin-top: 0;
 				display: block;
 
 				a {
@@ -339,17 +340,23 @@
 			
 			.account-menu {
 				display: block;
+				margin: 0 -35px;
+				padding: 20px 35px;
+				border-bottom: 1px solid #e4e6e7;
 
 				span {
 					display: none;
 				}
 
 				a {
-					margin: 0 -35px;
-					padding: 20px 35px;
-
 					p {
 						font-weight: 700;
+						color: #333333;
+						font-size: 14px;
+						display: flex;
+						align-items: center;
+						text-transform: uppercase;
+						letter-spacing: 0.5px;
 					}
 				}
 			}
@@ -367,9 +374,9 @@
 			}
 
 			.account-menu {
+				margin: 0 -20px;
+				padding: 20px 20px;
 				a {
-					margin: 0 -20px;
-    				padding: 20px 20px;
 				}
 			}
 		}
@@ -799,5 +806,152 @@
 		@include bpmax('desktop-1200') {
 			margin: 30px auto 15px;
 		}
+	}
+}
+
+.offer-bar {
+	padding: 11px 40px;
+	background-color: $white;
+	position: relative;
+	z-index: 20;
+
+	&__head {
+		font-size: 12px;
+		font-weight: 600;
+		letter-spacing: 0.22px;
+		line-height: 1.5;
+		text-align: center;
+		color: $title-black;
+	}
+	
+	&__toggle {
+		color: $title-black;
+		font-size: 10px;
+		font-weight: 700;
+		letter-spacing: 0.18px;
+		line-height: 1.8;
+		text-transform: uppercase;
+		position: absolute;
+		right: 40px;
+		top : 11px;
+		padding-right: 14px;
+		cursor: pointer;
+
+		&::after {
+			content: "";
+			height: 2px;
+			width: 10px;
+			background-color: #333333;
+			position: absolute;
+			right: 0;
+			top: 7px;
+			border-radius: 2px;
+		}
+		
+		&::before {
+			content: "";
+			height: 10px;
+			width: 2px;
+			background-color: #333333;
+			position: absolute;
+			right: 4px;
+			top: 3px;
+			border-radius: 2px;
+			transition: all ease 0.4s;
+		}
+
+		&.open {
+			&::before {
+				transform: rotate(90deg);
+			}
+		}
+	}
+
+	@include bpmax('tab-mid') {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		width: 100vw;
+
+		padding: 8px 15px;
+	
+		&__head {
+			text-align: left;
+		}
+
+		&__toggle {
+			top: 8px;
+		}
+	}
+}
+
+.offer-bar-c {
+	padding-top: 23px;
+	padding-bottom: 23px;
+	background-color: $white;
+	position: absolute;
+    left: 0;
+    top: 100%;
+	transform: translateY(-150%);
+	transition: all ease 0.4s;
+	opacity: 0;
+	z-index: -1;
+	
+	.web-link {
+		margin-top: 8px;
+	}
+	
+	&.show {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+.offer-bar-card {
+	padding: 15px 27px 10px;
+	background-color: #7c7c7c;
+	min-width: 350px;
+
+	h6 {
+		color: $white;
+		font-size: 14px;
+		font-weight: 700;
+		letter-spacing: 0.25px;
+		line-height: 1.28;
+		text-transform: uppercase;
+		margin-bottom: 17px;
+		text-align: center;
+	}
+
+	.price {
+		color: $white;
+		font-size: 28px;
+		font-weight: 700;
+		letter-spacing: 0.51px;
+		margin-bottom: 13px;
+	}
+	
+	.code {
+		color: $white;
+		font-size: 14px;
+		font-weight: 400;
+		letter-spacing: 0.25px;
+		text-transform: uppercase;
+		border: 1px dashed $white;
+		padding: 10px 43px;
+		margin-bottom: 13px;
+	}
+
+	.date,
+	.copy-code {
+		color: $white;
+		font-size: 9px;
+		font-weight: 700;
+		letter-spacing: 0.16px;
+		line-height: 18px;
+	}
+
+	.copy-code {
+		cursor: pointer;
 	}
 }
