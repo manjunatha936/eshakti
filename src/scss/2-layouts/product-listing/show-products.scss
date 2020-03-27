@@ -320,7 +320,7 @@
 }
 
 .js-products{
-    padding-left: 6px ;
+    padding-left: 10px ;
     li{
         margin-bottom: 1rem;
         transition: all .4s ease-in-out;
@@ -500,6 +500,12 @@
     }
 
     .prdt-out-stck{
+        @include bpmax("phone") {
+            right: .3rem;
+            top: .8rem;
+            font-size: 9px !important;
+        }
+
         @include bp("tab-lg") {
             font-size: 11px !important;
             right: .6rem !important;
@@ -686,11 +692,11 @@
        position: absolute;
        bottom: 0;
        right: 0;
-       height: 0;
+       height: 0%;
        padding-right: 25px;
        transition-property: height;
-       transition-duration: .8s;
-       transition-timing-function: ease-in-out;
+       transition-duration: .6s;
+       transition-timing-function: cubic-bezier(.57,.21,.69,1.25);
         overflow-y: auto;
 
         @media (min-width: 768px) { 
@@ -888,7 +894,7 @@
         height: 100%;
         transition-property: height;
         transition-duration: .8s;
-        transition-timing-function: ease-in-out;
+        transition-timing-function: cubic-bezier(.57,.21,.69,1.25);
     
 }
 .mbl-height {

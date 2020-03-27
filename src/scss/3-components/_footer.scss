@@ -484,3 +484,31 @@ $circle-clr : #f5f5f5;
         }
     }
 }
+
+
+
+.main-footer {
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: calc(100% - 30px);
+        left: 15px;
+        border-top: 1px solid #393939;
+        top: 0;
+        // bottom: -4rem;
+
+        // @include bpmax('desktop') {
+        //     bottom: -50px;
+        // }
+    
+        // @include bpmax('tab-mid') {
+        //     bottom: -45px;
+        // }
+    
+        // @include bpmax('phone') {
+        //     bottom: -35px;
+        // }
+    }
+}

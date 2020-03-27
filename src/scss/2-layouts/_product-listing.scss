@@ -134,25 +134,7 @@
     }
    
     .style-contain {
-        white-space: nowrap;
-        // height: 50px;
-    
         
-        //     width: 100%;
-
-            overflow-x: scroll;
-            display: block;
-            
-            &::-webkit-scrollbar {
-                display: none;
-            }
-          
-          /* Hide scrollbar for IE and Edge */
-            & {
-            -ms-overflow-style: none;
-            }
-        
-      
         .check-wrp {
             display: block;
             width: 100%;
@@ -211,8 +193,7 @@
         }
     }
     .img-container {
-        vertical-align: top;
-        width: 50px;
+        width: 50px !important;
         cursor: pointer;
     }
     .modal-lg {
@@ -265,7 +246,17 @@
             width: 322px;
             height: 518px;
         }            
-        @media screen and (max-width: 374px){
+        @media screen and (min-width: 414px){
+            width: 324px;
+            height: 432px;;
+        }            
+        @media screen and (min-width: 425px){
+            width: 322px;
+            height: 518px;
+        }
+        @media screen and (min-width: 768px){
+            width: 322px;
+            height: 518px;
         }
         @media screen and (min-width:1024px) and (max-width: 1404px){
             width: 351px;
@@ -766,7 +757,11 @@
 }
 
 .img-card-wrp {
-    margin-bottom: 15px;
+    margin-bottom: 8px;
+    @media screen and (min-width: 768px) {
+        margin-bottom: 4px;
+
+    }
     @include bp('tab-') {
         margin-bottom: 40px;
     }
@@ -801,7 +796,7 @@
 
 .saveditem-container {
     border-top: 1px solid #e9eef0;
-    border-bottom: 1px solid #e9eef0;
+    // border-bottom: 1px solid #e9eef0;
     padding: 20px 32px;
     display: none;
 
@@ -873,11 +868,11 @@
         border: 1px solid #c2cfd4;
         background-color: $white;
         position: absolute;
-        left: calc(100% - 60px);
+        left: calc(100% - 36px);
         top: 10px;
         cursor: pointer;
-        @media screen and (max-width : 992px){
-            left: calc(100% - 38px);
+        @media screen and (max-width : 776px){
+            left: calc(100% - 48px);
 
         }
     }
@@ -921,8 +916,9 @@
         max-width: 745px !important;
         background-color: #ffffff;
         height: 90%;
-        width: 87%;
+        width: 96%;
         @media screen and (min-width:768px){
+            width: 87%;
             max-height: 369px;
             
         }
@@ -986,8 +982,9 @@
         left: calc(100% + 10px);
         top: 3px;
         cursor: pointer;
-        @media screen and (max-width:375px){
-            left: calc(100% + 1px);
+        @media screen and (max-width:425px){
+            top: 8px;
+            left: calc(100% - 36px);
 
         }
 
@@ -1021,7 +1018,14 @@
           
         }
     }
-
+    .swiper-arrow .arrow:first-child {
+        top: 28%;
+        left: 14px;
+    }
+    .swiper-arrow .arrow:last-child {
+        top: 28%;
+        right: -11px;
+    }
 }
 
 .js-product-details-modal {
@@ -1040,8 +1044,8 @@
     }
     .product-details-dialog {
         max-width: 630px !important;
-        height: 90%;
-        width: 87%;
+        height: auto;
+        width: 96%;
         background-color: #ffffff;
        
         
@@ -1067,7 +1071,8 @@
 .left-container {
    
     margin-left: auto;
-    @media (max-width: 575px){  
+    @media (max-width: 575px){ 
+        width: 100%; 
         padding-left: 10px;
         
     }
@@ -1091,7 +1096,7 @@
     // padding-left: 10px;
     .swiper-arrow .arrow:first-child {
         top: 35% !important;
-        left: 10px !important;
+        left: 14px !important;
     }
     .swiper-arrow .arrow:last-child {
         top: 35% !important;
