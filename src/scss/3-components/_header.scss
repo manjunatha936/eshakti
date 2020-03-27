@@ -45,7 +45,9 @@
 	z-index: 100;
 
 	@include bpmax('tab-mid') {
-		top: 0 !important;
+		&:not(.normal-cust-header) {
+			top: 0 !important;
+		}
 	}
 
 	&.menu-hover,
@@ -892,7 +894,7 @@
 .offer-bar {
 	background-color: $white;
 	position: relative;
-	z-index: 20;
+	z-index: 101;
 	
 	&__head {
 		padding: 11px 120px;

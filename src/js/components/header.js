@@ -26,6 +26,10 @@ class HeaderInteractions {
         var discountht = $('.offer-bar').outerHeight();
         $('.web-header').css('top', discountht);
       }
+      if($('.discount-bar').length > 0) {
+        var discountht = $('.discount-bar').outerHeight();
+        $('.web-header').css('top', discountht).addClass('normal-cust-header');
+      }
     });
 
     //Hamburger functions
