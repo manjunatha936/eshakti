@@ -114,6 +114,60 @@ class ProductDetais {
               swiper: galleryThumbs,
             },
           });
+
+
+          var popupSlide1 = new Swiper('.js-necklineSLider', {
+            spaceBetween: 10,
+            slidesPerView: 3.5,
+            breakpoints: {
+             
+              360: {
+                slidesPerView: 2.5,
+         
+              },
+              768: {
+                slidesPerView: 4.5,
+             
+              },
+            }
+            
+          });
+          popupSlide1.update();
+          var popupSlide2 = new Swiper('.js-sleeveSLider', {
+            spaceBetween: 10,
+            slidesPerView: 3.5,
+            // loop: true,
+           
+            breakpoints: {
+             
+              360: {
+                slidesPerView: 2.5,
+         
+              },
+              768: {
+                slidesPerView: 4.5,
+             
+              },
+            }
+            
+          });
+          var popupSlide3 = new Swiper('.js-lengthSLider', {
+            spaceBetween: 10,
+            slidesPerView: 3.5,
+        
+            breakpoints: {
+             
+              360: {
+                slidesPerView: 2.5,
+         
+              },
+              768: {
+                slidesPerView: 4.5,
+             
+              },
+            }
+            
+          });
         //save style
         $(".js-btn-save").click(function(e){
           
