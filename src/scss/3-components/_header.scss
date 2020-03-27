@@ -996,6 +996,7 @@
 	padding: 15px 27px 10px;
 	background-color: #7c7c7c;
 	min-width: 350px;
+	min-height: 130px;
 
 	h6 {
 		color: $white;
@@ -1042,10 +1043,54 @@
 		cursor: pointer;
 	}
 
+	&.sale {
+		p {
+			color: $white;
+			font-size: 14px;
+			font-weight: 700;
+			letter-spacing: 0.25px;
+			line-height: 18px;
+		}
+
+		.sale-price {
+			display: flex;
+
+			p {
+				font-weight: 400;
+			}
+
+			h6 {
+				color: $white;
+				font-size: 66px;
+				font-weight: 900;
+				letter-spacing: 1.2px;
+				font-family: $playfair;
+				line-height: 0.7;
+				margin-left: -12px;
+			}
+
+			.percentage {
+				width: 20px;
+				font-weight: 600;
+			}
+		}
+
+		.conditions {
+			opacity: 0.71;
+			font-size: 9px;
+			font-weight: 700;
+			letter-spacing: 0.16px;
+			margin-top: -10px;
+			text-align: right;
+		}
+	}
+
 	@include bpmax('tab-mid') {
 		padding: 11px 20px;
 		min-width: 250px;
 		width: 280px;
+		min-height: 100px;
+		height: 105px;
 	
 		h6 {
 			font-size: 11px;
@@ -1067,6 +1112,39 @@
 		.copy-code {
 			font-size: 9px;
 			line-height: 14px;
+		}
+
+		&.sale {
+			p {
+				font-size: 11px;
+				line-height: 14px;
+			}
+	
+			.sale-price {
+				display: flex;
+	
+				p {
+					font-weight: 400;
+				}
+	
+				h6 {
+					font-size: 52px;
+					letter-spacing: 0.95px;
+					line-height: 0.7;
+					margin-left: -12px;
+				}
+	
+				.percentage {
+					width: 16px;
+				}
+			}
+	
+			.conditions {
+				font-size: 7px;
+				letter-spacing: 0.13px;
+				margin-top: -10px;
+				text-align: right;
+			}
 		}
 	}
 }
