@@ -2,6 +2,10 @@
 .field {
     margin-top: 1.5rem;
     margin-bottom: .5rem;
+
+    input {
+        font-weight: 600;
+    }
 }
 
 .form-label {
@@ -9,4 +13,17 @@
     color: $form-label;
     display: block;
     margin-bottom: .25rem;
+}
+
+.fields-edit {
+    position: relative;
+    @extend .fnt-xxs;
+    padding-left: 1.2rem;
+    color: rgba(46, 51, 61, .8);
+    &::before {
+        content: "\e91a";
+        font-family: "icomoon";
+        position: absolute;
+        left: 0;
+    }
 }

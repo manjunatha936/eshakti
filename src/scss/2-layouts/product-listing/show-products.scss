@@ -496,6 +496,12 @@
     }
 
     .prdt-out-stck{
+        @include bpmax("phone") {
+            right: .3rem;
+            top: .8rem;
+            font-size: 9px !important;
+        }
+
         @include bp("tab-lg") {
             font-size: 11px !important;
             right: .6rem !important;

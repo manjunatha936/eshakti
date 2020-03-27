@@ -1,5 +1,12 @@
 // Product-details
 
+.product-details {
+    @include bpmax("phone-lg") {
+        overflow: hidden;
+    }
+}
+
+
 .prod-label  {
     @extend .fnt-xxs;
     text-transform: uppercase;
