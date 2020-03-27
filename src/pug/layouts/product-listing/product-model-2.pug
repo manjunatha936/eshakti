@@ -1,6 +1,6 @@
 
 //MODEL 2 
-.product-modal.modal.fade.bd-example-modal-lg.custom-product-model(tabindex='-1' role='dialog' aria-labelledby='myLargeModalLabel' aria-hidden='true')
+.product-modal.modal.fade.bd-example-modal-lg.custom-product-model.custom-popup-v2(tabindex='-1' role='dialog' aria-labelledby='myLargeModalLabel' aria-hidden='true')
   .modal-dialog.modal-lg
     button.close-modal(data-dismiss="modal") &times;
     .modal-content.pt-5.product-custome-content.pb-0
@@ -15,11 +15,11 @@
                         .col-lg-4.d-flex.flex-column.justify-content-center.custom-modal-head__img.order-2.order-md-1.pt-3.pt-md-0
                             .model-img.mx-auto
                                 .left-arm
-                                    img.img.img-fluid(src="./assets/images/product-listing/parts/left-sleeve.png", alt="")
+                                    img.img.img-fluid(src="./assets/images/product-listing/parts/left.png", alt="")
                                 .neck-body
-                                    img.img.img-fluid(src="./assets/images/product-listing/parts/neck.png", alt="")
+                                    img.img.img-fluid(src="./assets/images/product-listing/parts/face.png", alt="")
                                 .right-arm
-                                    img.img.img-fluid(src="./assets/images/product-listing/parts/right-sleeve.png", alt="")
+                                    img.img.img-fluid(src="./assets/images/product-listing/parts/right.png", alt="")
                                 .length
                                     img.img.img-fluid(src="./assets/images/product-listing/parts/length.png", alt="")
                             a(href="#").share-style.share
@@ -163,8 +163,11 @@
                                                     span
                                                 .arrow.left-arrowlengthSLider-v2
                                                     span
-                            ul.mt-2.w-100.saved-styles__subImages.d-flex.flex-wrap.justify-content-center.jsustify-content-md-around                 
-                         
+                            .saved-styles__subImages.w-100
+                                .swiper-container.js-customSlide-v2
+                                    ul.swiper-wrapper                 
+                                    .swiper-pagination-bullets.d-flex.justify-content-center
+
         //- .row.custom-modal-foot
         //-     .col.d-flex.justify-content-center.justify-content-md-end
         //-         a.bttn.bttn__orange.mr-3(type="button", data-dismiss="modal") Proceed with the style

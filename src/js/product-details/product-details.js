@@ -195,9 +195,12 @@ class ProductDetais {
                     spaceBetween: 20,
                     breakpoints: {
                         480: {
-                            spaceBetween: 10
+                            spaceBetween: 10,
+                            slidesPerView: 1,
                         },
+                        
                         992: {
+                            slidesPerView: 'auto',
                             spaceBetween: 20
                         },
                         1200: {
@@ -229,15 +232,7 @@ class ProductDetais {
         
             
             })
-       
-            // if(window.innerWidth > 767){
-            //   $(".style-model-content").removeClass("fade")
-              
-            // }
-            // else{
-            //   $(".style-model-content").addClass("fade")
-              
-            // }
+ 
             // on hover change img
             $('.tab-img img').hover(function(){
             let src = $(this).attr("src")
