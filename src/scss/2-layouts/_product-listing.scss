@@ -125,9 +125,10 @@
     }
     .custom-style {
         position: relative;
+        background-color: #f9fafb;
+        padding: 30px;
       
         @include bp("desktop-1200") {
-            background-color: #f9fafb;
             padding: 50px;
          
           }
@@ -240,101 +241,105 @@
     }
     .model-img {
         
-        width: 235px;
-        height: 365px;
+        width: 148px;
+        height: 446px;
+            // height: 507px; 
+        @media screen and (min-width: 375px){
+            width: 149px;
+
+        }            
         @media screen and (min-width: 378px){
-            width: 322px;
             height: 518px;
         }            
-        @media screen and (min-width: 414px){
-            width: 324px;
-            height: 432px;;
-        }            
+        // @media screen and (min-width: 414px){
+        //     width: 324px;
+        //     height: 432px;;
+        // }            
         @media screen and (min-width: 425px){
-            width: 322px;
-            height: 518px;
+             height: 507px; 
         }
-        @media screen and (min-width: 768px){
-            width: 322px;
-            height: 518px;
-        }
-        @media screen and (min-width:1024px) and (max-width: 1404px){
-            width: 351px;
-            height: 539px;
+        // @media screen and (min-width: 768px){
+        //     width: 322px;
+        //     height: 518px;
+        // }
+        @media screen and (min-width:1024px) {
+            width: 148px;
+            height: 507px; 
         }            
-        @media screen and (min-width: 1404px){
-            width: 375px;
-            // height: 380px; 
-            height: 558px; 
-        }            
+        // @media screen and (min-width: 1404px){
+            
+        // }            
         position: relative;
-        @include bp("tab") {
-         
-          }
+   
         .left-arm {
             position: absolute;
             top: 0;
             left: 0;
          
-            width: 98px;
-            @media screen and (min-width: 378px){
-                width: 134px;
-            } 
-            @media screen and (max-width: 374px){
-            } 
-            @media screen and (min-width:1024px) and (max-width: 1404px){
-                width: 145px;
-                height: 292px;
+            width: 38px;
+            // @media screen and (min-width: 378px){
+            //     width: 134px;
+            // } 
+            // @media screen and (max-width: 374px){
+            // } 
+            @media screen and (min-width:1024px) {
+                width: 38px;
+                height: 266px;
             }            
-            @media screen and (min-width: 1404px){
-                width: 155px;
-                height: 292px;
-            }
+            // @media screen and (min-width: 1404px){
+            //     width: 155px;
+            //     height: 292px;
+            // }
         }
         .right-arm {
             position: absolute;
             top: 0;
             right: 0;
-            width: 93px;
+            width: 46px;
+
             
-            @media screen and (min-width: 378px){
+            @media screen and (min-width: 425px){
                 
-                width: 127px;
+                width: 47px;
             } 
-            @media screen and (max-width: 374px){
+            // @media screen and (max-width: 374px){
                 
-            } 
-            @media screen and (min-width:1024px) and (max-width: 1404px){
-                width: 138px;
-                height: 292px;
+            // } 
+            @media screen and (min-width:1024px) {
+                width: 46px;
+                height: 266px;
             }            
-            @media screen and (min-width: 1404px){
-                width: 147px;
-                height: 292px;
-            }
+            // @media screen and (min-width: 1404px){
+            //     width: 147px;
+            //     height: 292px;
+            // }
         }
         .neck-body {
             position: absolute;
             top: 0;
-            right: 92px;
-            width: 47px;
+            right: 46px;
+            width: 66px;
+
             
-            @media screen and (min-width: 378px){
-                right: 127px;
-                width: 63px;
+            // @media screen and (min-width: 378px){
+            //     right: 45px;
+            //     width: 63px;
+            // } 
+            @media screen and (min-width: 768px){
+                
+
             } 
-            @media screen and (max-width: 374px){
-            } 
-            @media screen and (min-width:1024px) and (max-width: 1404px){
-                right: 138px;
-                width: 69px;
+            @media screen and (min-width:1024px) {
+                right: 45px;
+                width: 66px;
+                height: 266px;
                 
             }            
-            @media screen and (min-width: 1404px){
-                right: 147px;
-                width: 73px;
-                height: 292px;
-            }
+            // @media screen and (min-width: 1404px){
+            //     right: 147px;
+            //     width: 73px;
+            //     height: 292px;
+            // }
             
         }
         .length {
@@ -342,10 +347,11 @@
             bottom: 0;
             left: 0;
             right: 0;
-            width: 100%;
+            // width: 100%;
+            width: 148px;
             height: 180px;
             @media screen and (min-width: 425px){
-                height: 266px;
+                height: 242px;
                 
             }
         }
@@ -915,7 +921,7 @@
     .size-modal-dialog {
         max-width: 745px !important;
         background-color: #ffffff;
-        height: 90%;
+        height: 300px;
         width: 96%;
         @media screen and (min-width:768px){
             width: 87%;
@@ -1020,7 +1026,13 @@
     }
     .swiper-arrow .arrow:first-child {
         top: 28%;
-        left: 14px;
+        left: 24px;
+
+        @media screen and (min-width:768px ){
+            
+            left: 24px;
+          
+        }
     }
     .swiper-arrow .arrow:last-child {
         top: 28%;
@@ -1108,4 +1120,7 @@
 }
 .js-proceed {
     visibility: hidden;
+}
+.popUp-container {
+    margin-right: -30px;
 }

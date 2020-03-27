@@ -118,7 +118,7 @@ class ProductDetais {
 
           var popupSlide1 = new Swiper('.js-necklineSLider', {
             spaceBetween: 10,
-            slidesPerView:'auto',
+            slidesPerView: 'auto',
             navigation: {
               nextEl: '.left-arrow-necklineSLider',
               prevEl: '.right-arrow-necklineSLider',
