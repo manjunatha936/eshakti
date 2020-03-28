@@ -12,8 +12,8 @@
                         p.prd-sub-txt.px-5 You can customize the garment to your style or shop the style 'as shown'.
                 .overflowScroll
                     .row.custom-modal-head
-                        .col-lg-4.d-flex.flex-column.justify-content-center.custom-modal-head__img.order-2.order-md-1.pt-3.pt-md-0
-                            .model-img.mx-auto
+                        .col-6.col-lg-4.d-flex.flex-column.justify-content-center.custom-modal-head__img.order-2.order-md-1.pt-3.pt-md-0
+                            .model-img.mx-auto.mb-auto
                                 .left-arm
                                     img.img.img-fluid(src="./assets/images/product-listing/parts/left.png", alt="")
                                 .neck-body
@@ -22,7 +22,7 @@
                                     img.img.img-fluid(src="./assets/images/product-listing/parts/right.png", alt="")
                                 .length
                                     img.img.img-fluid(src="./assets/images/product-listing/parts/length.png", alt="")
-                            a(href="#").share-style.share
+                            a(href="#").share-style.share.d-none.d-md-block
                                 i.icon-share
                                 .tooltip-share
                                     .tooltip-share__item.pinterest.d-flex
@@ -35,7 +35,7 @@
                                         i.icon-twitter.tip-icon
                                         p.prd-sub-txt Twitter
                                 span.txt-gry-12 Share
-                            p.fnt-11.text-center.pb-2 As Shown - Mandarin collar, Elbow length, Mini 
+                            p.fnt-11.text-center.pb-2.d-none.d-md-block As Shown - Mandarin collar, Elbow length, Mini 
                             
                         .col-lg-8.custom-modal-head__opt.order-1.order-md-2
                             ul#myTab.nav.d-flex.d-md-none(role='tablist')
@@ -54,29 +54,30 @@
                                             .img-wrp.d-flex.justify-content-center.align-item-center
                                                 span.style-img.text-center.pt-3.m-auto.img-txt__inner-txt Default
                                             p.img-txt.pt-2 As shown collar style
-                                        .swiper-container.popUp-container.js-prod-v2-neck.px-4.px-lg-5
-                                            .swiper-wrapper
-                                                
-                                                label.swiper-slide(for="check211" ).img-container.mr-4
-                                                    input#check211.d-none.style-check(type="radio" name="neckline" data-src="./assets/images/women.png") 
-                                                    .img-wrp
-                                                        img.style-img(src="./assets/images/style-img.png", alt="")
-                                                    p.img-txt.pt-2 Petre Pan
-                                                label.swiper-slide(for="check311").img-container.mr-4
-                                                    input#check311.d-none.style-check(type="radio" name="neckline" data-src="./assets/images/women.png") 
-                                                    .img-wrp
-                                                        img.style-img(src="./assets/images/style-img.png", alt="")
-                                                    p.img-txt.pt-2 Mandarin Collar
-                                                label.swiper-slide(for="check411").img-container.mr-4
-                                                    input#check411.d-none.style-check(type="radio" name="neckline" data-src="./assets/images/women.png") 
-                                                    .img-wrp
-                                                        img.style-img(src="./assets/images/style-img.png", alt="")
-                                                    p.img-txt.pt-2 Round Collar
-                                                label.swiper-slide(for="check511").img-container.mr-4
-                                                    input#check511.d-none.style-check(type="radio" name="neckline" data-src="./assets/images/women.png") 
-                                                    .img-wrp
-                                                        img.style-img(src="./assets/images/style-img.png", alt="")
-                                                    p.img-txt.pt-2 Petre Pan
+                                        .styleThumbSlider
+                                            .swiper-container.js-prod-v2-neck
+                                                .swiper-wrapper
+                                                    
+                                                    label.swiper-slide(for="check211" ).img-container.mr-4
+                                                        input#check211.d-none.style-check(type="radio" name="neckline" data-src="./assets/images/women.png") 
+                                                        .img-wrp
+                                                            img.style-img(src="./assets/images/style-img.png", alt="")
+                                                        p.img-txt.pt-2 Petre Pan
+                                                    label.swiper-slide(for="check311").img-container.mr-4
+                                                        input#check311.d-none.style-check(type="radio" name="neckline" data-src="./assets/images/women.png") 
+                                                        .img-wrp
+                                                            img.style-img(src="./assets/images/style-img.png", alt="")
+                                                        p.img-txt.pt-2 Mandarin Collar
+                                                    label.swiper-slide(for="check411").img-container.mr-4
+                                                        input#check411.d-none.style-check(type="radio" name="neckline" data-src="./assets/images/women.png") 
+                                                        .img-wrp
+                                                            img.style-img(src="./assets/images/style-img.png", alt="")
+                                                        p.img-txt.pt-2 Round Collar
+                                                    label.swiper-slide(for="check511").img-container.mr-4
+                                                        input#check511.d-none.style-check(type="radio" name="neckline" data-src="./assets/images/women.png") 
+                                                        .img-wrp
+                                                            img.style-img(src="./assets/images/style-img.png", alt="")
+                                                        p.img-txt.pt-2 Petre Pan
                                             .swiper-arrow
                                                 .arrow.right-arrow-necklineSLider-v2
                                                     span
@@ -92,35 +93,36 @@
                                             .img-wrp.d-flex.justify-content-center.align-item-center
                                                 span.style-img.text-center.pt-3.m-auto.img-txt__inner-txt Default
                                             p.img-txt.pt-2 As shown collar style
-                                        .swiper-container.popUp-container.js-prod-v2-sleev.px-4.px-lg-5 
-                                            .swiper-wrapper
-                                                
-                                                label.swiper-slide(for="check711").img-container.mr-4
-                                                    input#check711.d-none.style-check(type="radio" name="sleeveType" data-src="./assets/images/women.png") 
-                                                    .img-wrp
-                                                        img.style-img(src="./assets/images/style-img.png", alt="")
-                                                    p.img-txt.pt-2 Sleeveless
-                                                
-                                                label.swiper-slide(for="check811").img-container.mr-4
-                                                    input#check811.d-none.style-check(type="radio" name="sleeveType" data-src="./assets/images/women.png") 
-                                                    .img-wrp
-                                                        img.style-img(src="./assets/images/style-img.png", alt="")
-                                                    p.img-txt.pt-2 Elbow Length
-                                                label.swiper-slide(for="check911").img-container.mr-4
-                                                    input#check911.d-none.style-check(type="radio" name="sleeveType" data-src="./assets/images/women.png") 
-                                                    .img-wrp
-                                                        img.style-img(src="./assets/images/style-img.png", alt="")
-                                                    p.img-txt.pt-2 Bracelet Length
-                                                label.swiper-slide(for="check101").img-container.mr-4
-                                                    input#check101.d-none.style-check(type="radio" name="sleeveType" data-src="./assets/images/women.png") 
-                                                    .img-wrp
-                                                        img.style-img(src="./assets/images/style-img.png", alt="")
-                                                    p.img-txt.pt-2 Sleeveless
-                                                label.swiper-slide(for="check111").img-container.mr-4
-                                                    input#check111.d-none.style-check(type="radio" name="sleeveType" data-src="./assets/images/women.png") 
-                                                    .img-wrp
-                                                        img.style-img(src="./assets/images/style-img.png", alt="")
-                                                    p.img-txt.pt-2 Elbow Length
+                                        .styleThumbSlider
+                                            .swiper-container.js-prod-v2-sleev 
+                                                .swiper-wrapper
+                                                    
+                                                    label.swiper-slide(for="check711").img-container.mr-4
+                                                        input#check711.d-none.style-check(type="radio" name="sleeveType" data-src="./assets/images/women.png") 
+                                                        .img-wrp
+                                                            img.style-img(src="./assets/images/style-img.png", alt="")
+                                                        p.img-txt.pt-2 Sleeveless
+                                                    
+                                                    label.swiper-slide(for="check811").img-container.mr-4
+                                                        input#check811.d-none.style-check(type="radio" name="sleeveType" data-src="./assets/images/women.png") 
+                                                        .img-wrp
+                                                            img.style-img(src="./assets/images/style-img.png", alt="")
+                                                        p.img-txt.pt-2 Elbow Length
+                                                    label.swiper-slide(for="check911").img-container.mr-4
+                                                        input#check911.d-none.style-check(type="radio" name="sleeveType" data-src="./assets/images/women.png") 
+                                                        .img-wrp
+                                                            img.style-img(src="./assets/images/style-img.png", alt="")
+                                                        p.img-txt.pt-2 Bracelet Length
+                                                    label.swiper-slide(for="check101").img-container.mr-4
+                                                        input#check101.d-none.style-check(type="radio" name="sleeveType" data-src="./assets/images/women.png") 
+                                                        .img-wrp
+                                                            img.style-img(src="./assets/images/style-img.png", alt="")
+                                                        p.img-txt.pt-2 Sleeveless
+                                                    label.swiper-slide(for="check111").img-container.mr-4
+                                                        input#check111.d-none.style-check(type="radio" name="sleeveType" data-src="./assets/images/women.png") 
+                                                        .img-wrp
+                                                            img.style-img(src="./assets/images/style-img.png", alt="")
+                                                        p.img-txt.pt-2 Elbow Length
                                             .swiper-arrow
                                                 .arrow.right-arrow-sleeveSLider-v2
                                                     span
@@ -135,29 +137,30 @@
                                             .img-wrp.d-flex.justify-content-center.align-item-center
                                                 span.style-img.text-center.pt-3.m-auto.img-txt__inner-txt Default
                                             p.img-txt.pt-2 As shown collar style
-                                        .swiper-container.popUp-container.js-prod-v2-length.px-4 
-                                            .swiper-wrapper
-                                                
-                                                label.swiper-slide(for="check131").img-container.mr-4
-                                                    input#check131.d-none.style-check(type="radio" name="length" data-src="./assets/images/women.png") 
-                                                    .img-wrp
-                                                        img.style-img(src="./assets/images/style-img.png", alt="")
-                                                    p.img-txt.pt-2 Mini
-                                                label.swiper-slide(for="check141").img-container.mr-4
-                                                    input#check141.d-none.style-check(type="radio" name="length" data-src="./assets/images/women.png") 
-                                                    .img-wrp
-                                                        img.style-img(src="./assets/images/style-img.png", alt="")
-                                                    p.img-txt.pt-2 Knee Length
-                                                label.swiper-slide(for="check151").img-container.mr-4
-                                                    input#check151.d-none.style-check(type="radio" name="length" data-src="./assets/images/women.png") 
-                                                    .img-wrp
-                                                        img.style-img(src="./assets/images/style-img.png", alt="")
-                                                    p.img-txt.pt-2 Below Knee Length
-                                                label.swiper-slide(for="check161").img-container.mr-4
-                                                    input#check161.d-none.style-check(type="radio" name="length" data-src="./assets/images/women.png") 
-                                                    .img-wrp
-                                                        img.style-img(src="./assets/images/style-img.png", alt="")
-                                                    p.img-txt.pt-2 Mini
+                                        .styleThumbSlider
+                                            .swiper-container.js-prod-v2-length.px-4 
+                                                .swiper-wrapper
+                                                    
+                                                    label.swiper-slide(for="check131").img-container.mr-4
+                                                        input#check131.d-none.style-check(type="radio" name="length" data-src="./assets/images/women.png") 
+                                                        .img-wrp
+                                                            img.style-img(src="./assets/images/style-img.png", alt="")
+                                                        p.img-txt.pt-2 Mini
+                                                    label.swiper-slide(for="check141").img-container.mr-4
+                                                        input#check141.d-none.style-check(type="radio" name="length" data-src="./assets/images/women.png") 
+                                                        .img-wrp
+                                                            img.style-img(src="./assets/images/style-img.png", alt="")
+                                                        p.img-txt.pt-2 Knee Length
+                                                    label.swiper-slide(for="check151").img-container.mr-4
+                                                        input#check151.d-none.style-check(type="radio" name="length" data-src="./assets/images/women.png") 
+                                                        .img-wrp
+                                                            img.style-img(src="./assets/images/style-img.png", alt="")
+                                                        p.img-txt.pt-2 Below Knee Length
+                                                    label.swiper-slide(for="check161").img-container.mr-4
+                                                        input#check161.d-none.style-check(type="radio" name="length" data-src="./assets/images/women.png") 
+                                                        .img-wrp
+                                                            img.style-img(src="./assets/images/style-img.png", alt="")
+                                                        p.img-txt.pt-2 Mini
                                             .swiper-arrow
                                                 .arrow.right-arrowlengthSLider-v2
                                                     span
@@ -166,7 +169,7 @@
                             .saved-styles__subImages.w-100
                                 .swiper-container.js-customSlide-v2
                                     ul.swiper-wrapper                 
-                                    .swiper-pagination-bullets.d-flex.justify-content-center
+                                    .swiper-pagination-bullets.d-flex.justify-content-center.mt-3.mt-md-0
 
         //- .row.custom-modal-foot
         //-     .col.d-flex.justify-content-center.justify-content-md-end

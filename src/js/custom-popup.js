@@ -42,7 +42,7 @@ class SavePopup {
                 var $styleLen = $(this).parents('.style-model-content').index();
                 $('.saved-styles__subImages').find('.dyanamic-img-data').eq($styleLen).addClass('active');
             })
-        
+            
             //2nd popup save styles
             $('.js-save-style-item').on('click', function() {
     
@@ -51,7 +51,7 @@ class SavePopup {
                 const newdata = '<li class="slide-item swiper-slide"><div class="card-wrp"><div class="close-card" slide-id="'+ index +'"><span></span><span></span></div><input id="img'+ index +'" type="radio" name="img-check" class="d-none img-check"/><div class="check-circle"><span></span></div><label for="img'+ index +'"  class="style-card"><img class="saved-img" src="'+imageSource+'" alt="style image" /></div><div class="d-flex pt-2 align-items-center  " ><p class="fnt-11 w-100 pr-2">'+neckText+" , "+sleeveText+" , "+lengthText+'</p><i class="share-icon icon-share mr-2"  ></i></label></div></li>'
                 $(this).addClass("procced-save-style-transiton")
                 $('.saved-styles__subImages').addClass("save-item-transition")
-                $('.custom-modal-head__opt').addClass("mbl-height")
+                $('.custom-modal-head__opt').addClass("mbl-height col-6")
                 $('.save-item-btns').addClass("save-btn-transition")
                 
 
@@ -59,9 +59,8 @@ class SavePopup {
                     // loop: true,
                     // nextButton: '.swiper-button-next',
                     // prevButton: '.swiper-button-prev',
-                    slidesPerView: 1.3,
+                    slidesPerView: 1,
                     paginationClickable: true,
-                    spaceBetween: 20,
                     pagination: {
                         el: '.swiper-pagination-bullets',
                         clickable: true,
@@ -70,6 +69,10 @@ class SavePopup {
                       },
                     breakpoints: {
                         768: {
+                            slidesPerView: 1.4,
+
+                        },
+                        992: {
                             slidesPerView: 2,
 
                         }
@@ -87,7 +90,7 @@ class SavePopup {
                 $('.saved-styles__subImages').removeClass("save-item-transition")
                 $('.save-item-btns').removeClass("save-btn-transition")
                 $(".js-save-style-item").removeClass("procced-save-style-transiton")
-                $('.custom-modal-head__opt').removeClass("mbl-height")
+                $('.custom-modal-head__opt').removeClass("mbl-height col-6")
 
             })
             
@@ -147,6 +150,14 @@ class SavePopup {
             });
 
             $('.js-product-customization').click(function(){
+                setTimeout(function(){
+                    mySwiper1.update();
+                    mySwiper2.update();
+                    mySwiper3.update();
+                },300)
+            })
+            $('.style-head').click(function(){
+               
                 setTimeout(function(){
                     mySwiper1.update();
                     mySwiper2.update();

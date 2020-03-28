@@ -164,6 +164,13 @@ class ProductDetais {
               popupSlide3.update();
             },300);
           });
+          $(document).on('click', '.style-head', function(){
+            setTimeout(function(){
+              popupSlide1.update();
+              popupSlide2.update();
+              popupSlide3.update();
+            },300);
+          });
         //save style
         $(".js-btn-save").click(function(e){
           
