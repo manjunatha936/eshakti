@@ -60,18 +60,22 @@
         }
 
         &.sticky {
-            position: fixed;
-            left: calc((100% - 1140px) / 2);
-            top: 110px;
-    
+            @media only screen and (min-width: 992px) {
+                position: fixed;
+                left: calc((100% - 1140px) / 2);
+                top: 110px;
+            }
+            
             @media only screen and (min-width: 1300px) {
                 top: 120px;
             }
         }
-
+        
         &.sticky-bottom {
-            bottom: 0;
-            top: unset;
+            @media only screen and (min-width: 992px) {
+                bottom: 0;
+                top: unset;
+            }
         }
 
         @media(max-width: 992px) {

@@ -1500,18 +1500,31 @@ html {
 }
 
 .orderplaced-content__address {
-    .address-box:last-of-type {
-        &::after {
-            content: "";
-            width: 100px;
-
+    .address-box {
+        &:last-of-type {
             @include bpmax('phone') {
-                display: none;
+                margin-bottom: 0;
             }
         }
 
+        @include bpmax('phone-lg') {
+            max-width: 45%;
+            flex: 0 0 45%;
+        }
+
         @include bpmax('phone') {
-            margin-bottom: 0;
+            max-width: none;
+            flex: none;
+            width: 100%;
+        }
+    }
+
+    &::after {
+        content: "";
+        width: 100px;
+
+        @include bpmax('phone-lg') {
+            display: none;
         }
     }
 }
