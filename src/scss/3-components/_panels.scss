@@ -4,7 +4,7 @@
     background-color: $white;
 
     &--inner-info{
-        padding: 2rem 2.8rem;
+        padding: 20px 60px 20px 45px;
     }
 
     &__heading {
@@ -13,6 +13,199 @@
         color: $selection-label;
         font-family: $opensans;
         font-weight: 700 !important;
+        margin-bottom: 40px;
     }
     
+    .field {
+        margin-top: 0;
+        margin-bottom: 34px;
+    }
+
+    @include bpmax('tab-mid') {
+        box-shadow: none;
+        background-color: $white;
+    
+        &--inner-info{
+            padding: 0;
+        }
+    
+        &__heading {
+            font-size: 16px;
+            font-weight: 600 !important;
+            margin-bottom: 20px;
+            padding-right: 70px;
+        }
+        
+        .field {
+            margin-bottom: 0;
+        }
+
+        .form-label {
+            font-size: 13px;
+        }
+
+        .text-input {
+            margin-bottom: 24px;
+        }
+
+        .fields-edit {
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding-top: 0;
+        }
+    }
+    
+}
+
+.screen-info {
+    position: relative;
+}
+
+.screen-edit {
+    display: none;
+
+    .panel__heading {
+        margin-bottom: 20px;
+    }
+
+    .seperator {
+        padding-top: 15px;
+        margin: 0 -60px 50px -45px;
+        border-bottom: 1px solid #e4e6e7;
+    }
+
+    @include bpmax('tab-mid') {
+        .seperator {
+            padding-top: 30px;
+            margin: 0 -16px 24px -16px;
+        }
+        
+        .form-label {
+            font-size: 12px;
+            margin-bottom: 9px;
+        }
+
+        .form-input {
+            margin-bottom: 24px;
+        }
+    }
+    
+}
+
+
+.form-button {
+    color: $white;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 22px;
+    height: 50px;
+    background-color: #f25c50;
+    min-width: 115px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    padding: 0 30px;
+    
+    @include bpmax('tab-mid') {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+.password-popup {
+    .modal-content {
+        max-width: 400px;
+        border-radius: 0;
+        margin: auto;
+    }
+    
+    .modal-body {
+        padding: 48px;
+    }
+
+    .title {
+        color: #2e333d;
+        font-family: $opensans;
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 24px;
+    }
+
+    label {
+        color: #2e333d;
+        font-size: 12px;
+        font-weight: 400;
+        margin-bottom: 9px;
+        line-height: 16px;
+    }
+
+    .form-input {
+        margin-bottom: 20px;
+    }
+
+    .form-button {
+        margin-top: 12px;
+    }
+
+    .close {
+        position: absolute;
+        right: -38px;
+        top: -15px;
+        font-size: 50px;
+        font-weight: 100;
+        color: white;
+        cursor: pointer;
+    }
+
+    @include bpmax('tab-mid') {
+        .modal-content {
+            max-width: 350px;
+        }
+        
+        .modal-body {
+            padding: 26px 22px 43px 22px;
+        }
+    
+        .title {
+            font-size: 16px;
+        }
+    
+        .form-button {
+            max-width: 115px;
+        }
+    
+        .close {
+            right: 6px;
+            top: -36px;
+            font-size: 25px;
+
+            &:after {
+                content: "";
+                position: absolute;
+                height: 32px;
+                width: 32px;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%,-50%);
+                border-radius: 1px;
+                border: 1px solid $white;
+                border-radius: 50%;
+            }
+        }
+    }
+}
+
+.accounts-contain.profile {
+    
+    @include bpmax('tab-mid') {
+        padding-top: 80px;
+        
+        .accounts-contain__right {
+            background-color: white;
+            padding: 14px 16px;
+            width: 100%;
+            margin: 0;
+        }
+    }
 }

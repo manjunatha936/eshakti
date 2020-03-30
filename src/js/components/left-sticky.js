@@ -19,6 +19,10 @@ class leftSticky {
             var scrollPosition = $(window).scrollTop();
             var parentScrolled = scrollPosition - parentTop;
 
+            if($(".js-left-sticky").height() > parentHeight) {
+                $(".js-left-sticky").addClass("position-relative");
+            }
+
             if (scrollPosition > $(".web-header").height()) {
                 $(".js-left-sticky").addClass("sticky");
             }
