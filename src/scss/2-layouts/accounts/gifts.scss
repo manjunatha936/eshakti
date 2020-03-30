@@ -1,0 +1,150 @@
+.title-small {
+    color: $title-black;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: $opensans;
+    margin-bottom: 20px;
+    
+    @include bpmax('tab-mid') {
+        font-size: 16px;
+        margin-bottom: 12px;
+    }
+}
+
+.text-desc {
+    color: #797b7e;
+    font-size: 13px;
+    font-weight: 400;
+
+    @include bpmax('tab-mid') {
+        
+    }
+}
+
+.accounts-contain.gifts {
+    .accounts-contain__right {
+        background-color: $white;
+        padding: 20px 88px 30px 33px;
+        
+        .seperator {
+            padding-top: 12px;
+            margin-bottom: 17px;
+            border-bottom: 1px solid #e2e2e2;
+        }
+    }
+    
+    @include bpmax('tab-mid') {
+        padding-top: 80px;
+        
+        .accounts-contain__right {
+            
+            .seperator {
+                padding-top: 20px;
+                margin-bottom: 32px;
+            }
+
+            background-color: white;
+            padding: 20px 16px;
+            width: 100%;
+            margin: 0;
+        }
+    }
+}
+
+.gift-card-tab {
+    display: flex;
+    padding-top: 5px;
+    width: 100%;
+    border-bottom: 1px solid #e2e2e2;
+    margin-bottom: 30px;
+    
+    li {
+        padding: 9px 12px;
+        color: #797b7e;
+        font-size: 13px;
+        font-weight: 400;
+        cursor: pointer;
+        
+        &:first-child {
+            color: $white;
+            font-weight: 600;
+            border-radius: 2px;
+            background-color: #f25c50;
+        }
+    }
+    
+    @include bpmax('tab-mid') {
+        padding-top: 3px;
+        margin-bottom: 16px;
+    }
+}
+
+.gift-card-box {
+    width: 100%;
+    max-width: 530px;
+    padding: 20px;
+    border-radius: 3px;
+    border: 1px solid #dadada;
+    background-color: $white;
+    margin-bottom: 12px;
+    
+    .mb-9 {
+        margin-bottom: 9px;
+    }
+    
+    .coupon-box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 7px 8px 7px 13px;
+        width: 100%;
+        max-width: 197px;
+        border-radius: 4px;
+        border: 1px solid #d7d6d6;
+        background-color: #ffffff;
+        
+        p {
+            color: $title-black;
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        
+        a {
+            color: $title-black;
+            // font-family: Heebo;
+            font-size: 11px;
+            font-weight: 400;
+        }
+    }
+    
+    .text-desc {
+        span {
+            color: $title-black;
+            font-family: "Open Sans";
+            font-weight: 700;
+        }
+    }
+    
+    @include bpmax('tab-mid') {
+        max-width: 100%;
+        padding: 16px;
+        
+        .mb-9 {
+            margin-bottom: 12px;
+        }
+        
+        .coupon-box {
+            margin-top: 7px;
+            max-width: 100%;
+        }
+        
+        .text-desc {
+            span {
+                color: $title-black;
+                font-family: "Open Sans";
+                font-weight: 700;
+            }
+        }
+    }
+}
