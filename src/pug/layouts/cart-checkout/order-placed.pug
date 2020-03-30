@@ -4,7 +4,7 @@
         .row
             .col-8.cart-content.checkout-content
                 .order-success
-                    img(src="../assets/images/cart/order-placed.svg", alt="")
+                    img(src="./assets/images/cart/order-placed.svg", alt="")
                     h3 Order placed successfully
                     p Thank you for your order. You will receive shortly a copy of this order receipt via mail. If you wish to make any changes to a confirmed order (address,size or coupon/discounts), please contact our customer support at 
                         a(href="mailto:customerchampion@eshakti.com") customerchampion@eshakti.com
@@ -21,7 +21,7 @@
                         h2 Delivery Details
                         p Delivery between Mar 2nd - Mar 6th
 
-                        .checkout-content__address
+                        .checkout-content__address.orderplaced-content__address
                             .address-box
                                 h4 Shipping Details
                                 p Emilia Clarke
@@ -37,7 +37,7 @@
                                     br
                                     | Bellingham MA 200198.
 
-                            a.change-link(href="#") Change Address
+                            a.change-link.d-none(href="#") Change Address
 
                     .checkout-content__section
                         h2 Order-Item Details
@@ -49,7 +49,7 @@
                             tr
                                 td.cart-content__item
                                     .cart-content__img
-                                        img(src="../assets/images/cart/cart-img.png", alt="")
+                                        img(src="./assets/images/cart/cart-img.png", alt="")
                                     .cart-content__details
                                         label Zapelle
                                         h3 Cotton Poplin Two-tone Tiered Shift Dress
@@ -76,7 +76,7 @@
                             tr
                                 td.cart-content__item
                                     .cart-content__img
-                                        img(src="../assets/images/cart/cart-img.png", alt="")
+                                        img(src="./assets/images/cart/cart-img.png", alt="")
                                     .cart-content__details
                                         label Zapelle
                                         h3 Cotton Poplin Two-tone Tiered Shift Dress
@@ -111,7 +111,7 @@
                                                     span 75
                                                 P HPS to Knee
                                                     span 75
-
+                                            a.d-md-none(href="#") Show more
                                         .cart-style
                                             span Style
                                             p As Shown

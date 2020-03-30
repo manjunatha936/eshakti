@@ -12,14 +12,14 @@ $(document).ready(function(){
 
     $('.checkout-panel__promo input[type="text"]').on('focus input', function(){
         if($(this).val() == "") {
-            $(this).siblings('.checkout-panel__couponwrap').addClass('show-box');
+            $('.checkout-panel__couponwrap').addClass('show-box');
             $('.checkout-panel__scroll').addClass('no-scroll');
             if($(this).parents('.checkout-panel__promo').find('.overlay').length <= 0) {
                 $(this).parents('.checkout-panel__promo').append("<div class='overlay'></div>");
             }
         }
         else {
-            $(this).siblings('.checkout-panel__couponwrap').removeClass('show-box');
+            $('.checkout-panel__couponwrap').removeClass('show-box');
             $('.checkout-panel__scroll').removeClass('no-scroll');
             $('.checkout-panel__promo .overlay').remove();
         }
@@ -47,6 +47,13 @@ $(document).ready(function(){
 
         else {
             $('.checkout-panel').removeClass('stick-bottom');
+        }
+
+        if($(this).scrollTop() + $(this).outerHeight() > $('.checkout-panel').offset().top + $('.checkout-panel').outerHeight()) {
+            $('.checkout-panel .cart-panel__total').addClass('not-fixed');
+        }
+        else {
+            $('.checkout-panel .cart-panel__total').removeClass('not-fixed');
         }
     });
 
@@ -142,6 +149,38 @@ $(document).ready(function(){
         if (formatted == this.value) return;
         this.value = formatted;
         this.selectionEnd = cursor;
+    });
+
+    $(document).on('click', '.cart-content__details .cart-size a:not(.active)', function(e) {
+        e.preventDefault();
+        var el = $('.cart-content__details .custom-size'),
+            curHeight = el.height(),
+            autoHeight = el.css('height', 'auto').height();
+        el.height(curHeight).animate({height: autoHeight}, 300);
+        $(this).addClass('active').text('Show less');
+    });
+    
+    $(document).on('click', '.cart-content__details .cart-size a.active', function(e) {
+        e.preventDefault();
+        var el = $('.cart-content__details .custom-size');
+        el.animate({height: "36px"}, 300);
+        $(this).removeClass('active').text('Show more');
+    });
+
+    $(document).on('click', '.checkout-panel__promo > h4', function(e) {
+        e.preventDefault();
+        $('body').addClass('overflow-noscroll');
+        $(this).parents('.checkout-panel__promo').find('form').addClass('show-couponbox');
+    });
+
+    $(document).on('click', '.checkout-panel__promo .web-tooltip', function(e) {
+        e.stopPropagation();
+    });
+
+    $(document).on('click', '.checkout-panel__promo .backto-main', function(e) {
+        e.preventDefault();
+        $('body').removeClass('overflow-noscroll');
+        $('.checkout-panel__promo form').removeClass('show-couponbox');
     });
 });
 

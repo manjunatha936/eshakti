@@ -7,11 +7,11 @@
         .nav.nav-tabs(role='tablist')
           a.nav-item.nav-link.active(data-toggle='tab', href='#pay-card', role='tab') Credit Card
           a.nav-item.nav-link(data-toggle='tab', href='#pay-pal', role='tab')
-            img(src="../assets/images/cart/paypal.png", alt="Paypal")
+            img(src="./assets/images/cart/paypal.png", alt="Paypal")
         .tab-content
           #pay-card.tab-pane.fade.show.active(role='tabpanel')
             form.payment-form
-              .d-flex
+              .d-flex.flex-wrap
                 .form-group
                   label Card Number*
                   input.payment-form__number(required="required" data-parsley-creditcard="" type="tel" data-parsley-error-message="Please enter a valid card number")
@@ -35,7 +35,7 @@
               input(type="checkbox" name="save-check" id="save-check")
               label(for="save-check") Remember your PayPal details for future purchases.
             a.paypal-btn(href="#")
-              img(src="../assets/images/cart/paypal-btn.png", alt="")
+              img(src="./assets/images/cart/paypal-btn.png", alt="")
 
 
         
