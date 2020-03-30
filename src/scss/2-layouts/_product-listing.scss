@@ -214,7 +214,7 @@
         }
     }
     .slide-item {
-        margin-right: 40px;
+        // margin-right: 40px;
     }
     .style-model-content {
         // display: inline-block;
@@ -240,23 +240,30 @@
           }
     }
     .model-img {
-        
-        width: 148px;
-        height: 446px;
-            // height: 507px; 
+        width: 75px;
+        // width: 148px;
+        height: 275px;
+        // height: 507px; 
         @media screen and (min-width: 375px){
-            width: 149px;
-
+            width: 74px;
+            // height: 314px;
+            
+            
         }            
         @media screen and (min-width: 378px){
-            height: 518px;
+            height: 249px;
+            // height: 312px;
+            // height: 518px;
         }            
         // @media screen and (min-width: 414px){
         //     width: 324px;
         //     height: 432px;;
         // }            
-        @media screen and (min-width: 425px){
-             height: 507px; 
+        // @media screen and (min-width: 768px){
+        //      height: 314px; 
+        // }
+        @media screen and (min-width: 992px){
+             height: 314px; 
         }
         // @media screen and (min-width: 768px){
         //     width: 322px;
@@ -275,8 +282,8 @@
             position: absolute;
             top: 0;
             left: 0;
-         
-            width: 38px;
+            width: 19px;
+            // width: 38px;
             // @media screen and (min-width: 378px){
             //     width: 134px;
             // } 
@@ -295,12 +302,12 @@
             position: absolute;
             top: 0;
             right: 0;
-            width: 46px;
-
+            // width: 46px;
+            width: 23px;
             
             @media screen and (min-width: 425px){
                 
-                width: 47px;
+                // width: 47px;
             } 
             // @media screen and (max-width: 374px){
                 
@@ -317,9 +324,10 @@
         .neck-body {
             position: absolute;
             top: 0;
-            right: 46px;
-            width: 66px;
-
+            // right: 46px;
+            // width: 66px;
+            right: 23px;
+            width: 33px;
             
             // @media screen and (min-width: 378px){
             //     right: 45px;
@@ -348,9 +356,16 @@
             left: 0;
             right: 0;
             // width: 100%;
-            width: 148px;
-            height: 180px;
+            width: 74px;
+            height: 142px;
+            // height: 180px;
             @media screen and (min-width: 425px){
+               
+                height: 116px;
+                
+            }
+            @media screen and (min-width: 992px){
+                width: 148px;
                 height: 242px;
                 
             }
@@ -377,6 +392,10 @@
         display: flex;
         align-items: center;
         color: $title-black;
+        @media screen and (min-width:768px)and (max-height:1024px) {
+        bottom: 33px;
+            
+        }
 
         i {
             font-size: 16px;
@@ -433,7 +452,7 @@
         }
         @media screen and (min-width:992px ){
             // max-width: 900px;
-            max-width: 886px;
+            max-width: 920px;
         }
         @media screen and (min-width:1404px ){
             max-width: 1180px;
@@ -1036,7 +1055,7 @@
     }
     .swiper-arrow .arrow:last-child {
         top: 28%;
-        right: -11px;
+        right: 0;
     }
 }
 
@@ -1105,6 +1124,7 @@
     }
 }
 .product-details-cards {
+    
     // padding-left: 10px;
     .swiper-arrow .arrow:first-child {
         top: 35% !important;
@@ -1123,4 +1143,34 @@
 }
 .popUp-container {
     position: relative;
+}
+
+.styleThumbSlider {
+    width: calc(100% - 15px);
+    @media screen and (min-width:992px){
+        width: calc(100% - 50px);
+        
+    }
+    position: relative;
+
+    .swiper-container {
+        width: calc(100% - 75px);
+        @media screen and (min-width:992px){
+            width: calc(100% - 100px);
+           
+            
+        }
+    }
+
+    label.swiper-slide:last-of-type {
+        margin-right: 0 !important;
+    }
+
+    .arrow.swiper-button-disabled {
+        opacity: 0.5;
+        pointer-events: none;
+    }
+}
+.border-bttm-row {
+    border-top: 2px solid #393939;
 }

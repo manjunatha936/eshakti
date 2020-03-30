@@ -117,7 +117,8 @@ class ProductDetais {
 
 
           var popupSlide1 = new Swiper('.js-necklineSLider', {
-            spaceBetween: 10,
+            // spaceBetween: 10,
+            watchOverflow: true,
             slidesPerView: 'auto',
             navigation: {
               nextEl: '.left-arrow-necklineSLider',
@@ -153,8 +154,23 @@ class ProductDetais {
               popupSlide1.update();
               popupSlide2.update();
               popupSlide3.update();
-            },300)
+            },300);
           })
+
+          $(document).on('click', '.product-modal .nav-link.style-head', function(){
+            setTimeout(function(){
+              popupSlide1.update();
+              popupSlide2.update();
+              popupSlide3.update();
+            },300);
+          });
+          $(document).on('click', '.style-head', function(){
+            setTimeout(function(){
+              popupSlide1.update();
+              popupSlide2.update();
+              popupSlide3.update();
+            },300);
+          });
         //save style
         $(".js-btn-save").click(function(e){
           
@@ -195,9 +211,12 @@ class ProductDetais {
                     spaceBetween: 20,
                     breakpoints: {
                         480: {
-                            spaceBetween: 10
+                            spaceBetween: 10,
+                            slidesPerView: 1,
                         },
+                        
                         992: {
+                            slidesPerView: 'auto',
                             spaceBetween: 20
                         },
                         1200: {
@@ -229,15 +248,7 @@ class ProductDetais {
         
             
             })
-       
-            // if(window.innerWidth > 767){
-            //   $(".style-model-content").removeClass("fade")
-              
-            // }
-            // else{
-            //   $(".style-model-content").addClass("fade")
-              
-            // }
+ 
             // on hover change img
             $('.tab-img img').hover(function(){
             let src = $(this).attr("src")

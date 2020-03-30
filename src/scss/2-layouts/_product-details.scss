@@ -295,6 +295,14 @@
         bottom: 0;
         z-index: 10;
     }
+    .btn-addCart {
+        border: none;
+        width: 100%;
+        @media screen and (min-width:767px){
+        width: auto;
+            
+        }
+    }
 }
 .size-active {
     background-color: #000000;
