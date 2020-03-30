@@ -22,3 +22,46 @@
         
     }
 }
+.fnt-12-grey {
+    color: #2e333d;
+    font-size: 12px;
+    font-weight: 700;
+    padding-bottom: 6px;;
+}
+.old-address {
+    padding: 34px 28px 40px 32px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.06);
+    background-color: #ffffff;
+    .icon-edit::before {
+        font-size: 13px;
+    }
+    .icon-delete::before {
+        font-size: 13px;
+        
+    }
+    p,
+    address {
+        color: #72757a;
+        font-size: 12px;
+        line-height: 1.5;
+    }
+    .edit-txt {
+        color: #2e333d;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 22px;
+    }
+    .old-address-container {
+        border-radius: 2px;
+        background-color: #f9fafa;
+        padding: 25px;
+    }
+    .btn-text {
+        color: #2e333d;
+        font-size: 13px;
+        font-weight: 600;
+        line-height: 22px;
+        border: 1px solid #141313;
+        background-color: #ffffff;
+    }
+}
