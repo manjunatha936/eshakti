@@ -31,7 +31,7 @@ module.exports = {
     checkout: [path.join(paths.dirSrcJs, "checkout")],
     "order-placed": [path.join(paths.dirSrcJs, "order-placed")],
     "account-wishlist": [path.join(paths.dirSrcJs, "account-wishlist")],
-    "my-orders": [path.join(paths.dirSrcJs, "my-orders")],
+    "accounts-orders": [path.join(paths.dirSrcJs, "accounts-orders")],
     "address-management": [path.join(paths.dirSrcJs, "address-management")],
     "accounts-personal": [path.join(paths.dirSrcJs, "accounts-personal")],
     "my-orders-gift": [path.join(paths.dirSrcJs, "my-orders-gift")]

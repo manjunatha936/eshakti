@@ -140,7 +140,6 @@
                     text-align: left;
 
                     @include bp('tab') {
-                        width: calc(100% - 270px);
                         padding-right: 0;
                     }
                 }

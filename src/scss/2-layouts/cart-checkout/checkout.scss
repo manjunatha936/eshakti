@@ -547,10 +547,11 @@
         input[type="text"] {
             width: 100%;
             font-size: 13px;
-            line-height: 40px;
+            line-height: 20px;
             border: 1px solid #dadcde;
             background-color: $white;
-            padding: 0 10px;
+            padding: 10px 10px;
+            border-radius: 0;
         }
 
         input[type="submit"],
@@ -563,6 +564,7 @@
             background-color: #e8eaec;
             cursor: pointer;
             padding: 0 10px;
+            border-radius: 0;
         }
 
         .overlay {
@@ -707,6 +709,7 @@
                 padding: 10px;
                 font-size: 12px;
                 line-height: 1.5;
+                border-radius: 0;
             }
         }
 
@@ -773,6 +776,11 @@
         .card-group {
             border-bottom: 1px solid #d8dada;
             padding: 15px;
+
+            p {
+                color: #2e333d;
+                font-size: 11px;
+            }
 
             @include bpmax('phone') {
                 padding-left: 0;
@@ -1154,16 +1162,19 @@
         input[type="tel"],
         input[type="text"],
         input[type="password"] {
-            line-height: 40px;
+            line-height: 20px;
             color: $title-black;
             font-size: 13px;
             font-weight: 600;
             width: 100%;
-            padding: 0 15px;
+            padding: 10px 15px;
             border: 1px solid #c0c6cb;
             border-right: none;
             letter-spacing: 0.1px;
+            border-radius: 0;
 
+            -webkit-appearance: textfield !important;
+            appearance: textfield !important;
         }
 
         input[type="password"] {
@@ -1361,7 +1372,7 @@
 
     input[type="checkbox"] {
         & + label {
-            line-height: 1.38;
+            line-height: 1.4;
             opacity: 0.7;
             color: $title-black;
             font-size: 11px;
