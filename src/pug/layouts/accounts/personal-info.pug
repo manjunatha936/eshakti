@@ -58,7 +58,7 @@
         form.modal-body
             h6.title Change password
             label New Password
-            input.form-input(type="text")
+            input.form-input#pass(type="password" required)
             label Re-enter New Password
-            input.form-input(type="text")
+            input.form-input(type="password" required data-parsley-equalto="#pass")
             button.form-button(type="button") Save
