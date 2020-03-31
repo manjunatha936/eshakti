@@ -1,0 +1,164 @@
+.sec-form {
+    padding-top: 90px;
+    background: #fafafa;
+    padding-bottom: 30px;
+
+    @media only screen and (min-width: 1024px) {
+        padding-top: 180px;
+        padding-bottom: 35px;
+    }
+
+    @media only screen and (min-width: 1300px) {
+        padding-top: 180px;
+        padding-bottom: 35px;
+    }
+}
+
+.accounts-form-c {
+    padding: 20px 32px;
+    background-color: $white;
+    max-width: none;
+    flex: none;
+    width: calc(100% - 380px);
+
+    .accounts-form {
+        border-radius: 2px;
+        background-color: #f9fafa;
+        padding: 24px 40px 24px 24px;
+    }
+
+    h5 {
+        color: #2a2a2a;
+        font-family: $opensans;
+        font-size: 14px;
+        font-weight: 700;
+        margin-bottom: 24px;
+    }
+    
+    label {
+        margin-bottom: 8px;
+    }
+    
+    input,textarea {
+        margin-bottom: 24px;
+        height: 44px;
+    }
+    
+    .textarea {
+        height: 90px;
+        max-width: 100%;
+    }
+    
+    .seperator {
+        padding-top: 8px;
+        margin-bottom: 24px;
+        border-bottom: 1px solid #333333;
+        opacity: 0.16;
+    }
+
+    button {
+        margin-right: 20px;
+        min-width: 175px;
+        height: 40px;
+    }
+    
+    @include bpmax('tab-mid') {
+        padding: 16px;
+        width: 100%;
+    
+        .accounts-form {
+            padding: 24px 16px;
+        }
+        
+        h5 {
+            margin-bottom: 16px;
+        }
+        
+        label {
+            margin-bottom: 8px;
+        }
+        
+        input,textarea {
+            margin-bottom: 24px;
+            height: 40px;
+            max-width: 100%;
+        }
+        
+        .textarea {
+            height: 110px;
+        }
+        
+        .seperator {
+            padding-top: 0;
+            margin-bottom: 24px;
+        }
+
+        button {
+            width: auto;
+        }
+    }
+    
+    @media(max-width: 550px) {
+        button {
+            margin-right: 0;
+            min-width: 100%;
+            margin-bottom: 12px;
+        }
+    }
+}
+
+.accounts-help-c {
+    max-width: none;
+    flex: none;
+    width: 380px;
+
+    @include bpmax('tab-mid') {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+.help-box {
+    padding: 20px;
+    background-color: $white;
+    
+    h6 {
+        color: #2e333d;
+        font-family: $opensans;
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 11px;
+    }
+    
+    p {
+        color: #797b7e;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 18px;
+        margin-bottom: 15px;
+    }
+    
+    a {
+        color: #2e333d;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 16px;
+        text-decoration: underline;
+        margin-right: 11px;
+        cursor: pointer;
+        position: relative;
+        padding-left: 15px;
+        
+        &::before {
+            content: "\e942";
+            font-family: "icomoon";
+            position: absolute;
+            left: 0;
+        }
+    }
+    
+    @include bpmax('tab-mid') {
+        max-width: 350px;
+        margin: 32px auto 0;
+    }
+}
