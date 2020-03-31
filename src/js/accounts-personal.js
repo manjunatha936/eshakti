@@ -1,4 +1,6 @@
 import $ from 'jquery';
+import 'parsleyjs';
+
 
 
 $('.js-profile-edit').click(function(e){ 
@@ -13,6 +15,10 @@ $('.js-profile-save').click(function(e){
     $('.screen-edit').fadeOut("fast", function(){
         $('.screen-info').fadeIn('slow');
     });
+});
+
+$(".password-popup .form-button").on('click', function () {
+    $(this).parents('form').parsley().validate();  
 });
 
   
