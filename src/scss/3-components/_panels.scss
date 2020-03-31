@@ -4,7 +4,7 @@
     background-color: $white;
 
     &--inner-info{
-        padding: 20px 60px 20px 45px;
+        padding: 30px 60px 30px 45px;
     }
 
     &__heading {
@@ -18,7 +18,7 @@
     
     .field {
         margin-top: 0;
-        margin-bottom: 34px;
+        margin-bottom: 30px;
     }
 
     @include bpmax('tab-mid') {
@@ -70,12 +70,20 @@
     }
 
     .seperator {
-        padding-top: 15px;
-        margin: 0 -60px 50px -45px;
+        padding-top: 0;
+        margin: 0 -60px 40px -45px;
         border-bottom: 1px solid #e4e6e7;
     }
 
+    button {
+        margin-bottom: 10px;
+    }
+    
     @include bpmax('tab-mid') {
+        button {
+            margin-bottom: 0;
+        }
+
         .seperator {
             padding-top: 30px;
             margin: 0 -16px 24px -16px;
@@ -106,6 +114,12 @@
     border: none;
     cursor: pointer;
     padding: 0 30px;
+
+    &.white {
+        border: 1px solid #141313;
+        background-color: #ffffff;
+        color: #2e333d;
+    }
     
     @include bpmax('tab-mid') {
         width: 100%;
@@ -156,6 +170,8 @@
         font-weight: 100;
         color: white;
         cursor: pointer;
+        opacity: 0.9;
+        text-shadow: none;
     }
 
     @include bpmax('tab-mid') {

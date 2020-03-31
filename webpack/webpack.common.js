@@ -33,7 +33,7 @@ module.exports = {
     "my-orders": [path.join(paths.dirSrcJs, "my-orders")],
     "address-management": [path.join(paths.dirSrcJs, "address-management")],
     "accounts-personal": [path.join(paths.dirSrcJs, "accounts-personal")],
-    "my-orders-gift": [path.join(paths.dirSrcJs, "my-orders-gift")]
+    "accounts-gifts": [path.join(paths.dirSrcJs, "accounts-gifts")]
   },
   output: {
     path: paths.dirDist,

@@ -41,6 +41,11 @@
     padding: 16px;
     width: 100%;
     max-width: 300px;
+
+    &.textarea {
+        height: 86px;
+        max-width: 620px;
+    }
 }
 
 .fields-edit {
