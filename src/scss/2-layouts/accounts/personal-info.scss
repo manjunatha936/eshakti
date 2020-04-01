@@ -12,7 +12,40 @@
     @extend .fnt-xs;
     color: $form-label;
     display: block;
-    margin-bottom: .25rem;
+    margin-bottom: 6px;
+    line-height: 18px;
+}
+
+.text-input {
+    color: $title-black;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 18px;
+
+    &input {
+        border: 1px solid #dadcde;
+        background-color: #ffffff;
+        padding: 16px;
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+.form-input {
+    color: $title-black;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 18px;
+    border: 1px solid #dadcde;
+    background-color: #ffffff;
+    padding: 16px;
+    width: 100%;
+    max-width: 300px;
+
+    &.textarea {
+        height: 86px;
+        max-width: 620px;
+    }
 }
 
 .fields-edit {
@@ -20,6 +53,8 @@
     @extend .fnt-xxs;
     padding-left: 1.2rem;
     color: rgba(46, 51, 61, .8);
+    padding-top: 12px;
+
     &::before {
         content: "\e91a";
         font-family: "icomoon";

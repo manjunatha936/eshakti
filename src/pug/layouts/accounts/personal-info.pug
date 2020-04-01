@@ -1,31 +1,64 @@
 .panel.panel--inner-info
-    h1.panel__heading Personal Information
-    //START: FORM INFO
-    form
-        .row
-            .col-md-5.field
-                label.form-label(for="") Email ID
-                input.border-0(type="text" value="steffyjoseph@gmail.com")
+    //START: FORM INFO 
+    .screen-info
+        h1.panel__heading Personal Information
+        .row.field
+            .col-md-5
+                .form-label Email ID
+                .text-input steffyjoseph@gmail.com
 
-            .col-md-4.field
-                label.form-label(for="") Password
-                input.border-0(type="password" value="Manjunatha")
-            
-            .col-md-3.field
-                a.fnt-xxs.learn-link(href="javascript:void(0);") Change Password
-
+            .col-md-4
+                label.form-label Password
+                .text-input ************
+       
         .row.form-panel
-            .col-md-5.field
-                label.form-label(for="") Name
-                input.border-0(type="text" value="Steffy Joseph")
+            .col-md-5
+                label.form-label Name
+                .text-input Steffy Joseph
 
             .col-md-5.field
-                label.form-label(for="") Phone Number
-                input.border-0(type="text" value="+1 8727376727")
+                label.form-label Phone Number
+                .text-input +1 8727376727
         
-        .row.py-2
-            .col-6.field
-                a.fields-edit.learn-link(href="") Edit Info
+        a.fields-edit.learn-link.js-profile-edit.border-0(href="javascript:void(0)") Edit Info
+    form.screen-edit
+        h1.panel__heading Personal Information
+        .row.field
+            .col-md-5
+                .form-label Email ID
+                .text-input steffyjoseph@gmail.com
+
+            .col-md-4
+                label.form-label Password
+                .text-input ************
+            
+            .col-md-3
+                a.fnt-xxs.learn-link(data-toggle="modal" data-target="#changePassword") Change Password
+        .seperator
+        .row.form-panel.field
+            .col-md-6
+                label.form-label Name
+                input.form-input(type="text" value="Steffy Joseph")
+
+            .col-md-6
+                label.form-label Phone Number
+                input.form-input(type="text" value="+1 8727376727")
+        
+        .row
+            .col-md-6
+                button.js-profile-save.form-button(type="button") Save
         
             
 
+// Change password Popup
+#changePassword.modal.fade.password-popup(tabindex='-1' role='dialog'  aria-hidden='true')
+  .modal-dialog.modal-dialog-centered(role='document')
+    .modal-content
+        button.close(type='button' data-dismiss='modal' aria-label='Close') &times;
+        form.modal-body
+            h6.title Change password
+            label New Password
+            input.form-input#pass(type="password" required)
+            label Re-enter New Password
+            input.form-input(type="password" required data-parsley-equalto="#pass")
+            button.form-button(type="button") Save
