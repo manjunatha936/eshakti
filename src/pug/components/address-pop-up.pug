@@ -27,14 +27,14 @@
                             .col-lg-6.form-group
                                 label(for="") Country*
                                 .drop-container
-                                    .select-style
-                                        span.triangle-icon
-                                        select.form-input.select-btn.txt-gry-12
-                                            option(disable) select
-                                            option(value='saab') Saab
-                                            option(value='mercedes') Mercedes
-                                            option(value='audi') Audi
-                                        input.select-input.d-none(type="text" data-parsley-errors-container="#errorBlock1" data-parsley-error-message="Please select your country" data-parsley-required)
+                                    //- .select-style
+                                    //-     span.triangle-icon
+                                    select.form-input.select-btn.select_box.txt-gry-12
+                                        option(disable) select
+                                        option(value='saab') Saab
+                                        option(value='mercedes') Mercedes
+                                        option(value='audi') Audi
+                                        //- input.select-input.d-none(type="text" data-parsley-errors-container="#errorBlock1" data-parsley-error-message="Please select your country" data-parsley-required)
                                 #errorBlock1
                                 
                             .col-lg-6.form-group

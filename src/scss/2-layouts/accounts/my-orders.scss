@@ -335,6 +335,16 @@
         &__cardbody {
             margin-left: -10px;
             margin-right: -10px;
+
+            h3 {
+                padding: 0 10px;
+                color: $title-black;
+                font-family: $opensans;
+                font-size: 12px;
+                font-weight: 700;
+                margin: 20px 0 0;
+                width: 100%;
+            }
             
             > div {
                 padding: 0 10px;
@@ -418,6 +428,10 @@
                 justify-content: space-between;
                 position: relative;
                 z-index: 2;
+            }
+
+            & + .acc-orders__cardbody h3 {
+                margin-top: 10px;
             }
         }
 
@@ -504,6 +518,99 @@
                     opacity: 1;
                 }
             }
+        }
+    }
+}
+
+.accounts-panel {
+    &__left {
+        max-width: none;
+        flex: none;
+        width: calc(100% - 380px);
+
+        @include bpmax('desktop') {
+            width: calc(100% - 300px);
+        }
+
+        @include bpmax('tab-mid') {
+            width: 100%;
+        }
+    }
+
+    &__right {
+        max-width: none;
+        flex: none;
+        width: 380px;
+
+        @include bpmax('desktop') {
+            width: 300px;
+        }
+
+        @include bpmax('tab-mid') {
+            width: 70%;
+            margin-top: 30px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @include bpmax('phone-lg') {
+            width: 100%;
+            margin-top: 25px;
+        }
+
+        @include bpmax('phone') {
+            margin-top: 20px;
+        }
+    }
+
+    .acc-orders h2 {
+        color: #696c71;
+        font-weight: normal;
+
+        strong,
+        span {
+            color: #2a2a2a;
+            font-weight: 700;
+        }
+
+        strong {
+            position: relative;
+            padding-left: 20px;
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 7px;
+                height: 7px;
+                border-right: 1px solid;
+                border-bottom: 1px solid;
+                left: 3px;
+                top: 6px;
+                transform: rotate(-45deg);
+            }
+        }
+    }
+
+    .acc-orders__progress {
+        padding-bottom: 0;
+    }
+
+    .acc-orders__card {
+        h3 {
+            color: $title-black;
+            font-family: $opensans;
+            font-size: 12px;
+            font-weight: 700;
+            line-height: 1.35;
+            margin-bottom: 15px;
+        }
+    }
+
+    .acc-orders__cardbox {
+        margin-bottom: 25px;
+
+        &::after {
+            display: none;
         }
     }
 }
