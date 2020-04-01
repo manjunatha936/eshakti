@@ -29,8 +29,9 @@ module.exports = {
     "repeat-customer": [path.join(paths.dirSrcJs, "repeat-customer")],
     cart: [path.join(paths.dirSrcJs, "cart")],
     checkout: [path.join(paths.dirSrcJs, "checkout")],
+    "order-placed": [path.join(paths.dirSrcJs, "order-placed")],
     "account-wishlist": [path.join(paths.dirSrcJs, "account-wishlist")],
-    "my-orders": [path.join(paths.dirSrcJs, "my-orders")],
+    "accounts-orders": [path.join(paths.dirSrcJs, "accounts-orders")],
     "address-management": [path.join(paths.dirSrcJs, "address-management")],
     "accounts-personal": [path.join(paths.dirSrcJs, "accounts-personal")],
     "accounts-gifts": [path.join(paths.dirSrcJs, "accounts-gifts")]

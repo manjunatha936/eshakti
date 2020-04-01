@@ -1,0 +1,53 @@
+.accounts-contain.accounts-panel
+    .container.position-relative
+        .row
+            .accounts-panel__left.acc-orders.col-8
+                .acc-orders__card
+                    h2 My Orders 
+                        strong Order ID 
+                        span #1338681
+                    .acc-orders__cardbox
+                        .acc-orders__cardhead
+                            p Order number - 
+                                span #1338681
+                            p Placed on - 
+                                span 4th Apr 2020
+                            p
+                                a(href="#")
+                                    i.icon-help
+                                    label Help
+
+                        .acc-orders__progress
+                            .acc-orders__progressbar(data-value="75")
+                                .status
+                            
+                            .acc-orders__progresslevel
+                                .acc-orders__stage.active
+                                    .stage-status
+                                        i &times;
+                                        span
+                                    p Production Done
+                                .acc-orders__stage.partial-active
+                                    .stage-status
+                                        i
+                                            img(src="./assets/images/shipment.svg", alt="")
+                                        span
+                                    p Shipment
+                                .acc-orders__stage
+                                    .stage-status
+                                        i
+                                            img(src="./assets/images/delivery.svg", alt="")
+                                        span
+                                    p Delivery before Feb 11
+                
+                    .acc-orders__cardboxgroup
+                        h3 Order contain 3 items
+                        .acc-orders__cardbox
+                            .acc-orders__cardbody.row
+
+                        .acc-orders__cardbox
+                            .acc-orders__cardbody.row
+                            
+
+
+            .accounts-panel__right.col-4
