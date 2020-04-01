@@ -1,0 +1,83 @@
+.manage-size-container
+    .manage-size-profile
+        .size-profile.old-address
+            h4.header-text Size Profile 
+            ul.nav.manage-size-nav.mt-3.mt-md-4(role='tablist')
+                li.nav-item
+                    a#steffySize-tab.nav-link.size-tab.active(data-toggle='tab' href='#steffySize' role='tab' aria-controls='home' aria-selected='true') My Size Profile 
+                li.nav-item
+                    a#tiffnySize-tab.nav-link.size-tab(data-toggle='tab' href='#tiffnySize' role='tab' aria-controls='profile' aria-selected='false') Tiffany  
+                                    
+    include ../../mixins/dropdown.pug
+    #myTabContent.tab-content.manage-size-tab-content.pb-0
+        #steffySize.tab-pane.fade.show.active
+            h6 Title
+            input.input-value.fnt-13(type="text")
+            .select-size.d-flex.flex-wrap
+                +dropdown("Shoulder")
+                +dropdown("Chest ")
+                +dropdown("Bust ")
+                +dropdown("Under Bust ")
+            
+                +dropdown("Hip")
+                +dropdown("Waist ")
+                +dropdown("Upper Arms")
+                +dropdown("Waist")
+            
+                +dropdown("Hip")
+                +dropdown("Waist ")
+                +dropdown("Upper Arms")
+                +dropdown("Waist")
+                p.info-txt These measurements are optional. If you have a long torso or long legs, please consider providing them to help us achieve a great fit. For best results, please ask someone to help measure you
+            h4.header-text Hips point shoulder to    
+            .hip-size
+                +dropdown("Shoulder")
+                +dropdown("Chest ")
+                +dropdown("Bust ")
+                +dropdown("Shoulder")
+                +dropdown("Chest ")
+                +dropdown("Bust ")
+                +dropdown("Shoulder")
+                +dropdown("Chest ")
+                +dropdown("Bust ")
+        #tiffnySize.tab-pane.fade
+            h6 Title
+            input.input-value.fnt-13(type="text")
+            .select-size.d-flex.flex-wrap
+                +dropdown("Shoulder")
+                +dropdown("Chest ")
+                +dropdown("Bust ")
+                +dropdown("Under Bust ")
+            
+                +dropdown("Hip")
+                +dropdown("Waist ")
+                +dropdown("Upper Arms")
+                +dropdown("Waist")
+            
+                +dropdown("Hip")
+                +dropdown("Waist ")
+                +dropdown("Upper Arms")
+                +dropdown("Waist")
+                p.info-txt These measurements are optional. If you have a long torso or long legs, please consider providing them to help us achieve a great fit. For best results, please ask someone to help measure you
+            h4.header-text Hips point shoulder to    
+            .hip-size
+                +dropdown("Shoulder")
+                +dropdown("Chest ")
+                +dropdown("Bust ")
+                +dropdown("Shoulder")
+                +dropdown("Chest ")
+                +dropdown("Bust ")
+                +dropdown("Shoulder")
+                +dropdown("Chest ")
+                +dropdown("Bust ")
+    .select-Height.d-flex.align-items-center.py-4
+        span.select-label.text-capitalize.mr-4 Height:
+        .select-style.select-style--height.mt-0
+            //- span.triangle-icon
+            select.txt-gry-12.select_box
+                option(disabled selected) select
+                option(value='saab') 9.5
+                option(value='mercedes') 6.7
+                option(value='audi') 7.9
+    .update-btn
+        button.bttn.bttn__orange.mt-3.mt-md-4.py-2.px-3(type="button") Update

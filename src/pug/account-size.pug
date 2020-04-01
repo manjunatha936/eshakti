@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+html(lang="en")
+
+  head
+    include ./base/head.pug
+    +head("Account-sign")
+
+  body
+    //START: HEADER
+    include ./base/header.pug
+    +header()
+
+    //START: MAIN
+    main.maintp9
+        //START: ACCOUNT SIZE
+        include ../pug/layouts/account-size/main.pug
+
+    include ./base/footer.pug
