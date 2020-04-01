@@ -3,7 +3,7 @@ mixin leftpanel(value)
         h2 My Account
         ul
             li
-                a(href="#" class=(value === "profile" ? 'active' : ''))
+                a(href="accounts-personal.html" class=(value === "profile" ? 'active' : ''))
                     i.icon-account
                     | Profile
             li
@@ -15,7 +15,7 @@ mixin leftpanel(value)
                     i.icon-address
                     | Manage Address
             li
-                a(href="#" class=(value === "coupons" ? 'active' : ''))
+                a(href="accounts-gifts.html" class=(value === "coupons" ? 'active' : ''))
                     i.icon-coupon
                     | Gift Coupons & Cards
             li
