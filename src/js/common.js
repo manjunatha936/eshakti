@@ -15,11 +15,11 @@ import "bootstrap/js/src/modal"
 // // import "../pug/product-listing.pug";
 // import "../pug/productlisting.pug";
 // import "../pug/cart.pug";
-import "../pug/checkout.pug";
+// import "../pug/checkout.pug";
 // import "../pug/order-placed.pug";
 // import "../pug/account-wishlist.pug";
-import "../pug/accounts-orders.pug";
-import "../pug/accounts-orders-current.pug";
+// import "../pug/accounts-orders.pug";
+// import "../pug/accounts-orders-current.pug";
 // import "../pug/address-management.pug";
 // import "../pug/accounts-personal.pug";
 
