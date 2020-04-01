@@ -58,6 +58,15 @@
     
 }
 
+
+.parsley-errors-list {
+    margin-top: 2px;
+    li {
+        font-size: 11px;
+        color: #f25c50;
+    }
+}
+
 .screen-info {
     position: relative;
 }
@@ -95,6 +104,11 @@
         }
 
         .form-input {
+            margin-bottom: 24px;
+        }
+
+        .parsley-errors-list {
+            margin-top: -18px;
             margin-bottom: 24px;
         }
     }
@@ -180,6 +194,7 @@
 
         li {
             font-size: 11px;
+            color: #f25c50;
         }
     }
 
@@ -228,7 +243,7 @@
         
         .accounts-contain__right {
             background-color: white;
-            padding: 14px 16px;
+            padding: 20px 16px;
             width: 100%;
             margin: 0;
         }
