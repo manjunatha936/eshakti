@@ -251,6 +251,8 @@ class ProductDetais {
  
             // on hover change img
             $('.tab-img img').hover(function(){
+              $('.tab-img img').css({border:"none"})
+              $(this).css({border:"1px solid #464748"})
             let src = $(this).attr("src")
             $(this).parent(".tab-img").siblings(".model-img-tab-container").css("background-image","url("+src+")")
             })

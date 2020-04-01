@@ -50,6 +50,7 @@ class SavePopup {
                 // const newdata = '<li class="slide-item"><div class="card-wrp"><div class="close-card" ><span></span><span></span></div><input id="img'+ index +'" type="radio" name="img-check" class="d-none img-check"/><div class="check-circle"><span></span></div><label for="img'+ index +'" class="style-card"><img class="saved-img" src="'+ imageSource+'" alt="style image" /></div><div class="d-flex pt-2 align-items-center  " ><p class="fnt-11 w-100 pr-2 text-left">'+neckText+" , "+sleeveText+" , "+lengthText+'</p><i class="share-icon icon-share mr-2" ></i></label></div></li>'
                 const newdata = '<li class="slide-item swiper-slide"><div class="card-wrp"><div class="close-card" slide-id="'+ index +'"><span></span><span></span></div><input id="img'+ index +'" type="radio" name="img-check" class="d-none img-check"/><div class="check-circle"><span></span></div><label for="img'+ index +'"  class="style-card"><img class="saved-img" src="'+imageSource+'" alt="style image" /></div><div class="d-flex pt-2 align-items-center  " ><p class="fnt-11 w-100 pr-2">'+neckText+" , "+sleeveText+" , "+lengthText+'</p><i class="share-icon icon-share mr-2"  ></i></label></div></li>'
                 $(this).addClass("procced-save-style-transiton")
+                $(".custom-style").hide();
                 $('.saved-styles__subImages').addClass("save-item-transition")
                 $('.custom-modal-head__opt').addClass("mbl-height col-6")
                 $('.save-item-btns').addClass("save-btn-transition")
@@ -91,6 +92,7 @@ class SavePopup {
                 $('.save-item-btns').removeClass("save-btn-transition")
                 $(".js-save-style-item").removeClass("procced-save-style-transiton")
                 $('.custom-modal-head__opt').removeClass("mbl-height col-6")
+                $(".custom-style").show();
 
             })
             
@@ -103,7 +105,15 @@ class SavePopup {
                 // console.log(slideIndex)
                 // swiperStyle.removeSlide(slideIndex  );
                 
-                let length = $('.slide-item').length
+                let lengthSlide = parseInt($('.slide-item').length)
+                alert(lengthSlide)
+                // if(lengthSlide != 0){
+                //     $(".js-pagination").show();
+                // }
+                // else{
+                //     $(".js-pagination").hide();
+
+                // }
                 let i=1;
                 $('.close-card').each(function(){
                     $(this).attr("slide-id",i++)
