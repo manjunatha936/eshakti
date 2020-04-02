@@ -81,15 +81,21 @@
             }
         
     }
+
     .form-group {
         margin-bottom: 23px;
     }
+
     label {
         color: #2e333d;
         font-size: 13px;
         font-weight: 400;
+        display: block;
+        margin-bottom: 5px;
+        line-height: 18px;
         
     }
+
     .form-input {
         width: 100%;
         height: 50px;
@@ -97,6 +103,11 @@
         padding: 10px;
         border: 1px solid #dadcde;
         background-color: #ffffff;
+        height: 44px;
+
+        @media(max-width: 991px) {
+            max-width: 100%;
+        }
         
     }
     .link-pop {
@@ -130,6 +141,70 @@
             border-radius: 2px;
             background-color: #f4f4f4 !important;
         }
+    }
+
+    .select_wrap {
+        width: 100%;
+        max-width: 300px;
+        border: none;
+        height: 44px;
+        
+        @media(max-width: 991px) {
+            max-width: 100%;
+        }
+        
+        span {
+            color: $title-black;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 18px;
+            border: 1px solid #dadcde;
+            background-color: #ffffff;
+            padding: 13px 10px;
+            width: 100%;
+            max-width: 300px;
+            height: 44px;
+
+            @media(max-width: 991px) {
+                max-width: 100%;
+            }
+
+        }
+        
+        &.open:after,
+        &:after {
+            top: 48%;
+        }
+        
+        .overlay {
+            height: 100%;
+            width: 100%;
+        }
+        
+        ul {
+            width: 100%;
+            max-width: 300px;
+            left: 0;
+
+            @media(max-width: 991px) {
+                max-width: 100%;
+            }
+            
+            li {
+                font-size: 13px;
+                padding: 10px 15px;
+                line-height: 1.4;
+                
+                &:first-child {
+                    display: none;
+            }
+
+            &:nth-child(2) {
+                border: 1px solid #cdcecf;
+            }
+        }
+    }
+
     }
     
 }
@@ -205,5 +280,6 @@
   
     .change-address-form {
         display: none;
+        margin-top: 30px;
     }
 }

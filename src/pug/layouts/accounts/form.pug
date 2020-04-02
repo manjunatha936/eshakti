@@ -7,10 +7,10 @@ section.sec-form
                     .row
                         .col-md-6
                             label.form-label First Name
-                            input.form-input(type="text") 
+                            input.form-input(type="text" required) 
                         .col-md-6
                             label.form-label Email
-                            input.form-input(type="text") 
+                            input.form-input(type="text" required) 
                     .row
                         .col-md-6
                             label.form-label Style ID
@@ -25,13 +25,14 @@ section.sec-form
                     .seperator
                     .row
                         .col-12.text-center.text-lg-left
-                            button.form-button.white Cancel
-                            button.form-button.m-0 Save
+                            button.form-button.m-0.js-help-submit Submit
 
             .col-lg-4.accounts-help-c
                 .help-box
                     h6 Need more assistance?
                     p We are available if you have any questions!
                     .d-flex
-                        a(href="tel:5551234567") 855 374 2584 
-                        p.m-0.d-none.d-md-block ( Mon - Fri 8.00am to 4.00pm PST )
+                        a(href="tel:5551234567") 
+                            .icon-phone.icon
+                            p 855 374 2584 
+                        p.m-0.d-none.d-md-inline ( Mon - Fri 8.00am to 4.00pm PST )

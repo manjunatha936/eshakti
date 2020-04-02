@@ -140,7 +140,6 @@
                     text-align: left;
 
                     @include bp('tab') {
-                        width: calc(100% - 270px);
                         padding-right: 0;
                     }
                 }
@@ -299,6 +298,10 @@
             .custom-size {
                 display: flex;
                 flex-wrap: wrap;
+
+                @include bp('tab') {
+                    height: auto !important;
+                }
 
                 @include bpmax('phone-lg') {
                     height: 36px;

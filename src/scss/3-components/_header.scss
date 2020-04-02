@@ -116,11 +116,13 @@
 			height: 48px;
 
 			@include bpmax('desktop') {
-				padding: 3px 0px;
+				padding: 6px 0px;
+    			padding-right: 20px;
 			}
 			
 			@include bpmax('phone-lg') {
-				padding: 6px 0px;
+				padding: 8px 0;
+				height: 46px;
 			}
 
 			@media only screen and (max-width: 349.9px) {

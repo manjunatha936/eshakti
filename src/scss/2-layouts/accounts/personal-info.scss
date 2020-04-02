@@ -45,6 +45,11 @@
     &.textarea {
         height: 86px;
         max-width: 620px;
+        resize: none;
+    }
+
+    &.full-w {
+        max-width: 645px;
     }
 }
 
