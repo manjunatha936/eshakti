@@ -179,6 +179,7 @@
   padding-left: .3rem;
   @include bpmax("phone-lg") {
     max-width: 250px;
+    width: 100%;
     margin-right: 1.2rem;
   }
 }

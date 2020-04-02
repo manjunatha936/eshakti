@@ -47,8 +47,15 @@ class SavePopup {
             $('.js-save-style-item').on('click', function() {
     
                 var index = $(".slide-item").length;
+                alert(index)
+
+                if(index == 0){
+                    $(".js-v2-pagination").removeClass("d-flex").addClass("d-none")
+                }else {
+                    $(".js-v2-pagination").removeClass("d-none").addClass("d-flex justify-content-center")
+                }
                 // const newdata = '<li class="slide-item"><div class="card-wrp"><div class="close-card" ><span></span><span></span></div><input id="img'+ index +'" type="radio" name="img-check" class="d-none img-check"/><div class="check-circle"><span></span></div><label for="img'+ index +'" class="style-card"><img class="saved-img" src="'+ imageSource+'" alt="style image" /></div><div class="d-flex pt-2 align-items-center  " ><p class="fnt-11 w-100 pr-2 text-left">'+neckText+" , "+sleeveText+" , "+lengthText+'</p><i class="share-icon icon-share mr-2" ></i></label></div></li>'
-                const newdata = '<li class="slide-item swiper-slide"><div class="card-wrp"><div class="close-card" slide-id="'+ index +'"><span></span><span></span></div><input id="img'+ index +'" type="radio" name="img-check" class="d-none img-check"/><div class="check-circle"><span></span></div><label for="img'+ index +'"  class="style-card"><img class="saved-img" src="'+imageSource+'" alt="style image" /></div><div class="d-flex pt-2 align-items-center  " ><p class="fnt-11 w-100 pr-2">'+neckText+" , "+sleeveText+" , "+lengthText+'</p><i class="share-icon icon-share mr-2"  ></i></label></div></li>'
+                const newdata = '<li class="slide-item swiper-slide"><div class="card-wrp"><div class="close-card" slide-id="'+ index +'"><span></span><span></span></div><input id="img'+ index +'" type="radio" name="img-check" class="d-none img-check"/><div class="check-circle"><span></span></div><label for="img'+ index +'"  class="style-card"><img class="saved-img" src="'+imageSource+'" alt="style image" /></div><div class="d-flex pt-2 align-items-center  " ><p class="fnt-11 w-100 pr-2">'+neckText+" , "+sleeveText+" , "+lengthText+'</p><div class="share"><i class="icon-share"></i><div class="tooltip-share"><div class="tooltip-share__item pinterest d-flex"><i class="icon-pinterest tip-icon"></i><p class="prd-sub-txt">Pinterest</p></div><div class="tooltip-share__item facebook d-flex"><i class="icon-facebook tip-icon"></i><p class="prd-sub-txt">Facebook</p></div><div class="tooltip-share__item twitter d-flex"><i class="icon-twitter tip-icon"></i><p class="prd-sub-txt">Twitter</p></div></div></div></label></div></li>'
                 $(this).addClass("procced-save-style-transiton")
                 $(".custom-style").hide();
                 $('.saved-styles__subImages').addClass("save-item-transition")
@@ -60,7 +67,9 @@ class SavePopup {
                     // loop: true,
                     // nextButton: '.swiper-button-next',
                     // prevButton: '.swiper-button-prev',
-                    slidesPerView: 1,
+                    // slidesPerView: 1,
+                    slidesPerView: "auto",
+
                     paginationClickable: true,
                     pagination: {
                         el: '.swiper-pagination-bullets',
@@ -68,16 +77,12 @@ class SavePopup {
                        
                          
                       },
-                    breakpoints: {
-                        768: {
-                            slidesPerView: 1.4,
+                    // breakpoints: {
+                    //     768: {
+                    //         slidesPerView: "auto",
 
-                        },
-                        992: {
-                            slidesPerView: 2,
-
-                        }
-                    }
+                    //     }
+                    // }
                    
                 });
                 // }
@@ -107,13 +112,11 @@ class SavePopup {
                 
                 let lengthSlide = parseInt($('.slide-item').length)
                 alert(lengthSlide)
-                // if(lengthSlide != 0){
-                //     $(".js-pagination").show();
-                // }
-                // else{
-                //     $(".js-pagination").hide();
-
-                // }
+                if(lengthSlide == 1){
+                    $(".js-v2-pagination").removeClass("d-flex").addClass("d-none")
+                }else {
+                    $(".js-v2-pagination").removeClass("d-none").addClass("d-flex justify-content-center")
+                }
                 let i=1;
                 $('.close-card').each(function(){
                     $(this).attr("slide-id",i++)
