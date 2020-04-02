@@ -13,7 +13,7 @@
                 #return.d-lg-flex.tab-pane.fade.show.active
                     .return
                         p.pop-head.d-none.d-lg-block Returning Customers
-                        form(action="" data-parsley-validate)
+                        form.form-styles(action="" data-parsley-validate)
                             .form-group
                                 label(for="") Email address
                                 input.form-input(type="email" data-parsley-type="email" data-parsley-trigger="input keyup change" data-parsley-error-message="Please provide your Email" data-parsley-required )
@@ -27,7 +27,7 @@
                 #new-customer.d-lg-flex.tab-pane.fade     
                     .new-customer  
                         p.pop-head.d-none.d-lg-block New Customers
-                        form(action="" data-parsley-validate)
+                        form.form-styles(action="" data-parsley-validate)
                             .form-group
                                 label(for="") Email address
                                 input.form-input(type="text" data-parsley-type="email" data-parsley-trigger="input keyup change" data-parsley-error-message="Please provide your Address" data-parsley-required)

@@ -20,104 +20,106 @@
                         i.icon-delete 
                         span Delete
        
-    button.btn-text.mt-3.mt-md-4.py-2.px-3(type="button") + New Address
+    button.btn-text.mt-3.mt-md-4.py-2.px-3.js-add-address(type="button") + New Address
 .from-wrapper.pop-up.address.form-element-container
     form.form-address.form-group-container(data-parsley-validate)
         p.pop-head Shipping Address
-        .row
-            .col.form-group
-                label(for="") Address Line 1 
-                input.form-input(type="text" data-parsley-trigger="input keyup change" data-parsley-error-message="Please provide your Address" data-parsley-required  )
-                p.shop-info.mt-2 Our shipping partners do not deliver to PO Boxes / APO, Virgin Islands and Puerto Rico addresses. Please provide a full street address.
-        .row
-            .col.form-group
-                label(for="") Address Line 2
-                input.form-input(type="text" data-parsley-trigger="input keyup change" data-parsley-error-message="Please provide your Address" data-parsley-required )
-        .row
-            .col-lg-6.form-group
-                label(for="") Zipcode
-                input.form-input(type="text" data-parsley-minlength="6" data-parsley-minlength-message="minimum 6 charectors" 
-                data-parsley-trigger="input keyup change" 
-                data-parsley-error-message="Please enter valid your Zipcode" data-parsley-required)
-            .col-lg-6.form-group
-                label(for="") City
-                input.form-input(type="text" data-parsley-error-message="Please provide your City"  data-parsley-required)
-        .row
-            .col-lg-6.form-group
-                label(for="") State
-                .drop-container
-                    .select-style.mr-0
-                        span.triangle-icon
-                        select.form-input.select-btn.txt-gry-12
-                            option(disable) select
-                            option(value='saab') Saab
-                            option(value='mercedes') Mercedes
-                            option(value='audi') Audi
-                        input.select-input.d-none(type="text" data-parsley-errors-container="#errorBlock2" data-parsley-error-message="Please select your country" data-parsley-required)
-                #errorBlock2
-            .col-lg-6.form-group
-                label(for="") Country
-                .drop-container
-                    .select-style.mr-0
-                        span.triangle-icon
-                        select.form-input.select-btn.txt-gry-12
-                            option(disable) select
-                            option(value='saab') Saab
-                            option(value='mercedes') Mercedes
-                            option(value='audi') Audi
-                        input.select-input.d-none(type="text" data-parsley-errors-container="#errorBlock1" data-parsley-error-message="Please select your country" data-parsley-required)
-                #errorBlock1
-        .row
-            .col-12
-                .change-address
-                    p.pop-head.mb-2 Shipping Information
-                    label.label-container.label-container--check
-                        | Same as shipping address
-                        input.address-checkbox(type="checkbox" name="selectPlant" value="" checked)
-                        span.checkmark
-                    .change-address-form
-                        .row
-                            .col.form-group
-                                label(for="") Address Line 1 
-                                input.form-input(type="text" data-parsley-trigger="input keyup change" data-parsley-error-message="Please provide your Address" data-parsley-required  )
-                                p.shop-info.mt-2 Our shipping partners do not deliver to PO Boxes / APO, Virgin Islands and Puerto Rico addresses. Please provide a full street address.
-                        .row
-                            .col.form-group
-                                label(for="") Address Line 2
-                                input.form-input(type="text" data-parsley-trigger="input keyup change" data-parsley-error-message="Please provide your Address" data-parsley-required )
-                        .row
-                            .col-lg-6.form-group
-                                label(for="") Zipcode
-                                input.form-input(type="text" data-parsley-minlength="6" data-parsley-minlength-message="minimum 6 charectors" 
-                                data-parsley-trigger="input keyup change" 
-                                data-parsley-error-message="Please enter valid your Zipcode" data-parsley-required)
-                            .col-lg-6.form-group
-                                label(for="") City
-                                input.form-input(type="text" data-parsley-error-message="Please provide your City"  data-parsley-required)
-                        .row
-                            .col-lg-6.form-group
-                                label(for="") State
-                                .drop-container
-                                    .select-style.mr-0
-                                        span.triangle-icon
-                                        select.form-input.select-btn.txt-gry-12
-                                            option(disable) select
-                                            option(value='saab') Saab
-                                            option(value='mercedes') Mercedes
-                                            option(value='audi') Audi
-                                        input.select-input.d-none(type="text" data-parsley-errors-container="#errorBlock2" data-parsley-error-message="Please select your country" data-parsley-required)
-                                #errorBlock2
-                            .col-lg-6.form-group
-                                label(for="") Country
-                                .drop-container
-                                    .select-style.mr-0
-                                        span.triangle-icon
-                                        select.form-input.select-btn.txt-gry-12
-                                            option(disable) select
-                                            option(value='saab') Saab
-                                            option(value='mercedes') Mercedes
-                                            option(value='audi') Audi
-                                        input.select-input.d-none(type="text" data-parsley-errors-container="#errorBlock1" data-parsley-error-message="Please select your country" data-parsley-required)
-                                #errorBlock1
+        .js-to-validate
+            .row
+                .col.form-group
+                    label(for="") Address Line 1 
+                    input.form-input(type="text" data-parsley-trigger="input keyup change" data-parsley-error-message="Please provide your Address" data-parsley-required  )
+                    p.shop-info.mt-2 Our shipping partners do not deliver to PO Boxes / APO, Virgin Islands and Puerto Rico addresses. Please provide a full street address.
+            .row
+                .col.form-group
+                    label(for="") Address Line 2
+                    input.form-input(type="text" data-parsley-trigger="input keyup change" data-parsley-error-message="Please provide your Address" data-parsley-required )
+            .row
+                .col-lg-6.form-group
+                    label(for="") Zipcode
+                    input.form-input(type="text" data-parsley-minlength="6" data-parsley-minlength-message="minimum 6 charectors" 
+                    data-parsley-trigger="input keyup change" 
+                    data-parsley-error-message="Please enter valid your Zipcode" data-parsley-required)
+                .col-lg-6.form-group
+                    label(for="") City
+                    input.form-input(type="text" data-parsley-error-message="Please provide your City"  data-parsley-required)
+            .row
+                .col-lg-6.form-group
+                    label(for="") State
+                    .drop-container
+                        .select-style.mr-0
+                            span.triangle-icon
+                            select.form-input.select-btn.txt-gry-12
+                                option(disable) select
+                                option(value='saab') Saab
+                                option(value='mercedes') Mercedes
+                                option(value='audi') Audi
+                            input.select-input.d-none(type="text" data-parsley-errors-container="#errorBlock2" data-parsley-error-message="Please select your country" data-parsley-required)
+                    #errorBlock2
+                .col-lg-6.form-group
+                    label(for="") Country
+                    .drop-container
+                        .select-style.mr-0
+                            span.triangle-icon
+                            select.form-input.select-btn.txt-gry-12
+                                option(disable) select
+                                option(value='saab') Saab
+                                option(value='mercedes') Mercedes
+                                option(value='audi') Audi
+                            input.select-input.d-none(type="text" data-parsley-errors-container="#errorBlock1" data-parsley-error-message="Please select your country" data-parsley-required)
+                    #errorBlock1
+        .js-change-address
+            .row
+                .col-12
+                    .change-address
+                        p.pop-head.mb-2 Shipping Information
+                        label.label-container.label-container--check
+                            | Same as shipping address
+                            input.address-checkbox(type="checkbox" name="selectPlant" value="" checked)
+                            span.checkmark
+                        .change-address-form
+                            .row
+                                .col.form-group
+                                    label(for="") Address Line 1 
+                                    input.form-input(type="text" data-parsley-trigger="input keyup change" data-parsley-error-message="Please provide your Address" data-parsley-required  )
+                                    p.shop-info.mt-2 Our shipping partners do not deliver to PO Boxes / APO, Virgin Islands and Puerto Rico addresses. Please provide a full street address.
+                            .row
+                                .col.form-group
+                                    label(for="") Address Line 2
+                                    input.form-input(type="text" data-parsley-trigger="input keyup change" data-parsley-error-message="Please provide your Address" data-parsley-required )
+                            .row
+                                .col-lg-6.form-group
+                                    label(for="") Zipcode
+                                    input.form-input(type="text" data-parsley-minlength="6" data-parsley-minlength-message="minimum 6 charectors" 
+                                    data-parsley-trigger="input keyup change" 
+                                    data-parsley-error-message="Please enter valid your Zipcode" data-parsley-required)
+                                .col-lg-6.form-group
+                                    label(for="") City
+                                    input.form-input(type="text" data-parsley-error-message="Please provide your City"  data-parsley-required)
+                            .row
+                                .col-lg-6.form-group
+                                    label(for="") State
+                                    .drop-container
+                                        .select-style.mr-0
+                                            span.triangle-icon
+                                            select.form-input.select-btn.txt-gry-12
+                                                option(disable) select
+                                                option(value='saab') Saab
+                                                option(value='mercedes') Mercedes
+                                                option(value='audi') Audi
+                                            input.select-input.d-none(type="text" data-parsley-errors-container="#errorBlock2" data-parsley-error-message="Please select your country" data-parsley-required)
+                                    #errorBlock2
+                                .col-lg-6.form-group
+                                    label(for="") Country
+                                    .drop-container
+                                        .select-style.mr-0
+                                            span.triangle-icon
+                                            select.form-input.select-btn.txt-gry-12
+                                                option(disable) select
+                                                option(value='saab') Saab
+                                                option(value='mercedes') Mercedes
+                                                option(value='audi') Audi
+                                            input.select-input.d-none(type="text" data-parsley-errors-container="#errorBlock1" data-parsley-error-message="Please select your country" data-parsley-required)
+                                    #errorBlock1
 
-                button.address-btn.bttn.bttn__orange.mt-4(type="button") Save 
+                    button.address-btn.bttn.bttn__orange.mt-4(type="button") Save 
