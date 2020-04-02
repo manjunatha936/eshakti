@@ -186,9 +186,9 @@ class ProductDetais {
         $(".js-btn-save").click(function(e){
             let topValue = $('.custom-modal-head')[0].scrollHeight
             console.log(topValue)
-            $('.scroll-container').animate({
+            $('.overflowScroll').animate({
               scrollTop: topValue
-            }, 1500);
+            }, 400);
   
             $(".js-proceed").addClass("btn-visible-true")
           
