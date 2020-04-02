@@ -1,38 +1,60 @@
 .banner-container {
-    padding-bottom: 22.5%;
+    
     position: relative;
-    height: auto;
+    height: 140px;
     display: block;
+    @media screen and (min-width: 768px){
+      padding-bottom: 22.5%;
+      height: auto;
+    }
     &__view {
         position: absolute;
         top: 0;
         bottom: 0;
         left: 0;
         right: 0;
-        height: auto;
+        height: 100%;
         width: 100%;
+        @media screen and (min-width: 768px){
+         
+          height: auto;
+        }
     }
 }
 
 .bg-banner-content {
-  background: #fcfcfc;
+  bottom: 50%;
+  position: absolute;
+  left: 10%;
+  transform: translateY(8%);
+  background: transparent;
+  @media screen and (min-width:992px){
+    transform: translateY(25%);
+    left: 20%;
+    
+  }
   &__heading {
-    font-size: 26px;
-    line-height: 36px;
+    font-size: 16px;
+    line-height: 30px;
+    @media screen and (min-width:992px){
+      font-size: 26px;
+      line-height: 36px;
+      
+    }
   }
   p {
     color: $card-title;
   }
   &__container {
-    max-width: 250px;
+    max-width: 205px;
     margin: 0 auto;
     @include bp("tab") {
       max-width: 350px;
     }
-    padding: {
-      top: 2rem;
-      bottom: 2rem;
-    };
+    // padding: {
+    //   top: 2rem;
+    //   bottom: 2rem;
+    // };
   }
 }
 
