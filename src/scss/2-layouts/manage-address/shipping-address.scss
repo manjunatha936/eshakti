@@ -4,6 +4,8 @@
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.06);
     background-color: #ffffff;
     padding: 16px 16px;
+    display: none;
+
     @media screen and (min-width: 768px) {
         padding: 34px 32px;
         
@@ -22,9 +24,9 @@
         
     }
 }
-.fnt-12-grey {
+.fnt-14-grey {
     color: #2e333d;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 700;
     padding-bottom: 6px;;
 }
@@ -55,6 +57,14 @@
         border-radius: 2px;
         background-color: #f9fafa;
         padding: 25px;
+
+        p {
+            margin-top: 5px;
+        }
+
+        button {
+            cursor: pointer;
+        }
     }
     .btn-text {
         color: #2e333d;
@@ -63,6 +73,9 @@
         line-height: 22px;
         border: 1px solid #141313;
         background-color: #ffffff;
+    }
+    button {
+        cursor: pointer;
     }
 }
 .size-profile {
