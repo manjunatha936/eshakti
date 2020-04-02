@@ -19,7 +19,7 @@ import "bootstrap/js/src/modal"
 // import "../pug/order-placed.pug";
 // import "../pug/account-wishlist.pug";
 // import "../pug/accounts-orders.pug";
-// import "../pug/accounts-orders-current.pug";
+import "../pug/accounts-orders-current.pug";
 // import "../pug/address-management.pug";
 // import "../pug/accounts-personal.pug";
 

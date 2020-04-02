@@ -172,8 +172,26 @@ class ProductDetais {
             },300);
           });
         //save style
+        
+        
+        // $('.custom-product-model').on('shown.bs.modal', function() {
+        //   // Get the right offset
+         
+        //   setTimeout(function(){
+            
+        //   },2000)
+        //   console.log(topValue)
+        // });
+   
         $(".js-btn-save").click(function(e){
-          
+            setTimeout(function(){
+              var topValue = $('.saveditem-container').position().top + 35;
+              console.log(topValue);
+              $('.scroll-container .os-viewport').animate({
+                scrollTop: topValue
+              }, 1500);
+            })
+  
             $(".js-proceed").addClass("btn-visible-true")
           
           var index = $(".slide-item").length
@@ -197,11 +215,9 @@ class ProductDetais {
               }
               cardTitle = neckText+","+sleeveText+","+lengthText;
 
-            const ele = '<li class="slide-item swiper-slide"><div class="card-wrp"><div class="close-card" slide-id="'+ index +'"><span></span><span></span></div><input id="img'+ index +'" type="radio" name="img-check" class="d-none img-check"/><div class="check-circle"><span></span></div><label for="img'+ index +'"  class="style-card"><img class="saved-img" src="'+imageSource+'" alt="style image" /></div><div class="d-flex pt-2 align-items-center  " ><p class="fnt-11 w-100 pr-2">'+cardTitle+'</p><i class="share-icon icon-share mr-2"  ></i></label></div></li>'
+            const ele = '<li class="slide-item swiper-slide"><div class="card-wrp"><div class="close-card" slide-id="'+ index +'"><span></span><span></span></div><input id="img'+ index +'" type="radio" name="img-check" class="d-none img-check"/><div class="check-circle"><span></span></div><label for="img'+ index +'"  class="style-card"><img class="saved-img" src="'+imageSource+'" alt="style image" /></div><div class="d-flex pt-2 align-items-center  " ><p class="fnt-11 w-100 pr-2">'+cardTitle+'</p><div class="share"><i class="icon-share"></i><div class="tooltip-share"><div class="tooltip-share__item pinterest d-flex"><i class="icon-pinterest tip-icon"></i><p class="prd-sub-txt">Pinterest</p></div><div class="tooltip-share__item facebook d-flex"><i class="icon-facebook tip-icon"></i><p class="prd-sub-txt">Facebook</p></div><div class="tooltip-share__item twitter d-flex"><i class="icon-twitter tip-icon"></i><p class="prd-sub-txt">Twitter</p></div></div></div></label></div></li>'
 
-            // '<li class="slide-item"><div class="card-wrp"><label for="img'+ index +'" class="style-card"><img class="saved-img" src="'+ imageSource+'" alt="style image" /></div><div class="d-flex pt-2 align-items-center  " ><p class="fnt-11 w-100 pr-2 text-left">'+neckText+" , "+sleeveText+" , "+lengthText+'</p><i class="share-icon icon-share mr-2" ></i></label></div></li>'
-            // $('.slide-item-wrp').append(ele)
-            // if($(".slide-item").length> 4){
+
                 swiperStyle = new Swiper('.js-style-slider', {
                     // loop: true,
                     // nextButton: '.swiper-button-next',
