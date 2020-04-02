@@ -172,22 +172,23 @@ class ProductDetais {
             },300);
           });
         //save style
-        var topValue;
         
-        $('.custom-product-model').on('shown.bs.modal', function() {
-          // Get the right offset
+        
+        // $('.custom-product-model').on('shown.bs.modal', function() {
+        //   // Get the right offset
          
-          setTimeout(function(){
-            topValue = $('.custom-modal-head')[0].offsetHeight
-          },2000)
-        });
+        //   setTimeout(function(){
+            
+        //   },2000)
+        //   console.log(topValue)
+        // });
    
         $(".js-btn-save").click(function(e){
-            // let topValue = $(".custom-modal-head").offsetHeight
-            $('.scroll-container').animate({
-              scrollTop: 200
-            }, 1500);
+            let topValue = $('.custom-modal-head')[0].scrollHeight
             console.log(topValue)
+            $('.scroll-container').animate({
+              scrollTop: topValue
+            }, 1500);
   
             $(".js-proceed").addClass("btn-visible-true")
           
