@@ -184,11 +184,13 @@ class ProductDetais {
         // });
    
         $(".js-btn-save").click(function(e){
-            let topValue = $('.custom-modal-head')[0].scrollHeight
-            console.log(topValue)
-            $('.scroll-container').animate({
-              scrollTop: topValue
-            }, 1500);
+            setTimeout(function(){
+              var topValue = $('.saveditem-container').position().top + 35;
+              console.log(topValue);
+              $('.scroll-container .os-viewport').animate({
+                scrollTop: topValue
+              }, 1500);
+            })
   
             $(".js-proceed").addClass("btn-visible-true")
           
