@@ -8,6 +8,7 @@
       height: auto;
     }
     &__view {
+        object-fit: cover;
         position: absolute;
         top: 0;
         bottom: 0;

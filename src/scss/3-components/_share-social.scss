@@ -3,6 +3,7 @@
 .share {
     position: relative;
     .icon-share {
+        cursor: pointer;
         font-size: 14px;
         // line-height: 24px;
         @include bp("tab") {

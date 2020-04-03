@@ -232,6 +232,10 @@ class ProductDetais {
                             slidesPerView: 1,
                         },
                         
+                        768: {
+                            slidesPerView: 'auto',
+                            spaceBetween: 20
+                        },
                         992: {
                             slidesPerView: 'auto',
                             spaceBetween: 20
