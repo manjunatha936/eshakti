@@ -184,11 +184,13 @@ class ProductDetais {
         // });
    
         $(".js-btn-save").click(function(e){
-            let topValue = $('.custom-modal-head')[0].scrollHeight
-            console.log(topValue)
-            $('.overflowScroll').animate({
-              scrollTop: topValue
-            }, 400);
+            setTimeout(function(){
+              var topValue = $('.saveditem-container').position().top + 35;
+              console.log(topValue);
+              $('.scroll-container .os-viewport').animate({
+                scrollTop: topValue
+              }, 1500);
+            })
   
             $(".js-proceed").addClass("btn-visible-true")
           
@@ -297,7 +299,20 @@ class ProductDetais {
           $(".js-size-modal-wrp").modal("show")
         })
     //Save style popup
-
+        $(window).scroll(function(){
+          let windowHeight = ($(window)[0].innerHeight)
+        let bottomHeight =  $('.btn-wrp')[0].offsetTop
+        if($(window).scrollTop() < bottomHeight  ) {
+          $('.btn-wrp').addClass("sticky-btn");
+          
+        }else {
+          $('.btn-wrp').removeClass("sticky-btn");
+          
+        }
+            console.log($(window).scrollTop())
+            console.log("window height" + "" +windowHeight )
+            console.log("btn height " + bottomHeight )
+        })
 
     //Save style model
         var CreateMoreStyles = document.querySelector('.create-more-styles')

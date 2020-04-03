@@ -43,11 +43,193 @@
                     .acc-orders__cardboxgroup
                         h3 Order contain 3 items
                         .acc-orders__cardbox
-                            .acc-orders__cardbody.row
+                            .acc-orders__cardbody.row.order-content
+                                .order-content__img
+                                    img(src="./assets/images/cart/cart-img.png", alt="")
+                                .order-content__details
+                                    label Zapelle
+                                    h3 Cotton Poplin Two-tone Tiered Shift Dress
+                                    .cart-color
+                                        span Color: 
+                                        p Crimson red/hot pink
+                                    .cart-size
+                                        span Size
+                                        .standard-size
+                                            p Standard Size: 
+                                                span M-10
+                                            p Height: 
+                                                span 5.4
+                                    .cart-style
+                                        span Style
+                                        p As Shown
+                                    .cart-price
+                                        span $59.95
+                                        p QTY - 
+                                            span 1
+
+                            h3 Item status
+                            .acc-orders__progress.order-content-progress
+                                a(href="#") Track your item 2667567890
+                                .acc-orders__progressbar(data-value="75")
+                                    .status
+                                
+                                .acc-orders__progresslevel
+                                    .acc-orders__stage.active
+                                        .stage-status
+                                            i
+                                            span
+                                        p Pattern creation
+                                    .acc-orders__stage.active
+                                        .stage-status
+                                            i
+                                            span
+                                        p Fabric & Kit creation
+                                    .acc-orders__stage.active
+                                        .stage-status
+                                            i
+                                            span
+                                        p Cutting & stitching
+                                    .acc-orders__stage.partial-active
+                                        .stage-status
+                                            i
+                                            span
+                                        p Quality control
+                                    .acc-orders__stage
+                                        .stage-status
+                                            i
+                                            span
+                                        p Packing & Shipping via DHL on Feb 02
+                                    .acc-orders__stage
+                                        .stage-status
+                                            i
+                                            span
+                                        p Delivery on Feb 10
 
                         .acc-orders__cardbox
-                            .acc-orders__cardbody.row
+                            .acc-orders__cardbody.row.order-content
+                                .order-content__img
+                                    img(src="./assets/images/cart/cart-img.png", alt="")
+                                .order-content__details
+                                    label Zapelle
+                                    h3 Cotton Poplin Two-tone Tiered Shift Dress
+                                    .cart-color
+                                        span Color: 
+                                        p Crimson red/hot pink
+                                    .cart-size
+                                        span Size
+
+                                        .custom-size
+                                            p Height: 
+                                                span 5.4
+                                            p Length of Arm: 
+                                                span 35
+                                            p Upperarm: 
+                                                span 36
+                                            p Hip: 
+                                                span 35
+                                            p Waist: 
+                                                span 75
+                                            p Underbust: 
+                                                span 20
+                                            p Bust: 
+                                                span 36
+                                            p Chest: 
+                                                span 36
+                                            p Shoulder: 
+                                                span 75
+                                            p HPS to Bust: 
+                                                span 75
+                                            p HPS to Waist:
+                                                span 75
+                                            P HPS to Knee
+                                                span 75
+                                        a.d-md-none(href="#") Show more
+                                    .cart-style
+                                        span Style
+                                        p As Shown
+                                    .cart-price
+                                        span $59.95
+                                        p QTY - 
+                                            span 1
+
+                            h3 Item status
+                            .acc-orders__progress.order-content-progress
+                                a(href="#") Track your item 2667567890
+                                .acc-orders__progressbar(data-value="75")
+                                    .status
+                                
+                                .acc-orders__progresslevel
+                                    .acc-orders__stage.active
+                                        .stage-status
+                                            i
+                                            span
+                                        p Pattern creation
+                                    .acc-orders__stage.active
+                                        .stage-status
+                                            i
+                                            span
+                                        p Fabric & Kit creation
+                                    .acc-orders__stage.active
+                                        .stage-status
+                                            i
+                                            span
+                                        p Cutting & stitching
+                                    .acc-orders__stage.partial-active
+                                        .stage-status
+                                            i
+                                            span
+                                        p Quality control
+                                    .acc-orders__stage
+                                        .stage-status
+                                            i
+                                            span
+                                        p Packing & Shipping via DHL on Feb 02
+                                    .acc-orders__stage
+                                        .stage-status
+                                            i
+                                            span
+                                        p Delivery on Feb 10
                             
 
 
             .accounts-panel__right.col-4
+                .cart-panel__card
+                    .cart-panel__cost
+                        h4 Order Summary
+                        .row.align-items-center
+                            p.col-8.cost-label Subtotal (
+                                span 2 
+                                |  items)
+                            span.col-4 $99.99
+                        .row.align-items-center 
+                            p.col-8.cost-label Customisation Charges
+                            span.col-4 $18.0
+                        .row.align-items-center 
+                            p.col-8.cost-label GST
+                            span.col-4 $27.80
+                        .row.align-items-center 
+                            p.col-8.cost-label Shipping Charges
+                            span.col-4 $12.95
+                        .row.align-items-center 
+                            p.col-8.cost-label Coupons Discount
+                            span.col-4 - $27.95
+                    .orderplace-panel__total
+                        .row.align-items-center 
+                            p.col-8 Total Price
+                            span.col-4 $173.74
+
+                .cart-panel__card
+                    .address-box
+                        h4 Shipping Details
+                        p Emilia Clarke
+                            br
+                            | 400 Hartford Avenue, Mount street,
+                            br
+                            | Bellingham MA 200198.
+                    .address-box
+                        h4 Billing Details
+                        p Emilia Clarke
+                            br
+                            | 400 Hartford Avenue, Mount street,
+                            br
+                            | Bellingham MA 200198.
