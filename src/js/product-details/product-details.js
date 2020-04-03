@@ -184,6 +184,7 @@ class ProductDetais {
         // });
    
         $(".js-btn-save").click(function(e){
+            $(this).addClass("btn-disable")
             setTimeout(function(){
               var topValue = $('.saveditem-container').position().top + 35;
               console.log(topValue);
