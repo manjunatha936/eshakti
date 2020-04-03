@@ -147,4 +147,10 @@
             }
         }
     }
+
+    @media (min-width: 767px) {
+        .coupon-box {
+            max-width: 200px;
+        }
+    }
 }

@@ -31,8 +31,8 @@ const headerfns = new HeaderInteractions();
 import leftSticky from "./components/left-sticky";
 const leftsticky = new leftSticky();
 
-import addressManagement from "./address-management";
-const addressmanagement = new addressManagement();
+import addressPopup from "./components/address-popup";
+const addresspopup = new addressPopup();
 
 // // import "./components/header";
 // import ProductDetais from './product-listing'
