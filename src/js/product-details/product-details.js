@@ -301,8 +301,9 @@ class ProductDetais {
     //Save style popup
         $(window).scroll(function(){
           let windowHeight = ($(window)[0].innerHeight)
-        let bottomHeight =  $('.btn-wrp')[0].offsetTop
-        if($(window).scrollTop() < bottomHeight  ) {
+        let bottomHeight =  $('.btn-wrp')[0].offsetTop 
+        let heightELem = $('.btn-wrp')[0].clientHeight
+        if($(window).scrollTop() <= (bottomHeight + heightELem)) {
           $('.btn-wrp').addClass("sticky-btn");
           
         }else {
@@ -310,8 +311,8 @@ class ProductDetais {
           
         }
             console.log($(window).scrollTop())
-            console.log("window height" + "" +windowHeight )
-            console.log("btn height " + bottomHeight )
+            console.log("heightELem" + "" +heightELem )
+            // console.log("btn height " + bottomHeight )
         })
 
     //Save style model
