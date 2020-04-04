@@ -47,7 +47,7 @@ class SavePopup {
             $('.js-save-style-item').on('click', function() {
     
                 var index = $(".slide-item").length;
-                alert(index)
+                // alert(index)
 
                 if(index == 0){
                     $(".js-v2-pagination").removeClass("d-flex").addClass("d-none")
@@ -111,8 +111,8 @@ class SavePopup {
                 // swiperStyle.removeSlide(slideIndex  );
                 
                 let lengthSlide = parseInt($('.slide-item').length)
-                alert(lengthSlide)
-                if(lengthSlide == 1){
+                // alert(lengthSlide)
+                if(lengthSlide <= 1){
                     $(".js-v2-pagination").removeClass("d-flex").addClass("d-none")
                 }else {
                     $(".js-v2-pagination").removeClass("d-none").addClass("d-flex justify-content-center")

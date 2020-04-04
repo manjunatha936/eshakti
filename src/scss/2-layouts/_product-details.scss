@@ -288,6 +288,7 @@
 }
 
 .btn-wrp {
+    position: stativ;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -309,4 +310,11 @@
 .size-active {
     background-color: #000000;
     clear: #fff;
+}
+
+.btn-disable {
+    color:  #cecfd0 !important;
+    border: 1px solid #d7d8d9 !important;
+    pointer-events: none !important;
+    cursor: not-allowed !important;
 }

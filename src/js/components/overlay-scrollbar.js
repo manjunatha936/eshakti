@@ -9,7 +9,7 @@ class OverlayScrollbar {
   }
 
   init() {
-      // let overscroll = OverlayScrollbars(document.querySelectorAll(".style-contain"), {  
+      // let overscrollSize = OverlayScrollbars(document.querySelectorAll(".measures-drop-wrp"), {  
       //           scrollbars : {
       //               clickScrolling : true
       //           },
