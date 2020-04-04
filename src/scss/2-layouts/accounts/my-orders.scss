@@ -22,7 +22,7 @@
         height: fit-content;
         position: absolute;
         top: 0;
-        left: 0;
+        left: 15px;
 
         h2 {
             line-height: 1.4;
@@ -70,7 +70,13 @@
         &.sticky {
             @media only screen and (min-width: 992px) {
                 position: fixed;
-                left: calc((100% - 1140px) / 2);
+                left: calc((100% - 960px) / 2 + 15px);
+                top: 110px;
+            }
+            
+            @media only screen and (min-width: 1200px) {
+                position: fixed;
+                left: calc((100% - 1140px) / 2 + 15px);
                 top: 110px;
             }
             
@@ -97,6 +103,7 @@
             width: 100%;
             box-shadow: none;
             background: transparent;
+            left: 0;
             
             h2 {
                 display: none;

@@ -361,6 +361,11 @@
     position: relative;
     width: 100%;
 
+    @media(max-width: 767px) {
+        max-width: 380px;
+        margin: auto;
+    }
+
     &__view {
         position: relative;
         overflow: hidden;

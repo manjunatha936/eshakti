@@ -7,3 +7,7 @@ $(".js-edit-size , .js-new-profile").on('click', function () {
         $('.js-size-edit').fadeIn('slow');
     });
 });
+
+
+import ProductDetais from './product-details/product-details'
+const productDetais = new ProductDetais();
