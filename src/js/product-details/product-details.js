@@ -301,6 +301,7 @@ class ProductDetais {
         })
 
         $(".js-size-model").click(function(){
+          console.log("clicked");
           $(".js-size-modal-wrp").modal("show")
         })
     //Save style popup
@@ -330,7 +331,7 @@ class ProductDetais {
 
         $(".js-size-model").click(function(){
           $(".js-size-modal-wrp").modal("show")
-        })
+        });
     }
 }
 

@@ -28,17 +28,9 @@ var wishlistSlider = new Swiper('.js-wishlist-slider', {
         480: {
         slidesPerView: 1.3,
         },
-        // when window width is >= 640px
-        640: {
-        slidesPerView: 1.5,
-        },
-        // when window width is >= 992px
-        992: {
-        slidesPerView: 3,
-        },
-        // when window width is >= 1200px
-        1200: {
-        slidesPerView: 4,
+        // when window width is >= 768px
+        768: {
+        slidesPerView: "auto",
         }
     }
 });

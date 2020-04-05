@@ -1,11 +1,16 @@
 import $ from 'jquery'
 import 'parsleyjs';
+import "bootstrap/js/src/modal";
 
 $(".js-edit-size , .js-new-profile").on('click', function () {
-    console.log("in");
     $('.js-size-screen').fadeOut("fast", function(){
         $('.js-size-edit').fadeIn('slow');
     });
+});
+
+$(".js-size-model").click(function(){
+    console.log("inside");
+    $(".js-size-modal-wrp").modal("show")
 });
 
 
