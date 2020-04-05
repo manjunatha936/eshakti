@@ -239,8 +239,6 @@
 .accounts-contain.profile {
     
     @include bpmax('tab-mid') {
-        padding-top: 80px;
-        
         .accounts-contain__right {
             background-color: white;
             padding: 20px 16px;
