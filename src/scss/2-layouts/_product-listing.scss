@@ -1,5 +1,6 @@
 .product-listing {
-    
+    overflow: hidden;
+    padding-bottom: 2rem;
     padding-top: 5rem;
     @media screen and (min-width: 768px) {
         
@@ -13,7 +14,17 @@
         
         padding-top: 11rem;
     }
-   
+    @include bpmax("phone-lg") {
+        overflow: hidden;
+    }
+    @media screen and (min-width: 768px){
+        padding-bottom: 2rem;
+        
+    }
+    @media screen and (min-width: 1024px){
+        padding-bottom: 4rem;
+        
+    }
     font-style: $opensans;
     
     .share {
@@ -255,15 +266,24 @@
             // height: 312px;
             // height: 518px;
         }            
+        @media screen and (min-width: 378px){
+            height: 274px;
+            // height: 312px;
+            // height: 518px;
+        }            
         // @media screen and (min-width: 414px){
         //     width: 324px;
         //     height: 432px;;
         // }            
-        // @media screen and (min-width: 768px){
-        //      height: 314px; 
-        // }
+        @media screen and (min-width: 768px){
+            height: 248px;
+
+        }
         @media screen and (min-width: 992px){
-             height: 314px; 
+            //  height: 314px; 
+            height: 507px; 
+
+             width: 148px;
         }
         // @media screen and (min-width: 768px){
         //     width: 322px;
@@ -287,8 +307,10 @@
             // @media screen and (min-width: 378px){
             //     width: 134px;
             // } 
-            // @media screen and (max-width: 374px){
-            // } 
+            @media screen and (min-width: 992px){
+                width: 38px;
+                height: 266px;
+            } 
             @media screen and (min-width:1024px) {
                 width: 38px;
                 height: 266px;
@@ -312,6 +334,10 @@
             // @media screen and (max-width: 374px){
                 
             // } 
+            @media screen and (min-width:992px) {
+                width: 46px;
+                height: 266px;
+            }            
             @media screen and (min-width:1024px) {
                 width: 46px;
                 height: 266px;
@@ -333,7 +359,10 @@
             //     right: 45px;
             //     width: 63px;
             // } 
-            @media screen and (min-width: 768px){
+            @media screen and (min-width: 992px){
+                right: 45px;
+                width: 66px;
+                height: 266px;
                 
 
             } 
@@ -392,8 +421,12 @@
         display: flex;
         align-items: center;
         color: $title-black;
-        @media screen and (min-width:768px)and (max-height:1024px) {
-        bottom: 33px;
+        @media screen and (min-width:768px) {
+            bottom: 33px;
+            
+        }
+        @media screen and (min-width:1440px) {
+            bottom: 66px;
             
         }
 
@@ -870,9 +903,13 @@
         }
     }
     .model-img-tab-container {
+        @media screen and (max-width : 776px){
+
+            background-size: 100% 100%;
+
+        }
         width: 100%;
         height: 100vh;
-        background-size: 100% 100%;
         background-repeat: no-repeat;
         cursor: zoom-out;
 
@@ -937,6 +974,9 @@
 }
 
 .size-modal {
+    .modal-dialog {
+        pointer-events: auto !important;
+    }
     .size-modal-dialog {
         max-width: 745px !important;
         background-color: #ffffff;
@@ -1007,6 +1047,11 @@
         left: calc(100% + 10px);
         top: 3px;
         cursor: pointer;
+        @media screen and (max-width:991px){
+            top: 25px;
+            left: calc(100% - 50px);
+
+        }
         @media screen and (max-width:425px){
             top: 8px;
             left: calc(100% - 36px);

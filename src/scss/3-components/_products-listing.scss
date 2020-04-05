@@ -8,6 +8,7 @@
       height: auto;
     }
     &__view {
+        object-fit: cover;
         position: absolute;
         top: 0;
         bottom: 0;
@@ -101,4 +102,17 @@
 .text-hilght {
     font-weight: 600;
     color: #131415;
+}
+.sticky-btn {
+  @media screen and (max-width: 767px) {
+    padding-bottom: 20px;
+    width: 100%;
+    margin-right: 15px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 11;
+    // transition: all ease .7s;
+    
+  }
 }

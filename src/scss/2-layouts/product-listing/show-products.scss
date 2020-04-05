@@ -8,7 +8,7 @@
     @media (max-width: 767px) {
         position: sticky;
         top: 0;
-        z-index: 99998;
+        z-index: 11;
     }
 
     @include bpmax("phone") {
@@ -360,6 +360,11 @@
 .product-card {
     position: relative;
     width: 100%;
+
+    @media(max-width: 767px) {
+        max-width: 380px;
+        margin: auto;
+    }
 
     &__view {
         position: relative;

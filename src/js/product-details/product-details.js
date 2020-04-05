@@ -184,6 +184,7 @@ class ProductDetais {
         // });
    
         $(".js-btn-save").click(function(e){
+            $(this).addClass("btn-disable")
             setTimeout(function(){
               var topValue = $('.saveditem-container').position().top + 35;
               console.log(topValue);
@@ -231,6 +232,10 @@ class ProductDetais {
                             slidesPerView: 1,
                         },
                         
+                        768: {
+                            slidesPerView: 'auto',
+                            spaceBetween: 20
+                        },
                         992: {
                             slidesPerView: 'auto',
                             spaceBetween: 20
@@ -296,10 +301,25 @@ class ProductDetais {
         })
 
         $(".js-size-model").click(function(){
+          console.log("clicked");
           $(".js-size-modal-wrp").modal("show")
         })
     //Save style popup
-
+        $(window).scroll(function(){
+          let windowHeight = ($(window)[0].innerHeight)
+        let bottomHeight =  $('.btn-wrp')[0].offsetTop 
+        let heightELem = $('.btn-wrp')[0].clientHeight
+        if($(window).scrollTop() <= (bottomHeight + heightELem)) {
+          $('.btn-wrp').addClass("sticky-btn");
+          
+        }else {
+          $('.btn-wrp').removeClass("sticky-btn");
+          
+        }
+            console.log($(window).scrollTop())
+            console.log("heightELem" + "" +heightELem )
+            // console.log("btn height " + bottomHeight )
+        })
 
     //Save style model
         var CreateMoreStyles = document.querySelector('.create-more-styles')
@@ -311,7 +331,7 @@ class ProductDetais {
 
         $(".js-size-model").click(function(){
           $(".js-size-modal-wrp").modal("show")
-        })
+        });
     }
 }
 
