@@ -49,24 +49,24 @@
                     .drop-container
                         .select-style.mr-0
                             span.triangle-icon
-                            select.form-input.select-btn.txt-gry-12
+                            select.form-input.select-btn.txt-gry-12(required="")
                                 option(value="") select
                                 option(value='saab') Saab
                                 option(value='mercedes') Mercedes
                                 option(value='audi') Audi
-                            input.select-input.d-none(type="text" data-parsley-errors-container="#errorBlock2" data-parsley-error-message="Please select your country" data-parsley-required)
+                            //- input.select-input.d-none(type="text" data-parsley-errors-container="#errorBlock2" data-parsley-error-message="Please select your country" data-parsley-required)
                     #errorBlock2
                 .col-lg-6.form-group
                     label(for="") Country
                     .drop-container
                         .select-style.mr-0
                             span.triangle-icon
-                            select.form-input.select-btn.txt-gry-12
-                                option(disable) select
+                            select.form-input.select-btn.txt-gry-12(required="")
+                                option(value="") select
                                 option(value='saab') Saab
                                 option(value='mercedes') Mercedes
                                 option(value='audi') Audi
-                            input.select-input.d-none(type="text" data-parsley-errors-container="#errorBlock1" data-parsley-error-message="Please select your country" data-parsley-required)
+                            //- input.select-input.d-none(type="text" data-parsley-errors-container="#errorBlock1" data-parsley-error-message="Please select your country" data-parsley-required)
                     #errorBlock1
         .js-change-address
             .row
@@ -102,24 +102,24 @@
                                     .drop-container
                                         .select-style.mr-0
                                             span.triangle-icon
-                                            select.form-input.select-btn.txt-gry-12
-                                                option(disable) select
+                                            select.form-input.select-btn.txt-gry-12(required="")
+                                                option(value="") select
                                                 option(value='saab') Saab
                                                 option(value='mercedes') Mercedes
                                                 option(value='audi') Audi
-                                            input.select-input.d-none(type="text" data-parsley-errors-container="#errorBlock2" data-parsley-error-message="Please select your country" data-parsley-required)
+                                            //- input.select-input.d-none(type="text" data-parsley-errors-container="#errorBlock2" data-parsley-error-message="Please select your country" data-parsley-required)
                                     #errorBlock2
                                 .col-lg-6.form-group
                                     label(for="") Country
                                     .drop-container
                                         .select-style.mr-0
                                             span.triangle-icon
-                                            select.form-input.select-btn.txt-gry-12
-                                                option(disable) select
+                                            select.form-input.select-btn.txt-gry-12(required="")
+                                                option(value="") select
                                                 option(value='saab') Saab
                                                 option(value='mercedes') Mercedes
                                                 option(value='audi') Audi
-                                            input.select-input.d-none(type="text" data-parsley-errors-container="#errorBlock1" data-parsley-error-message="Please select your country" data-parsley-required)
+                                            //- input.select-input.d-none(type="text" data-parsley-errors-container="#errorBlock1" data-parsley-error-message="Please select your country" data-parsley-required)
                                     #errorBlock1
 
                     button.address-btn.bttn.bttn__orange.mt-4(type="button") Save 
