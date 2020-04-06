@@ -253,18 +253,7 @@
 //Product recent items
 
 .product-recent-view {
-    padding-top: 1rem;
-    @include bpmax("phone-lg") {
-        overflow: hidden;
-    }
-    @media screen and (min-width: 768px){
-        padding-top: 2rem;
-        
-    }
-    @media screen and (min-width: 1024px){
-        padding-top: 4rem;
-        
-    }
+    overflow: hidden;
    &__title {
        font-family: $opensans;
        text-transform: uppercase;
@@ -296,7 +285,7 @@
         background-color: #ffffff;
         position: sticky;
         bottom: 0;
-        z-index: 10;
+        // z-index: 10;
     }
     .btn-addCart {
         border: none;

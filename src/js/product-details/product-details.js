@@ -307,16 +307,21 @@ class ProductDetais {
         $(window).scroll(function(){
           let windowHeight = ($(window)[0].innerHeight)
         let bottomHeight =  $('.btn-wrp')[0].offsetTop 
-        let heightELem = $('.btn-wrp')[0].clientHeight
-        if($(window).scrollTop() <= (bottomHeight + heightELem)) {
+        let heightELem = $('.btn-wrp')[0].clientHeight;
+        let totalOffset = (bottomHeight + heightELem);
+        let scrollSpacePoint =  windowHeight - totalOffset;
+        let scrollPoint = totalOffset +  scrollSpacePoint;
+        if($(window).scrollTop() <= scrollPoint ) {
           $('.btn-wrp').addClass("sticky-btn");
           
         }else {
           $('.btn-wrp').removeClass("sticky-btn");
           
         }
-            console.log($(window).scrollTop())
-            console.log("heightELem" + "" +heightELem )
+            // console.log($(window).scrollTop())
+            console.log("windowHeight" + "" +scrollSpacePoint )
+            console.log("scrollPoint" + "" +scrollPoint )
+            console.log("scrollPoint" + "" +totalOffset )
             // console.log("btn height " + bottomHeight )
         })
 

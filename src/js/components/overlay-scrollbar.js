@@ -20,6 +20,9 @@ class OverlayScrollbar {
       let productScroll = OverlayScrollbars(document.querySelector(".model-wrp"), { overflowBehavior : {
           x : "never",
         },});
+      let stickyInnerContainer = OverlayScrollbars(document.querySelector(".sticky-inner-container"), { overflowBehavior : {
+          x : "never",
+        },});
 
       let addressScroll = OverlayScrollbars(document.querySelector(".js-address-wrp"), { overflowBehavior : {
           x : "never",
