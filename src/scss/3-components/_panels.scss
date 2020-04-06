@@ -116,7 +116,7 @@
 }
 
 
-.form-button {
+.form-styles .form-button {
     color: $white;
     font-size: 14px;
     font-weight: 700;
@@ -239,8 +239,6 @@
 .accounts-contain.profile {
     
     @include bpmax('tab-mid') {
-        padding-top: 80px;
-        
         .accounts-contain__right {
             background-color: white;
             padding: 20px 16px;

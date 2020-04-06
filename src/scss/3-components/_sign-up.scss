@@ -216,8 +216,8 @@
     .triangle-icon {
         position: absolute;
         right: 12px;
-        top: 50%;
-        transform: translateY(-50%);
+        top: 18px;
+        // transform: translateY(-50%);
         width: 0;
         height: 0;
         border-left: 4px solid transparent;
@@ -227,9 +227,8 @@
     .select-style {
         position: relative;
         padding: 0;
-        border: 1px solid #cdcecf;
-        background-color: #ffffff;
         overflow: hidden;
+        background-color: #ffffff;
         
     }
     
@@ -242,8 +241,9 @@
         background-color: transparent;
         background-image: none;
         -webkit-appearance: none;
-           -moz-appearance: none;
-                appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border: 1px solid #cdcecf;
     }
     .modal-content {
         padding: 22px 22px 32px;

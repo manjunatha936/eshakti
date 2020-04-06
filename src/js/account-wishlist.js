@@ -6,25 +6,35 @@ var wishlistSlider = new Swiper('.js-wishlist-slider', {
     loop: false,
     preventClicks: true,
     grabCursor: true,
-    slidesPerView: 4,
+    slidesPerView: 1.2,
     simulateTouch: false,
     spaceBetween: 0,
     observer: true,
     observeParents: true,
     grabCursor: false,
     loop: false,
+    watchOverflow: true,
     navigation: {
         nextEl: '.left-arrow',
         prevEl: '.right-arrow',
     },
+      // Responsive breakpoints
     breakpoints: {
-        768: {
-            slidesPerView: 2
+        // when window width is >= 320px
+        320: {
+        slidesPerView: 1.3,
         },
-        992: {
-            slidesPerView: 4
+        // when window width is >= 480px
+        480: {
+        slidesPerView: 1.3,
+        },
+        // when window width is >= 768px
+        768: {
+        slidesPerView: "auto",
         }
     }
 });
 
-$( '.js-wishlist-slider .swiper-slide').length
+//Product Recent-items slider
+import RecentlyViewed from './product-details/recent-item-slider'
+const recentlyViewed = new RecentlyViewed();

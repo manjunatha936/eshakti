@@ -1,0 +1,204 @@
+.accounts-contain.accounts-panel.past-orders
+    .container.position-relative
+        .row
+            .accounts-panel__left.acc-orders.col-8
+                form(action="").acc-orders__card.js-return-form
+                    p.acc-orders__bcrumbs My Orders
+                        strong Order ID 
+                            span #1338681
+                        strong Return Authorization Request
+                        
+                    .acc-orders__cardbox
+                        .acc-orders__cardhead
+                            p Order number - 
+                                span #1338681
+                            p.delivered Delivered - 
+                                span 4th Apr 2020
+                
+                        h3 Select the items to be returned
+
+                    .acc-orders__cardbox
+                        .acc-orders__cardbody.row.order-content
+                            .order-content__check
+                                input(type="checkbox" name="product-item" id="product1" data-parsley-errors-container="#error-product-item" required data-parsley-error-message="Please select a product to continue")
+                                label(for="product1")
+                            .order-content__img
+                                img(src="./assets/images/cart/cart-img.png", alt="")
+                            .order-content__details
+                                label Zapelle
+                                h3 Cotton Poplin Two-tone Tiered Shift Dress
+                                .cart-color
+                                    span Color: 
+                                    p Crimson red/hot pink
+                                .cart-color
+                                    span Product ID: 
+                                    p CL0098765
+                                .cart-size
+                                    span Size
+                                    .standard-size
+                                        p Standard Size: 
+                                            span M-10
+                                        p Height: 
+                                            span 5.4
+                                .cart-style
+                                    span Style
+                                    p As Shown
+                                .cart-price
+                                    span $59.95
+                                    p QTY - 
+                                        span 1
+
+                            .order-content__returnbox
+                                h3 Reason for the return
+                                #errorreturnblock2
+                                .check-group
+                                    input(type="radio" name="return-reason" id="return-reason1" data-parsley-errors-container="#errorreturnblock2" required)
+                                    label(for="return-reason1") Issue with the quality
+                                .check-group
+                                    input(type="radio" name="return-reason" id="return-reason2" data-parsley-errors-container="#errorreturnblock2" )
+                                    label(for="return-reason2") It has fit issues
+                                .check-group
+                                    input(type="radio" name="return-reason" id="return-reason3" data-parsley-errors-container="#errorreturnblock2" )
+                                    label(for="return-reason3") I recieved a wrong product
+                                .check-group
+                                    input(type="radio" name="return-reason" id="return-reason4" data-parsley-errors-container="#errorreturnblock2" )
+                                    label(for="return-reason4") It didn’t look good on me
+                                .check-group
+                                    input(type="radio" name="return-reason" id="return-reason5" data-parsley-errors-container="#errorreturnblock2" )
+                                    label(for="return-reason5") I changed my mind
+                                .check-group
+                                    input(type="radio" name="return-reason" id="return-reason6" data-parsley-errors-container="#errorreturnblock2" )
+                                    label(for="return-reason6") It’s not worth the value
+                                .check-group
+                                    input(type="radio" name="return-reason" id="return-reason7" data-parsley-errors-container="#errorreturnblock2" )
+                                    label(for="return-reason7") My reason is not listed here
+                                .text-group
+                                    h3 Additional Information
+                                    textarea
+                                
+
+
+                    .acc-orders__cardbox
+                        .acc-orders__cardbody.row.order-content
+                            .order-content__check
+                                input(type="checkbox" name="product-item" id="product2" data-parsley-errors-container="#error-product-item" data-parsley-error-message="Please select a product to continue")
+                                label(for="product2")
+                            .order-content__img
+                                img(src="./assets/images/cart/cart-img.png", alt="")
+                            .order-content__details
+                                label Zapelle
+                                h3 Cotton Poplin Two-tone Tiered Shift Dress
+                                .cart-color
+                                    span Color: 
+                                    p Crimson red/hot pink
+                                .cart-color
+                                    span Product ID: 
+                                    p CL0098765
+                                .cart-size
+                                    span Size
+
+                                    .custom-size
+                                        p Height: 
+                                            span 5.4
+                                        p Length of Arm: 
+                                            span 35
+                                        p Upperarm: 
+                                            span 36
+                                        p Hip: 
+                                            span 35
+                                        p Waist: 
+                                            span 75
+                                        p Underbust: 
+                                            span 20
+                                        p Bust: 
+                                            span 36
+                                        p Chest: 
+                                            span 36
+                                        p Shoulder: 
+                                            span 75
+                                        p HPS to Bust: 
+                                            span 75
+                                        p HPS to Waist:
+                                            span 75
+                                        P HPS to Knee
+                                            span 75
+                                    a.d-md-none(href="#") Show more
+                                .cart-style
+                                    span Style
+                                    p As Shown
+                                .cart-price
+                                    span $59.95
+                                    p QTY - 
+                                        span 1
+
+                            .order-content__returnbox
+                                h3 Reason for the return
+                                #errorreturnblock3
+                                .check-group
+                                    input(type="radio" name="return-reason1" id="return-reason11" data-parsley-errors-container="#errorreturnblock3" required)
+                                    label(for="return-reason11") Issue with the quality
+                                .check-group
+                                    input(type="radio" name="return-reason1" id="return-reason12" data-parsley-errors-container="#errorreturnblock3")
+                                    label(for="return-reason12") It has fit issues
+                                .check-group
+                                    input(type="radio" name="return-reason1" id="return-reason13" data-parsley-errors-container="#errorreturnblock3")
+                                    label(for="return-reason13") I recieved a wrong product
+                                .check-group
+                                    input(type="radio" name="return-reason1" id="return-reason14" data-parsley-errors-container="#errorreturnblock3")
+                                    label(for="return-reason14") It didn’t look good on me
+                                .check-group
+                                    input(type="radio" name="return-reason1" id="return-reason15" data-parsley-errors-container="#errorreturnblock3")
+                                    label(for="return-reason15") I changed my mind
+                                .check-group
+                                    input(type="radio" name="return-reason1" id="return-reason16" data-parsley-errors-container="#errorreturnblock3")
+                                    label(for="return-reason16") It’s not worth the value
+                                .check-group
+                                    input(type="radio" name="return-reason1" id="return-reason17" data-parsley-errors-container="#errorreturnblock3")
+                                    label(for="return-reason17") My reason is not listed here
+                                .text-group
+                                    h3 Additional Information
+                                    textarea
+
+                    #error-product-item
+                    .acc-orders__payment.js-return-validate
+                        h6 Select refund type
+                            |
+                            span
+                                i.js-return-modal.icon-info
+                        .d-flex.align-items-center
+                            .check-group.order-content
+                                input(type="radio" name="return-payment" id="return-payment1" value="cash" required data-parsley-errors-container="#errorreturnblock1")
+                                label(for="return-payment1") Cash
+                            .check-group.order-content
+                                input(type="radio" name="return-payment" id="return-payment2" value="credit" data-parsley-errors-container="#errorreturnblock1")
+                                label(for="return-payment2") Credit Card
+                        #errorreturnblock1
+                    
+                    .acc-orders__submit.form-styles
+                        button.form-button.white Cancel
+                        button.form-button.js-return-submit(type="button") Proceed 
+
+
+            
+            
+            .accounts-panel__right.col-4
+                .cart-panel__card.return-card
+                    h4 Need Help?
+                    p We are available if you have any questions!
+                    a.checkout-link(href="#") Contact Us
+
+                .cart-panel__card.return-card
+                    h4 Return and Refund Policy
+                    p Read the policy to get more information on Refund
+                    a.checkout-link(href="#") View Return Policy
+
+.modal.fade.size-modal#return-popup(tabindex='-1' role='dialog' aria-labelledby='myLargeModalLabel' aria-hidden='true')
+  .modal-dialog.modal-sm.size-modal-dialog
+    .modal-content.h-100
+        button.close-modal(data-dismiss="modal") &times;
+        .model-head
+            p.head-text Where should the money go?
+            h5 Cash
+            p.sub-text.mb-5 Cash refund is the money which is returned to the customer in the form of cash. Cash refund can occur due to a variety of reasons.
+            h5 Credit Card
+            p.sub-text Cash refund is the money which is returned to the customer in the form of cash. Cash refund can occur due to a variety of reasons.

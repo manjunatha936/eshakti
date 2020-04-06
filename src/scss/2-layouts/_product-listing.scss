@@ -1047,6 +1047,11 @@
         left: calc(100% + 10px);
         top: 3px;
         cursor: pointer;
+        @media screen and (max-width:991px){
+            top: 25px;
+            left: calc(100% - 50px);
+
+        }
         @media screen and (max-width:425px){
             top: 8px;
             left: calc(100% - 36px);

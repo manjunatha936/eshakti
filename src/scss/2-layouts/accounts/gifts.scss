@@ -34,10 +34,7 @@
     }
     
     @include bpmax('tab-mid') {
-        padding-top: 80px;
-        
         .accounts-contain__right {
-            
             .seperator {
                 padding-top: 20px;
                 margin-bottom: 32px;
@@ -45,8 +42,6 @@
 
             background-color: white;
             padding: 20px 16px;
-            width: 100%;
-            margin: 0;
         }
     }
 }

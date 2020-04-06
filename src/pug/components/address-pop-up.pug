@@ -30,8 +30,8 @@
                                     .drop-container
                                         //- .select-style
                                         //-     span.triangle-icon
-                                        select.form-input.select-btn.select_box.txt-gry-12
-                                            option(disabled selected) select
+                                        select.form-input.select-btn.select_box.txt-gry-12(required)
+                                            option(disable) 
                                             option(value='saab') Saab
                                             option(value='mercedes') Mercedes
                                             option(value='audi') Audi
@@ -59,7 +59,7 @@
                                         //-         option(value='audi') Audi
                                         //-     input.select-input.d-none(type="text" data-parsley-errors-container="#errorBlock2" data-parsley-error-message="Please select your country" data-parsley-required)
                                         select.form-input.select-btn.select_box.txt-gry-12
-                                            option(disable) 
+                                            option(value="") 
                                             option(value='saab') Saab
                                             option(value='mercedes') Mercedes
                                             option(value='audi') Audi
