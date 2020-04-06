@@ -20,7 +20,7 @@
                     .acc-orders__cardbox
                         .acc-orders__cardbody.row.order-content
                             .order-content__check
-                                input(type="checkbox" name="product1" id="product1")
+                                input(type="checkbox" name="product-item" id="product1" data-parsley-errors-container="#error-product-item" required data-parsley-error-message="Please select a product to continue")
                                 label(for="product1")
                             .order-content__img
                                 img(src="./assets/images/cart/cart-img.png", alt="")
@@ -81,7 +81,7 @@
                     .acc-orders__cardbox
                         .acc-orders__cardbody.row.order-content
                             .order-content__check
-                                input(type="checkbox" name="product2" id="product2")
+                                input(type="checkbox" name="product-item" id="product2" data-parsley-errors-container="#error-product-item" data-parsley-error-message="Please select a product to continue")
                                 label(for="product2")
                             .order-content__img
                                 img(src="./assets/images/cart/cart-img.png", alt="")
@@ -159,6 +159,7 @@
                                     h3 Additional Information
                                     textarea
 
+                    #error-product-item
                     .acc-orders__payment.js-return-validate
                         h6 Select refund type
                             |
