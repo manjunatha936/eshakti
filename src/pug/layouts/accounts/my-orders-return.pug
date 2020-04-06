@@ -2,7 +2,7 @@
     .container.position-relative
         .row
             .accounts-panel__left.acc-orders.col-8
-                .acc-orders__card
+                form(action="").acc-orders__card.js-return-form
                     p.acc-orders__bcrumbs My Orders
                         strong Order ID 
                             span #1338681
@@ -50,26 +50,27 @@
 
                             .order-content__returnbox
                                 h3 Reason for the return
+                                #errorreturnblock2
                                 .check-group
-                                    input(type="radio" name="return-reason" id="return-reason1")
+                                    input(type="radio" name="return-reason" id="return-reason1" data-parsley-errors-container="#errorreturnblock2" required)
                                     label(for="return-reason1") Issue with the quality
                                 .check-group
-                                    input(type="radio" name="return-reason" id="return-reason2")
+                                    input(type="radio" name="return-reason" id="return-reason2" data-parsley-errors-container="#errorreturnblock2" )
                                     label(for="return-reason2") It has fit issues
                                 .check-group
-                                    input(type="radio" name="return-reason" id="return-reason3")
+                                    input(type="radio" name="return-reason" id="return-reason3" data-parsley-errors-container="#errorreturnblock2" )
                                     label(for="return-reason3") I recieved a wrong product
                                 .check-group
-                                    input(type="radio" name="return-reason" id="return-reason4")
+                                    input(type="radio" name="return-reason" id="return-reason4" data-parsley-errors-container="#errorreturnblock2" )
                                     label(for="return-reason4") It didn’t look good on me
                                 .check-group
-                                    input(type="radio" name="return-reason" id="return-reason5")
+                                    input(type="radio" name="return-reason" id="return-reason5" data-parsley-errors-container="#errorreturnblock2" )
                                     label(for="return-reason5") I changed my mind
                                 .check-group
-                                    input(type="radio" name="return-reason" id="return-reason6")
+                                    input(type="radio" name="return-reason" id="return-reason6" data-parsley-errors-container="#errorreturnblock2" )
                                     label(for="return-reason6") It’s not worth the value
                                 .check-group
-                                    input(type="radio" name="return-reason" id="return-reason7")
+                                    input(type="radio" name="return-reason" id="return-reason7" data-parsley-errors-container="#errorreturnblock2" )
                                     label(for="return-reason7") My reason is not listed here
                                 .text-group
                                     h3 Additional Information
@@ -132,32 +133,53 @@
 
                             .order-content__returnbox
                                 h3 Reason for the return
+                                #errorreturnblock3
                                 .check-group
-                                    input(type="radio" name="return-reason" id="return-reason1")
-                                    label(for="return-reason1") Issue with the quality
+                                    input(type="radio" name="return-reason1" id="return-reason11" data-parsley-errors-container="#errorreturnblock3" required)
+                                    label(for="return-reason11") Issue with the quality
                                 .check-group
-                                    input(type="radio" name="return-reason" id="return-reason2")
-                                    label(for="return-reason2") It has fit issues
+                                    input(type="radio" name="return-reason1" id="return-reason12" data-parsley-errors-container="#errorreturnblock3")
+                                    label(for="return-reason12") It has fit issues
                                 .check-group
-                                    input(type="radio" name="return-reason" id="return-reason3")
-                                    label(for="return-reason3") I recieved a wrong product
+                                    input(type="radio" name="return-reason1" id="return-reason13" data-parsley-errors-container="#errorreturnblock3")
+                                    label(for="return-reason13") I recieved a wrong product
                                 .check-group
-                                    input(type="radio" name="return-reason" id="return-reason4")
-                                    label(for="return-reason4") It didn’t look good on me
+                                    input(type="radio" name="return-reason1" id="return-reason14" data-parsley-errors-container="#errorreturnblock3")
+                                    label(for="return-reason14") It didn’t look good on me
                                 .check-group
-                                    input(type="radio" name="return-reason" id="return-reason5")
-                                    label(for="return-reason5") I changed my mind
+                                    input(type="radio" name="return-reason1" id="return-reason15" data-parsley-errors-container="#errorreturnblock3")
+                                    label(for="return-reason15") I changed my mind
                                 .check-group
-                                    input(type="radio" name="return-reason" id="return-reason6")
-                                    label(for="return-reason6") It’s not worth the value
+                                    input(type="radio" name="return-reason1" id="return-reason16" data-parsley-errors-container="#errorreturnblock3")
+                                    label(for="return-reason16") It’s not worth the value
                                 .check-group
-                                    input(type="radio" name="return-reason" id="return-reason7")
-                                    label(for="return-reason7") My reason is not listed here
+                                    input(type="radio" name="return-reason1" id="return-reason17" data-parsley-errors-container="#errorreturnblock3")
+                                    label(for="return-reason17") My reason is not listed here
                                 .text-group
                                     h3 Additional Information
                                     textarea
 
+                    .acc-orders__payment.js-return-validate
+                        h6 Select refund type
+                            |
+                            span
+                                i.js-return-modal.icon-info
+                        .d-flex.align-items-center
+                            .check-group.order-content
+                                input(type="radio" name="return-payment" id="return-payment1" value="cash" required data-parsley-errors-container="#errorreturnblock1")
+                                label(for="return-payment1") Cash
+                            .check-group.order-content
+                                input(type="radio" name="return-payment" id="return-payment2" value="credit" data-parsley-errors-container="#errorreturnblock1")
+                                label(for="return-payment2") Credit Card
+                        #errorreturnblock1
+                    
+                    .acc-orders__submit.form-styles
+                        button.form-button.white Cancel
+                        button.form-button.js-return-submit(type="button") Proceed 
 
+
+            
+            
             .accounts-panel__right.col-4
                 .cart-panel__card.return-card
                     h4 Need Help?
@@ -168,3 +190,14 @@
                     h4 Return and Refund Policy
                     p Read the policy to get more information on Refund
                     a.checkout-link(href="#") View Return Policy
+
+.modal.fade.size-modal#return-popup(tabindex='-1' role='dialog' aria-labelledby='myLargeModalLabel' aria-hidden='true')
+  .modal-dialog.modal-sm.size-modal-dialog
+    .modal-content.h-100
+        button.close-modal(data-dismiss="modal") &times;
+        .model-head
+            p.head-text Where should the money go?
+            h5 Cash
+            p.sub-text.mb-5 Cash refund is the money which is returned to the customer in the form of cash. Cash refund can occur due to a variety of reasons.
+            h5 Credit Card
+            p.sub-text Cash refund is the money which is returned to the customer in the form of cash. Cash refund can occur due to a variety of reasons.

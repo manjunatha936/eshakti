@@ -1,4 +1,7 @@
 import $ from 'jquery';
+import "bootstrap/js/src/modal";
+import 'parsleyjs';
+
 
 $(document).ready(function(){
     $(document).on('click', '.order-content__details .cart-size a:not(.active)', function(e) {
@@ -18,6 +21,17 @@ $(document).ready(function(){
     });
 
     $('.order-content__check input[type="checkbox"]').on('change', function(){
-        $(this).parents('.acc-orders__cardbox').find('.order-content__returnbox').slideToggle();
+        $(this).parents('.acc-orders__cardbox').find('.order-content__returnbox').slideToggle().addClass("js-return-validate");
+    });
+
+    $(".js-return-modal").click(function(){
+        $("#return-popup").modal("show")
+    });
+
+    $('.js-return-form .js-return-submit').on('click', function () {
+        console.log("in");
+        $('.js-return-form .js-return-validate :input:not(:button), .js-return-form .js-return-validate select').each(function (index, value) { 
+            $(this).parsley().validate();
+          });
     });
 })

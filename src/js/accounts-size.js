@@ -9,7 +9,6 @@ $(".js-edit-size , .js-new-profile").on('click', function () {
 });
 
 $(".js-size-model").click(function(){
-    console.log("inside");
     $(".js-size-modal-wrp").modal("show")
 });
 
