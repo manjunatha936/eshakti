@@ -30,4 +30,11 @@
     .swiper-arrow .arrow:last-child {
         right: 0px;
     }
+
+    @media(max-width: 767px) {
+        .product-card {
+            max-width: 265px;
+            margin: auto;
+        }
+    }
 }
