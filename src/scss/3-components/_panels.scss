@@ -246,4 +246,10 @@
             margin: 0;
         }
     }
+
+    @media only screen and (max-width: 992px) and (min-width: 767px)  {
+        .container {
+            min-height: calc(100vh - 625px);
+        }
+    }
 }
