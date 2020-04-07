@@ -1,6 +1,6 @@
 
+import $ from 'jquery'
 import Swiper from 'swiper';
-// import $ from 'jquery'
 
 var wishlistSlider = new Swiper('.js-wishlist-slider', {
     loop: false,
@@ -37,6 +37,12 @@ var wishlistSlider = new Swiper('.js-wishlist-slider', {
         }
     }
 });
+$(".favourite-tabs .nav-item").click(function(){
+    setTimeout(function(){
+        wishlistSlider.update();
+   
+    },300);
+  })
 
 //Product Recent-items slider
 import RecentlyViewed from './product-details/recent-item-slider'

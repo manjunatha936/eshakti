@@ -47,32 +47,32 @@
                 .col-lg-6.form-group
                     label(for="") State
                     .drop-container
-                        .select-style.mr-0
-                            span.triangle-icon
-                            select.form-input.select-btn.txt-gry-12(required="")
-                                option(value="") select
-                                option(value='saab') Saab
-                                option(value='mercedes') Mercedes
-                                option(value='audi') Audi
+                        //- .select-style
+                        //-     span.triangle-icon
+                        select.form-input.select-btn.select_box.txt-gry-12(required)
+                            option(disable selected) select
+                            option(value='saab') Saab
+                            option(value='mercedes') Mercedes
+                            option(value='audi') Audi
                             //- input.select-input.d-none(type="text" data-parsley-errors-container="#errorBlock2" data-parsley-error-message="Please select your country" data-parsley-required)
                     #errorBlock2
                 .col-lg-6.form-group
                     label(for="") Country
                     .drop-container
-                        .select-style.mr-0
-                            span.triangle-icon
-                            select.form-input.select-btn.txt-gry-12(required="")
-                                option(value="") select
-                                option(value='saab') Saab
-                                option(value='mercedes') Mercedes
-                                option(value='audi') Audi
+                        //- .select-style
+                        //-     span.triangle-icon
+                        select.form-input.select-btn.select_box.txt-gry-12(required)
+                            option(disable selected) select
+                            option(value='saab') Saab
+                            option(value='mercedes') Mercedes
+                            option(value='audi') Audi
                             //- input.select-input.d-none(type="text" data-parsley-errors-container="#errorBlock1" data-parsley-error-message="Please select your country" data-parsley-required)
                     #errorBlock1
         .js-change-address
             .row
                 .col-12
                     .change-address
-                        p.pop-head.mb-2 Shipping Information
+                        p.pop-head.mb-2 Billing Information
                         label.label-container.label-container--check
                             | Same as shipping address
                             input.address-checkbox(type="checkbox" name="selectPlant" value="" checked)
@@ -100,25 +100,21 @@
                                 .col-lg-6.form-group
                                     label(for="") State
                                     .drop-container
-                                        .select-style.mr-0
-                                            span.triangle-icon
-                                            select.form-input.select-btn.txt-gry-12(required="")
-                                                option(value="") select
-                                                option(value='saab') Saab
-                                                option(value='mercedes') Mercedes
-                                                option(value='audi') Audi
+                                        select.form-input.select-btn.select_box.txt-gry-12
+                                            option(value="") 
+                                            option(value='saab') Saab
+                                            option(value='mercedes') Mercedes
+                                            option(value='audi') Audi
                                             //- input.select-input.d-none(type="text" data-parsley-errors-container="#errorBlock2" data-parsley-error-message="Please select your country" data-parsley-required)
                                     #errorBlock2
                                 .col-lg-6.form-group
                                     label(for="") Country
                                     .drop-container
-                                        .select-style.mr-0
-                                            span.triangle-icon
-                                            select.form-input.select-btn.txt-gry-12(required="")
-                                                option(value="") select
-                                                option(value='saab') Saab
-                                                option(value='mercedes') Mercedes
-                                                option(value='audi') Audi
+                                        select.form-input.select-btn.select_box.txt-gry-12
+                                            option(value="") 
+                                            option(value='saab') Saab
+                                            option(value='mercedes') Mercedes
+                                            option(value='audi') Audi
                                             //- input.select-input.d-none(type="text" data-parsley-errors-container="#errorBlock1" data-parsley-error-message="Please select your country" data-parsley-required)
                                     #errorBlock1
 
