@@ -1,0 +1,102 @@
+.container
+    .py-5
+    // Button trigger modal
+    button.bttn-style(type='button' data-toggle='modal' data-target='#exampleID') Form Popup
+    .py-5
+
+
+
+
+// Modal
+.modal.fade.popup-template#exampleID(tabindex='-1' role='dialog' aria-hidden='true')
+  .modal-dialog.modal-dialog-centered(role='document')
+    .modal-content
+        button.close(type='button' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+        .modal-body
+            form(action="").container.form-template  
+                .row
+                    .col-md-12.form-group
+                        h6 Sample Form
+                .row
+                    .col-md-6.form-group
+                        label(for="#input1") First Name
+                        input(type="text" id="input1" required)
+                    .col-md-6.form-group
+                        label(for="#input2") Last Name
+                        input(type="text" id="input2" required)
+                .row
+                    .col-md-6.form-group
+                        label(for="#input3") Email ID
+                        input(type="email" id="input3" required)
+                    .col-md-6.form-group
+                        label(for="#input4") Password
+                        input(type="password" id="input4" required)
+
+                .row
+                    .col-md-12.form-group
+                        p Select Gender 
+                        .d-flex.flex-wrap 
+                            .radio-group
+                                input(type="radio" name="input7" id="#radio1"  required data-parsley-errors-container="#error-radio-tag")
+                                label(for="#radio1") Male
+                            .radio-group
+                                input(type="radio" name="input7" id="#radio2"  required)
+                                label(for="#radio2") Female
+                            .radio-group
+                                input(type="radio" name="input7" id="#radio3"  required)
+                                label(for="#radio3") Others
+                        #error-radio-tag
+
+                .row
+                    .col-md-12.form-group
+                        label(for="#input5") Address Line 1
+                        input(type="text" id="input5" required)
+                    .col-md-12.form-group
+                        label(for="#input6") Address Line 2
+                        input(type="text" id="input6" required)
+
+                .row
+                    .col-md-6.form-group
+                        label(for='input9') State
+                        select#input-9(required)
+                            option(value='') 
+                            option(value='saab') Saab
+                            option(value='mercedes') Mercedes
+                            option(value='audi') Audi
+                    .col-md-6.form-group
+                        label(for='input10') Country
+                        select#input10(required)
+                            option(value='') 
+                            option(value='saab') Saab
+                            option(value='mercedes') Mercedes
+                            option(value='audi') Audi
+
+                .row
+                    .col-12.form-group
+                        p Additional Information
+                        textarea(name="input11")
+                .row
+                    .col-md-12.form-group
+                        p Select Options 
+                        .d-flex.flex-wrap 
+                            .check-group
+                                input(type="checkbox" name="input8" id="check1" required data-parsley-errors-container="#error-check-tag")
+                                label(for="check1") Option 1
+                            .check-group
+                                input(type="checkbox" name="input8" id="check2" required)
+                                label(for="check2") Option 2
+                            .check-group
+                                input(type="checkbox" name="input8" id="check3" required)
+                                label(for="check3") Option 3
+                            .check-group
+                                input(type="checkbox" name="input8" id="check4" required)
+                                label(for="check4") Option 4
+                        #error-check-tag
+                .row    
+                    .col-12
+                        button(type="submit") Submit
+                
+
+
+    

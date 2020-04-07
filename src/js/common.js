@@ -34,6 +34,9 @@ const leftsticky = new leftSticky();
 import addressPopup from "./components/address-popup";
 const addresspopup = new addressPopup();
 
+import formTemplate from "./components/form-template";
+const formtemplate = new formTemplate();
+
 // // import "./components/header";
 // import ProductDetais from './product-listing'
 // const productDetais = new ProductDetais();
