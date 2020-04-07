@@ -477,6 +477,7 @@
         &__cardbody {
             margin-left: -10px;
             margin-right: -10px;
+            position: relative;
 
             h3 {
                 padding: 0 10px;
@@ -909,6 +910,10 @@
         line-height: 1.6;
         margin-bottom: 20px;
 
+        a {
+            color: inherit;
+        }
+
         @include bpmax('desktop') {
             margin-bottom: 12px;
         }
@@ -939,7 +944,7 @@
                 height: 7px;
                 border-right: 1px solid;
                 border-bottom: 1px solid;
-                left: 3px;
+                left: 4px;
                 top: 6px;
                 transform: rotate(-45deg);
 
