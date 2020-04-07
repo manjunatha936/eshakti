@@ -223,7 +223,7 @@
         max-width: 570px;
         width: 100%;
         .drop-container {
-        
+            margin-bottom: 32px !important;
             &:nth-child(4n) {
                 @media screen and (min-width:992px) {
                     margin-right: 0 !important;
@@ -241,14 +241,20 @@
     .drop-container {
         margin-right: 20px !important;
         
-        @media screen and (min-width:768px) {
+        @media screen and (min-width:425px) {
            
-            margin-right: 33px !important;
+            margin-right: 38px !important;
         }
         @media screen and (min-width:992px) {
            
             margin-right: 52px !important;
         }
+    }
+    .drop-container:nth-child(3n) {
+        @media screen and (min-width:375px) and (max-width:767px) {
+            margin-right: 0 !important;
+        }
+
     }
     .select-style {
         margin-right: 0 !important;
@@ -276,8 +282,10 @@
         display: flex;
         flex-wrap: wrap;
         .drop-container {
-            &:nth-child(3n) {
-                @media screen and (min-width:375px) {
+            margin-bottom: 32px !important;
+           
+            .drop-container:nth-child(3n) {
+                @media screen and (max-width:425px) {
                     margin-right: 0 !important;
                 }
     
@@ -304,14 +312,20 @@
 }
 .address-management-rigt {
     .drop-container {
-        @media screen and (min-width:375px) and (max-width:991px) {
-            margin-right: 10px !important;
+        @media screen and (min-width:767px) and (max-width:991px) {
+            margin-right: 38px !important;
         }
     }
-    
     .hip-size .drop-container:nth-child(3n) {
-        margin-right: 10px !important;
+        @media screen and (min-width:375px) and (max-width:767px) {
+            margin-right: 0 !important;
+        }
+
     }
+    
+    // .hip-size .drop-container:nth-child(3n) {
+    //     margin-right: 10px !important;
+    // }
 }
 
 .header-text {
