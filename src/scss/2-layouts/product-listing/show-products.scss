@@ -361,10 +361,10 @@
     position: relative;
     width: 100%;
 
-    @media(max-width: 767px) {
-        max-width: 255px;
-        margin: auto;
-    }
+    // @media(max-width: 767px) {
+    //     max-width: 255px;
+    //     margin: auto;
+    // }
 
     &__view {
         position: relative;
