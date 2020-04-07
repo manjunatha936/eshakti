@@ -3,15 +3,17 @@ html(lang="en")
 
   head
     include ./base/head.pug
-    +head("Home")
+    +head("Product Listing")
 
   body
-    //- include ./base/discount-bar.pug
-    //- include ./base/header.pug
+    include ./base/header.pug
+    +header("repeat")
+    // Main
+    main.maintp9
+      include ./layouts/product-listing/main.pug
+      //- include ./layouts/product-listing/product-listing-model.pug
+      include ./layouts/product-listing/product-model-2.pug
+      //- include ./layouts/product-listing/product-modal.pug
+      
 
-    main.product-listing-main
-      include ./layouts/product-listing/product-modal.pug
-      include ./layouts/product-listing/prduct-details.pug
-      include ./layouts/product-listing/product-modal.pug
-
-    //- include ./base/footer.pug
+    include ./base/footer.pug

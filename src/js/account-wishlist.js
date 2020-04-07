@@ -7,14 +7,15 @@ var wishlistSlider = new Swiper('.js-wishlist-slider', {
     preventClicks: true,
     grabCursor: true,
     slidesPerView: 1.2,
-    simulateTouch: false,
     spaceBetween: 0,
     observer: true,
     observeParents: true,
-    grabCursor: false,
     loop: false,
     watchOverflow: true,
-    navigation: false,
+    navigation: {
+                nextEl: '.left-arrow',
+                prevEl: '.right-arrow',
+    },
       // Responsive breakpoints
     breakpoints: {
         // when window width is >= 320px
@@ -30,10 +31,7 @@ var wishlistSlider = new Swiper('.js-wishlist-slider', {
         slidesPerView: "auto",
         },
         992: {
-            // navigation: {
-            //     nextEl: '.left-arrow',
-            //     prevEl: '.right-arrow',
-            // },
+            
         }
     }
 });
