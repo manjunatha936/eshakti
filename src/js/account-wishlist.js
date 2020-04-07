@@ -7,11 +7,9 @@ var wishlistSlider = new Swiper('.js-wishlist-slider', {
     preventClicks: true,
     grabCursor: true,
     slidesPerView: 1.2,
-    simulateTouch: false,
     spaceBetween: 0,
     observer: true,
     observeParents: true,
-    grabCursor: false,
     loop: false,
     watchOverflow: true,
     navigation: {
