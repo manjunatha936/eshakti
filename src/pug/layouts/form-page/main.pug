@@ -10,9 +10,9 @@
 // Modal
 .modal.fade.popup-template#exampleID(tabindex='-1' role='dialog' aria-hidden='true')
   .modal-dialog.modal-dialog-centered(role='document')
+    button.close(type='button' data-dismiss='modal' aria-label='Close')
+        span(aria-hidden='true') &times;
     .modal-content
-        button.close(type='button' data-dismiss='modal' aria-label='Close')
-          span(aria-hidden='true') &times;
         .modal-body
             form(action="").container.form-template  
                 .row
@@ -59,11 +59,20 @@
                 .row
                     .col-md-6.form-group
                         label(for='input9') State
-                        select#input-9(required)
-                            option(value='') 
-                            option(value='saab') Saab
-                            option(value='mercedes') Mercedes
-                            option(value='audi') Audi
+                        //- select#input-9(required)
+                        //-     option(value='') 
+                        //-     option(value='saab') Saab
+                        //-     option(value='mercedes') Mercedes
+                        //-     option(value='audi') Audi
+
+                        .drop-container
+                            select.form-input.select-btn.select_box.txt-gry-12(required data-parsley-errors-container="#error-select1")
+                                option(value='') 
+                                option(value='saab') Saab
+                                option(value='mercedes') Mercedes
+                                option(value='audi') Audi
+                            #error-select1
+
                     .col-md-6.form-group
                         label(for='input10') Country
                         select#input10(required)
