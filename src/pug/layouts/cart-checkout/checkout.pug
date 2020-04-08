@@ -1,4 +1,4 @@
-.cart-contain
+.cart-contain.checkout-contain
     .container.cart-contain-wrap.checkout-contain-wrap
         h1.page-title Checkout
         a(href="#" data-toggle="modal" data-target=".failure-popup") Fail popup
@@ -54,8 +54,14 @@
 
                                         .cart-style
                                             span Style
-                                            p As Shown
-
+                                            .cart-style-custom
+                                                p Neckline: 
+                                                    span As shown, boat neck
+                                                p Sleeve type: 
+                                                    span As shown, elbow length sleeves
+                                                p Length: 
+                                                    span Full length with 3 inches heels on
+                                            a.d-md-none(href="#") Show more
 
                                 td.cart-content__price
                                     p $59.95
@@ -124,7 +130,7 @@
                             form.row.m-0
                                 a(href="#").backto-main Back
                                 .col-8.text-group.p-0
-                                    input(type="text")
+                                    input(type="text" data-parsley-required)
                                 .col-4.submit-group.p-0
                                     input(type="submit" value="Apply")
                                 .checkout-panel__coupontags
@@ -153,6 +159,7 @@
                             .suggest-head(data-toggle="collapse" data-target="#suggest-content")
                                 h4 For Special instruction on your order
                                 p (Additional Style/size, target delivery date etc.)
+                                p.saved-text It would be really helpful if I can get the product 2 days before christmas
                             .suggest-content#suggest-content.collapse
                                 form
                                     textarea.suggest-content__box It would be really helpful if I can get the product 2 days before christmas
