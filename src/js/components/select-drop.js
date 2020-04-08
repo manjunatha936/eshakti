@@ -51,7 +51,7 @@ function selectit(elem){
             var target_el = $(this);
             index_el = target_el.index();
             $(this).parents('.select_wrap').find('ul.open li').removeClass('active').eq(index_el).addClass('active');
-            $(this).parents('.select_wrap').find('select').val(target_el.attr('value'));
+            $(this).parents('.select_wrap').find('select').val(target_el.attr('value')).change();
 
             target_el.parents('.select_wrap').find('span').attr('value',target_el.attr('value'))
                 .attr('data-icon',target_el.attr('data-icon'))
