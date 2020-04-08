@@ -75,7 +75,6 @@ var wishlistSliderObjectMore = new Swiper('.js-wishlist-slider-more', {
       }
 });
 $(".btn-close-sm").on("click",function(){
-    alert("close clicked")
     $(this).parents(".swiper-slide").remove()
     wishlistSliderObject.update();
     wishlistSliderObjectMore.update();
