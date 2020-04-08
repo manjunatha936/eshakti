@@ -55,4 +55,11 @@
     @media screen and (min-width: 480px) and (max-width: 767px){
         max-width: 50% !important;
     }
+
+    @media(max-width: 767px) {
+        .product-card {
+            max-width: 265px;
+            margin: auto;
+        }
+    }
 }
