@@ -1,6 +1,9 @@
 import $ from 'jquery';
 import 'parsleyjs';
 
+import OverlayScrollbar from './overlay-scrollbar';
+const addressScrollbar = new OverlayScrollbar()
+
 
 class formTemplate {
     constructor() {
