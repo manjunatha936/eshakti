@@ -3,9 +3,7 @@
     // Button trigger modal
     button.bttn-style(type='button' data-toggle='modal' data-target='#exampleID') Form Popup
     .py-5
-
-
-
+        
 
 // Modal
 .modal.fade.popup-template#exampleID(tabindex='-1' role='dialog' aria-hidden='true')
@@ -67,7 +65,7 @@
 
                         .drop-container
                             select.form-input.select-btn.select_box.txt-gry-12(required data-parsley-errors-container="#error-select1")
-                                option(value='') 
+                                option(value='' disabled selected) Select 
                                 option(value='saab') Saab
                                 option(value='mercedes') Mercedes
                                 option(value='audi') Audi

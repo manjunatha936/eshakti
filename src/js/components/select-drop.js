@@ -20,7 +20,7 @@ function selectit(elem){
 
         function active_fn(data){
             active = data;
-            active_el = $('<span></span>').attr('value',active.val()).attr('data-icon',active.attr('data-icon')).attr('data-text',active.attr('data-text')).text(active.text());
+            active_el = $('<span></span>').attr('value',active.val()).attr('disabled',active.attr('disabled')).attr('data-text',active.attr('data-text')).text(active.text());
         }
 
         if(select_el.find('option:selected').length > 0){
