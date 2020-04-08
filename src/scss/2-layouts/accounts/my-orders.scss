@@ -1388,6 +1388,49 @@
                 }
             }
 
+            .cart-style-custom {
+                p {
+                    // margin: 5px 0;
+                    
+                    &:first-of-type {
+                        margin-top: 0;
+                    }
+
+                    &:last-of-type {
+                        margin-bottom: 0;
+                    }
+
+                    span {
+                        display: inline;
+                    }
+                }
+
+                @include bp('tab') {
+                    height: auto !important;
+                }
+
+                @include bpmax('phone-lg') {
+                    height: 36px;
+                    overflow: hidden;
+
+                    p {
+                        margin: 0;
+                    }
+                }
+            }
+
+            .cart-style {
+                a {
+                    opacity: 0.9;
+                    color: $title-black;
+                    font-size: 12px;
+                    font-weight: 600;
+                    line-height: 1.33;
+                    border-bottom: 1px solid;
+                    margin: 5px 0;
+                }
+            }
+
             .cart-size {
                 p {
                     display: flex;

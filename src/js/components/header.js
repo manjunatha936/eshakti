@@ -105,12 +105,14 @@ class HeaderInteractions {
         $temp.remove();
       });
 
-    var data_breaks = $('.web-header__menulinks').attr('data-breaks').split(',');
-    var break_count = 0;
-    for (var i = 0; i < data_breaks.length - 1; i++) {
-      var break_val = parseInt(data_breaks[i]);
-      break_count = break_count + break_val;
-      $(".web-header__menulinks > li:nth-of-type(" + (break_count + i) + ")").after("<li class='seperator'></li>");
+    if($('.web-header__menulinks').length > 0) {
+      var data_breaks = $('.web-header__menulinks').attr('data-breaks').split(',');
+      var break_count = 0;
+      for (var i = 0; i < data_breaks.length - 1; i++) {
+        var break_val = parseInt(data_breaks[i]);
+        break_count = break_count + break_val;
+        $(".web-header__menulinks > li:nth-of-type(" + (break_count + i) + ")").after("<li class='seperator'></li>");
+      }
     }
 
     $(document).on('click', '.web-header__search:not(.search-open)', function () {

@@ -6,8 +6,7 @@ html(lang="en")
     +head("Checkout")
 
   body.checkout-body
-    include ./base/header.pug
-    +header("repeat","white")
+    include ./layouts/cart-checkout/checkout-header.pug
 
     main
       include ./layouts/cart-checkout/checkout.pug
@@ -15,4 +14,4 @@ html(lang="en")
       include ./components/payment-popup.pug
       include ./components/orderfail-popup.pug
 
-    include ./base/footer.pug
+    include ./layouts/cart-checkout/checkout-footer.pug

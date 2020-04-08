@@ -3,16 +3,14 @@
     // Button trigger modal
     button.bttn-style(type='button' data-toggle='modal' data-target='#exampleID') Form Popup
     .py-5
-
-
-
+        
 
 // Modal
 .modal.fade.popup-template#exampleID(tabindex='-1' role='dialog' aria-hidden='true')
   .modal-dialog.modal-dialog-centered(role='document')
-    .modal-content
-        button.close(type='button' data-dismiss='modal' aria-label='Close')
-          span(aria-hidden='true') &times;
+    button.close(type='button' data-dismiss='modal' aria-label='Close')
+        span(aria-hidden='true') &times;
+    .modal-content.js-custom-scroll
         .modal-body
             form(action="").container.form-template  
                 .row
@@ -46,7 +44,7 @@
                             .radio-group
                                 input(type="radio" name="input7" id="#radio3"  required)
                                 label(for="#radio3") Others
-                        #error-radio-tag
+                        p#error-radio-tag
 
                 .row
                     .col-md-12.form-group
@@ -58,19 +56,24 @@
 
                 .row
                     .col-md-6.form-group
-                        label(for='input9') State
-                        select#input-9(required)
-                            option(value='') 
-                            option(value='saab') Saab
-                            option(value='mercedes') Mercedes
-                            option(value='audi') Audi
+                        label State
+                        .drop-container
+                            select.form-input.select-btn.select_box.txt-gry-12(required data-parsley-errors-container="#error-select1")
+                                option(value='' disabled selected) Select 
+                                option(value='saab') Karnataka
+                                option(value='mercedes') Goa
+                                option(value='audi') Kerala
+                            p#error-select1
+
                     .col-md-6.form-group
-                        label(for='input10') Country
-                        select#input10(required)
-                            option(value='') 
-                            option(value='saab') Saab
-                            option(value='mercedes') Mercedes
-                            option(value='audi') Audi
+                        label Country
+                        .drop-container
+                            select.form-input.select-btn.select_box.txt-gry-12(required data-parsley-errors-container="#error-select2")
+                                option(value='' disabled selected) Select 
+                                option(value='saab') India
+                                option(value='mercedes') America
+                                option(value='audi') Japan
+                            p#error-select2
 
                 .row
                     .col-12.form-group
@@ -92,7 +95,7 @@
                             .check-group
                                 input(type="checkbox" name="input8" id="check4" required)
                                 label(for="check4") Option 4
-                        #error-check-tag
+                        p#error-check-tag
                 .row    
                     .col-12
                         button(type="submit") Submit

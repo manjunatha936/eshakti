@@ -20,7 +20,7 @@ function selectit(elem){
 
         function active_fn(data){
             active = data;
-            active_el = $('<span></span>').attr('value',active.val()).attr('data-icon',active.attr('data-icon')).attr('data-text',active.attr('data-text')).text(active.text());
+            active_el = $('<span></span>').attr('value',active.val()).attr('disabled',active.attr('disabled')).attr('data-text',active.attr('data-text')).text(active.text());
         }
 
         if(select_el.find('option:selected').length > 0){
@@ -51,7 +51,7 @@ function selectit(elem){
             var target_el = $(this);
             index_el = target_el.index();
             $(this).parents('.select_wrap').find('ul.open li').removeClass('active').eq(index_el).addClass('active');
-            $(this).parents('.select_wrap').find('select').val(target_el.attr('value'));
+            $(this).parents('.select_wrap').find('select').val(target_el.attr('value')).change();
 
             target_el.parents('.select_wrap').find('span').attr('value',target_el.attr('value'))
                 .attr('data-icon',target_el.attr('data-icon'))
