@@ -51,7 +51,7 @@ class leftSticky {
         var tabindex = $(".js-left-sticky ul li a.active").parent().index();
 var leftpos = 0;
 for (var i = 0; i < tabindex; i++) {
-    leftpos = leftpos + $('.js-left-sticky ul li').eq(i).outerWidth() + 20;
+    leftpos = leftpos + $('.js-left-sticky ul li').eq(i).outerWidth() + 15;
 }
 $('.js-left-sticky ul').scrollLeft(leftpos);
     }
