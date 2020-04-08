@@ -10,10 +10,31 @@
     height: auto;
     top: 10px;
     right: 14px;
+    cursor: pointer;
 }
 
 .js-wishlist-slider {
     margin-left: 0;
     margin-right: 0;
     width: 100%;
+}
+.account-wishlist {
+    .btn-close-sm {
+        width: 15px;
+        height: 15px;
+        right: 0;
+    }
+    .swiper-arrow .arrow:first-child {
+        left: 20px;
+    }
+    .swiper-arrow .arrow:last-child {
+        right: 0px;
+    }
+
+    @media(max-width: 767px) {
+        .product-card {
+            max-width: 265px;
+            margin: auto;
+        }
+    }
 }

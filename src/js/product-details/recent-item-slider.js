@@ -44,15 +44,15 @@ class RecentlyViewed {
             },
             // when window width is >= 640px
             640: {
-            slidesPerView: 1.5,
+            slidesPerView: 1.9,
             },
             // when window width is >= 992px
             992: {
-            slidesPerView: 3,
+            slidesPerView: 2.7,
             },
             // when window width is >= 1200px
             1200: {
-            slidesPerView: 4,
+            slidesPerView: 6.5,
             }
         } 
         });

@@ -31,9 +31,14 @@
     padding-bottom: 6px;;
 }
 .old-address {
-    padding: 34px 28px 40px 32px;
+    padding: 24px 16px;
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.06);
     background-color: #ffffff;
+    @media screen and (min-width: 768px) {
+        padding: 34px 28px 40px 32px;
+
+        
+    }
     .icon-edit::before {
         font-size: 13px;
     }

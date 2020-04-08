@@ -97,6 +97,7 @@
         border-radius: 4px;
         border: 1px solid #d7d6d6;
         background-color: #ffffff;
+        position: relative;
         
         p {
             color: $title-black;
@@ -110,6 +111,19 @@
             // font-family: Heebo;
             font-size: 11px;
             font-weight: 400;
+        }
+        
+        .indication {
+            position: absolute;
+            top: 114%;
+            right: 0;
+            font-size: 11px;
+            font-weight: 600;
+            padding: 5px 7px;
+            box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+            text-transform: none;
+            border-radius: 4px;
+            display: none;
         }
     }
     
@@ -132,6 +146,11 @@
         .coupon-box {
             margin-top: 7px;
             max-width: 100%;
+
+            .indication {
+                top: unset;
+                bottom: 117%;
+            }
         }
         
         .text-desc {
@@ -141,6 +160,7 @@
                 font-weight: 700;
             }
         }
+        
     }
 
     @media (min-width: 767px) {

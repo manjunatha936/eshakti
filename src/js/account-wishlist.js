@@ -1,17 +1,17 @@
 
+import $ from 'jquery'
 import Swiper from 'swiper';
-// import $ from 'jquery'
 
-var wishlistSlider = new Swiper('.js-wishlist-slider', {
+var wishlistSliderObject;
+
+wishlistSliderObject = new Swiper('.js-wishlist-slider', {
     loop: false,
     preventClicks: true,
     grabCursor: true,
     slidesPerView: 1.2,
-    simulateTouch: false,
     spaceBetween: 0,
     observer: true,
     observeParents: true,
-    grabCursor: false,
     loop: false,
     watchOverflow: true,
     navigation: {
@@ -32,11 +32,21 @@ var wishlistSlider = new Swiper('.js-wishlist-slider', {
         768: {
         slidesPerView: "auto",
         },
-        992: {
-            
-        }
+  
     }
 });
+$(".btn-close-sm").on("click",function(){
+    alert("close clicked")
+    $(this).parents(".swiper-slide").remove()
+    wishlistSliderObject.update();
+
+})
+$(".favourite-tabs .nav-item").click(function(){
+    setTimeout(function(){
+        wishlistSliderObject.update();
+   
+    },300);
+  })
 
 //Product Recent-items slider
 import RecentlyViewed from './product-details/recent-item-slider'
