@@ -90,6 +90,22 @@
         top: .8rem;
         bottom: .8rem;
     };
+    .select_wrap ul {
+        border-top: none;
+		border: 1px solid #cdcecf;
+        max-height: 150px;
+        overflow: auto;
+        li {
+            &:first-child {
+                border-top: none !important;
+            }
+		border-top: 1px solid #cdcecf !important;
+		border-bottom: none !important;
+		border-left: none !important;
+		border-right: none !important;
+   
+        }
+    }
 }
 
 .prd-size {

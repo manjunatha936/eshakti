@@ -19,6 +19,9 @@
     width: 100%;
 }
 .account-wishlist {
+    .wishslider-container {
+        padding-bottom: 16px;
+    }
     .btn-close-sm {
         width: 15px;
         height: 15px;
@@ -26,8 +29,30 @@
     }
     .swiper-arrow .arrow:first-child {
         left: 20px;
+        top: 45%;
     }
     .swiper-arrow .arrow:last-child {
         right: 0px;
+        top: 45%;
+
+    }
+    .swiper-pagination-bullets {
+        // position: absolute;
+    
+        bottom: 0px;
+        // left: 50% !important;
+        // transform: translate(-50%,-50%);
+        .swiper-pagination-bullet {
+            margin-right: 7px;
+            background-color: #929498 !important;
+        }
+        .swiper-pagination-bullet-active {
+            background-color: #949aa5 !important    ;
+        }
+    }
+}
+.wishlist-item {
+    @media screen and (min-width: 480px) and (max-width: 767px){
+        max-width: 50% !important;
     }
 }
