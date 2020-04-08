@@ -42,7 +42,7 @@
 	width: 100%;
 	transition: all 0.3s ease;
 	top: 0;
-	z-index: 5;
+	z-index: 1;
 
 	@include bpmax('tab-mid') {
 		&:not(.normal-cust-header) {
