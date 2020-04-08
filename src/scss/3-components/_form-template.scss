@@ -1,15 +1,28 @@
 .popup-template {
     .close {
         position: absolute;
-        right: -38px;
-        top: -15px;
-        font-size: 50px;
+        right: -35px;
+        top: 5px;
+        font-size: 25px;
         font-weight: 100;
         color: white;
         cursor: pointer;
         opacity: 0.9;
         text-shadow: none;
-        
+
+        &:after {
+            content: "";
+            position: absolute;
+            height: 32px;
+            width: 32px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 1px;
+            border: 1px solid $white;
+            border-radius: 50%;
+        }
+
         @include bpmax('tab-mid') {
             right: 6px;
             top: -36px;
@@ -22,7 +35,7 @@
                 width: 32px;
                 left: 50%;
                 top: 50%;
-                transform: translate(-50%,-50%);
+                transform: translate(-50%, -50%);
                 border-radius: 1px;
                 border: 1px solid $white;
                 border-radius: 50%;
@@ -37,6 +50,10 @@
         @include bpmax('tab-mid') {
             padding: 15px 5px;
         }
+
+        @media only screen and (max-width: 992px) and (min-width: 800px)  {
+            padding: 35px 10px;
+        }
     }
 
     .modal-dialog {
@@ -49,6 +66,13 @@
         @media(max-width: 991px) {
             max-width: 95%;
         }
+    }
+
+    .modal-content {
+        border-radius: 0;
+        max-height: calc(100vh - 50px);
+        overflow-y: scroll;
+        overflow-x: hidden;
     }
 }
 
@@ -68,7 +92,7 @@
 
     .form-group {
         margin-bottom: 30px;
-        
+
         @include bpmax('tab-mid') {
             margin-bottom: 22px;
         }
@@ -131,7 +155,7 @@
                     transition: all 0.2s ease;
                     border-radius: 2px;
                 }
-    
+
                 &::before {
                     content: "\e911";
                     font-family: 'icomoon';
@@ -207,8 +231,8 @@
                 position: relative;
                 padding-left: 25px;
                 color: #2a2a2a;
-                font-size: 13px;
-                line-height: 1.35;
+                font-size: 14px;
+                line-height: 18px;
                 margin-bottom: 0;
                 cursor: pointer;
                 margin-bottom: 10px;
@@ -232,12 +256,83 @@
         border: none;
         cursor: pointer;
         padding: 0 30px;
-    
+
         &.white {
             border: 1px solid #141313;
             background-color: #ffffff;
             color: #2e333d;
         }
+    }
+
+    .select_wrap {
+        width: 100%;
+        border: none;
+        height: 45px;
+
+        @media(max-width: 991px) {
+            max-width: 100%;
+        }
+
+        select {
+            display: block;
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+        }
+
+        span {
+            color: $title-black;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 18px;
+            border: 1px solid #dadcde;
+            background-color: #ffffff;
+            padding: 13px 10px;
+            width: 100%;
+            height: 45px;
+
+            @media(max-width: 991px) {
+                max-width: 100%;
+            }
+
+        }
+
+        &.open:after,
+        &:after {
+            top: 48%;
+        }
+
+        .overlay {
+            height: 100%;
+            width: 100%;
+        }
+
+        ul {
+            width: 100%;
+            max-width: 300px;
+            left: 0;
+
+            @media(max-width: 991px) {
+                max-width: 100%;
+            }
+
+            li {
+                font-size: 13px;
+                padding: 10px 15px;
+                line-height: 1.4;
+
+                &:first-child {
+                    display: none;
+                }
+
+                &:nth-child(2) {
+                    border: 1px solid #cdcecf;
+                }
+            }
+        }
+
     }
 }
 
