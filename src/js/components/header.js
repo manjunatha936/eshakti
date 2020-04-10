@@ -97,6 +97,7 @@ class HeaderInteractions {
 
       // copy link js
       $(".copy-code").click(function () {
+        e.preventDefault();
         var element = $(this).parents(".offer-bar-card").find(".code");
         var $temp = $("<input>");
         $("body").append($temp);

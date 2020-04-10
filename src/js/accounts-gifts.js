@@ -7,6 +7,7 @@ $(".js-gift-card").on('click',function() {
 });
 
 $(".js-copy-code").click(function () {
+    e.preventDefault();
     var element = $(this).parents(".coupon-box").find(".js-code");
     var $temp = $("<input>");
     $("body").append($temp);
