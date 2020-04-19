@@ -23,6 +23,10 @@
         }
     }
 
+    @media(max-width: 991px) {
+        padding: 110px 0 50px;
+    }
+
     @media(max-width: 767px) {
         padding: 90px 0 50px;
 
@@ -36,10 +40,6 @@
             max-width: 350px;
             margin: 0 auto 35px;
         }
-    }
-
-    @media(max-width: 991px) {
-        padding: 110px 0 50px;
     }
 }
 
