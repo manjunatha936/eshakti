@@ -263,12 +263,13 @@
             
         }            
         @media screen and (min-width: 378px){
-            height: 249px;
+            height: 274px;
             // height: 312px;
             // height: 518px;
-        }            
-        @media screen and (min-width: 378px){
-            height: 274px;
+        }     
+
+        @media screen and (min-width: 425px){
+            height: 248px;
             // height: 312px;
             // height: 518px;
         }            
@@ -414,9 +415,26 @@
             }
         }
     }
-    .share-style {
+    .share-style.shareV2 {
         position: absolute;
         bottom: 20px;
+        right: 20px;
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        color: $title-black;
+        @media screen and (min-width:768px) {
+            bottom: 33px;
+            
+        }
+        @media screen and (min-width:1440px) {
+            bottom: 66px;
+            
+        }
+    }
+    .share-style {
+        position: absolute;
+        bottom: 56px;
         right: 20px;
         padding: 5px;
         display: flex;

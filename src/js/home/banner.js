@@ -14,7 +14,11 @@ class BannerSwiper {
         spaceBetween: 0,
         loop: true,
         effect: 'fade',
+        fadeEffect: {
+          crossFade: true
+        },
         autoplay: {
+          disableOnInteraction: false,
           delay: 3000
         }
     });
