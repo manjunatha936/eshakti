@@ -1,0 +1,65 @@
+section.sec-gift-card
+    .container
+        .row
+            .col-12.text-center
+                h4 Gift Card
+        .row
+            .col-lg-5.col-md-6.offset-lg-1.order-2
+                .img-c
+                    p 
+                        | Give the gift of 
+                        span Personalized fashion
+                    .img(style="background-image: url('assets/images/gift-card/girl.png')", alt="girl")
+            .col-md-6.col-lg-5.order-md-2
+                form.form-template
+                    .form-group
+                        label(for="#rec-name") Recipient’s Name
+                            span.red *
+                        input(type="text" id="rec-name" required)
+                    .form-group
+                        label(for="#your-name") Your Name
+                            span.red *
+                        input(type="text" id="your-name" required)
+                    .form-group
+                        label(for="#rec-mail") Recipient’s Email
+                            span.red *
+                        input(type="mail" id="rec-mail" required)
+                    .form-group
+                        label Message
+                        textarea(name="message")
+                        p Max 500 Characters
+                    .form-group
+                        label Card Amount
+                            span.red * 
+                        .d-flex.flex-wrap.align-items-center
+                            .radio-group.text
+                                input(type="radio" name="card-amount" id="#card-radio1"  required data-parsley-errors-container="#error-card-amount")
+                                label(for="#card-radio1") 
+                                    input.radio-text-input(type="text")
+                            .radio-group
+                                input(type="radio" name="card-amount" id="#card-radio2"  required)
+                                label(for="#card-radio2") $
+                                    span 25
+                            .radio-group
+                                input(type="radio" name="card-amount" id="#card-radio3"  required)
+                                label(for="#card-radio3") $
+                                    span 75
+                            .radio-group
+                                input(type="radio" name="card-amount" id="#card-radio4"  required)
+                                label(for="#card-radio4") $
+                                    span 100
+                        p#error-card-amount
+                    .form-group 
+                        .d-flex.flex-wrap.align-items-center
+                            .radio-group
+                                input(type="radio" name="date-amount" id="#date-radio1"  required data-parsley-errors-container="#error-send-date")
+                                label(for="#date-radio1") Send now
+                            .radio-group.d-flex.align-items-center
+                                input(type="radio" name="date-amount" id="#date-radio2"  required)
+                                label(for="#date-radio2") Select date
+                                .date-selector
+                                    input(type="date")
+                        p#error-send-date
+                    .form-group 
+                        button(type="submit") Add to Bag
+                    a.terms(href="javascript:void(0)") Conditions
