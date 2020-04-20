@@ -1,42 +1,237 @@
-.main-div {
-    width: 400px;
-    height: 2000px;
-    background: red;
-}
+.about-banner-wrap {
+    padding-top: 130px;
+    padding-bottom: 60px;
 
-body {
-/* Disables pull-to-refresh but allows overscroll glow effects. */
-    overscroll-behavior-y: contain;
-}
+    @include bpmax('tab-mid') {
+        padding-top: 100px;
+    }
 
-html.overflow-hidden {
-    overflow: hidden;
-}
+    @include bpmax('phone-lg') {
+        padding-top: 90px;
+    }
 
-.scroll-div {
-    position: fixed;
-    top: calc(100% - 100px);
-    background: blue;
-    width: 400px;
-    height: 100vh;
-    overflow: hidden;
-    transition: all 0.3s ease;
+    @include bpmax('phone') {
+        height: auto;
+    }
 
-    &.active {
-        overflow: auto;
+    @include bp('tab') {
+        height: 550px;
+    }
+
+    @include bp('desktop') {
+        height: 620px;
+    }
+
+    @media only screen and (min-width: 1300px) {
+        height: 700px;
+        padding-top: 150px;
     }
 }
 
-.content {
-    height: 100%;
-    color: white;
-    overflow: hidden;
+.about-banner {
+    background-image: linear-gradient(184deg, #eae9e7 0%, #e7e6e4 100%);
+
+    &__textwrap {
+        max-width: 47.25%;
+        flex: 0 0 47.25%;
+
+        @include bpmax('phone') {
+            max-width: none;
+            flex: none;
+            width: 100%;
+            margin-bottom: 40px;
+        }
+    }
+
+    &__imgwrap {
+        max-width: 52.25%;
+        flex: 0 0 52.25%;
+        height: 100%;
+        padding-top: 30px;
+
+        @include bpmax('phone') {
+            max-width: none;
+            flex: none;
+            width: 100%;
+            height: 400px;
+        }
+    }
+
+    &__img {
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        background: #e9e8e6;
+
+        img {
+            height: 100%;
+        }
+    }
+
+    &__text {
+        max-width: 372px;
+
+        > *:last-child {
+            margin-bottom: 0;
+        }
+
+        @include bpmax('tab') {
+            max-width: 295px;
+        }
+
+        @include bpmax('phone') {
+            max-width: none;
+        }
+
+        .h2heading {
+            line-height: 1.05;
+            color: $bnr-black;
+
+            @include bpmax('phone') {
+                width: 300px;
+                max-width: 100%;
+            }
+        }
+
+        span {
+            color: $bnr-red;
+        }
+
+        p {
+            margin: 20px 0 25px;
+        }
+    }
 }
 
-.mystyle .content {
-    overflow: auto;
+.about-brand {
+    padding: 60px 0;
 
-    // &.attop {
-    //     touch-action: pan-down;
-    // }
+    @include bpmax("desktop") {
+        padding: 50px 0;
+    }
+
+    @include bpmax("tab-mid") {
+        padding: 45px 0; 
+    }
+
+    @include bpmax('phone-lg') {
+        padding: 30px 0;
+    }
+
+    &__intro {
+        max-width: 550px;
+        padding: 0 12.5;
+        margin: 0 auto;
+        width: 100%;
+        text-align: center;
+
+        p {
+            margin-top: 10px;
+        }
+    }
+
+    &__cust {
+        margin-top: 40px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        > div {
+            max-width: none;
+            flex: none;
+            margin-right: 50px;
+            width: auto;
+
+            &:last-of-type {
+                margin-right: 0;
+            }
+        }
+
+        img {
+            height: 48px;
+            width: auto;
+        }
+
+        p {
+            color: #3f4145;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 1.43;
+            margin-top: 12px;
+        }
+    }
+}
+
+.about-content {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+
+    &__box {
+        display: flex;
+        align-items: center;
+        margin-top: 60px;
+
+        &:first-of-type {
+            margin-top: 0;
+        }
+
+        &img {
+            width: 54%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 440px;
+        }
+
+        &text {
+            width: 46%;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            padding-left: 80px;
+        }
+
+        h3 {
+            color: $title-black;
+            font-size: 32px;
+            font-weight: 900;
+            line-height: 1;
+        }
+
+        p {
+            color: $text-black;
+            line-height: 1.5;
+            margin-top: 15px;
+        }
+
+        &:nth-of-type(even) {
+            flex-direction: row-reverse;
+
+            .about-content__boxtext {
+                padding-left: 0;
+                padding-right: 80px;
+            }
+        }
+    }
+}
+
+.about-feedback {
+    .home-feedback__box {
+        width: 680px;
+        
+        p {
+            line-height: 1.5;
+        }
+    }
+    
+    .review-cardwrap {
+        text-align: left;
+        margin-top: 50px;
+
+        .web-link {
+            display: table;
+            margin: 0 auto;
+            margin-top: 15px;
+        }
+    }
 }

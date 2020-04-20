@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+html(lang="en")
+
+  head
+    include ./base/head.pug
+    +head("About")
+
+  body
+    include ./base/header.pug
+    +header()
+
+    main
+      include ./layouts/static/about.pug
+
+    include ./base/footer.pug

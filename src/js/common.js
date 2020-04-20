@@ -9,7 +9,7 @@ import "bootstrap/js/src/modal"
 
 // import "../pug/index.pug";
 // import "../pug/repeat-customer.pug";
-// // import "../pug/about.pug";
+import "../pug/about-us.pug";
 // import "../pug/contact.pug";
 // import "../pug/product-details.pug";
 // // import "../pug/product-listing.pug";
