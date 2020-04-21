@@ -8,6 +8,13 @@ $(".form-template .radio-group.text .radio-text-input").on('keyup', function (e)
     $(this).parents('.radio-group').find('input:radio').prop("checked", true).attr("value",val);
 });
 
+var group = $(".radio-text-input").parents(".form-group");
+
+$(group).find('input:radio').on('change', function (e) {
+    if(!$(".radio-text-input").parents('.radio-group').find('input:radio').is(':checked')) { 
+        $(".radio-text-input").val("");
+    }
+});
 
 //date picker
 $(".form-template .date-selector input").on('click', function (e) {
