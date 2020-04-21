@@ -10,7 +10,7 @@
         text-align: center;
         display: flex;
         flex-direction: column;
-        justify-content: flex-end;
+        justify-content: space-between;
 
         p {
             color: #202225;
@@ -23,14 +23,10 @@
             }
         }
 
-        .img {
-            height: 100%;
+        img {
+            height: auto;
             width: 100%;
             object-position: bottom;
-            max-height: calc(100% - 55px);
-            background-size: cover;
-            background-position: bottom;
-            background-repeat: no-repeat;
         }
     }
 
