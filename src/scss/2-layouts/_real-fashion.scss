@@ -26,6 +26,7 @@
 
             .icon {
                 font-size: 13px;
+                color: white;
             }
         }
 
@@ -61,23 +62,23 @@
     }
 }
 
-// Masonry
-.masonry {
-    column-gap: 30px;
-    column-fill: initial;
-    transition: all ease 0.3s;
+// // Masonry
+// .masonry {
+//     column-gap: 30px;
+//     column-fill: initial;
+//     transition: all ease 0.3s;
 
-    .brick {
-        margin-bottom: 45px;
-        display: inline-block;
-        vertical-align: top;
-    }
+//     .brick {
+//         margin-bottom: 45px;
+//         display: inline-block;
+//         vertical-align: top;
+//     }
 
-    @media only screen and (min-width: 768px) and (max-width: 1023px) {
-        column-count: 2;
-    }
+//     @media only screen and (min-width: 768px) and (max-width: 1023px) {
+//         column-count: 2;
+//     }
 
-    @media only screen and (min-width: 1024px) {
-        column-count: 3;
-    }
-}
+//     @media only screen and (min-width: 1024px) {
+//         column-count: 3;
+//     }
+// }

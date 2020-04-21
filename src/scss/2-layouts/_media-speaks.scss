@@ -1,5 +1,5 @@
 .sec-styles {
-    padding: 200px 0 50px;
+    padding: 180px 0 50px;
 
     h4 {
         color: #202225;
@@ -7,6 +7,10 @@
         font-weight: 900;
         line-height: 1.1;
         margin-bottom: 50px;
+    }
+
+    @media(max-width: 1299.9px) {
+        padding: 150px 0 50px;
     }
 
     @media(max-width: 991.9px) {
