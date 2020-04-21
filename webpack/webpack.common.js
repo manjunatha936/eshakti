@@ -39,6 +39,7 @@ module.exports = {
     "accounts-help": [path.join(paths.dirSrcJs, "accounts-help")],
     "gift-card": [path.join(paths.dirSrcJs, "gift-card")],
     "accounts-size": [path.join(paths.dirSrcJs, "accounts-size")],
+    "real-fashion": [path.join(paths.dirSrcJs, "real-fashion")],
     "contest": [path.join(paths.dirSrcJs, "contest")]
   },
   output: {
