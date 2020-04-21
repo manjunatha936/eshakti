@@ -23,11 +23,33 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: 5px;
+
+    @media only screen and (min-width: 1300px) {
+        margin-top: 10px;
+    }
+
+    @include bpmax("desktop") {
+        height: 430px;
+    }
+
+    @include bpmax("tab-mid") {
+        height: 370px;
+    }
+
+    @include bpmax('phone') {
+        height: 340px;
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+
+    @media only screen and (max-width: 399.9px) {
+        height: 300px;
+    }
 
     .section-heading {
         color: $white;
@@ -35,6 +57,16 @@
         letter-spacing: 0.44px;
         line-height: 1.3;
         margin-bottom: 0;
+        padding: 0 15px;
+        text-align: center;
+
+        @include bpmax("tab-mid") {
+            font-size: 26px;
+        }
+
+        @include bpmax("phone") {
+            font-size: 24px;
+        }
     }
 
     a {
@@ -42,6 +74,14 @@
         color: $white;
         margin-top: 20px;
         line-height: 1;
+
+        @include bpmax("tab-mid") {
+            font-size: 50px;
+        }
+
+        @include bpmax("phone") {
+            font-size: 40px;
+        }
 
         i::before {
             color: inherit;
@@ -53,4 +93,80 @@
     width: 825px;
     margin: 0 auto;
     max-width: 100%;
+    padding: 60px 0;
+
+    @include bpmax("desktop") {
+        padding: 50px 0;
+    }
+
+    @include bpmax("tab-mid") {
+        padding: 45px 0; 
+    }
+
+    @include bpmax('phone') {
+        padding: 35px 0;
+    }
+
+    h3 {
+        line-height: 1.3;
+        margin-bottom: 2px;
+        font-size: 28px;
+        
+        @include bpmax("tab-mid") {
+            font-size: 26px;
+            margin-bottom: 0;
+        }
+
+        @include bpmax("phone") {
+            font-size: 24px;
+        }
+    }
+
+    a.web-link {
+        margin-top: 30px;
+
+        @include bpmax("tab-mid") {
+            margin-top: 20px;
+        }
+
+        @include bpmax("phone") {
+            margin-top: 15px;
+        }
+    }
+
+    .about-content__boxtext {
+        padding-left: 60px;
+
+        @include bpmax("desktop") {
+            padding-left: 50px;
+        }
+    
+        @include bpmax("tab-mid") {
+            padding-left: 40px;
+        }
+
+        @include bpmax("phone-lg") {
+            padding-left: 0;
+        }
+
+        @include bpmax("phone") {
+            padding-top: 12px
+        }
+    }
+
+    .about-content__box {
+        margin-top: 40px;
+
+        @include bpmax("tab-mid") {
+            margin-top: 30px;
+        }
+
+        @include bpmax("phone") {
+            margin-top: 20px;
+        }
+
+        &:first-of-type {
+            margin-top: 0;
+        }
+    }
 }

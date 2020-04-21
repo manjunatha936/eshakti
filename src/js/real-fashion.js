@@ -11,17 +11,17 @@ var macyInstance1 = Macy({
             margin: 30
         },
         991: {
-            margin: 20,
+            margin: 25,
             columns: 2
-
         },
         767: {
-            margin: 25,
-            columns: 1
-
+            margin: 20
         },
         575: {
-            margin: 20,
+            margin: 15
+        },
+        479: {
+            columns: 1
         },
         399: {
             margin: 15
