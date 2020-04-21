@@ -35,7 +35,7 @@ section.sec-gift-card
                             .radio-group.text
                                 input(type="radio" name="card-amount" id="#card-radio1"  required data-parsley-errors-container="#error-card-amount")
                                 label(for="#card-radio1") 
-                                    input.radio-text-input(type="text")
+                                    input.radio-text-input(type="number")
                             .radio-group
                                 input(type="radio" name="card-amount" id="#card-radio2"  required)
                                 label(for="#card-radio2") $
@@ -58,7 +58,7 @@ section.sec-gift-card
                                 input(type="radio" name="date-amount" id="#date-radio2"  required)
                                 label(for="#date-radio2") Select date
                                 .date-selector
-                                    input(type="date")
+                                    input(type="text")
                         p#error-send-date
                     .form-group 
                         button(type="submit") Add to Bag
