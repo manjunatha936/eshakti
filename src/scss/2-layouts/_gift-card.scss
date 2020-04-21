@@ -135,6 +135,7 @@
                     pointer-events: all;
                     opacity: 1;
                 }
+
             }
         }
 
@@ -142,6 +143,27 @@
         button {
             padding: 0 50px;
             text-transform: uppercase;
+        }
+
+        input[type="radio"]:checked {
+
+            &+label {
+                &::before {
+                    left: 4px;
+                    top: 4px;
+                    width: 9px;
+                    height: 9px;
+                    border-radius: 50%;
+                    background-color: white;
+                    z-index: 1;
+                    transition: none;
+                }
+
+                &::after {
+                    background-color: #f25c50;
+                }
+
+            }
         }
     }
 
@@ -210,12 +232,12 @@
             margin-top: 35px;
             height: 450px;
             padding: 20px 10px 0;
-    
+
             p {
                 font-size: 16px;
                 margin-bottom: 25px;
             }
-    
+
             .img {
                 height: 100%;
                 width: 100%;
