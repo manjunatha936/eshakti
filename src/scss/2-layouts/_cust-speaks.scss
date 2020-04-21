@@ -183,6 +183,10 @@
             }
         }
     }
+
+    @include bpmax('phone') {
+        margin-bottom: 15px;
+    }
 }
 
 .page-pagination {

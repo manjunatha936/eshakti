@@ -1,0 +1,159 @@
+.contest-content {
+    padding-top: 130px;
+
+    @include bpmax('tab-mid') {
+        padding-top: 100px;
+    }
+
+    @include bpmax('phone-lg') {
+        padding-top: 90px;
+    }
+
+    @include bpmax('phone') {
+        padding-top: 75px;
+    }
+
+    @media only screen and (min-width: 1300px) {
+        padding-top: 150px;
+    }
+
+    .h2heading {
+        width: 485px;
+        max-width: 100%;
+        margin: 35px auto 45px;
+        text-align: center;
+        line-height: 1.1;
+        padding: 0 15px;
+
+        @include bpmax('tab-mid') {
+            margin: 25px auto 40px;
+        }
+
+        @include bpmax('phone') {
+            margin: 10px auto 35px;
+        }
+    }
+    
+    ul.nav {
+        border-bottom: 1px solid #dadada;
+        margin-bottom: 0;
+        white-space: nowrap;
+        display: block;
+        overflow: auto;
+
+        .nav-item {
+            display: inline-block;
+        }
+    }
+    
+    .nav-link {
+        padding: 9px 32px;
+        color: #797b7e;
+        font-size: 13px;
+        border-radius: 2px;
+
+        &.active {
+            font-weight: 600;
+            color: $white;
+            background-color: $bnr-red;
+        }
+    }
+
+    .custom-container {
+        padding: 0 90px;
+
+        @include bpmax('desktop') {
+            padding: 0 50px;
+        }
+
+        @include bpmax('tab-mid') {
+            padding: 0 30px;
+        }
+
+        @include bpmax('phone-lg') {
+            padding: 0 15px;
+        }
+    }
+
+    @include bp('desktop-1200') {
+        .about-content {
+            padding: 50px 0;
+        }
+    }
+}
+
+.contest-entries {
+    padding: 60px 0;
+
+    @include bpmax("desktop") {
+        padding: 50px 0;
+    }
+
+    @include bpmax("tab-mid") {
+        padding: 45px 0; 
+    }
+
+    @include bpmax('phone-lg') {
+        padding: 40px 0;
+    }
+
+    @include bpmax('phone') {
+        padding: 35px 0;
+    }
+
+    .section-heading {
+        text-align: center;
+        margin-bottom: 50px;
+
+        @include bpmax('desktop') {
+            margin-bottom: 40px;
+        }
+        
+        @include bpmax('tab-mid') {
+            margin-bottom: 32px;
+        }
+
+        @include bpmax('phone-lg') {
+            margin-bottom: 26px;
+        }
+
+        @include bpmax('phone') {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__img {
+        padding-bottom: 66%;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__text {
+        border: 1px solid #ebebeb;
+        padding: 24px;
+        padding-top: 20px;
+
+        @include bpmax('tab-mid') {
+            padding: 15px;
+        }
+        
+        p {
+            margin-top: 15px;
+            line-height: 1.45;
+
+            &:first-of-type {
+                margin-top: 0;
+            }
+
+            span {
+                color: $text-black;
+                font-size: 12px;
+            }
+        }
+    }
+}
