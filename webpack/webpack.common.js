@@ -16,7 +16,7 @@ const paths = require("./paths");
 
 const pugTemplates = [];
 const srcll = fs.readdirSync(paths.dirSrcPug);
-srcll.forEach(s => s.endsWith(".pug") && pugTemplates.push(s));
+srcll.forEach((s) => s.endsWith(".pug") && pugTemplates.push(s));
 
 module.exports = {
   entry: {
@@ -30,9 +30,13 @@ module.exports = {
     "order-placed": [path.join(paths.dirSrcJs, "order-placed")],
     "accounts-wishlist": [path.join(paths.dirSrcJs, "accounts-wishlist")],
     "accounts-orders": [path.join(paths.dirSrcJs, "accounts-orders")],
-    "accounts-orders-current": [path.join(paths.dirSrcJs, "accounts-orders-current")],
+    "accounts-orders-current": [
+      path.join(paths.dirSrcJs, "accounts-orders-current"),
+    ],
     "accounts-orders-past": [path.join(paths.dirSrcJs, "accounts-orders-past")],
-    "accounts-orders-return": [path.join(paths.dirSrcJs, "accounts-orders-return")],
+    "accounts-orders-return": [
+      path.join(paths.dirSrcJs, "accounts-orders-return"),
+    ],
     "accounts-address": [path.join(paths.dirSrcJs, "accounts-address")],
     "accounts-personal": [path.join(paths.dirSrcJs, "accounts-personal")],
     "accounts-gifts": [path.join(paths.dirSrcJs, "accounts-gifts")],
@@ -40,11 +44,11 @@ module.exports = {
     "gift-card": [path.join(paths.dirSrcJs, "gift-card")],
     "accounts-size": [path.join(paths.dirSrcJs, "accounts-size")],
     "real-fashion": [path.join(paths.dirSrcJs, "real-fashion")],
-    "contest": [path.join(paths.dirSrcJs, "contest")]
+    contest: [path.join(paths.dirSrcJs, "contest")],
   },
   output: {
     path: paths.dirDist,
-    filename: "js/[name].js"
+    filename: "js/[name].js",
   },
   stats: "none",
   module: {
@@ -52,18 +56,16 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: [
-          { loader: 'babel-loader' },
-        ]
+        use: [{ loader: "babel-loader" }],
       },
       {
         test: /\.js$/,
-        use: ['source-map-loader'],
-        enforce: 'pre',
+        use: ["source-map-loader"],
+        enforce: "pre",
       },
       {
         test: /\.(eot|woff|woff2|svg|ttf)([\?]?.*)$/,
-        use: ['url-loader']
+        use: ["url-loader"],
       },
       {
         test: /\.pug$/,
@@ -72,20 +74,20 @@ module.exports = {
           {
             loader: "pug-html-loader",
             options: {
-              pretty: true
-            }
-          }
-        ]
+              pretty: true,
+            },
+          },
+        ],
       },
       {
         test: /\.css$/,
-        use: ["css-hot-loader", MiniCssExtractPlugin.loader, "css-loader"]
-      }
-    ]
+        use: ["css-hot-loader", MiniCssExtractPlugin.loader, "css-loader"],
+      },
+    ],
   },
   plugins: [
     ...pugTemplates.map(
-      templateName =>
+      (templateName) =>
         new HtmlWebPackPlugin({
           inject: true,
           template: `./src/pug/${templateName}`,
@@ -93,21 +95,21 @@ module.exports = {
             paths.dirDist,
             templateName.replace(".pug", ".html")
           ),
-          chunks: ["common", templateName.replace(".pug", "")],
+          // chunks: ["common", templateName.replace(".pug", "")],
           minify: false,
-          alwaysWriteToDisk: true
+          alwaysWriteToDisk: true,
         })
     ),
     new MiniCssExtractPlugin({
-      filename: "css/main.css"
+      filename: "css/main.css",
     }),
     new CopyWebpackPlugin([
       {
         from: "src/assets",
-        to: "assets"
-      }
+        to: "assets",
+      },
     ]),
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
   ],
   optimization: {
     minimizer: [
@@ -129,9 +131,23 @@ module.exports = {
         // Disable during development
         disable: process.env.NODE_ENV !== "production",
         pngquant: {
-          quality: "95-100"
-        }
-      })
-    ]
-  }
+          quality: "95-100",
+        },
+      }),
+    ],
+    splitChunks: {
+      cacheGroups: {
+        vendors: {
+          test: /[\\/]node_modules[\\/]/,
+          name: "vendor",
+          chunks: "all",
+        },
+        default: {
+          minChunks: 2,
+          priority: -20,
+          reuseExistingChunk: true,
+        },
+      },
+    },
+  },
 };
